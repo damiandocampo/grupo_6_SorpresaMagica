@@ -25,8 +25,8 @@ Si sos un usuario particular o tenes un negocio, no dejes pasar la oportunidad d
 
 ## ¡Páginas Referentes!
 
-Por la estetica: https://www.golofiesta.com.ar/
-Por los productos y servicios que ofrecen: https://arcorencasa.com/
-Por los clientes objetivos: https://www.felfort.com.ar/
-Por la funcionalidad: https://www.alfajores-jorgito.com/
-Por su diseño e interactividad: https://www.wowco.com.ar/
+- Por la estetica: https://www.golofiesta.com.ar/
+- Por los productos y servicios que ofrecen: https://arcorencasa.com/
+- Por los clientes objetivos: https://www.felfort.com.ar/
+- Por la funcionalidad: https://www.alfajores-jorgito.com/
+- Por su diseño e interactividad: https://www.wowco.com.ar/
