@@ -1,0 +1,411 @@
+header div.desktop, nav.nav-bar-desktop {
+    display: none;
+}
+
+/* -- HEADER -- */
+
+
+header div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--rosa);
+    padding: 0 10px;
+    height: 44px;
+}
+
+/* search - user */
+
+header div .user, div .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header div .user .user-icon ,div .search .search-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+}
+
+/* user */
+
+header div .user .user-icon i{
+    font-size: 34px;
+}
+
+header div .user p {
+    display: none;
+}
+
+/* envíos */
+
+header div .message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 76%;
+}
+
+header div .message span {
+    font-weight: bold;
+}
+
+header div .message p {
+    text-align: center;
+    font-size: 12px;
+}
+
+/* search */
+
+header div .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+/* header div .search {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    background-color: var(--rosa);
+    z-index: 1;
+    position: relative;
+} */
+
+header div .search input.search {
+    display: none;
+}
+
+/* header div .search input.search {
+    width: 280px;
+    height: 30px;
+    border: solid 2px var(--celeste);
+    border-radius: 15px;
+    outline: none;
+} */
+
+header div .search button {
+    border: none;
+    width: 25px;
+    height: 25px;
+    background-color: var(--rosa);
+}
+
+
+/* header div .search button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 12px;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+} */
+
+header div .search i {
+    font-size: 24px;
+}
+
+
+/* -- NAV BAR -- */
+
+ nav.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    background-color: var(--blanco);
+    height: 99px;
+    box-shadow: 0px 2px 15px 0px rgba(32, 32, 32, .3);
+    z-index: 10;
+    position: sticky;
+    top: 0;
+}
+
+/* menu - cart */
+
+ nav.nav-bar .menu, nav.nav-bar .cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+
+ nav.nav-bar .menu i, nav.nav-bar .cart i {
+    font-size: 35px;
+}
+
+ nav.nav-bar .menu h3, nav.nav-bar .cart h3 {
+    font-size: 14px;
+}
+
+ nav.nav-bar .menu ul {
+    display: none;
+}
+
+/* logo */
+
+ nav.nav-bar .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+nav.nav-bar .logo a{
+    height: 99px;
+}
+
+ nav.nav-bar .logo img {
+    height: 100%;
+} 
+
+
+/* TABLET */
+
+
+@media (min-width: 640px) {
+
+    /* -- HEADER -- */ 
+
+    header div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--rosa);
+        padding: 0 10px;
+        height: 56px;
+    }
+
+    /* user */
+
+    header div .user .user-icon i{
+        font-size: 38px;
+    }
+
+    /* search */
+    
+    header div .search .search-icon i{
+        font-size: 30px;
+    }
+
+    /* envíos */
+
+    header div .message p {
+        text-align: center;
+        font-size: 16px;
+    }
+
+
+    /* -- NAV BAR -- */
+
+    nav.nav-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+        background-color: var(--blanco);
+        height: 111px;
+        box-shadow: 0px 2px 15px 0px rgba(32, 32, 32, .3);
+        z-index: 10;
+        position: sticky;
+        top: 0;
+    }
+
+    /* logo */
+
+    nav.nav-bar .logo a{
+        height: 111px;
+    }
+
+    /* menu - cart */
+
+    nav.nav-bar .menu i, nav.nav-bar .cart i {
+        font-size: 44px;
+    }
+    
+    nav.nav-bar .menu h3, nav.nav-bar .cart h3 {
+        font-size: 16px;
+    }
+
+}
+
+
+/* desktop */
+
+@media (min-width: 1024px) {
+
+    header div, nav.nav-bar{
+        display: none;
+    }
+
+    /* -- HEADER -- */
+
+    header div.desktop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--rosa);
+        padding: 0 10px;
+        height: 38px;
+    }
+
+    /* envíos */
+
+    header div.desktop .message {
+        display: flex;
+        align-items: center;
+    }
+
+    header div.desktop .message span {
+        font-weight: bold;
+    }
+
+    header div.desktop .message p i {
+        font-size: 20px;
+    }
+
+    header div.desktop .message p {
+        text-align: left;
+        font-size: 16px;
+    }
+
+
+    /* user */
+
+    header div.desktop .user {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header div.desktop .user .user-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+    }
+
+    header div.desktop .user .user-icon i{
+        font-size: 30px;
+    }
+
+    header div.desktop .user p {
+        font-size: 16px;
+        margin-left: 4px;
+    }
+
+
+    /* -- NAV BAR -- */
+
+    nav.nav-bar-desktop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 10px;
+        height: 80px;
+        background-color: white;
+        box-shadow: 0px 2px 15px 0px rgba(32, 32, 32, .3);
+        z-index: 10;
+        position: sticky;
+        top: 0;
+    }
+
+    /* logo */
+
+    nav.nav-bar-desktop .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        height: 80px;
+    }
+
+    nav.nav-bar-desktop a{
+        height: 100%;
+    }
+
+    nav.nav-bar-desktop img {
+        height: 100%;
+    }
+
+    /* inicio productos contacto */
+
+    nav.nav-bar-desktop .desktop-nav{
+        width: 30%;
+        display: flex;
+    }
+
+    nav.nav-bar-desktop .desktop-nav ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    nav.nav-bar-desktop .desktop-nav nav {
+        display: none;
+    }
+
+    nav.nav-bar-desktop .desktop-nav a {
+        font-size: 20px;
+    }
+
+    /* busqueda */
+
+    nav.nav-bar-desktop .search{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 265px;
+        border: solid 2px var(--celeste);
+        border-radius: 15px;
+    }
+
+    nav.nav-bar-desktop .search input {
+        width: 225px;
+        height: 24px;
+        border: none;
+        border-radius: 15px;
+        outline: none;
+    }
+
+    nav.nav-bar-desktop button{
+        width: 26px;
+        height: 26px;
+        border: none;
+        background-color: white;
+        border-radius: 15px;
+    }
+
+    nav.nav-bar-desktop button i {
+        font-size: 18px;
+    }
+
+
+    /* carrito */
+
+    nav.nav-bar-desktop .cart{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5%
+    }
+
+    nav.nav-bar-desktop .cart i {
+        font-size: 30px;
+    }
+
+}
+

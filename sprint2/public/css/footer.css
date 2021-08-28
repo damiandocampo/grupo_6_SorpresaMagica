@@ -1,0 +1,116 @@
+footer {
+    border-top: solid 2px gray;
+}
+
+/* footer top */
+
+footer div.top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer div.top .rrss, footer div.top .contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+footer div.top .rrss .rrss-icon{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer div.top .rrss .rrss-icon{
+    font-size: 32px;
+}
+
+footer div.top .contact i {
+    font-size: 16px;
+}
+
+footer div.top h3 {
+    font-weight: normal;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+footer div.top p {
+    font-size: 16px;
+    padding: 5px;
+}
+
+footer div.top .mapa {
+    padding: 10px 5px;
+    width: 98%;
+    height: 300px;
+}
+
+
+
+/* footer bottom */
+
+footer div.bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--rosa);
+    padding: 5px 10px;
+    box-shadow: inset 0px 12px 5px -10px rgba(32, 32, 32, 0.30);
+}
+
+footer div.bottom p {
+    font-size: 12px;
+    text-align: center;
+}
+
+footer div.bottom p a {
+    text-decoration: underline;
+}
+
+
+/* tablet */
+
+@media (min-width: 640px) {
+
+    /* footer top */
+
+    footer div.top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    footer div.top .rrss-contact {
+        width: 50%;
+        height: 300px;
+    }
+
+    footer div.top .rrss {
+        padding-top: 43.5px;
+        padding-bottom: 10px;
+    }
+
+    footer div.top .contact {
+        padding-top: 10px;
+        padding-bottom: 43.5px;
+    }
+
+    footer div.top .mapa {
+        padding: 10px 5px;
+        width: 50%;
+    }
+    
+    /* footer bottom */
+
+    footer div.bottom {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
