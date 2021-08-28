@@ -5,7 +5,7 @@
  - **Soledad Verón**. 20 años. Estudiante de Programación Web FullStack con Digital House y Fundación Formar.
  - **Agustina Benitez**. 27 años. Estudiante de Programacion FullStack con Digital House y Fundación Formar.
  - **Damian Do Campo.** 37 años. Tecnico Mecanico y estudiante de Programacion FullStack con Digital House y Fundación Formar.
- - **Claudia Casco**. 43 años. Economía y Administración de empresas. Emprendedora. Fotografía y diseño. Estudiante de Programación Web FullStack con Digital House y Fundación Formar.
+ - **Claudia Casco**. 43 años. Economía y Administración de empresas. Emprendedora. Fotografía Digital y diseño. Estudiante de Programación Web FullStack con Digital House y Fundación Formar.
 
 <img src="https://i.ibb.co/vmM8hb2/sorpresa-sin-circulo.jpg" alt="Logo de Sorpresa Mágica">
 
