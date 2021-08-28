@@ -1,15 +1,11 @@
-header.mobile {
-    box-shadow: 0px 2px 15px 0px rgba(32, 32, 32, .3);
-}
-
-header.desktop {
+header div.desktop, nav.nav-bar-desktop {
     display: none;
 }
 
-/* -- HEADER TOP -- */
+/* -- HEADER -- */
 
 
-header.mobile div.top {
+header div{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,7 +16,13 @@ header.mobile div.top {
 
 /* search - user */
 
-header.mobile div.top .user .user-icon ,div.top .search .search-icon{
+header div .user, div .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header div .user .user-icon ,div .search .search-icon{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,60 +30,110 @@ header.mobile div.top .user .user-icon ,div.top .search .search-icon{
     height: 44px;
 }
 
-/* search */
-
-header.mobile div.top .user, div.top .search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 12%
-}
-
-div.top .search .search-icon i{
-    font-size: 26px;
-}
-
 /* user */
 
-header.mobile div.top .user .user-icon i{
+header div .user .user-icon i{
     font-size: 34px;
 }
 
-header.mobile div.top .user p {
+header div .user p {
     display: none;
 }
 
 /* envíos */
 
-header.mobile div.top .message {
+header div .message {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 76%;
 }
 
-header.mobile div.top .message span {
+header div .message span {
     font-weight: bold;
 }
 
-header.mobile div.top .message p {
+header div .message p {
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
+}
+
+/* search */
+
+header div .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+/* header div .search {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    background-color: var(--rosa);
+    z-index: 1;
+    position: relative;
+} */
+
+header div .search input.search {
+    display: none;
+}
+
+/* header div .search input.search {
+    width: 280px;
+    height: 30px;
+    border: solid 2px var(--celeste);
+    border-radius: 15px;
+    outline: none;
+} */
+
+header div .search button {
+    border: none;
+    width: 25px;
+    height: 25px;
+    background-color: var(--rosa);
 }
 
 
-/* -- HEADER BOTTOM -- */
-
-header.mobile div.bottom {
+/* header div .search button {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    right: 12px;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+} */
+
+header div .search i {
+    font-size: 24px;
+}
+
+
+/* -- NAV BAR -- */
+
+ nav.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 0 10px;
+    background-color: var(--blanco);
+    height: 99px;
+    box-shadow: 0px 2px 15px 0px rgba(32, 32, 32, .3);
+    z-index: 10;
+    position: sticky;
+    top: 0;
 }
 
 /* menu - cart */
 
-header.mobile div.bottom .menu, div.bottom .cart {
+ nav.nav-bar .menu, nav.nav-bar .cart {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -89,25 +141,33 @@ header.mobile div.bottom .menu, div.bottom .cart {
     width: 20%;
 }
 
-header.mobile div.bottom .menu i, div.bottom .cart i {
+ nav.nav-bar .menu i, nav.nav-bar .cart i {
     font-size: 35px;
 }
 
-header.mobile div.bottom .menu h3, div.bottom .cart h3 {
+ nav.nav-bar .menu h3, nav.nav-bar .cart h3 {
     font-size: 14px;
+}
+
+ nav.nav-bar .menu ul {
+    display: none;
 }
 
 /* logo */
 
-header.mobile div.bottom .logo {
+ nav.nav-bar .logo {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 60%;
 }
 
-header.mobile div.bottom .logo img {
-    width: 100%;
+nav.nav-bar .logo a{
+    height: 99px;
+}
+
+ nav.nav-bar .logo img {
+    height: 100%;
 } 
 
 
@@ -116,9 +176,9 @@ header.mobile div.bottom .logo img {
 
 @media (min-width: 640px) {
 
-    /* -- HEADER TOP -- */ 
+    /* -- HEADER -- */ 
 
-    header.mobile div.top {
+    header div {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -129,33 +189,52 @@ header.mobile div.bottom .logo img {
 
     /* user */
 
-    header.mobile div.top .user .user-icon i{
+    header div .user .user-icon i{
         font-size: 38px;
     }
 
     /* search */
     
-    header.mobile div.top .search .search-icon i{
+    header div .search .search-icon i{
         font-size: 30px;
     }
 
     /* envíos */
 
-    header.mobile div.top .message p {
+    header div .message p {
         text-align: center;
         font-size: 16px;
     }
 
 
-    /* -- HEADER BOTTOM -- */
+    /* -- NAV BAR -- */
+
+    nav.nav-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+        background-color: var(--blanco);
+        height: 111px;
+        box-shadow: 0px 2px 15px 0px rgba(32, 32, 32, .3);
+        z-index: 10;
+        position: sticky;
+        top: 0;
+    }
+
+    /* logo */
+
+    nav.nav-bar .logo a{
+        height: 111px;
+    }
 
     /* menu - cart */
 
-    header.mobile div.bottom .menu i, div.bottom .cart i {
+    nav.nav-bar .menu i, nav.nav-bar .cart i {
         font-size: 44px;
     }
     
-    header.mobile div.bottom .menu h3, div.bottom .cart h3 {
+    nav.nav-bar .menu h3, nav.nav-bar .cart h3 {
         font-size: 16px;
     }
 
@@ -166,18 +245,13 @@ header.mobile div.bottom .logo img {
 
 @media (min-width: 1024px) {
 
-    header.mobile {
+    header div, nav.nav-bar{
         display: none;
     }
 
-    header.desktop {
-    display: block;
-    box-shadow: 0px 2px 15px 0px rgba(32, 32, 32, .3);
-    }
+    /* -- HEADER -- */
 
-    /* -- HEADER TOP -- */
-
-    header.desktop div.top {
+    header div.desktop {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -188,20 +262,20 @@ header.mobile div.bottom .logo img {
 
     /* envíos */
 
-    header.desktop div.top .message {
+    header div.desktop .message {
         display: flex;
         align-items: center;
     }
 
-    header.desktop div.top .message span {
+    header div.desktop .message span {
         font-weight: bold;
     }
 
-    header.desktop div.top .message p i {
+    header div.desktop .message p i {
         font-size: 20px;
     }
 
-    header.desktop div.top .message p {
+    header div.desktop .message p {
         text-align: left;
         font-size: 16px;
     }
@@ -209,13 +283,13 @@ header.mobile div.bottom .logo img {
 
     /* user */
 
-    header.desktop div.top .user {
+    header div.desktop .user {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    header.desktop div.top .user .user-icon {
+    header div.desktop .user .user-icon {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -223,29 +297,34 @@ header.mobile div.bottom .logo img {
         height: 30px;
     }
 
-    header.desktop div.top .user .user-icon i{
+    header div.desktop .user .user-icon i{
         font-size: 30px;
     }
 
-    header.desktop div.top .user p {
+    header div.desktop .user p {
         font-size: 16px;
         margin-left: 4px;
     }
 
 
-    /* -- HEADER BOTTOM -- */
+    /* -- NAV BAR -- */
 
-    header.desktop div.bottom {
+    nav.nav-bar-desktop {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 0px 10px;
         height: 80px;
+        background-color: white;
+        box-shadow: 0px 2px 15px 0px rgba(32, 32, 32, .3);
+        z-index: 10;
+        position: sticky;
+        top: 0;
     }
 
     /* logo */
 
-    header.desktop div.bottom .logo {
+    nav.nav-bar-desktop .logo {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -253,39 +332,39 @@ header.mobile div.bottom .logo img {
         height: 80px;
     }
 
-    header.desktop div.bottom a{
+    nav.nav-bar-desktop a{
         height: 100%;
     }
 
-    header.desktop div.bottom img {
+    nav.nav-bar-desktop img {
         height: 100%;
     }
 
     /* inicio productos contacto */
 
-    header.desktop div.bottom .desktop-nav{
+    nav.nav-bar-desktop .desktop-nav{
         width: 30%;
         display: flex;
     }
 
-    header.desktop div.bottom .desktop-nav ul {
+    nav.nav-bar-desktop .desktop-nav ul {
         width: 100%;
         display: flex;
         justify-content: space-around;
         align-items: center;
     }
 
-    header.desktop div.bottom .desktop-nav nav {
+    nav.nav-bar-desktop .desktop-nav nav {
         display: none;
     }
 
-    header.desktop div.bottom .desktop-nav a {
+    nav.nav-bar-desktop .desktop-nav a {
         font-size: 20px;
     }
 
     /* busqueda */
 
-    header.desktop div.bottom .search{
+    nav.nav-bar-desktop .search{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -294,7 +373,7 @@ header.mobile div.bottom .logo img {
         border-radius: 15px;
     }
 
-    header.desktop div.bottom .search input {
+    nav.nav-bar-desktop .search input {
         width: 225px;
         height: 24px;
         border: none;
@@ -302,7 +381,7 @@ header.mobile div.bottom .logo img {
         outline: none;
     }
 
-    header.desktop div.bottom button{
+    nav.nav-bar-desktop button{
         width: 26px;
         height: 26px;
         border: none;
@@ -310,21 +389,21 @@ header.mobile div.bottom .logo img {
         border-radius: 15px;
     }
 
-    header.desktop div.bottom button i {
+    nav.nav-bar-desktop button i {
         font-size: 18px;
     }
 
 
     /* carrito */
 
-    header.desktop div.bottom .cart{
+    nav.nav-bar-desktop .cart{
         display: flex;
         justify-content: center;
         align-items: center;
         width: 5%
     }
 
-    header.desktop div.bottom .cart i {
+    nav.nav-bar-desktop .cart i {
         font-size: 30px;
     }
 
