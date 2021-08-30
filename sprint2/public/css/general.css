@@ -10,7 +10,7 @@
     --violeta: #936dc6;
     --lila: #dcc2ff;
     --negro: #202020;
-    --tipografia: font-family: 'Roboto', sans-serif;
+    --tipografia: 'Roboto', sans-serif;
 }
 
 * {
