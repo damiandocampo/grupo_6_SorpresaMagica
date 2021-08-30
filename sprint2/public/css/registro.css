@@ -1,0 +1,135 @@
+main {
+    margin: 100px auto;
+    width: 250px;
+    
+    ;
+}
+
+main h1 {
+    text-align: center;
+    margin: 0 auto;
+    font: italic bold 40px Georgia, Serif;
+    text-shadow: -4px 3px 0 #dcc2ffff, -14px 7px 0 #11e7ee;
+    padding-bottom: 40px;
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.seccion {
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.descripcion {
+    padding: 10px;
+    color:rgb(34, 23, 23);
+    text-shadow: 2px 2px 2px #11e7ee;
+}
+
+.completar {
+    border-radius: 10px;
+    border-color: #202020ff;
+    background-color: lavender;
+    padding: 8px 9px;
+}
+
+p {
+    padding-top: 45px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px #dcc2ffff;
+}
+
+.boton-contenedor {
+    display: flex;
+    justify-content: center;
+}
+
+.boton {
+    border-radius: 5px;   
+    background-color: #dcc2ffff;
+    padding: 10px;
+    color: rgb(32, 32, 102);
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
+}
+
+
+.boton:hover {
+    background-color: #9ce8eb;
+}
+
+
+
+
+
+
+@media (min-width: 640px) {
+
+    main {
+        width: 500px;
+    }
+
+    main h1 {
+        font-size: 50px;
+    }
+
+    .descripcion {
+        font-size: 20px;
+    }
+
+    .completar {
+        padding: 9px 10px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .boton {
+        font-size: 20px;
+    }
+}
+
+
+@media (min-width: 1024px) {
+
+    main {
+        width: 500px;
+    }
+
+    main h1 {
+        font-size: 50px;
+    }
+
+    .descripcion {
+        font-size: 20px;
+    }
+
+    .completar {
+        padding: 9px 10px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .boton {
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+
