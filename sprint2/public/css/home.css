@@ -1,5 +1,243 @@
-/* slider */
+.home {
+    background-color: khaki;
+}
+
+
+.home img {
+    width: 100%;
+}
+
+/* SLIDER */
 
 .home div.slider {
-    
+    width: 95%;
+    margin: auto;
+}
+
+.home div.slider .slides {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.home div.slider .slides ul {
+    display: flex;
+    width: 400%;
+    animation: cambio 20s infinite;
+}
+
+.home div.slider .slides ul li {
+    width: 100%;
+}
+
+.home div.slider .slides ul li img {
+    width: 100%;
+}
+
+.home div.slider-tablet, .home div.slider-desktop {
+    display: none;
+}
+
+@keyframes cambio {
+    0% {margin-left: 0}
+    20% {margin-left: 0}
+
+    25% {margin-left: -100%}
+    45% {margin-left: -100%}
+
+    50% {margin-left: -200%}
+    70% {margin-left: -200%}
+
+    75% {margin-left: -300%}
+    95% {margin-left: -300%}
+}
+
+.home div.slider input {
+    display: none;
+}
+
+.home div.slider .buttons {
+    text-align: center;
+}
+
+.home div.slider .buttons label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius:50%;
+    border: solid 2.5px var(--rosa);
+ }
+
+.home div.slider input.slide1:checked > .home div.slider .slides ul{
+    margin-left: 0;
+}
+.home div.slider input.slide2:checked > .home div.slider .slides ul{
+    margin-left: -100%;
+}
+.home div.slider input.slide3:checked > .home div.slider .slides ul{
+    margin-left: -200%;
+}
+.home div.slider input.slide4:checked > .home div.slider .slides ul{
+    margin-left: -300%;
+}
+
+.home div.slider input.slide1:checked ~ .home div.slider .buttons label{
+    background-color: var(--rosa);
+}
+
+/* ESPECIALES */
+
+.home section.especiales {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.home section.especiales article {
+    background-color: var(--lila);
+    margin: 5px auto;
+    position: relative;
+}
+
+.home section.especiales article h3 {
+    font-size: 24px;
+}
+
+.home section.especiales article div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0px;
+    height: 75px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* DESTACADOS */
+
+
+/* divisor */
+
+.home section.destacados .divisor {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.home section.destacados .divisor hr {
+    display: inline;
+    width: 50%;
+    height: 1.5px;
+    border: none;
+    background-color: gray;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.home section.destacados .divisor h3 {
+    display: inline;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+/* productos */
+
+.home section.destacados .productos {
+    display: flex;
+    margin: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.home section.destacados .productos article {
+    display: flex;
+    border: 1px solid #c4c4c4;
+    margin-bottom: 5px;
+    background-color: white;
+    width: 49%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.15);
+}
+
+/* descripción del producto */
+
+.home section.destacados .productos article .descripcion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home section.destacados .productos article .descripcion h5{
+    font-size: 8px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.home section.destacados .productos article .descripcion h3{
+    font-size: 10px;
+    text-align: center;
+}
+
+.home section.destacados .productos article .descripcion h2 {
+    font-size: 18px;
+}
+
+.home section.destacados .productos article .descripcion div {
+    margin-bottom: 5px;
+}
+
+/* cantidad */
+
+.home section.destacados .productos article .descripcion .cantidad {
+    display: none;
+    width: 90%;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px gray;
+}
+
+.home section.destacados .productos article .descripcion .cantidad button {
+    display: flex;
+    width: 35%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.home section.destacados .productos article .descripcion .cantidad p {
+    display: flex;
+    width: 30%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border-left: solid 1px gray;
+    border-right: solid 1px gray;
+}
+
+/* agregar al carrito */
+
+.home section.destacados .productos article .descripcion .comprar {
+    display: flex;
+    width: 90%;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--violeta);
+}
+
+.home section.destacados .productos article .descripcion .comprar button {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: var(--violeta);
+    border: none;
 }

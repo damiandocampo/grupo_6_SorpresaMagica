@@ -12,17 +12,16 @@ header div{
     background-color: var(--rosa);
     padding: 0 10px;
     height: 44px;
+    width: 100%;
 }
 
 /* search - user */
 
-header div .user, div .search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+header div .checkbox-user, header div .checkbox-search{
+    display: none;
 }
 
-header div .user .user-icon ,div .search .search-icon{
+header div .user, div .search {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,7 +35,24 @@ header div .user .user-icon i{
     font-size: 34px;
 }
 
-header div .user p {
+header div .user-checked {
+    display: none;
+}
+
+.user-checked p a:active {
+    text-decoration: underline;
+}
+
+.checkbox-user:checked ~ .user-checked{
+    display: flex;
+    width: 100vw;
+}
+
+.checkbox-user:checked ~ .message {
+    display: none;
+}
+
+.checkbox-user:checked ~ .search {
     display: none;
 }
 
@@ -68,52 +84,56 @@ header div .search {
     padding-right: 5px;
 }
 
-/* header div .search {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
-    background-color: var(--rosa);
-    z-index: 1;
-    position: relative;
-} */
-
-header div .search input.search {
-    display: none;
+header div .search i {
+    font-size: 24px;
 }
 
-/* header div .search input.search {
-    width: 280px;
+header div .search-checked {
+    display: none;
+    width: 100vw;
+    position: absolute;
+    justify-content: flex-start;
+}
+
+header div .search-checked form {
+    display: flex;
+}
+
+header div .search-checked input {
+    width: 80vw;
     height: 30px;
     border: solid 2px var(--celeste);
     border-radius: 15px;
     outline: none;
-} */
-
-header div .search button {
-    border: none;
-    width: 25px;
-    height: 25px;
-    background-color: var(--rosa);
+    padding-left: 30px;
 }
 
-
-/* header div .search button {
+header div .search-checked button {
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    right: 12px;
-    width: 25px;
-    height: 25px;
+    padding-left: 2px;
+    width: 30px;
+    height: 30px;
     background-color: white;
-    border: none;
+    border: solid 2px var(--celeste);
     border-radius: 50%;
-} */
+}
 
-header div .search i {
+header div .search-checked i {
     font-size: 24px;
 }
+
+.checkbox-search:checked ~ .search-checked {
+    display: flex;
+}
+
+.checkbox-search:checked ~ .search {
+    z-index: 5;
+}
+
+
 
 
 /* -- NAV BAR -- */
@@ -125,6 +145,7 @@ header div .search i {
     padding: 0 10px;
     background-color: var(--blanco);
     height: 99px;
+    width: 100%;
     box-shadow: 0px 2px 15px 0px rgba(32, 32, 32, .3);
     z-index: 10;
     position: sticky;
@@ -133,7 +154,7 @@ header div .search i {
 
 /* menu - cart */
 
- nav.nav-bar .menu, nav.nav-bar .cart {
+nav.nav-bar .menu, nav.nav-bar .cart {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -149,8 +170,57 @@ header div .search i {
     font-size: 14px;
 }
 
- nav.nav-bar .menu ul {
+/* menu */
+
+nav.nav-bar .menu label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+nav.nav-bar .menu ul, nav.nav-bar .menu input {
     display: none;
+}
+
+nav.nav-bar .menu ul li {
+    display: flex;
+    border-bottom: solid 1px var(--rosa);
+    width: 80%;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+nav.nav-bar .menu ul li a {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+}
+
+nav.nav-bar .menu ul li span {
+    color: var(--violeta);
+}
+
+nav.nav-bar .menu input:checked ~ ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: white;
+    width: 100vw;
+    top: 99px;
+    right: 0px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+nav.nav-bar .menu ul li:active {
+    background-color: var(--rosa);
+}
+
+nav.nav-bar .menu ul li a:active {
+    font-weight: bold;
 }
 
 /* logo */
@@ -168,7 +238,7 @@ nav.nav-bar .logo a{
 
  nav.nav-bar .logo img {
     height: 100%;
-} 
+}
 
 
 /* TABLET */
