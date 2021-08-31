@@ -1,7 +1,8 @@
 main {
-    margin: 100px auto;
-    width: 250px;
-    font-size: var(--tipografia)
+    font-size: var(--tipografia);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 main h1 {
@@ -9,13 +10,15 @@ main h1 {
     margin: 0 auto;
     font: italic bold 40px Georgia, Serif;
     text-shadow: -4px 3px 0 #dcc2ffff, -14px 7px 0 #11e7ee;
-    padding-bottom: 40px;  
+    padding-bottom: 40px;
+    padding-top: 50px
 }
 
 form {
     display: flex;
     flex-direction: column;
     align-content: center;
+    /*width: 250px;*/
 }
 
 .seccion {
@@ -84,10 +87,6 @@ p {
 
 @media (min-width: 640px) {
 
-    main {
-        width: 500px;
-    }
-
     main h1 {
         font-size: 50px;
     }
@@ -115,10 +114,6 @@ p {
 
 
 @media (min-width: 1024px) {
-
-    main {
-        width: 500px;
-    }
 
     main h1 {
         font-size: 50px;
