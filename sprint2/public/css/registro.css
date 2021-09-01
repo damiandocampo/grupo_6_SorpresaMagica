@@ -3,7 +3,7 @@ main {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: 100px auto;
+    margin: 0px auto;
     width: 250px;
 }
 
@@ -41,7 +41,7 @@ form {
     padding: 8px 9px;
 }
 
-p {
+.seccion p {
     padding-top: 45px;
     padding-bottom: 10px;
     text-align: center;
@@ -52,6 +52,7 @@ p {
 .boton-contenedor {
     display: flex;
     justify-content: center;
+    padding-bottom: 30px
 }
 
 .boton {
@@ -63,7 +64,6 @@ p {
     font-size: 14px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
 }
-
 
 .boton:hover {
     background-color: #9ce8eb;
@@ -100,6 +100,9 @@ p {
         font-size: 20px;
     }
 }
+
+
+
 
 
 @media (min-width: 1024px) {

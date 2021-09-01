@@ -3,6 +3,7 @@ main {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    background-color: beige
 }
 
 main h1 {
@@ -41,11 +42,12 @@ form {
     padding: 8px 9px;
 }
 
-p {
-    padding-top: 45px;
-    padding-bottom: 10px;
+main p {
+    padding-top: 40px;
+    padding-bottom: 30px;
     text-align: center;
     font-weight: bold;
+    text-shadow: 2px 2px 2px #dcc2ffff
 }
 
 .checkbox {
@@ -78,9 +80,6 @@ p {
     background-color: #9ce8eb;
 }
 
-.cuenta {
-    text-shadow: 2px 2px 2px #dcc2ffff
-}
 
 
 
@@ -111,6 +110,9 @@ p {
         font-size: 20px;
     }
 }
+
+
+
 
 
 @media (min-width: 1024px) {
