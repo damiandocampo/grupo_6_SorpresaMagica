@@ -1,0 +1,626 @@
+.home {
+    background-image: url(/images/imagenDeFondo.jpeg);
+}
+
+.home img {
+    width: 100%;
+}
+
+/* SLIDER */
+
+.home div.slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 95%;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    
+}
+
+.home div.slider ul {
+    display: flex;
+    width: 400%;
+    animation: cambio 20s infinite;
+}
+
+.home div.slider ul li {
+    width: 100%;
+}
+
+.home div.slider ul li img {
+    width: 100%;
+    box-shadow: 0px 0px 5px 2px rgb(0 0 0 / 15%);
+}
+
+.home div.slider ul.tablet, .home div.slider ul.desktop {
+    display: none;
+}
+
+@keyframes cambio {
+    0% {margin-left: 0}
+    20% {margin-left: 0}
+
+    25% {margin-left: -100%}
+    45% {margin-left: -100%}
+
+    50% {margin-left: -200%}
+    70% {margin-left: -200%}
+
+    75% {margin-left: -300%}
+    95% {margin-left: -300%}
+}
+
+/* botones izq-der */
+
+.home div.slider .buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+}
+
+.home div.slider .buttons button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 100%;
+    background-color: white;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.home div.slider .buttons button i {
+    font-size: 20px;
+}
+
+/* botones abajo */
+
+.home div.slider .dots {
+    display: flex;
+    justify-content: center;
+}
+
+.home div.slider .dots input {
+    display: none;
+}
+
+.home div.slider .dots label {
+    display: inline;
+    width: 15px;
+    height: 15px;
+    border-radius:50%;
+    border: solid 3.5px var(--rosa);
+    cursor: pointer;
+    background-color: white;
+    margin: 2px;
+    box-shadow: 0px 0px 5px 2px rgb(0 0 0 / 15%);
+ }
+
+.home div.slider input.slide1:checked ~ label.slide1{
+    background-color: var(--rosa);
+}
+
+.home div.slider input.slide2:checked ~ label.slide2{
+    background-color: var(--rosa);
+}
+
+.home div.slider input.slide3:checked ~ label.slide3{
+    background-color: var(--rosa);
+}
+
+.home div.slider input.slide4:checked ~ label.slide4{
+    background-color: var(--rosa);
+}
+
+/* ESPECIALES */
+
+.home section.especiales {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.home section.especiales article {
+    background-color: var(--lila);
+    width: 100%;
+    margin: 5px auto;
+    position: relative;
+    box-shadow: 0px 0px 5px 2px rgb(0 0 0 / 15%);
+}
+
+.home section.especiales article a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.home section.especiales article h3 {
+    font-size: 24px;
+    text-align: center;
+}
+
+.home section.especiales article div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0px;
+    height: 75px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.home section.especiales article.ofertas a div.hasta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 0px;
+    height: 120px;
+    border-left: 50px solid rgba(255, 255, 255, 0.5);
+    border-right: 50px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 35px solid transparent;
+    position: absolute;
+    top: 0;
+    background-color: transparent;
+}
+
+.home section.especiales article.ofertas a div.hasta p {
+    font-size: 14px;
+    text-align: center;
+}
+
+.home section.especiales article.ofertas a div.hasta h3{
+    text-align: center;
+    font-size: 32px;
+    color: var(--celeste);
+    font-weight: bold;
+}
+
+
+/* DIVISOR */
+
+.home section .divisor {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.home section .divisor hr {
+    display: inline;
+    width: 50%;
+    height: 1px;
+    border: none;
+    background-color: gray;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.home section .divisor h3 {
+    display: inline;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+
+/* DESTACADOS */
+
+/* productos */
+
+.home section.destacados .productos {
+    display: flex;
+    margin: 20px 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.home section.destacados .productos article {
+    display: flex;
+    border: 1px solid #c4c4c4;
+    margin-bottom: 5px;
+    background-color: white;
+    width: 49%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.15);
+}
+
+/* descripción del producto */
+
+.home section.destacados .productos article .descripcion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.home section.destacados .productos article .descripcion h5{
+    font-size: 8px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.home section.destacados .productos article .descripcion h3{
+    font-size: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    height: 26px;
+}
+
+.home section.destacados .productos article .descripcion h2 {
+    font-size: 18px;
+}
+
+.home section.destacados .productos article .descripcion div {
+    margin-bottom: 5px;
+}
+
+/* cantidad */
+
+.home section.destacados .productos article .descripcion .cantidad {
+    display: none;
+    width: 90%;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px gray;
+}
+
+.home section.destacados .productos article .descripcion .cantidad button {
+    display: flex;
+    width: 35%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+.home section.destacados .productos article .descripcion .cantidad p {
+    display: flex;
+    width: 30%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border-left: solid 1px gray;
+    border-right: solid 1px gray;
+}
+
+/* agregar al carrito */
+
+.home section.destacados .productos article .descripcion .comprar {
+    display: flex;
+    width: 90%;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--violeta);
+}
+
+.home section.destacados .productos article .descripcion .comprar button {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: var(--violeta);
+    border: none;
+    cursor: pointer;
+}
+
+
+/* CATEGORÍAS */
+
+.home section.categorias {
+    padding-bottom: 15px;
+}
+
+.home section.categorias .slider {
+    height: 135px;
+    position: relative;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.home section.categorias .slider ul {
+    display: flex;
+    background-color: white;
+    width: 1890%;
+    animation: scroll 30s linear infinite;
+}
+
+.home section.categorias .slider ul li {
+    margin: 5px;
+    position: relative;
+    width: 125px;
+    height: 125px;
+    overflow: hidden;
+}
+
+.home section.categorias .slider ul li :after{
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    border-radius: 100%;
+    width: 125px;
+    height: 125px;
+    box-shadow: 0px 0px 0px 2000px rgb(255 255 255);
+}
+
+.home section.categorias .slider ul li a {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.home section.categorias .slider ul li a img {
+    width: 125px;
+    border-radius: 100%;
+}
+
+.home section.categorias .slider ul li a div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    opacity: 0.6;
+    position: absolute;
+    bottom: 0px;
+    height: 35%;
+    width: 100%;
+}
+
+.home section.categorias .slider ul li a div h3 {
+    color: var(--celeste);
+    font-size: 16px;
+}
+
+@keyframes scroll {
+    0% {transform: translateX(0)}
+    100% {transform: translateX(-945px);}
+}
+
+
+/* TABLET */
+
+@media (min-width: 640px) {
+
+    /* SLIDER */
+
+    .home div.slider ul.mobile, .home div.slider ul.desktop {
+        display: none;
+    }
+
+    .home div.slider ul.tablet {
+        display: flex;
+    }
+
+    /* ESPECIALES */
+
+    .home section.especiales {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .home section.especiales article {
+        background-color: var(--lila);
+        width: 30%;
+        margin: 5px auto;
+        position: relative;
+    }
+    
+    .home section.especiales article h3 {
+        font-size: 24px;
+    }
+    
+    .home section.especiales article div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 0px;
+        height: 75px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* DESTACADOS */
+
+    /* productos */
+    
+    .home section.destacados .productos article {
+        display: flex;
+        border: 1px solid #c4c4c4;
+        margin-bottom: 10px;
+        background-color: white;
+        width: 32%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.15);
+    }
+
+    /* descripción del producto */
+
+    .home section.destacados .productos article .descripcion h5{
+        font-size: 10px;
+        font-weight: normal;
+        text-transform: uppercase;
+    }
+
+    .home section.destacados .productos article .descripcion h3{
+        font-size: 12px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        height: 28px;
+    }
+
+    /* cantidad - agregar al carrito */
+
+    .home section.destacados .productos article .descripcion .comprar, .home section.destacados .productos article .descripcion .cantidad {
+        width: 80%;
+    }
+
+    /* cantidad */
+
+    .home section.destacados .productos article .descripcion .cantidad {
+        display: flex;
+    }
+
+    /* CATEGORÍAS */
+
+    .home section.categorias .slider {
+        height: 160px;
+        position: relative;
+        margin: 20px auto;
+        overflow: hidden;
+    }
+
+    .home section.categorias .slider ul {
+        display: flex;
+        background-color: white;
+        width: 2240%;
+        animation: scroll 30s linear infinite;
+    }
+
+    .home section.categorias .slider ul li {
+        margin: 5px;
+        position: relative;
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+    }
+
+    .home section.categorias .slider ul li :after{
+        content: '';
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        border-radius: 100%;
+        width: 150px;
+        height: 150px;
+        box-shadow: 0px 0px 0px 2000px rgb(255 255 255);
+    }
+
+    .home section.categorias .slider ul li a img {
+        width: 150px;
+        border-radius: 100%;
+    }
+
+    .home section.categorias .slider ul li a div h3 {
+        color: var(--celeste);
+        font-size: 18px;
+    }
+
+    @keyframes scroll {
+        0% {transform: translateX(0)}
+        100% {transform: translateX(-1120px);}
+    }
+
+}
+
+
+
+/* DESKTOP */
+
+@media (min-width: 1024px) {
+
+    /* SLIDER */
+
+    .home div.slider ul.mobile, .home div.slider ul.tablet {
+        display: none;
+    }
+
+    .home div.slider ul.desktop {
+        display: flex;
+    }
+
+    /* DESTACADOS */
+
+    /* productos */
+    
+    .home section.destacados .productos article {
+        display: flex;
+        border: 1px solid #c4c4c4;
+        margin-bottom: 10px;
+        background-color: white;
+        width: 24%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.15);
+    }
+
+    /* cantidad - agregar al carrito */
+
+    .home section.destacados .productos article .descripcion .comprar, .home section.destacados .productos article .descripcion .cantidad {
+        width: 70%;
+    }
+
+    /* CATEGORÍAS */
+
+    .home section.categorias .slider {
+        height: 185px;
+        position: relative;
+        margin: 20px auto;
+        overflow: hidden;
+    }
+
+    .home section.categorias .slider ul {
+        display: flex;
+        background-color: white;
+        width: 2590%;
+        animation: scroll 30s linear infinite;
+    }
+
+    .home section.categorias .slider ul li {
+        margin: 5px;
+        position: relative;
+        width: 175px;
+        height: 175px;
+        overflow: hidden;
+    }
+
+    .home section.categorias .slider ul li :after{
+        content: '';
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        border-radius: 100%;
+        width: 175px;
+        height: 175px;
+        box-shadow: 0px 0px 0px 2000px rgb(255 255 255);
+    }
+
+    .home section.categorias .slider ul li a img {
+        width: 175px;
+        border-radius: 100%;
+    }
+
+    .home section.categorias .slider ul li a div h3 {
+        color: var(--celeste);
+        font-size: 20px;
+    }
+
+    @keyframes scroll {
+        0% {transform: translateX(0)}
+        100% {transform: translateX(-1295px);}
+    }
+
+}
