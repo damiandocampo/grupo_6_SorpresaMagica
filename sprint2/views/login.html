@@ -12,16 +12,29 @@
 <body>
     <header>
         <div>
-            <div class="user">
+            <input type="checkbox" name="" id="user" class="checkbox-user">
+            <label for="user" class="user">
                 <div class="user-icon"><i class="far fa-user-circle"></i></div>
+            </label>
+
+            <div class="user-checked">
                 <p><a href="/registro">Crear una cuenta</a> | <a href="/login">Iniciar sesión</a></p>
             </div>
+
             <div class="message">
                 <p><i class="fas fa-truck"></i> <span>Envíos gratis</span> en compras mayores a $3.000.</p>
             </div>
-            <div class="search">
-                <input type="text" name="search" id="search" placeholder="Buscar" class="search">
-                <button type="submit"><i class="fas fa-search"></i></button>
+
+            <input type="checkbox" name="" id="search" class="checkbox-search">
+            <label for="search" class="search">
+                <div class="search-icon"><i class="fas fa-search"></i></div>
+            </label>
+
+            <div class="search-checked">
+                <form action="get">
+                    <input type="text" name="search" id="search" placeholder="Buscar">
+                    <button type="submit"><i class="fas fa-angle-double-right"></i></button>
+                </form>
             </div>
         </div>
 
@@ -36,67 +49,83 @@
         </div>
     </header>
 
-<nav class="nav-bar">
-            <nav class="menu">
+    <nav class="nav-bar">
+        <nav class="menu">
+            <input type="checkbox" name="" id="products">
+            <label for="products">
                 <i class="fas fa-bars"></i>
-                <h3><a href="/productos">Productos</a></h3>
-                <ul>
-                    <li><a href="">Alfajores</a></li>
-                    <li><a href="">Caramelos</a></li>
-                    <li><a href="">Chicles</a></li>
-                    <li><a href="">Chocolates</a></li>
-                    <li><a href="">Chupetines</a></li>
-                    <li><a href="">Confites</a></li>
-                    <li><a href="">Gomitas</a></li>
-                    <li><a href="">Marcas</a></li>
-                </ul>
-            </nav>
-            <div class="logo">
-                <a href="/"><img src="/images/logo-sorpresa-magica.png" alt="logo"></a>
-            </div>
-            <div class="cart">
+                <h3>Productos</h3>
+            </label>
+            <ul>
+                <li><a href="/productos"><span>●</span> Todo <span>●</span></a></li>
+                <li><a href="/productos/alfajores"><span>●</span> Alfajores <span>●</span></a></li>
+                <li><a href="/productos/caramelos"><span>●</span> Caramelos <span>●</span></a></li>
+                <li><a href="/productos/chicles"><span>●</span> Chicles <span>●</span></a></li>
+                <li><a href="/productos/chocolates"><span>●</span> Chocolates <span>●</span></a></li>
+                <li><a href="/productos/chupetines"><span>●</span> Chupetines <span>●</span></a></li>
+                <li><a href="/productos/confites"><span>●</span> Confites <span>●</span></a></li>
+                <li><a href="/productos/gomitas"><span>●</span> Gomitas <span>●</span></a></li>
+                <li><a href="/productos/marcas"><span>●</span> Marcas <span>●</span></a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <a href="/"><img src="/images/logo-sorpresa-magica.png" alt="logo"></a>
+        </div>
+        <div class="cart">
+            <a href="/carritoDeCompras.html">
                 <i class="fas fa-shopping-cart"></i>
-                <h3><a href="/carrito">Carrito</a></h3>
-            </div>
-        </nav>
-
-        <nav class="nav-bar-desktop">
-            <div class="logo">
-                <a href="/"><img src="/images/logo-sorpresa-magica.png" alt="logo"></a>
-            </div>
-            <div class="desktop-nav">
-                <ul>
-                    <li>
-                        <h3><a href="/">Inicio</a></h3>
-                    </li>
-                    <li>
-                        <h3><a href="/productos">Productos</a></h3>
-                        <nav>
-                            <ul>
-                                <li><a href="">Alfajores</a></li>
-                                <li><a href="">Caramelos</a></li>
-                                <li><a href="">Chicles</a></li>
-                                <li><a href="">Chocolates</a></li>
-                                <li><a href="">Chupetines</a></li>
-                                <li><a href="">Confites</a></li>
-                                <li><a href="">Gomitas</a></li>
-                                <li><a href="">Marcas</a></li>
-                            </ul>
-                        </nav>
-                    </li>
-                    <li>
-                        <h3><a href="/contacto">Contacto</a></h3>
-                    </li>
-                </ul>
-            </div>
-            <div class="search">
+                <h3>Carrito</h3>
+            </a>
+        </div>
+    </nav>
+    <nav class="nav-bar-desktop">
+        <div class="logo">
+            <a href="/"><img src="/images/logo-sorpresa-magica.png" alt="logo"></a>
+        </div>
+        <div class="desktop-nav">
+            <ul>
+                <li>
+                    <a href="/">
+                        <h3>Inicio</h3>
+                    </a>
+                </li>
+                <li class="productos">
+                    <a href="/productos">
+                        <h3>Productos</h3>
+                    </a>
+                    <nav>
+                        <ul>
+                            <li><a href="/productos"><span>●</span> Todo <span>●</span></a></li>
+                            <li><a href="/productos/alfajores"><span>●</span> Alfajores <span>●</span></a></li>
+                            <li><a href="/productos/caramelos"><span>●</span> Caramelos <span>●</span></a></li>
+                            <li><a href="/productos/chicles"><span>●</span> Chicles <span>●</span></a></li>
+                            <li><a href="/productos/chocolates"><span>●</span> Chocolates <span>●</span></a></li>
+                            <li><a href="/productos/chupetines"><span>●</span> Chupetines <span>●</span></a></li>
+                            <li><a href="/productos/confites"><span>●</span> Confites <span>●</span></a></li>
+                            <li><a href="/productos/gomitas"><span>●</span> Gomitas <span>●</span></a></li>
+                            <li><a href="/productos/marcas"><span>●</span> Marcas <span>●</span></a></li>
+                        </ul>
+                    </nav>
+                </li>
+                <li>
+                    <a href="/contacto">
+                        <h3>Contacto</h3>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="search">
+            <form action="" method="get">
                 <input type="text" name="search" id="search" placeholder="Buscar">
-                <button type="submit"><div class="search-icon"><i class="fas fa-search"></i></div></button>
-            </div>
-            <div class="cart">
-                <a href=""><i class="fas fa-shopping-cart"></i></a>
-            </div>
-        </nav>
+                <button type="submit">
+                    <div class="search-icon"><i class="fas fa-search"></i></div>
+                </button>
+            </form>
+        </div>
+        <div class="cart">
+            <a href="/carritoDeCompras.html"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </nav>
 
     <main>
         <h1>Iniciar Sesión</h1>
