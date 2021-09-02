@@ -9,16 +9,108 @@
     <title>Document</title>
 </head>
 <body>
-    <header></header>
+    <header>
+
+        <div>
+            <div class="user">
+                <div class="user-icon"><i class="far fa-user-circle"></i></div>
+                <p><a href="/registro">Crear una cuenta</a> | <a href="/login">Iniciar sesión</a></p>
+            </div>
+            <div class="message">
+                <p><i class="fas fa-truck"></i> <span>Envíos gratis</span> en compras mayores a $3.000.</p>
+            </div>
+            <div class="search">
+                <input type="text" name="search" id="search" placeholder="Buscar" class="search">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+
+        <div class="desktop">
+            <div class="message">
+                <p><i class="fas fa-truck"></i> <span>Envíos gratis</span> en compras mayores a $3.000.</p>
+            </div>
+            <div class="user">
+                <div class="user-icon"><i class="far fa-user-circle"></i></div>
+                <p><a href="/registro">Crear una cuenta</a> | <a href="/login">Iniciar sesión</a></p>
+            </div>
+        </div>
+        
+    </header>
 
 
-    <main class="bodyCarrito">
+    <nav class="nav-bar">
+        <nav class="menu">
+            <i class="fas fa-bars"></i>
+            <h3><a href="/productos">Productos</a></h3>
+            <ul>
+                <li><a href="">Alfajores</a></li>
+                <li><a href="">Caramelos</a></li>
+                <li><a href="">Chicles</a></li>
+                <li><a href="">Chocolates</a></li>
+                <li><a href="">Chupetines</a></li>
+                <li><a href="">Confites</a></li>
+                <li><a href="">Gomitas</a></li>
+                <li><a href="">Marcas</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <a href="/"><img src="/images/logo-sorpresa-magica.png" alt="logo"></a>
+        </div>
+        <div class="cart">
+            <i class="fas fa-shopping-cart"></i>
+            <h3><a href="/carrito">Carrito</a></h3>
+        </div>
+    </nav>
+
+    <nav class="nav-bar-desktop">
+        <div class="logo">
+            <a href="/"><img src="/images/logo-sorpresa-magica.png" alt="logo"></a>
+        </div>
+        <div class="desktop-nav">
+            <ul>
+                <li>
+                    <h3><a href="/">Inicio</a></h3>
+                </li>
+                <li>
+                    <h3><a href="/productos">Productos</a></h3>
+                    <nav>
+                        <ul>
+                            <li><a href="">Alfajores</a></li>
+                            <li><a href="">Caramelos</a></li>
+                            <li><a href="">Chicles</a></li>
+                            <li><a href="">Chocolates</a></li>
+                            <li><a href="">Chupetines</a></li>
+                            <li><a href="">Confites</a></li>
+                            <li><a href="">Gomitas</a></li>
+                            <li><a href="">Marcas</a></li>
+                        </ul>
+                    </nav>
+                </li>
+                <li>
+                    <h3><a href="/contacto">Contacto</a></h3>
+                </li>
+            </ul>
+        </div>
+        <div class="search">
+            <input type="text" name="search" id="search" placeholder="Buscar">
+            <button type="submit"><div class="search-icon"><i class="fas fa-search"></i></div></button>
+        </div>
+        <div class="cart">
+            <a href=""><i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </nav>
+
+
+
+   <main class="bodyCarrito">
         <div class="micompra">
-     <i class="fas fa-shopping-cart"></i><h1>Mi compra</h1>
+     <i class="fas fa-shopping-cart"></i><h1>Mi Compra</h1>
      </div>
 
-<div class="productContainer">
+ <div class="productContainer">
+    <div class="tabla">
      <div class="titulos">
+      <div class="tituloscolor">
          <div class="producto">
          <h3>Producto</h3>
         </div>
@@ -26,11 +118,12 @@
          <h3>Cantidad</h3>
         </div>
         <div class="precio">
-         <h3>Precio por unidad</h3>
+         <h3>Precio</h3>
         </div>
-        <div class="tachito">
+        <div class="tachitotitulo">
             <i class="fas fa-trash"></i>
         </div>
+    </div>
     
      </div>
 
@@ -39,11 +132,14 @@
             <img class="img" src="/images/productos/Alfajor MILKA Triple Mousse 55 Gr 14,04.png" alt="imagen alfajor">
         </div>
         <div class="cantidad">
-         <p>1</p>
+            <button><</button>
+            <p>1</p>
+            <button>></button>
         </div>
         <div class="precio">
-         <p>$123</p>
-        </div>
+            <p>$</p>
+            <p>123</p>
+           </div>
         <div class="tachito">
             <i class="fas fa-trash"></i>
         </div>
@@ -52,13 +148,16 @@
 
         <div class="titulos">
             <div class="producto" >
-                <img class="img" src="/images/productos/Alfajor MILKA Triple Mousse 55 Gr 14,04.png" alt="imagen alfajor">
+                <img class="img" src="/images/productos/Bombones BON O BON Chocolate Con Leche 18 U 422,26.png" alt="imagen alfajor">
            </div>
            <div class="cantidad">
+               <button><</button>
             <p>1</p>
+                <button>></button>
            </div>
            <div class="precio">
-            <p>$123</p>
+            <p>$</p>
+            <p>123</p>
            </div>
            <div class="tachito">
             <i class="fas fa-trash"></i>
@@ -67,137 +166,80 @@
 
            <div class="titulos">
             <div class="producto" >
-                <img class="img" src="/images/productos/Alfajor MILKA Triple Mousse 55 Gr 14,04.png" alt="imagen alfajor">
+                <img class="img" src="/images/productos/Confites De Chocolate ROCKLETS 40 Gr 73,57.jpg" alt="imagen alfajor">
            </div>
            <div class="cantidad">
+            <button><</button>
             <p>1</p>
+            <button>></button>
            </div>
            <div class="precio">
-            <p>$123</p>
+            <p>$</p>
+            <p>123</p>
            </div>
            <div class="tachito">
             <i class="fas fa-trash"></i>
            </div>
            </div>
-
+</div>
            <div class="dosBotones">
             
-    <button class="subButon">vaciar carrito</button>
-    <button class="subButon">seguir comprando</button>
+    <button class="subButon">Vaciar carrito</button>
+    <button class="subButon">Seguir comprando</button>
             </div>
     <div class="total">
         <h3>Total:</h3>
         <div class="resultado">1</div>
     
         <h3>Valor:</h3>
-        <div class="resultado">$123</div>
+        <div class="resultado">
+            <p>$</p>
+            <p>123</p>
     </div>
+</div>
             
     
             <div class="continuar">
     
-                <button class="buton">continuar</button>
+                <button class="buton">CONTINUAR</button>
     
             </div>
 </div>
     </main>
-
-
-
-
-    
-   <!-- <main class="bodyCarrito">
-       <div class="micompra">
-    <i class="fas fa-shopping-cart"></i><h1>Mi compra</h1>
-    </div>
- 
-        <div class="carrito">
-
-        <div class="producto">
-            <div class="titulos">
-            <h3>Producto</h3>
+    <footer>
+        <div class="top">
+            <div class="rrss-contact">
+                <div class="rrss">
+                    <h3>Seguinos</h3>
+                    <div class="rrss-icon">
+                        <a href="https://www.instagram.com/sorpresa_magica_golosinas" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/sorpresa_magica_golosinas" target="_blank"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://www.twitter.com/sorpresa_magica_golosinas" target="_blank"><i
+                                class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="contact">
+                    <h3>Contactanos</h3>
+                    <p><i class="fas fa-phone-alt"></i> 1234-5678</p>
+                    <p><i class="far fa-envelope"></i> sorpresa-magica@outlook.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> San Benito de Palermo 565, CABA</p>
+                </div>
             </div>
-            <div>
-            <img class="img" src="/images/productos/Alfajor MILKA Triple Mousse 55 Gr 14,04.png" alt="imagen alfajor">
-            </div>
-            <div>
-            <img class="img" src="/images/productos/Alfajor MILKA Triple Mousse 55 Gr 14,04.png" alt="imagen alfajor">
-            </div>
-       </div>
-
-        <div class="cantidad">
-            <div class="titulos" >
-            <h3>Cantidad</h3>
-            </div>
-        <div>
-            <p>1</p>
-        </div>
-        <div>
-            <p>1</p>
-        </div>
-
-        </div>
-
-
-        <div class="precio">
-            <div class="titulos" >
-                <h3>Precio por unidad</h3>
-            </div>
-            <div>
-            <p>123</p>
-           </div>
-           <div>
-            <p>123</p>
+            <div class="mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.4514133879015!2d-58.434576985177785!3d-34.56744276308578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5bc77430ee7%3A0xea9b07e9d0781f38!2sSan%20Benito%20de%20Palermo%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1629818682912!5m2!1ses-419!2sar"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
-        
-
-        <div class="tachito">
-            <div class="titulos">
-            <h3>tachito</h3>
-            </div>
-            <div>
-                <i class="fas fa-trash"></i>
-            </div>
-            <div>
-            <i class="fas fa-trash"></i>
-            </div>
+        <div class="bottom">
+            <p>Copyright Sorpresa Mágica - 2021. Todos los derechos reservados.</p>
+            <p>Defensa de las y los consumidores. Para reclamos ingrese <a href="">aquí</a>.</p>
         </div>
-            
-            
-          
-    </div>
-
-        <div class="botones">
-        <div>
-<button>vaciar carrito</button>
-<button>seguir comprando</button>
-        </div>
-<div>
-    <h3>total</h3>
-    <div>1</div>
-
-    <h3>valor</h3>
-    <div>123</div>
-</div>
-        </div>
-
-        <div>
-
-            <button>continuar</button>
-
-        </div>
+    </footer>
 
 
 
-    
-
-
-
-
-
-
-    
-</main>-->
 </body>
 </html>
