@@ -1,0 +1,195 @@
+/*main productos*/
+
+ main.productos{
+    padding: 0 10px;
+ }
+
+main.productos section.conteiner{
+  /*  margin: auto;*/
+    background-color: rgba(126, 235, 224, 0.884);
+    width: 100%;
+    height: 409px;
+    padding: 30px;
+    margin-top: -5px;
+}
+main section ul li img{
+    width: 100%;
+    height: 332px;
+    box-shadow: 0px 0px 12px rgb(189 42 112);
+}
+
+ main section ul.slider{
+    position: relative;
+    width: 100%px;
+    height: 500px;
+}
+
+ main ul.slider li{
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .7s;
+}
+
+ main ul .slider li:first-child{
+    opacity: 1;
+} 
+
+main ul.slider li:target{
+    opacity: 1;
+}
+
+main ul.menu{
+    text-align: center;
+   /* margin-left: 150px;*/
+    margin-top: -25px;
+   /* margin-bottom: 20px;*/
+     
+}
+
+.menu li{
+    display: inline-block;
+    text-align: center;
+}
+
+.menu li a{
+    /*display: inline-block;*/
+    color: rgb(224, 64, 203);
+    background-color: lightseagreen;
+   /* text-decoration: none;*/
+    padding: 7px;
+   /* width: 20px;
+    height: 20px;*/
+    font-size: 3px;
+    border-radius: 100%;
+}
+
+main h1{
+    margin: 20px auto 20px 20px;
+    font-size: 19px;
+    font-family: monospace;
+}
+
+main p{
+    font-size: 30px;
+    font-family: "Montserrat";
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+main div.rayas{
+    border-bottom-style: dotted;
+    color: pink;
+    width: 99%;
+    margin-bottom: 20px;
+}
+
+main section.cantidad{
+     /*camtidad conteiner*/
+    display: flex;
+    position: relative;
+}
+
+main section.cantidad div.cant{
+    width: 90%;
+    margin: 10px auto 20px 20px;
+}
+
+main.productos section.cantidad div.cant{
+    border: solid 1px hotpink;
+    padding: 15px 20px 15px 15px;
+}
+
+main.productos section.cantidad span{
+    position: relative;
+    display: flex;
+    top: -5px;
+}
+
+main.productos section div.numeber{
+   /* background-color: palevioletred;*/
+   position: absolute;
+    top: 20px;
+    left: 44px;
+}
+
+main.productos section.cantidad div p{
+    font-size: 18px;
+}
+
+main.productos section div.angle{
+    position: absolute;
+    left: 366px;
+    top: 22px;
+    font-size: 25px;
+}
+
+main.productos section.cantidad div i{
+    color: hotpink;
+   /* font-size: 25px;*/
+}
+
+
+main.productos section button.agregar{
+    height: 50px;
+    padding: 0 8px;
+    font-size: 15px;
+    width: 90%;
+    margin-left: 20px;
+    border-color: #ff96e2;
+    border-bottom: 4px solid #ff63d4;
+    color: #fbfbfb;
+    background: #ff96e2;
+    border-radius: 3px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+main.productos section div.postal{
+    border: solid 1px #ccc;
+    width: 45%;
+    padding: 8px;
+    height: 39px;
+    font-size: 20px;
+    margin: 0 auto 20px 20px;
+}
+
+main.productos section button.calcular{
+    left: 50%;
+    position: absolute;
+    width: 43%;
+    height: 42px;
+    top: 832px;
+    font-size: 21px;
+    background: #53eaecd6;
+    border-color: #53eaecd6;
+    border-bottom: 4px solid #67aaad;
+    color: #700dccb8;
+}
+
+main.productos section.productosRelacionados article img{
+    width: 100%;
+}
+
+
+
+
+/* TABLET */
+
+
+/*@media (min-width: 640px) {
+
+}*/
+
+   
+
+
+/* desktop */
+
+/*@media (min-width: 1024px) {
+
+}*/
+
