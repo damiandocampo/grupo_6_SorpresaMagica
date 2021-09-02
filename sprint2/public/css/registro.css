@@ -4,7 +4,9 @@ main {
     justify-content: center;
     flex-direction: column;
     margin: 0px auto;
-    width: 250px;
+    width: 100%;
+    align-items: center;
+    /*background-image: url('');*/
 }
 
 main h1 {
@@ -20,6 +22,7 @@ form {
     display: flex;
     flex-direction: column;
     align-content: center;
+    padding: 0px 60px;
 }
 
 .seccion {
@@ -39,6 +42,7 @@ form {
     border-color: #202020ff;
     background-color: lavender;
     padding: 8px 9px;
+    text-align: center
 }
 
 .seccion p {
@@ -76,10 +80,6 @@ form {
 
 @media (min-width: 640px) {
 
-    main {
-        width: 500px;
-    }
-
     main h1 {
         font-size: 50px;
     }
@@ -106,10 +106,6 @@ form {
 
 
 @media (min-width: 1024px) {
-
-    main {
-        width: 500px;
-    }
 
     main h1 {
         font-size: 50px;
