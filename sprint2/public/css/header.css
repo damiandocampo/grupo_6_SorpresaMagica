@@ -92,7 +92,7 @@ header div .search-checked {
     display: none;
     width: 100vw;
     position: absolute;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 header div .search-checked form {
@@ -100,7 +100,7 @@ header div .search-checked form {
 }
 
 header div .search-checked input {
-    width: 80vw;
+    width: 72vw;
     height: 30px;
     border: solid 2px var(--celeste);
     border-radius: 15px;
@@ -188,7 +188,7 @@ nav.nav-bar .menu ul li {
     display: flex;
     border-bottom: solid 1px var(--rosa);
     width: 80%;
-    height: 60px;
+    height: 45px;
     justify-content: center;
     align-items: center;
 }
@@ -261,6 +261,11 @@ nav.nav-bar .logo a{
 
     header div .user .user-icon i{
         font-size: 38px;
+    }
+    
+    .checkbox-user:checked ~ .user-checked{
+        display: flex;
+        width: 80vw;
     }
 
     /* search */
@@ -335,6 +340,8 @@ nav.nav-bar .logo a{
     header div.desktop .message {
         display: flex;
         align-items: center;
+        width: 50%;
+        justify-content: flex-start;
     }
 
     header div.desktop .message span {
@@ -355,8 +362,9 @@ nav.nav-bar .logo a{
 
     header div.desktop .user {
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
+        width: 50%;
     }
 
     header div.desktop .user .user-icon {
@@ -374,6 +382,10 @@ nav.nav-bar .logo a{
     header div.desktop .user p {
         font-size: 16px;
         margin-left: 4px;
+    }
+
+    header div.desktop .user p a:hover {
+        text-decoration: underline;
     }
 
 
@@ -424,12 +436,76 @@ nav.nav-bar .logo a{
         align-items: center;
     }
 
-    nav.nav-bar-desktop .desktop-nav nav {
-        display: none;
+    nav.nav-bar-desktop .desktop-nav ul li a {
+        font-size: 20px;
     }
 
-    nav.nav-bar-desktop .desktop-nav a {
+    nav.nav-bar-desktop .desktop-nav ul li a h3:hover {
+        color: var(--celeste);
+        text-shadow: 1px 1px 2px black;
+    }
+
+    /* productos */
+
+    nav.nav-bar-desktop .desktop-nav ul li.productos {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav.nav-bar-desktop .desktop-nav ul li.productos nav {
+        display: none;
+        position: absolute;
+        top: 23px;
+    }
+    
+    nav.nav-bar-desktop .desktop-nav ul li.productos nav ul {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        width: 200px;
+        align-items: center;
+        justify-content: space-evenly;
+        padding-top: 20px;
+        padding-bottom: 5px;
+    }
+    
+    nav.nav-bar-desktop .desktop-nav ul li.productos nav ul li{
+        display: flex;
+        border-bottom: solid 1px var(--rosa);
+        width: 80%;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    nav.nav-bar-desktop .desktop-nav ul li.productos nav ul li a {
+        width: 100%;
         font-size: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    nav.nav-bar-desktop .desktop-nav ul li.productos nav ul li span {
+        color: var(--violeta);
+    }
+
+    nav.nav-bar-desktop .desktop-nav ul li.productos nav:hover {
+        display: flex;
+    }
+    
+    nav.nav-bar-desktop .desktop-nav ul li.productos a:hover ~ nav {
+        display: flex;
+    }
+    
+    nav.nav-bar-desktop .desktop-nav ul li.productos nav ul li:hover {
+        background-color: var(--rosa);
+    }
+    
+    nav.nav-bar-desktop .desktop-nav ul li.productos nav ul li a:hover {
+        font-weight: bold;
     }
 
     /* busqueda */
@@ -444,10 +520,9 @@ nav.nav-bar .logo a{
     }
 
     nav.nav-bar-desktop .search input {
-        width: 225px;
+        width: 210px;
         height: 24px;
         border: none;
-        border-radius: 15px;
         outline: none;
     }
 
@@ -457,6 +532,7 @@ nav.nav-bar .logo a{
         border: none;
         background-color: white;
         border-radius: 15px;
+        cursor: pointer;
     }
 
     nav.nav-bar-desktop button i {
