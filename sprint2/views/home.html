@@ -15,16 +15,29 @@
     <header>
 
         <div>
-            <div class="user">
+            <input type="checkbox" name="" id="user" class="checkbox-user">
+            <label for="user" class="user">
                 <div class="user-icon"><i class="far fa-user-circle"></i></div>
+            </label>
+
+            <div class="user-checked">
                 <p><a href="/registro">Crear una cuenta</a> | <a href="/login">Iniciar sesión</a></p>
             </div>
+
             <div class="message">
                 <p><i class="fas fa-truck"></i> <span>Envíos gratis</span> en compras mayores a $3.000.</p>
             </div>
-            <div class="search">
-                <input type="text" name="search" id="search" placeholder="Buscar" class="search">
-                <button type="submit"><i class="fas fa-search"></i></button>
+
+            <input type="checkbox" name="" id="search" class="checkbox-search">
+            <label for="search" class="search">
+                <div class="search-icon"><i class="fas fa-search"></i></div>
+            </label>
+
+            <div class="search-checked">
+                <form action="get">
+                    <input type="text" name="search" id="search" placeholder="Buscar">
+                    <button type="submit"><i class="fas fa-angle-double-right"></i></button>
+                </form>
             </div>
         </div>
 
@@ -37,72 +50,564 @@
                 <p><a href="/registro">Crear una cuenta</a> | <a href="/login">Iniciar sesión</a></p>
             </div>
         </div>
-        
+
     </header>
 
-    <main class="home">
-
-        <nav class="nav-bar">
-            <nav class="menu">
+    <nav class="nav-bar">
+        <nav class="menu">
+            <input type="checkbox" name="" id="products">
+            <label for="products">
                 <i class="fas fa-bars"></i>
-                <h3><a href="/productos">Productos</a></h3>
-                <ul>
-                    <li><a href="">Alfajores</a></li>
-                    <li><a href="">Caramelos</a></li>
-                    <li><a href="">Chicles</a></li>
-                    <li><a href="">Chocolates</a></li>
-                    <li><a href="">Chupetines</a></li>
-                    <li><a href="">Confites</a></li>
-                    <li><a href="">Gomitas</a></li>
-                    <li><a href="">Marcas</a></li>
-                </ul>
-            </nav>
-            <div class="logo">
-                <a href="/"><img src="/images/logo-sorpresa-magica.png" alt="logo"></a>
-            </div>
-            <div class="cart">
+                <h3>Productos</h3>
+            </label>
+            <ul>
+                <li><a href="/productos"><span>●</span> Todo <span>●</span></a></li>
+                <li><a href="/productos/alfajores"><span>●</span> Alfajores <span>●</span></a></li>
+                <li><a href="/productos/caramelos"><span>●</span> Caramelos <span>●</span></a></li>
+                <li><a href="/productos/chicles"><span>●</span> Chicles <span>●</span></a></li>
+                <li><a href="/productos/chocolates"><span>●</span> Chocolates <span>●</span></a></li>
+                <li><a href="/productos/chupetines"><span>●</span> Chupetines <span>●</span></a></li>
+                <li><a href="/productos/confites"><span>●</span> Confites <span>●</span></a></li>
+                <li><a href="/productos/gomitas"><span>●</span> Gomitas <span>●</span></a></li>
+                <li><a href="/productos/marcas"><span>●</span> Marcas <span>●</span></a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <a href="/"><img src="/images/logo-sorpresa-magica.png" alt="logo"></a>
+        </div>
+        <div class="cart">
+            <a href="/carritoDeCompras.html">
                 <i class="fas fa-shopping-cart"></i>
-                <h3><a href="/carrito">Carrito</a></h3>
-            </div>
-        </nav>
+                <h3>Carrito</h3>
+            </a>
+        </div>
+    </nav>
+    <nav class="nav-bar-desktop">
+        <div class="logo">
+            <a href="/"><img src="/images/logo-sorpresa-magica.png" alt="logo"></a>
+        </div>
+        <div class="desktop-nav">
+            <ul>
+                <li>
+                    <a href="/">
+                        <h3>Inicio</h3>
+                    </a>
+                </li>
+                <li class="productos">
+                    <a href="/productos">
+                        <h3>Productos</h3>
+                    </a>
+                    <nav>
+                        <ul>
+                            <li><a href="/productos"><span>●</span> Todo <span>●</span></a></li>
+                            <li><a href="/productos/alfajores"><span>●</span> Alfajores <span>●</span></a></li>
+                            <li><a href="/productos/caramelos"><span>●</span> Caramelos <span>●</span></a></li>
+                            <li><a href="/productos/chicles"><span>●</span> Chicles <span>●</span></a></li>
+                            <li><a href="/productos/chocolates"><span>●</span> Chocolates <span>●</span></a></li>
+                            <li><a href="/productos/chupetines"><span>●</span> Chupetines <span>●</span></a></li>
+                            <li><a href="/productos/confites"><span>●</span> Confites <span>●</span></a></li>
+                            <li><a href="/productos/gomitas"><span>●</span> Gomitas <span>●</span></a></li>
+                            <li><a href="/productos/marcas"><span>●</span> Marcas <span>●</span></a></li>
+                        </ul>
+                    </nav>
+                </li>
+                <li>
+                    <a href="/contacto">
+                        <h3>Contacto</h3>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="search">
+            <form action="" method="get">
+                <input type="text" name="search" id="search" placeholder="Buscar">
+                <button type="submit">
+                    <div class="search-icon"><i class="fas fa-search"></i></div>
+                </button>
+            </form>
+        </div>
+        <div class="cart">
+            <a href="/carritoDeCompras.html"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </nav>
 
-        <nav class="nav-bar-desktop">
-            <div class="logo">
-                <a href="/"><img src="/images/logo-sorpresa-magica.png" alt="logo"></a>
+    <main class="home">
+        
+
+
+
+        <div class="slider">
+
+            <ul class="mobile">
+                <li> <img src="/images/banners/banner-mix-felfort.png" alt="Mix feltfort" class="slide1"> </li>
+                <li> <img src="/images/banners/banner-edulzatusmm.png" alt="Endulzá tus mejores momentos" class="slide2"> </li>
+                <li> <img src="/images/banners/banner-bonobon.png" alt="Bon o bon mes de la dulzura" class="slide3"> </li>
+                <li> <img src="/images/banners/banner-golosinas.png" alt="Golosinas marcas" class="slide4"> </li>
+            </ul>
+
+            <ul class="tablet">
+                <li> <img src="/images/banners/banner-mix-felfort-tablet.png" alt="Mix feltfort" class="slide1"> </li>
+                <li> <img src="/images/banners/banner-edulzatusmm-tablet.png" alt="Endulzá tus mejores momentos" class="slide2"> </li>
+                <li> <img src="/images/banners/banner-bonobon-tablet.png" alt="Bon o bon mes de la dulzura" class="slide3"> </li>
+                <li> <img src="/images/banners/banner-golosinas-tablet.png" alt="Golosinas marcas" class="slide4"> </li>
+            </ul>
+
+            <ul class="desktop">
+                <li> <img src="/images/banners/banner-mix-felfort-desktop.png" alt="Mix feltfort" class="slide1"> </li>
+                <li> <img src="/images/banners/banner-edulzatusmm-desktop.png" alt="Endulzá tus mejores momentos" class="slide2"> </li>
+                <li> <img src="/images/banners/banner-bonobon-desktop.png" alt="Bon o bon mes de la dulzura" class="slide3"> </li>
+                <li> <img src="/images/banners/banner-golosinas-desktop.png" alt="Golosinas marcas" class="slide4"> </li>
+            </ul>
+
+            <div class="buttons">
+                <button class="left">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="right">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
-            <div class="desktop-nav">
+
+            <div class="dots">
+
+                <input type="radio" name="slider" id="slide1" class="slide1" checked>
+                <input type="radio" name="slider" id="slide2" class="slide2">
+                <input type="radio" name="slider" id="slide3" class="slide3">
+                <input type="radio" name="slider" id="slide4" class="slide4">
+
+                <label for="slide1" class="slide1"></label>
+                <label for="slide2" class="slide2"></label>
+                <label for="slide3" class="slide3"></label>
+                <label for="slide4" class="slide4"></label>
+
+            </div>
+
+        </div>
+
+        <section class="especiales">
+
+            <article class="ofertas">
+                <a href="">
+                    <div class="hasta">
+                        <p>Hasta</p>
+                        <h3>2x1</h3>
+                    </div>
+                    <img src="/images/dest1-ofertas-golosinas.png" alt="Ofertas">
+                    <div>
+                        <h3>Ofertas imperdibles</h3>
+                    </div>
+                </a>
+            </article>
+            <article class="nuevos">
+                <a href="">
+                    <img src="/images/dest2-nuevos-arcor.png" alt="Nuevos productos Arcor">
+                    <div>
+                        <h3>Nuevos productos</h3>
+                    </div>
+                </a>
+            </article>
+            <article class="cajas">
+                <a href="">
+                    <img src="/images/dest3-cajas-candy-box.png" alt="Cajas de golosinas para regalar">
+                    <div>
+                        <h3>Cajas para regalar</h3>
+                    </div>
+                </a>
+            </article>
+
+        </section>
+
+        <section class="destacados">
+
+            <div class="divisor">
+                <hr>
+                <h3>Destacados</h3>
+                <hr>
+            </div>
+
+            <div class="productos">
+                <article>
+                    <a href="">
+                        <img src="/images/productos/Chocolate CADBURY Yogur Frutilla 80 Gr 240,53.png"
+                            alt="Chocolate CADBURY Yogur Frutilla 80 gramos">
+                    </a>
+                    <div class="descripcion">
+                        <a href="">
+                            <h5>Cadbury</h5>
+                        </a>
+                        <h3>Chocolate CADBURY Yogur Frutilla 80gr</h3>
+                        <h2>$240,53</h2>
+                        <div class="cantidad">
+                            <button>-</button>
+                            <p>1</p>
+                            <button>+</button>
+                        </div>
+                        <div class="comprar">
+                            <button type="submit">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <a href="">
+                        <img src="/images/productos/Bombones BON O BON Chocolate Con Leche 18 U 422,26.png"
+                            alt="Bombones BON O BON Chocolate Con Leche 18 unidades">
+                    </a>
+                    <div class="descripcion">
+                        <a href="">
+                            <h5>Bon O Bon</h5>
+                        </a>
+                        <h3>Bombones BON O BON Chocolate Con Leche 18u</h3>
+                        <h2>$422,26</h2>
+                        <div class="cantidad">
+                            <button>-</button>
+                            <p>1</p>
+                            <button>+</button>
+                        </div>
+                        <div class="comprar">
+                            <button type="submit">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <a href="">
+                        <img src="/images/productos/Alfajor Triple TERRABUSI Torta 70 Gr 65,78.png"
+                            alt="Alfajor Triple TERRABUSI Torta 70 gramos">
+                    </a>
+                    <div class="descripcion">
+                        <a href="">
+                            <h5>Terrabusi</h5>
+                        </a>
+                        <h3>Alfajor Triple TERRABUSI Torta 70gr</h3>
+                        <h2>$65,78</h2>
+                        <div class="cantidad">
+                            <button>-</button>
+                            <p>1</p>
+                            <button>+</button>
+                        </div>
+                        <div class="comprar">
+                            <button type="submit">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <a href="">
+                        <img src="/images/productos/Caramelos Duros ARCOR Rodajas Frutales Acidas 930 Gr 883,87.png"
+                            alt="Caramelos Duros ARCOR Rodajas Frutales Acidas 930 gramos">
+                    </a>
+                    <div class="descripcion">
+                        <a href="">
+                            <h5>Arcor</h5>
+                        </a>
+                        <h3>Caramelos Duros ARCOR Rodajas Frutales Acidas 930gr</h3>
+                        <h2>$883,87</h2>
+                        <div class="cantidad">
+                            <button>-</button>
+                            <p>1</p>
+                            <button>+</button>
+                        </div>
+                        <div class="comprar">
+                            <button type="submit">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <a href="">
+                        <img src="/images/productos/Alfajor MILKA Triple Mousse 55 Gr 14,04.png"
+                            alt="Alfajor MILKA Triple Mousse 55 gramos">
+                    </a>
+                    <div class="descripcion">
+                        <a href="">
+                            <h5>Milka</h5>
+                        </a>
+                        <h3>Alfajor MILKA Triple Mousse 55gr</h3>
+                        <h2>$74,04</h2>
+                        <div class="cantidad">
+                            <button>-</button>
+                            <p>1</p>
+                            <button>+</button>
+                        </div>
+                        <div class="comprar">
+                            <button type="submit">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <a href="">
+                        <img src="/images/productos/BUTTER TOFFEES Bon O Bon 150 Gr 158,48.png"
+                            alt="BUTTER TOFFEES Bon O Bon 150 gramos">
+                    </a>
+                    <div class="descripcion">
+                        <a href="">
+                            <h5>Butter Toffees</h5>
+                        </a>
+                        <h3>BUTTER TOFFEES Bon O Bon 150gr</h3>
+                        <h2>$158,48</h2>
+                        <div class="cantidad">
+                            <button>-</button>
+                            <p>1</p>
+                            <button>+</button>
+                        </div>
+                        <div class="comprar">
+                            <button type="submit">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <a href="">
+                        <img src="/images/productos/Gomitas MOGUL Jelly Buttons 220 Gr 238,67.jpg"
+                            alt="Gomitas MOGUL Jelly Buttons 220 gramos">
+                    </a>
+                    <div class="descripcion">
+                        <a href="">
+                            <h5>Mogul</h5>
+                        </a>
+                        <h3>Gomitas MOGUL Jelly Buttons 220gr</h3>
+                        <h2>$238,67</h2>
+                        <div class="cantidad">
+                            <button>-</button>
+                            <p>1</p>
+                            <button>+</button>
+                        </div>
+                        <div class="comprar">
+                            <button type="submit">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <a href="">
+                        <img src="/images/productos/Confites De Chocolate ROCKLETS 40 Gr 73,57.jpg"
+                            alt="Confites De Chocolate ROCKLETS 40 gramos">
+                    </a>
+                    <div class="descripcion">
+                        <a href="">
+                            <h5>Rocklets</h5>
+                        </a>
+                        <h3>Confites De Chocolate ROCKLETS 40gr</h3>
+                        <h2>$73,57</h2>
+                        <div class="cantidad">
+                            <button>-</button>
+                            <p>1</p>
+                            <button>+</button>
+                        </div>
+                        <div class="comprar">
+                            <button type="submit">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <a href="">
+                        <img src="/images/productos/Caramelos HALLS Creamy Mora 27 Gr 53,21.jpg"
+                            alt="Caramelos HALLS Creamy Mora 27 gramos">
+                    </a>
+                    <div class="descripcion">
+                        <a href="">
+                            <h5>Halls</h5>
+                        </a>
+                        <h3>Caramelos HALLS Creamy Mora 27gr</h3>
+                        <h2>$53,21</h2>
+                        <div class="cantidad">
+                            <button>-</button>
+                            <p>1</p>
+                            <button>+</button>
+                        </div>
+                        <div class="comprar">
+                            <button type="submit">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <a href="">
+                        <img src="/images/productos/Chocolate MILKA Castañas 155 Gr 477,21.jpg"
+                            alt="Chocolate MILKA Castañas 155 gramos">
+                    </a>
+                    <div class="descripcion">
+                        <a href="">
+                            <h5>Milka</h5>
+                        </a>
+                        <h3>Chocolate MILKA Castañas 155gr</h3>
+                        <h2>$477,21</h2>
+                        <div class="cantidad">
+                            <button>-</button>
+                            <p>1</p>
+                            <button>+</button>
+                        </div>
+                        <div class="comprar">
+                            <button type="submit">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <a href="">
+                        <img src="/images/productos/Oblea NUGATON Blanco 27 Gr 63,63.jpg"
+                            alt="Oblea NUGATON Blanco 27 gramos">
+                    </a>
+                    <div class="descripcion">
+                        <a href="">
+                            <h5>Nugaton</h5>
+                        </a>
+                        <h3>Oblea NUGATON Blanco 27gr</h3>
+                        <h2>$63,63</h2>
+                        <div class="cantidad">
+                            <button>-</button>
+                            <p>1</p>
+                            <button>+</button>
+                        </div>
+                        <div class="comprar">
+                            <button type="submit">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <a href="">
+                        <img src="/images/productos/Gomitas MOGUL Frutillas Acidas 150 Gr 141,13.png"
+                            alt="Gomitas MOGUL Frutillas Acidas 150 gramos">
+                    </a>
+                    <div class="descripcion">
+                        <a href="">
+                            <h5>Mogul</h5>
+                        </a>
+                        <h3>Gomitas MOGUL Frutillas Acidas 150gr</h3>
+                        <h2>$141,13</h2>
+                        <div class="cantidad">
+                            <button>-</button>
+                            <p>1</p>
+                            <button>+</button>
+                        </div>
+                        <div class="comprar">
+                            <button type="submit">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+        </section>
+
+        <section class="categorias">
+
+            <div class="divisor">
+                <hr>
+                <h3>Categorías</h3>
+                <hr>
+            </div>
+
+            <div class="slider">
                 <ul>
                     <li>
-                        <h3><a href="/">Inicio</a></h3>
+                        <a href="">
+                            <img src="/images/categorias/alfajores.jpg" alt="">
+                            <div>
+                                <h3>Alfajores</h3>
+                            </div>
+                        </a>
                     </li>
                     <li>
-                        <h3><a href="/productos">Productos</a></h3>
-                        <nav>
-                            <ul>
-                                <li><a href="">Alfajores</a></li>
-                                <li><a href="">Caramelos</a></li>
-                                <li><a href="">Chicles</a></li>
-                                <li><a href="">Chocolates</a></li>
-                                <li><a href="">Chupetines</a></li>
-                                <li><a href="">Confites</a></li>
-                                <li><a href="">Gomitas</a></li>
-                                <li><a href="">Marcas</a></li>
-                            </ul>
-                        </nav>
+                        <a href="">
+                            <img src="/images/categorias/caramelos.png" alt="">
+                            <div>
+                                <h3>Caramelos</h3>
+                            </div>
+                        </a>
                     </li>
                     <li>
-                        <h3><a href="/contacto">Contacto</a></h3>
+                        <a href="">
+                            <img src="/images/categorias/chicles.jpg" alt="">
+                            <div>
+                                <h3>Chicles</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/images/categorias/chocolates.jfif" alt="">
+                            <div>
+                                <h3>Chocolates</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/images/categorias/chupetines.jfif" alt="">
+                            <div>
+                                <h3>Chupetines</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/images/categorias/confites.jpg" alt="">
+                            <div>
+                                <h3>Confites</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/images/categorias/gomitas.jfif" alt="">
+                            <div>
+                                <h3>Gomitas</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/images/categorias/alfajores.jpg" alt="">
+                            <div>
+                                <h3>Alfajores</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/images/categorias/caramelos.png" alt="">
+                            <div>
+                                <h3>Caramelos</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/images/categorias/chicles.jpg" alt="">
+                            <div>
+                                <h3>Chicles</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/images/categorias/chocolates.jfif" alt="">
+                            <div>
+                                <h3>Chocolates</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/images/categorias/chupetines.jfif" alt="">
+                            <div>
+                                <h3>Chupetines</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/images/categorias/confites.jpg" alt="">
+                            <div>
+                                <h3>Confites</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/images/categorias/gomitas.jfif" alt="">
+                            <div>
+                                <h3>Gomitas</h3>
+                            </div>
+                        </a>
                     </li>
                 </ul>
             </div>
-            <div class="search">
-                <input type="text" name="search" id="search" placeholder="Buscar">
-                <button type="submit"><div class="search-icon"><i class="fas fa-search"></i></div></button>
-            </div>
-            <div class="cart">
-                <a href=""><i class="fas fa-shopping-cart"></i></a>
-            </div>
-        </nav>
+
+        </section>
         
     </main>
 
