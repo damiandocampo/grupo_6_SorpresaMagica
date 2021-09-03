@@ -1,4 +1,4 @@
-main .login {
+main.login {
     font-size: var(--tipografia);
     display: flex;
     justify-content: center;
@@ -9,7 +9,7 @@ main .login {
     background-image: url('/images/imagenDeFondo.jpeg');
 }
 
-main .login h1 {
+main.login h1 {
     text-align: center;
     margin: 0 auto;
     font: italic bold 40px Georgia, Serif;
@@ -18,27 +18,27 @@ main .login h1 {
     padding-top: 50px
 }
 
-form {
+main.login form {
     display: flex;
     flex-direction: column;
     align-content: center;
     padding: 0px 60px;
 }
 
-.seccion {
+main.login .seccion {
     display:flex;
     flex-direction: column;
     margin-bottom: 10px;
 }
 
-.descripcion {
+main.login .descripcion {
     padding: 10px;
     color:rgb(34, 23, 23);
     text-align: center;
     text-shadow: 2px 2px 2px #11e7ee;
 }
 
-.completar {
+main.login .completar {
     border-radius: 10px;
     border-color: #202020ff;
     background-color: lavender;
@@ -46,7 +46,7 @@ form {
     text-align: center;
 }
 
-main .login p {
+main.login p {
     padding-top: 40px;
     padding-bottom: 30px;
     text-align: center;
@@ -54,23 +54,23 @@ main .login p {
     text-shadow: 2px 2px 2px #dcc2ffff
 }
 
-.checkbox {
+main.login .checkbox {
     position: relative;
     left: 2px;
 }
 
-.recuerdame {
+main.login .recuerdame {
     color:rgb(34, 23, 23);
     text-shadow: 2px 2px 2px #dcc2ffff
 }
 
-.boton-contenedor {
+main.login .boton-contenedor {
     display: flex;
     justify-content: center;
     padding-top: 30px;
 }
 
-.boton {
+main.login .boton {
     border-radius: 5px;   
     background-color: #dcc2ffff;
     padding: 10px;
@@ -80,7 +80,7 @@ main .login p {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
 }
 
-.boton:hover {
+main.login .boton:hover {
     background-color: #9ce8eb;
 }
 
@@ -90,27 +90,27 @@ main .login p {
 
 @media (min-width: 640px) {
 
-    main .login h1 {
+    main.login h1 {
         font-size: 50px;
     }
 
-    .descripcion {
+    main.login .descripcion {
         font-size: 20px;
     }
 
-    .completar {
+    main.login .completar {
         padding: 9px 10px;
     }
 
-    .recuerdame {
+    main.login .recuerdame {
         font-size: 20px;
     }
 
-    p {
+    main.login p {
         font-size: 20px;
     }
 
-    .boton {
+    main.login .boton {
         font-size: 20px;
     }
 }
@@ -121,27 +121,27 @@ main .login p {
 
 @media (min-width: 1024px) {
 
-    main h1 {
+    main.login h1 {
         font-size: 50px;
     }
 
-    .descripcion {
+    main.login .descripcion {
         font-size: 20px;
     }
 
-    .completar {
+    main.login .completar {
         padding: 9px 10px;
     }
 
-    .recuerdame {
+    main.login .recuerdame {
         font-size: 20px;
     }
 
-    p {
+    main.login p {
         font-size: 20px;
     }
 
-    .boton {
+    main.login .boton {
         font-size: 20px;
     }
 }

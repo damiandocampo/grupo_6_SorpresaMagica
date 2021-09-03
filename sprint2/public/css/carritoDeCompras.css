@@ -1,7 +1,7 @@
-*{border-collapse: separate;}
+
 
 .bodyCarrito{
-   
+    background-image: url("/images/imagenDeFondo.jpeg");
     padding: 10px;
     width: 100%;
     
@@ -17,7 +17,8 @@
 
 
 
-h1{
+.bodyCarrito h1{
+    width: 100%;
     text-align: center;
     margin: 0 auto;
     font: italic bold 40px Georgia, Serif;
@@ -27,17 +28,15 @@ h1{
     }
 
 .micompra i{
-    width: 30%;
     color:var(--violeta);
-    font-size: 50px;
     text-align: center;
     margin: 0 auto;
     text-shadow: -4px 3px 0 #dcc2ffff, -14px 7px 0 #11e7ee;
     padding-bottom: 40px;
-    padding-top: 50px;
+    margin-right: 5%;
 }
 
-main i{
+.bodyCarrito i{
 font-size: 100%;    
 } 
 
@@ -47,7 +46,7 @@ font-size: 100%;
     margin-bottom: 10px;
 }
 
-main div h3{
+.bodyCarrito div h3{
     text-align: center;
     color: white;
     font-weight: 800;
@@ -70,7 +69,7 @@ main div h3{
 }
 
 
-.producto{
+.bodyCarrito .producto{
    
     border: 1px solid var(--violeta);
     display: flex;
@@ -92,7 +91,7 @@ main div h3{
     width: 80%;
 }
     
-.cantidad{
+.bodyCarrito .cantidad{
    
     border: 1px solid var(--violeta);
     display: flex;
@@ -101,16 +100,16 @@ main div h3{
     justify-content: space-around;
 }
 
-.cantidad p{
+.bodyCarrito .cantidad p{
     font-size:20px;
     
 }
 
-.cantidad button{
+.bodyCarrito .cantidad button{
     font-size: x-large;
 }
 
-.precio{
+.bodyCarrito .precio{
     font-size: inherit;
     border: 1px solid var(--violeta);
     display: flex;
@@ -119,21 +118,21 @@ main div h3{
     justify-content: space-evenly;
 }
 
-.precio p{
+.bodyCarrito .precio p{
     font-size: 20px;
     
     
 }
 
-.precio div{
+.bodyCarrito .precio div{
     height: 70px;
 }
 
-.tachitotitulo i{
+.bodyCarrito .tachitotitulo i{
     display: none;
 }
 
-.tachito{
+.bodyCarrito .tachito{
     
     border: 1px solid var(--violeta);
     display: flex;
@@ -142,7 +141,7 @@ main div h3{
     align-items: center;
     justify-content: center;
 }
-.tachito div{
+.bodyCarrito .tachito div{
     height: 70px;
 }
 
@@ -167,7 +166,7 @@ main div h3{
     width: 100%;
 }
 
-.total{
+.bodyCarrito .total{
     
     border: 2px solid var(--lila);
     text-align: center;
@@ -177,13 +176,13 @@ main div h3{
     justify-content:space-between;
 }
 
-.total h3{
+.bodyCarrito .total h3{
     margin: auto;
     margin-left: 20px;
     color: black;
 }
 
-.resultado{
+.bodyCarrito .resultado{
     background-color: white;
     display: flex;
     text-align:center;
@@ -192,13 +191,13 @@ main div h3{
     width: 25%;
 }
 
-.resultado p{
+.bodyCarrito .resultado p{
     font-weight:800;
     letter-spacing: 1px;
 
 }
 
-.continuar{
+.bodyCarrito .continuar{
     
     margin-top: 20px;
     margin-bottom: 20px;
@@ -208,7 +207,7 @@ main div h3{
     align-items: center;
 
 }
-.buton {
+.bodyCarrito .buton {
     height: 50px;
     border: 0px;
     font-size: 1em;
@@ -241,20 +240,20 @@ main div h3{
         border: 1px solid var(--violeta);
         height: 100%;
     }
-    .producto{
+    .bodyCarrito .producto{
         width: 30%;
     }
 
-    .cantidad{
+    .bodyCarrito .cantidad{
         width: 20%;
     }
-    .precio{
+    .bodyCarrito .precio{
         width:15%;
     }
-    .tachito{
+    .bodyCarrito .tachito{
         width: 10%;
     }
-    .tachitotitulo{
+    .bodyCarrito .tachitotitulo{
         width: 10%;
     }
 }
@@ -280,7 +279,7 @@ main div h3{
     border: 1px solid var(--violeta);
     height: 100%;
 }
-.producto{
+.bodyCarrito .producto{
     width: 25%;
 }
 .bodyCarrito .img {
@@ -294,13 +293,13 @@ main div h3{
 .bodyCarrito .micompra{
     margin-bottom: 0;
 }
-.cantidad{
+.bodyCarrito .cantidad{
     width: 15%;
 }
-.precio{
+.bodyCarrito .precio{
     width:15%;
 }
-.tachito{
+.bodyCarrito .tachito{
     width: 10%;
 }
 .tachitotitulo{
@@ -314,11 +313,11 @@ main div h3{
 .subButon{
     margin: 0px;
 }
-.total{
+.bodyCarrito .total{
     width: 50%;
     margin-left: 50%;
 }
-.continuar{
+.bodyCarrito .continuar{
     align-items: flex-end;
 }
 

@@ -1,4 +1,4 @@
-main {
+main.registro {
     font-size: var(--tipografia);
     display: flex;
     justify-content: center;
@@ -9,7 +9,7 @@ main {
     background-image: url('/images/imagenDeFondo.jpeg');
 }
 
-main h1 {
+main.registro h1 {
     text-align: center;
     margin: 0 auto;
     font: italic bold 40px Georgia, Serif;
@@ -18,26 +18,26 @@ main h1 {
     padding-top: 50px
 }
 
-form {
+main.registro form {
     display: flex;
     flex-direction: column;
     align-content: center;
     padding: 0px 60px;
 }
 
-.seccion {
+main.registro .seccion {
     display:flex;
     flex-direction: column;
     margin-bottom: 10px;
 }
 
-.descripcion {
+main.registro .descripcion {
     padding: 10px;
     color:rgb(34, 23, 23);
     text-shadow: 2px 2px 2px #11e7ee;
 }
 
-.completar {
+main.registro .completar {
     border-radius: 10px;
     border-color: #202020ff;
     background-color: lavender;
@@ -45,7 +45,7 @@ form {
     text-align: center
 }
 
-.seccion p {
+main.registro .seccion p {
     padding-top: 45px;
     padding-bottom: 10px;
     text-align: center;
@@ -53,13 +53,13 @@ form {
     text-shadow: 2px 2px 2px #dcc2ffff;
 }
 
-.boton-contenedor {
+main.registro .boton-contenedor {
     display: flex;
     justify-content: center;
     padding-bottom: 30px
 }
 
-.boton {
+main.registro .boton {
     border-radius: 5px;   
     background-color: #dcc2ffff;
     padding: 10px;
@@ -69,7 +69,7 @@ form {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
 }
 
-.boton:hover {
+main.registro .boton:hover {
     background-color: #9ce8eb;
 }
 
@@ -80,23 +80,23 @@ form {
 
 @media (min-width: 640px) {
 
-    main h1 {
+    main.registro h1 {
         font-size: 50px;
     }
 
-    .descripcion {
+    main.registro .descripcion {
         font-size: 20px;
     }
 
-    .completar {
+    main.registro .completar {
         padding: 9px 10px;
     }
 
-    p {
+    main.registro p {
         font-size: 20px;
     }
 
-    .boton {
+    main.registro .boton {
         font-size: 20px;
     }
 }
@@ -107,23 +107,23 @@ form {
 
 @media (min-width: 1024px) {
 
-    main h1 {
+    main.registro h1 {
         font-size: 50px;
     }
 
-    .descripcion {
+    main.registro .descripcion {
         font-size: 20px;
     }
 
-    .completar {
+    main.registro .completar {
         padding: 9px 10px;
     }
 
-    p {
+    main.registro p {
         font-size: 20px;
     }
 
-    .boton {
+    main.registro .boton {
         font-size: 20px;
     }
 }
