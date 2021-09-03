@@ -18,14 +18,23 @@
 
 
 h1{
-    margin-left: 5px;
-    color:var(--violeta);
-    font-size: 40px;
+    text-align: center;
+    margin: 0 auto;
+    font: italic bold 40px Georgia, Serif;
+    text-shadow: -4px 3px 0 #dcc2ffff, -14px 7px 0 #11e7ee;
+    padding-bottom: 40px;
+    padding-top: 50px;
     }
 
 .micompra i{
+    width: 30%;
     color:var(--violeta);
-    font-size: 2em;
+    font-size: 50px;
+    text-align: center;
+    margin: 0 auto;
+    text-shadow: -4px 3px 0 #dcc2ffff, -14px 7px 0 #11e7ee;
+    padding-bottom: 40px;
+    padding-top: 50px;
 }
 
 main i{
@@ -34,7 +43,7 @@ font-size: 100%;
 
 
 .tabla{
-    
+    background: mintcream;
     margin-bottom: 10px;
 }
 
@@ -63,7 +72,7 @@ main div h3{
 
 .producto{
    
-    border: 2px solid var(--violeta);
+    border: 1px solid var(--violeta);
     display: flex;
     flex-direction: column;
     width: 35%;
@@ -71,18 +80,21 @@ main div h3{
     justify-content: center;
 }
 
+.descripcionCarrito{
+    display: none;
+}
 
 
 
 
-.img{
+.bodyCarrito .img{
     padding: 5%;
     width: 80%;
 }
     
 .cantidad{
    
-    border: 2px solid var(--violeta);
+    border: 1px solid var(--violeta);
     display: flex;
     width: 25%;
     align-items: center;
@@ -90,7 +102,7 @@ main div h3{
 }
 
 .cantidad p{
-    font-size:2em;
+    font-size:20px;
     
 }
 
@@ -100,7 +112,7 @@ main div h3{
 
 .precio{
     font-size: inherit;
-    border: 2px solid var(--violeta);
+    border: 1px solid var(--violeta);
     display: flex;
     width: 30%;
     align-items: center;
@@ -108,7 +120,7 @@ main div h3{
 }
 
 .precio p{
-    font-size: 2em;
+    font-size: 20px;
     
     
 }
@@ -123,7 +135,7 @@ main div h3{
 
 .tachito{
     
-    border: 2px solid var(--violeta);
+    border: 1px solid var(--violeta);
     display: flex;
     flex-direction: column;
     width: 10%;
@@ -156,6 +168,7 @@ main div h3{
 }
 
 .total{
+    
     border: 2px solid var(--lila);
     text-align: center;
     background-color: var(--lila);
@@ -165,6 +178,7 @@ main div h3{
 }
 
 .total h3{
+    margin: auto;
     margin-left: 20px;
     color: black;
 }
@@ -209,11 +223,118 @@ main div h3{
 
 
 
+
+@media(min-width:426px){
+    .descripcionCarrito{
+        
+        width:25% ;
+        display: block;
+       
+    }
+    .descripcionCarrito h3{
+        width:25% ;
+        display: block;
+    }
+    .descripcionCarrito p{ 
+        display: flex;
+        align-items: center;
+        border: 1px solid var(--violeta);
+        height: 100%;
+    }
+    .producto{
+        width: 30%;
+    }
+
+    .cantidad{
+        width: 20%;
+    }
+    .precio{
+        width:15%;
+    }
+    .tachito{
+        width: 10%;
+    }
+    .tachitotitulo{
+        width: 10%;
+    }
+}
+
+@media(min-width:768px){
+    .productContainer{
+        margin: 0px 5% 2%;
+    }
+
+.descripcionCarrito{
+        
+    width:35% ;
+    display: block;
+   
+}
+.descripcionCarrito h3{
+    width:35% ;
+    display: block;
+}
+.descripcionCarrito p{ 
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--violeta);
+    height: 100%;
+}
+.producto{
+    width: 25%;
+}
+.bodyCarrito .img {
+    padding: 5%;
+    width: 35%;
+}
+.bodyCarrito .h1{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.bodyCarrito .micompra{
+    margin-bottom: 0;
+}
+.cantidad{
+    width: 15%;
+}
+.precio{
+    width:15%;
+}
+.tachito{
+    width: 10%;
+}
+.tachitotitulo{
+    width: 10%;
+}
+.dosBotones{
+    flex-direction: row;
+    width: 50%;
+    margin-left: 50%;
+}
+.subButon{
+    margin: 0px;
+}
+.total{
+    width: 50%;
+    margin-left: 50%;
+}
+.continuar{
+    align-items: flex-end;
+}
+
+.continuar .buton:hover {
+    background-color: #9ce8eb;
+}
+
+.tachito:hover {
+    background-color: #9ce8eb;
+}
+
+}
+
+
 /*
  celular
-@media(min-width:640px)
-
-
 movil: min:320px max:425px
 tablet: min:426px max:768px
 laptop: min769px max1440px
