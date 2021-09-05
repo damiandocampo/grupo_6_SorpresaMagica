@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/b408874973.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header>
+        <div>
+            <input type="checkbox" name="" id="user" class="checkbox-user">
+            <label for="user" class="user">
+                <div class="user-icon"><i class="far fa-user-circle"></i></div>
+            </label>
+
+            <div class="user-checked">
+                <p><a href="/registro">Crear una cuenta</a> | <a href="/login">Iniciar sesión</a></p>
+            </div>
+
+            <div class="message">
+                <p><i class="fas fa-truck"></i> <span>Envíos gratis</span> en compras mayores a $3.000.</p>
+            </div>
+
+            <input type="checkbox" name="" id="search" class="checkbox-search">
+            <label for="search" class="search">
+                <div class="search-icon"><i class="fas fa-search"></i></div>
+            </label>
+
+            <div class="search-checked">
+                <form action="get">
+                    <input type="text" name="search" id="search" placeholder="Buscar">
+                    <button type="submit"><i class="fas fa-angle-double-right"></i></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="desktop">
+            <div class="message">
+                <p><i class="fas fa-truck"></i> <span>Envíos gratis</span> en compras mayores a $3.000.</p>
+            </div>
+            <div class="user">
+                <div class="user-icon"><i class="far fa-user-circle"></i></div>
+                <p><a href="/registro">Crear una cuenta</a> | <a href="/login">Iniciar sesión</a></p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav-bar">
+        <nav class="menu">
+            <input type="checkbox" name="" id="products">
+            <label for="products">
+                <i class="fas fa-bars"></i>
+                <h3>Productos</h3>
+            </label>
+            <ul>
+                <li><a href="/productos"><span>●</span> Todo <span>●</span></a></li>
+                <li><a href="/productos/alfajores"><span>●</span> Alfajores <span>●</span></a></li>
+                <li><a href="/productos/caramelos"><span>●</span> Caramelos <span>●</span></a></li>
+                <li><a href="/productos/chicles"><span>●</span> Chicles <span>●</span></a></li>
+                <li><a href="/productos/chocolates"><span>●</span> Chocolates <span>●</span></a></li>
+                <li><a href="/productos/chupetines"><span>●</span> Chupetines <span>●</span></a></li>
+                <li><a href="/productos/confites"><span>●</span> Confites <span>●</span></a></li>
+                <li><a href="/productos/gomitas"><span>●</span> Gomitas <span>●</span></a></li>
+                <li><a href="/productos/marcas"><span>●</span> Marcas <span>●</span></a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <a href="/"><img src="/images/logo-sorpresa-magica.png" alt="logo"></a>
+        </div>
+        <div class="cart">
+            <a href="/carritoDeCompras.html">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>Carrito</h3>
+            </a>
+        </div>
+    </nav>
+    <nav class="nav-bar-desktop">
+        <div class="logo">
+            <a href="/"><img src="/images/logo-sorpresa-magica.png" alt="logo"></a>
+        </div>
+        <div class="desktop-nav">
+            <ul>
+                <li>
+                    <a href="/">
+                        <h3>Inicio</h3>
+                    </a>
+                </li>
+                <li class="productos">
+                    <a href="/productos">
+                        <h3>Productos</h3>
+                    </a>
+                    <nav>
+                        <ul>
+                            <li><a href="/productos"><span>●</span> Todo <span>●</span></a></li>
+                            <li><a href="/productos/alfajores"><span>●</span> Alfajores <span>●</span></a></li>
+                            <li><a href="/productos/caramelos"><span>●</span> Caramelos <span>●</span></a></li>
+                            <li><a href="/productos/chicles"><span>●</span> Chicles <span>●</span></a></li>
+                            <li><a href="/productos/chocolates"><span>●</span> Chocolates <span>●</span></a></li>
+                            <li><a href="/productos/chupetines"><span>●</span> Chupetines <span>●</span></a></li>
+                            <li><a href="/productos/confites"><span>●</span> Confites <span>●</span></a></li>
+                            <li><a href="/productos/gomitas"><span>●</span> Gomitas <span>●</span></a></li>
+                            <li><a href="/productos/marcas"><span>●</span> Marcas <span>●</span></a></li>
+                        </ul>
+                    </nav>
+                </li>
+                <li>
+                    <a href="/contacto">
+                        <h3>Contacto</h3>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="search">
+            <form action="" method="get">
+                <input type="text" name="search" id="search" placeholder="Buscar">
+                <button type="submit">
+                    <div class="search-icon"><i class="fas fa-search"></i></div>
+                </button>
+            </form>
+        </div>
+        <div class="cart">
+            <a href="/carritoDeCompras.html"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </nav>
+
+    <main class ="login">
+        <h1>Iniciar Sesión</h1>
+        <form action="">
+            <div class="seccion">
+                <label class="descripcion" for="email">E-mail</label>
+                <input class="completar" type="email" name="email" id="email" placeholder="Ingrese su e-mail">
+            </div>
+            <div class="seccion">
+                <label class="descripcion" for="contraseña">Contraseña</label>
+                <input class="completar" type="contraseña" name="contraseña" id="contraseña" placeholder="ingrese su contraseña">
+            </div>
+                <div>
+                    <input class="checkbox" type="checkbox" name="Recuerdame" value="Recuerdame">
+                    <label class="recuerdame" for="">Recuérdame</label>
+                </div>
+                <div class="boton-contenedor">
+                    <button class="boton" type="submit">Ingresar</button>
+                </div>
+                <p class="olvidar"><a href="#">¿Olvidaste tu contraseña?</a></p>
+                <p class="cuenta">¿No tienes cuenta? <a href="#">Regístrate</a></p>
+            </form>
+        </main>
+        </form>
+    </main>
+
+    <footer>
+        <div class="top">
+            <div class="rrss-contact">
+                <div class="rrss">
+                    <h3>Seguinos</h3>
+                    <div class="rrss-icon">
+                        <a href="https://www.instagram.com/sorpresa_magica_golosinas" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/sorpresa_magica_golosinas" target="_blank"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://www.twitter.com/sorpresa_magica_golosinas" target="_blank"><i
+                                class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="contact">
+                    <h3>Contactanos</h3>
+                    <p><i class="fas fa-phone-alt"></i> 1234-5678</p>
+                    <p><i class="far fa-envelope"></i> sorpresa-magica@outlook.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> San Benito de Palermo 565, CABA</p>
+                </div>
+            </div>
+            <div class="mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.4514133879015!2d-58.434576985177785!3d-34.56744276308578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5bc77430ee7%3A0xea9b07e9d0781f38!2sSan%20Benito%20de%20Palermo%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1629818682912!5m2!1ses-419!2sar"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div class="bottom">
+            <p>Copyright Sorpresa Mágica - 2021. Todos los derechos reservados.</p>
+            <p>Defensa de las y los consumidores. Para reclamos ingrese <a href="">aquí</a>.</p>
+        </div>
+    </footer>
+</body>
+</html>
