@@ -1,8 +1,12 @@
-/*main productos*/
-
  main.productos{
     padding: 0 10px;
  }
+
+ main.productos section.fondo{
+    background-image:url(/images/imagenDeFondo.jpeg);
+   /* height: 1221px;*/
+    height: 100%;
+}
 
 main.productos section.conteiner{
   /*  margin: auto;*/
@@ -10,39 +14,42 @@ main.productos section.conteiner{
     width: 100%;
     height: 409px;
     padding: 30px;
-    margin-top: -5px;
+    margin-top: 2%;
 }
-main section ul li img{
-    width: 100%;
+main.productos section.conteiner ul li img{
+   /* width: 100%;*/
     height: 332px;
     box-shadow: 0px 0px 12px rgb(189 42 112);
 }
 
- main section ul.slider{
+main.productos section.conteiner ul.slider{
     position: relative;
-    width: 100%px;
-    height: 500px;
+    width: 100%;
+   /* height: 500px;*/
+   flex-wrap: wrap;
 }
 
- main ul.slider li{
+ main.productos ul.slider li{
     position: absolute;
-    left: 0;
-    top: 0;
+ /*  left: 0;
+    top: 0;*/
     opacity: 0;
     width: inherit;
     height: inherit;
     transition: opacity .7s;
+    display: flex;
+    justify-content: center;
 }
 
- main ul .slider li:first-child{
+ main.productos ul .slider li:first-child{
     opacity: 1;
 } 
 
-main ul.slider li:target{
+main.productos ul.slider li:target{
     opacity: 1;
 }
 
-main ul.menu{
+main.productos ul.menu{
     text-align: center;
    /* margin-left: 150px;*/
     margin-top: -25px;
@@ -50,12 +57,12 @@ main ul.menu{
      
 }
 
-.menu li{
+main.productos .menu li{
     display: inline-block;
     text-align: center;
 }
 
-.menu li a{
+main.productos .menu li a{
     /*display: inline-block;*/
     color: rgb(224, 64, 203);
     background-color: lightseagreen;
@@ -67,33 +74,35 @@ main ul.menu{
     border-radius: 100%;
 }
 
-main h1{
+main.productos h1{
     margin: 20px auto 20px 20px;
     font-size: 19px;
     font-family: monospace;
 }
 
-main p{
+main.productos section.price p{
     font-size: 30px;
     font-family: "Montserrat";
     margin-left: 20px;
     margin-bottom: 10px;
 }
 
-main div.rayas{
+main.productos div.rayas{
     border-bottom-style: dotted;
     color: pink;
     width: 99%;
     margin-bottom: 20px;
+    margin-top: 34px;
 }
 
-main section.cantidad{
+
+main.productos section.cantidad{
      /*camtidad conteiner*/
     display: flex;
     position: relative;
 }
 
-main section.cantidad div.cant{
+main.productos section.cantidad div.cant{
     width: 90%;
     margin: 10px auto 20px 20px;
 }
@@ -112,19 +121,24 @@ main.productos section.cantidad span{
 main.productos section div.numeber{
    /* background-color: palevioletred;*/
    position: absolute;
-    top: 20px;
+    top: 36px;
     left: 44px;
 }
 
-main.productos section.cantidad div p{
+main.productos section.cantidad div.numeber p{
     font-size: 18px;
+    margin-left: 20px;
 }
 
 main.productos section div.angle{
+    display: flex;
     position: absolute;
-    left: 366px;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    left: -10%;
     top: 22px;
     font-size: 25px;
+    width: 100%;
 }
 
 main.productos section.cantidad div i{
@@ -148,21 +162,31 @@ main.productos section button.agregar{
     margin-bottom: 30px;
 }
 
-main.productos section div.postal{
-    border: solid 1px #ccc;
-    width: 45%;
-    padding: 8px;
-    height: 39px;
-    font-size: 20px;
-    margin: 0 auto 20px 20px;
+main.productos section.CP{
+    width: 91%;
+    height: 43px;
+    display: flex;
+    position: relative;
+    margin-left: 20px;
 }
 
-main.productos section button.calcular{
-    left: 50%;
+
+main.productos section.CP div.postal{
+    border: solid 1px #ccc;
+    width: 100%;
+    padding: 8px;
+    height: 41px;
+    font-size: 20px;
+    /*margin: 0 auto 20px 20px;*/
+    position: absolute;
+}
+
+main.productos section.CP button.calcular{
+    left: 57%;
     position: absolute;
     width: 43%;
     height: 42px;
-    top: 832px;
+    top: -1px;
     font-size: 21px;
     background: #53eaecd6;
     border-color: #53eaecd6;
@@ -170,26 +194,247 @@ main.productos section button.calcular{
     color: #700dccb8;
 }
 
+/*aca hay una linea de rayitas*/
+
+main.productos section.descripcion{
+    display: flex;
+    flex-direction: column;
+}
+
+main.productos section.descripcion h2{
+     color: var(--celeste);
+     filter: drop-shadow(2px 1px 0px black);
+     text-align: center;
+     margin: 23px auto 30px auto;
+     height: 68px;
+     font-size: 28px;
+     
+ }
+
+main.productos section.descripcion p{
+    border: solid 1.5px #8c7a7a;
+    padding: 10px;
+    font-size: 18px;
+    margin-bottom: 40px;
+    height: 106px;
+}
+
+main.productos h2{
+    color: var(--celeste);
+    filter: drop-shadow(2px 1px 0px black);
+    text-align: center;
+    margin: 23px auto 30px auto;
+    height: 6px;
+    font-size: 28px;
+    
+}
+
+main.productos section.productosRelacionados{
+   /* width: 100%;*/
+   /* height: 686px;*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+   /* margin-bottom: 65px;*/
+    margin-bottom: 12px;
+    justify-content: space-around;
+    align-content: space-between;
+}
+ 
+main.productos section.productosRelacionados article{
+    margin-top: 66px;
+    height: 100%;
+/*flex-wrap: wrap;*/
+   justify-content: center;
+   box-shadow: 0px -1px 6px #4e4c4c;
+  /* width: 10rem;*/
+   width: 47%;
+   background-color: white
+}
+
 main.productos section.productosRelacionados article img{
     width: 100%;
 }
 
+main.productos section.productosRelacionados article h6{
+  width: 100%;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-around;
+    height: 21px;
+
+}
+
+main.productos section.productosRelacionados article h3{
+    width: 100%;
+    font-size: 13px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+main.productos section.productosRelacionados article span.precio{
+
+    width: 100%;
+   display: flex;
+    font-size: 25px;
+    height: 39px;
+    align-items: stretch;
+    justify-content: center;
+}
+
+main.productos section.productosRelacionados article div {
+   width: 100%;
+   display: flex;
+   height: 38px;
+   display: none;
+  margin: 0px auto 0px auto;
+  border: solid 1px gray;
+}
+
+main.productos section.productosRelacionados article div button{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-size: 19px;
+    align-items: center;
+    text-decoration: none;
+    border: none;
+}
+
+main.productos section.productosRelacionados article div p{
+    width: 100%;
+    font-size: 21px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    /* height: 21px; */
+    align-items: center;
+    border-left: solid 1px #736060;
+    border-right: solid 1px #736060;
+}
+
+main.productos section.productosRelacionados article div button{
+    
+}
+
+main.productos section.productosRelacionados article button.agregar2{
+    width: 100%;
+    font-size: 13px;
+    height: 43px;
+    align-items: center;
+    font-family: Arial;
+    /* justify-content: center; */
+    background: #53eaecd6;
+    border-color: #53eaecd6;
+    border-bottom: 4px solid #67aaad;
+    color: #9a0fbd;
+    display: flex;
+    justify-content: center;
+}
 
 
 
 /* TABLET */
 
 
-/*@media (min-width: 640px) {
+@media (min-width: 640px) {
+     
+    main.productos section.fondo{
+        height: 100%;
+    }
 
-}*/
+    main.productos section.productosRelacionados article button.agregar2 {
+        justify-content: center;
+    }
+
+    main.productos section.productosRelacionados article div {
+        height: 52px;
+        display: flex;
+    }
+
+    main.productos section.productosRelacionados article button.agregar2{
+        height: 58px;
+        font-size: 18px;
+    }
+}
 
    
 
 
 /* desktop */
 
-/*@media (min-width: 1024px) {
+@media (min-width: 1024px) {
 
-}*/
+    main.productos section.fondo{
+        height: 100%;
+    }
+main.productos ul li img{
+    display: flex;
+    justify-content: center;
+
+}
+main.productos section.conteiner{
+    background-color: rgba(126, 235, 224, 0.884);
+    width: 100%;
+    height: 429px;
+    padding: 30px;
+    margin-top: 2px;
+    display: flex;
+    width: 54%;
+    flex-direction: column;
+}
+
+main.productos div.conteinerDetalle{
+    display: flex;
+    flex-direction: column;
+    width: 37%;
+    left: 57%;
+    top: 169px;
+    position: absolute;
+}
+
+main section ul.slider{
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+main ul.slaider li{
+    justify-content: center;
+    display: flex;
+}
+
+main.productos section h2{
+    height: 68px
+}
+
+main.productos section.descripcion p{
+    width: 50%;
+}
+
+main.productos section.productos.Relacionados{
+    align-content: space-between;
+    justify-content: space-evenly;
+}
+
+main.productos section.productosRelacionados article{
+    display: flex;
+    width: 23%;
+    flex-direction: column;
+}
+
+main.productos section.productosRelacionados article div {
+    height: 52px;
+}
+
+
+main.productos section.productosRelacionados article button.agregar2{
+    justify-content: center;
+    height: 58px;
+    font-size: 18px;
+}
+
+}
+
 
