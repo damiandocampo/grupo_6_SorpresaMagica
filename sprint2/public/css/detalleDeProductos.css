@@ -314,10 +314,6 @@ main.productos section.productosRelacionados article div p{
     border-right: solid 1px #736060;
 }
 
-main.productos section.productosRelacionados article div button{
-    
-}
-
 main.productos section.productosRelacionados article button.agregar2{
     width: 100%;
     font-size: 13px;
