@@ -22,13 +22,13 @@ footer div.top .rrss, footer div.top .contact {
 }
 
 footer div.top .rrss .rrss-icon{
-    width: 50%;
+    width: 60%;
     display: flex;
     justify-content: space-around;
 }
 
-footer div.top .rrss .rrss-icon{
-    font-size: 32px;
+footer div.top .rrss .rrss-icon a img{
+    width: 32px;
 }
 
 footer div.top .contact i {
@@ -42,8 +42,14 @@ footer div.top h3 {
 }
 
 footer div.top p {
+    display: flex;
     font-size: 16px;
     padding: 5px;
+}
+
+footer div.top p img{
+    width: 24px;
+    padding-right: 5px;
 }
 
 footer div.top .mapa {

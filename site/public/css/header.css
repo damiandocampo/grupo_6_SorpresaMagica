@@ -62,16 +62,25 @@ header div .message {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 76%;
+}
+
+header div .message .truck-icon{
+    width: 24px;
+    padding: 0px;
+}
+
+header div .message img {
+    width: 24px;
+}
+
+header div .message p {
+    font-size: 12px;
+    padding: 0px;
+    padding-left: 5px;
 }
 
 header div .message span {
     font-weight: bold;
-}
-
-header div .message p {
-    text-align: center;
-    font-size: 12px;
 }
 
 /* search */
@@ -162,8 +171,8 @@ nav.nav-bar .menu, nav.nav-bar .cart {
     width: 20%;
 }
 
- nav.nav-bar .menu i, nav.nav-bar .cart i {
-    font-size: 35px;
+nav.nav-bar .menu img, nav.nav-bar .cart a img {
+    width: 40px;
 }
 
  nav.nav-bar .menu h3, nav.nav-bar .cart h3 {
@@ -238,6 +247,14 @@ nav.nav-bar .logo a{
 
  nav.nav-bar .logo img {
     height: 100%;
+}
+
+/* carrito */
+
+nav.nav-bar .cart a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -344,19 +361,25 @@ nav.nav-bar .logo a{
         justify-content: flex-start;
     }
 
-    header div.desktop .message span {
-        font-weight: bold;
+    header div.desktop .message .truck-icon{
+        display: flex;
+        width: 24px;
+        padding: 0px;
     }
 
-    header div.desktop .message p i {
-        font-size: 20px;
+    header div.desktop .message img {
+        width: 24px;
+    }
+
+    header div.desktop .message span {
+        font-weight: bold;
     }
 
     header div.desktop .message p {
         text-align: left;
         font-size: 16px;
+        padding-left: 5px;
     }
-
 
     /* user */
 
@@ -544,13 +567,13 @@ nav.nav-bar .logo a{
 
     nav.nav-bar-desktop .cart{
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         width: 5%
     }
 
-    nav.nav-bar-desktop .cart i {
-        font-size: 30px;
+    nav.nav-bar-desktop .cart img {
+        width: 35px;
     }
 
 }
