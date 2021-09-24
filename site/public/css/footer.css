@@ -80,6 +80,14 @@ footer div.bottom p a {
     text-decoration: underline;
 }
 
+footer div.bottom div p a {
+    text-decoration: none;
+}
+
+footer div.bottom div p a:hover {
+    text-decoration: underline;
+}
+
 
 /* tablet */
 

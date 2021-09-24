@@ -1,0 +1,33 @@
+footer {
+    bottom: 0;
+    width: 100%;
+}
+
+footer div.bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--rosa);
+    padding: 5px 10px;
+    box-shadow: inset 0px 12px 5px -10px rgba(32, 32, 32, 0.30);
+}
+
+footer div.bottom p {
+    font-size: 12px;
+    text-align: center;
+    margin: 0;
+}
+
+footer div.bottom p a {
+    color: var(--negro);
+    text-decoration: underline !important;
+}
+
+/* tablet */
+
+@media (min-width: 640px) {
+    footer div.bottom {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

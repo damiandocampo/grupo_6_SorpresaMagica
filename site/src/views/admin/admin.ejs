@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('./partials/head') %>
+
+  <body>
+
+    <%- include('./partials/header') %>
+
+      <main class="admin">
+
+        <div class="titulo">
+          <h1>Listado de productos</h1>
+          <a href="/admin/create"><button type="button" class="btn btn-secondary">Agregar nuevo producto</button></a>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table">
+
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Imágen</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Eliminar</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td><img src="/images/productos/Alfajor MILKA Triple Mousse 55 Gr 74,04.png" alt="..." width="90px">
+                </td>
+                <td>Nombre del producto</td>
+                <td>Descripción</td>
+                <td>Marca</td>
+                <td>$$$</td>
+                <td><a href="/admin/edit"><button type="button" class="btn btn-outline-primary"><i
+                        class="fas fa-pen btn-outline-primary"></i> Editar</button></a></td>
+                <td><a href="/admin/delete"><button type="button" class="btn btn-outline-danger"><i
+                        class="fas fa-trash btn-outline-danger"></i> Eliminar</button></a></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td><img src="/images/productos/Alfajor MILKA Triple Mousse 55 Gr 74,04.png" alt="..." width="90px">
+                </td>
+                <td>Nombre del producto</td>
+                <td>Descripción</td>
+                <td>Marca</td>
+                <td>$$$</td>
+                <td><a href="/admin/edit"><button type="button" class="btn btn-outline-primary"><i
+                        class="fas fa-pen btn-outline-primary"></i> Editar</button></a></td>
+                <td><a href="/admin/delete"><button type="button" class="btn btn-outline-danger"><i
+                        class="fas fa-trash btn-outline-danger"></i> Eliminar</button></a></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td><img src="/images/productos/Alfajor MILKA Triple Mousse 55 Gr 74,04.png" alt="..." width="90px">
+                </td>
+                <td>Nombre del producto</td>
+                <td>Descripción</td>
+                <td>Marca</td>
+                <td>$$$</td>
+                <td><a href="/admin/edit"><button type="button" class="btn btn-outline-primary"><i
+                        class="fas fa-pen btn-outline-primary"></i> Editar</button></a></td>
+                <td><a href="/admin/delete"><button type="button" class="btn btn-outline-danger"><i
+                        class="fas fa-trash btn-outline-danger"></i> Eliminar</button></a></td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td><img src="/images/productos/Alfajor MILKA Triple Mousse 55 Gr 74,04.png" alt="..." width="90px">
+                </td>
+                <td>Nombre del producto</td>
+                <td>Descripción</td>
+                <td>Marca</td>
+                <td>$$$</td>
+                <td><a href="/admin/edit"><button type="button" class="btn btn-outline-primary"><i
+                        class="fas fa-pen btn-outline-primary"></i> Editar</button></a></td>
+                <td><a href="/admin/delete"><button type="button" class="btn btn-outline-danger"><i
+                        class="fas fa-trash btn-outline-danger"></i> Eliminar</button></a></td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+
+      </main>
+
+      <%- include('./partials/footer') %>
+
+  </body>
+
+</html>
