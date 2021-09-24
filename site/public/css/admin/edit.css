@@ -1,0 +1,121 @@
+.edit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit h1 {
+    margin: 40px 0px;
+    margin-bottom: 0px;
+}
+
+.edit .g-2 {
+    width: 90% !important;
+    display: flex;
+    flex-direction: column !important;
+    background-color: white;
+    margin: 50px 0px;
+}
+
+.edit .col-md {
+    display: flex;
+    width: 95% !important;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0px;
+}
+
+.edit .form-floating {
+    width: 450px !important;
+}
+
+.edit .separador {
+    display: flex !important;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.edit .button-crear {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.edit .separador button {
+    width: 150px !important;
+    height: 50px;
+}
+
+.edit .mb-3 {
+    display: flex !important;
+    align-items: center;
+    flex-direction: column;
+}
+
+.edit .separador img {
+    width: 20%;
+}
+
+@media(min-width: 1024px) {
+
+    .edit {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .edit h1 {
+        margin: 40px 0px;
+    }
+
+    .edit .g-2 {
+        width: 90% !important;
+        display: flex;
+        flex-direction: column !important;
+        background-color: white;
+        margin: 50px 0px;
+    }
+
+    .edit .col-md {
+        display: flex;
+        width: 40% !important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .edit .form-floating {
+        width: 450px !important;
+    }
+
+    .edit .separador {
+        display: flex !important;
+        margin: 10px;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .edit .imagen-del-producto {
+        width: 50% !important;
+    }
+
+    .edit .form-control {
+        width: 200px !important;
+    }
+
+    .edit .button-crear {
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .edit .separador button {
+        width: 150px !important;
+        height: 50px;
+    }
+}

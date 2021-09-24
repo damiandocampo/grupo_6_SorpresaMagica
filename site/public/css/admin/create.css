@@ -1,0 +1,109 @@
+.create {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.create h1 {
+    margin: 40px 0px;
+    margin-bottom: 0px;
+}
+
+.create .g-2 {
+    width: 90% !important;
+    display: flex;
+    flex-direction: column !important;
+    background-color: white;
+    margin: 50px 0px;
+}
+
+.create .col-md {
+    display: flex;
+    width: 95% !important;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0px;
+}
+
+.form-floating {
+    width: 450px !important;
+}
+
+.separador {
+    display: flex !important;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button-crear {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.separador button {
+    width: 150px !important;
+    height: 50px;
+}
+
+.mb-3 {
+    display: flex !important;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media(min-width: 1024px) {
+
+    .create {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .create h1 {
+        margin: 40px 0px;
+    }
+
+    .create .g-2 {
+        width: 90% !important;
+        display: flex;
+        flex-direction: column !important;
+        background-color: white;
+        margin: 50px 0px;
+    }
+
+    .create .col-md {
+        display: flex;
+        width: 40% !important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-floating {
+        width: 450px !important;
+    }
+
+    .separador {
+        display: flex !important;
+        margin: 10px;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .button-crear {
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .separador button {
+        width: 150px !important;
+        height: 50px;
+    }
+}
