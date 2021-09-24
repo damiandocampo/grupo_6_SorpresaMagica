@@ -1,0 +1,18 @@
+header nav{
+    background-color: var(--rosa);
+}
+
+.logo {
+    width: 120px;
+}
+
+.btn-outline-success {
+    color: var(--negro) !important;
+    border-color: var(--negro) !important;
+}
+
+.btn-outline-success:hover {
+    color: white !important;
+    border-color: #cb91b6 !important;
+    background-color: #cb91b6 !important;
+}
