@@ -1,101 +1,212 @@
 [
     {
         "id": 1,
-        "marca":"Cadbury",
-        "title": "Chocolate CADBURY Yogur Frutilla 80gr",
-        "price": "$240,53",
-        "categoria":"Chocolate",
-        "image": "Chocolate CADBURY Yogur Frutilla 80 Gr 240,53.png"
+        "marca":"Milka",
+        "title": "Alfajor MILKA Triple Mousse 55gr",
+        "price": "$74,04",
+        "categoria":"Alfajores",
+        "destacado": true,
+        "descuento": "",
+        "image": "AlfajorMILKATripleMousse55Gr74,04.png"
     },
-
     {
         "id": 2,
-        "marca":"Bon O Bon",
-        "title": "Bombones BON O BON Chocolate Con Leche 18u",
-        "price": "$422,26",
-        "categoria":"Chocolate",
-        "image": "Bombones BON O BON Chocolate Con Leche 18 U 422,26.png"
+        "marca":"Pepitos",
+        "title": "Alfajor PEPITOS Chocolate 57gr",
+        "price": "$88,99",
+        "categoria":"Alfajores",
+        "destacado": false,
+        "descuento": "",
+        "image": "AlfajorPepitosChocolate57GrX1U88,99.jpg"
     },
-
     {
         "id": 3,
         "marca":"Terrabusi",
         "title": "Alfajor Triple TERRABUSI Torta 70gr",
         "price": "$65,78",
         "categoria":"Alfajores",
-        "image": "Alfajor Triple TERRABUSI Torta 70 Gr 65,78.png"
+        "destacado": false,
+        "descuento": "",
+        "image": "AlfajorTripleTERRABUSITorta70Gr65,78.png"
     },
-
     {
         "id": 4,
-        "marca":"Arcor",
-        "title": "Caramelos Duros ARCOR Rodajas Frutales Acidas 930gr",
-        "price": "$883,87",
-        "categoria":"Caramelos",
-        "image": "Caramelos Duros ARCOR Rodajas Frutales Acidas 930 Gr 883,87.png"
+        "marca":"Bon O Bon",
+        "title": "Bombones BON O BON Chocolate Con Leche 18u",
+        "price": "$422,26",
+        "categoria":"Chocolate",
+        "destacado": true,
+        "descuento": "",
+        "image": "BombonesBONOBONChocolateConLeche18U422,26.png"
     },
-
     {
         "id": 5,
-        "marca":"Milka",
-        "title": "Alfajor MILKA Triple Mousse 55gr",
-        "price": "$74,04",
-        "categoria":"Alfajores",
-        "image": "Alfajor MILKA Triple Mousse 55 Gr 74,04.png"
-    },
-
-    {
-        "id": 6,
         "marca":"Butter Toffees",
         "title": "BUTTER TOFFEES Bon O Bon 150gr",
         "price": "$158,48",
         "categoria":"Caramelos",
-        "image": "BUTTER TOFFEES Bon O Bon 150 Gr 158,48.png"
+        "destacado": true,
+        "descuento": "",
+        "image": "BUTTERTOFFEESBonOBon150Gr158,48.png"
     },
-
+    {
+        "id": 6,
+        "marca":"Arcor",
+        "title": "Caramelos Duros ARCOR Rodajas Frutales Acidas 930gr",
+        "price": "$883,87",
+        "categoria":"Caramelos",
+        "destacado": true,
+        "descuento": "",
+        "image": "CaramelosDurosARCORRodajasFrutalesAcidas930Gr883,87.png"
+    },
     {
         "id": 7,
-        "marca":"Mogul",
-        "title": "Gomitas MOGUL Jelly Buttons 220gr",
-        "price": "$238,67",
-        "categoria":"Gomitas",
-        "image": "Gomitas MOGUL Jelly Buttons 220 Gr 238,67.jpg"
-    },
-
-    {
-        "id": 9,
         "marca":"Halls",
         "title": "Caramelos HALLS Creamy Mora 27gr",
         "price": "$53,21",
         "categoria":"Caramelos",
-        "image": "Caramelos HALLS Creamy Mora 27 Gr 53,21.jpg"
+        "destacado": false,
+        "descuento": "",
+        "image": "CaramelosHALLSCreamyMora27Gr53,21.jpg"
     },
-
+    {
+        "id":8,
+        "marca": "Topline",
+        "title": "Chicles 7 Ultra Green TOPLINE 24gr",
+        "price": "$109,99",
+        "categoria": "Chicles",
+        "destacado": true,
+        "descuento": "",
+        "image": "Chicles7UltraGreenTOPLINEEst24Gr109,99.jpg"
+    },
+    {
+        "id": 9,
+        "marca":"Beldent",
+        "title": "Chicles Menta BELDENT 10gr",
+        "price": "$53,99",
+        "categoria":"Chicles",
+        "destacado": false,
+        "descuento": "",
+        "image": "ChiclesMentaBeldentX10Gr53,99.jpg"
+    },
     {
         "id": 10,
+        "marca":"Topline",
+        "title": "Chicles TOPLINE Fruta 6.7gr",
+        "price": "$27,99",
+        "categoria":"Chicles",
+        "destacado": false,
+        "descuento": "",
+        "image": "ChiclesTOPLINEFrutaPaq6.7Gr27,99.jpg"
+    },
+    {
+        "id": 11,
+        "marca":"Cadbury",
+        "title": "Chocolate CADBURY Yogur Frutilla 80gr",
+        "price": "$240,53",
+        "categoria":"Chocolates",
+        "destacado": true,
+        "descuento": "",
+        "image": "ChocolateCADBURYYogurFrutilla80Gr240,53.png"
+    },
+    {
+        "id": 12,
+        "marca":"M&Ms",
+        "title": "Confites de Chocolate M&Ms 52Gr.jpg",
+        "price": "$221,99",
+        "categoria":"Confites",
+        "destacado": true,
+        "descuento": "",
+        "image": "ChocolateM&MBsa52Gr221,99.jpg"
+    },
+    {
+        "id": 13,
         "marca":"Milka",
         "title": "Chocolate MILKA Castañas 155gr",
         "price": "$477,21",
         "categoria":"Chocolate",
-        "image": "Chocolate MILKA Castañas 155 Gr 477,21.jpg"
+        "destacado": true,
+        "descuento": "",
+        "image": "ChocolateMILKACastañas155Gr477,21.jpg"
     },
-
     {
-        "id": 11,
-        "marca":"Nugaton",
-        "title": "Oblea NUGATON Blanco 27gr",
-        "price": "$63,63",
-        "categoria":"Chocolate",
-        "image": "Oblea NUGATON Blanco 27 Gr 63,63.jpg"
+        "id": 14,
+        "marca":"Mr.Pop'S",
+        "title": "Chupetin Frutal MR,POP'S 10u",
+        "price": "$100,69",
+        "categoria":"Chupetines",
+        "destacado": false,
+        "descuento": "",
+        "image": "ChupetinFrutalMr.Pop'SBsa10U100,69.jpg"
     },
-     
     {
-        "id": 12,
+        "id": 15,
+        "marca":"Mr.Pop'S",
+        "title": "Chupetin Tuti Fruti MR.POP'S 480gr",
+        "price": "$313,91",
+        "categoria":"Chupetines",
+        "destacado": false,
+        "descuento": "",
+        "image": "ChupetinTutiFrutiMr.Pop'SBsa480Gr313,91.jpg"
+    },
+    {
+        "id": 16,
+        "marca":"Flynn Paff",
+        "title": "Chupetin Tutti Frutti FLYNN PAFF 432gr",
+        "price": "$488,99",
+        "categoria":"Chupetines",
+        "destacado": true,
+        "descuento": "",
+        "image": "ChupetinTuttiFruttiFlynnPaffPaq432Gr488,99.jpg"
+    },
+    {
+        "id": 17,
+        "marca":"Rocklets",
+        "title": "Confites De Chocolate ROCKLETS 40gr",
+        "price": "$73,57",
+        "categoria":"Confites",
+        "destacado": true,
+        "descuento": "",
+        "image": "ConfitesDeChocolateROCKLETS40Gr73,57.jpg"
+    },
+    {
+        "id": 18,
         "marca":"Mogul",
         "title": "Gomitas MOGUL Frutillas Acidas 150gr",
         "price": "$141,13",
         "categoria":"Gomitas",
-        "image": "Gomitas MOGUL Frutillas Acidas 150 Gr 141,13.png"
+        "destacado": true,
+        "descuento": "",
+        "image": "GomitasMOGULFrutillasAcidas150Gr141,13.png"
+    },
+    {
+        "id": 19,
+        "marca":"Mogul",
+        "title": "Gomitas MOGUL Jelly Buttons 220gr",
+        "price": "$238,67",
+        "categoria":"Gomitas",
+        "destacado": false,
+        "descuento": "",
+        "image": "GomitasMOGULJellyButtons220Gr238,67.jpg"
+    },
+    {
+        "id": 20,
+        "marca":"Billiken",
+        "title": "Gomitas Sabor Frutal BILLIKEN 200Gr",
+        "price": "$152,99",
+        "categoria":"Gomitas",
+        "destacado": false,
+        "descuento": "",
+        "image": "GomitasSaborFrutalBillikenBsa200Gr152,99.jpg"
+    },
+    {
+        "id": 21,
+        "marca":"Cofler",
+        "title": "Mani Con Chocolate COFLER 40Gr",
+        "price": "$91,49",
+        "categoria":"Confites",
+        "destacado": true,
+        "descuento": "",
+        "image": "ManiConChocolateCOFLERCja40Gr91,49.jpg"
     }
-   
 ]

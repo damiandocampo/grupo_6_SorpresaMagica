@@ -22,7 +22,6 @@
                 <th scope="col">#</th>
                 <th scope="col">Imágen</th>
                 <th scope="col">Nombre</th>
-                <th scope="col">Descripción</th>
                 <th scope="col">Marca</th>
                 <th scope="col">Precio</th>
                 <th scope="col">Editar</th>
@@ -31,58 +30,19 @@
             </thead>
 
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td><img src="/images/productos/Alfajor MILKA Triple Mousse 55 Gr 74,04.png" alt="..." width="90px">
-                </td>
-                <td>Nombre del producto</td>
-                <td>Descripción</td>
-                <td>Marca</td>
-                <td>$$$</td>
-                <td><a href="/admin/edit"><button type="button" class="btn btn-outline-primary"><i
-                        class="fas fa-pen btn-outline-primary"></i> Editar</button></a></td>
-                <td><a href="/admin/delete"><button type="button" class="btn btn-outline-danger"><i
-                        class="fas fa-trash btn-outline-danger"></i> Eliminar</button></a></td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td><img src="/images/productos/Alfajor MILKA Triple Mousse 55 Gr 74,04.png" alt="..." width="90px">
-                </td>
-                <td>Nombre del producto</td>
-                <td>Descripción</td>
-                <td>Marca</td>
-                <td>$$$</td>
-                <td><a href="/admin/edit"><button type="button" class="btn btn-outline-primary"><i
-                        class="fas fa-pen btn-outline-primary"></i> Editar</button></a></td>
-                <td><a href="/admin/delete"><button type="button" class="btn btn-outline-danger"><i
-                        class="fas fa-trash btn-outline-danger"></i> Eliminar</button></a></td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td><img src="/images/productos/Alfajor MILKA Triple Mousse 55 Gr 74,04.png" alt="..." width="90px">
-                </td>
-                <td>Nombre del producto</td>
-                <td>Descripción</td>
-                <td>Marca</td>
-                <td>$$$</td>
-                <td><a href="/admin/edit"><button type="button" class="btn btn-outline-primary"><i
-                        class="fas fa-pen btn-outline-primary"></i> Editar</button></a></td>
-                <td><a href="/admin/delete"><button type="button" class="btn btn-outline-danger"><i
-                        class="fas fa-trash btn-outline-danger"></i> Eliminar</button></a></td>
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td><img src="/images/productos/Alfajor MILKA Triple Mousse 55 Gr 74,04.png" alt="..." width="90px">
-                </td>
-                <td>Nombre del producto</td>
-                <td>Descripción</td>
-                <td>Marca</td>
-                <td>$$$</td>
-                <td><a href="/admin/edit"><button type="button" class="btn btn-outline-primary"><i
-                        class="fas fa-pen btn-outline-primary"></i> Editar</button></a></td>
-                <td><a href="/admin/delete"><button type="button" class="btn btn-outline-danger"><i
-                        class="fas fa-trash btn-outline-danger"></i> Eliminar</button></a></td>
-              </tr>
+              
+                <% products.forEach(product => { %>
+                  <tr>
+                    <th scope="row"><%= product.id %></th>
+                    <td><img src="/images/productos/<%= product.image %>" alt="..." width="90px"></td>
+                    <td><%= product.title %></td>
+                    <td><%= product.marca %></td>
+                    <td><%= product.price %></td>
+                    <td><a href="/admin/edit"><button type="button" class="btn btn-outline-primary"><i class="fas fa-pen btn-outline-primary"></i> Editar</button></a></td>
+                    <td><a href="/admin/delete"><button type="button" class="btn btn-outline-danger"><i class="fas fa-trash btn-outline-danger"></i> Eliminar</button></a></td>
+                  </tr>
+                <% }) %> 
+                
             </tbody>
 
           </table>
