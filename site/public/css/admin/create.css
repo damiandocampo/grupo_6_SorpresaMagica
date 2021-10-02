@@ -3,19 +3,30 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 90%;
+    margin: 40px auto;
+    background-color: white;
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.15);
 }
 
 .create h1 {
-    margin: 40px 0px;
+    margin-top: 40px;
     margin-bottom: 0px;
 }
 
+.create form {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .create .g-2 {
-    width: 90% !important;
+    width: 100% !important;
     display: flex;
     flex-direction: column !important;
-    background-color: white;
-    margin: 50px 0px;
+    margin: 20px 0px;
+    padding: 20px 0px;
 }
 
 .create .col-md {
@@ -26,33 +37,42 @@
     margin: 5px 0px;
 }
 
-.form-floating {
-    width: 450px !important;
+.create .form-floating {
+    width: 100% !important;
 }
 
-.separador {
+.create .separador {
     display: flex !important;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
 }
 
-.button-crear {
+.create .button-crear {
     width: 50%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.separador button {
+.create .separador button {
     width: 150px !important;
     height: 50px;
 }
 
-.mb-3 {
+.create .mb-3 {
     display: flex !important;
     align-items: center;
     flex-direction: column;
+    width: 100% !important;
+}
+
+@media(min-width: 680px) {
+
+    .create .form-floating, .create .mb-3 {
+        width: 450px !important;
+    }
+
 }
 
 @media(min-width: 1024px) {
@@ -62,32 +82,36 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 90%;
+        margin: 40px auto;
+        background-color: white;
+        box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.15);
     }
 
     .create h1 {
-        margin: 40px 0px;
+        margin-top: 40px;
     }
 
     .create .g-2 {
         width: 90% !important;
         display: flex;
         flex-direction: column !important;
-        background-color: white;
         margin: 50px 0px;
+        padding: 20px 0px;
     }
 
     .create .col-md {
         display: flex;
-        width: 40% !important;
+        width: 50% !important;
         justify-content: center;
         align-items: center;
     }
 
-    .form-floating {
-        width: 450px !important;
+    .create .form-floating, .create .mb-3 {
+        width: 90% !important;
     }
 
-    .separador {
+    .create .separador {
         display: flex !important;
         margin: 10px;
         justify-content: space-around;
@@ -95,14 +119,14 @@
         flex-direction: row;
     }
 
-    .button-crear {
+    .create .button-crear {
         width: 50%;
         display: flex;
         justify-content: space-around;
         align-items: center;
     }
 
-    .separador button {
+    .create .separador button {
         width: 150px !important;
         height: 50px;
     }
