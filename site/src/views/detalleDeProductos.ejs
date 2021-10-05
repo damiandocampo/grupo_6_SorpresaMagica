@@ -14,15 +14,15 @@
             <section class="conteiner">
                 <ul class="slider">
                     <li id="slide1">
-                        <img src="/images/productos/AlfajorMILKATripleMousse55Gr74,04.png" alt="Foto alfajor 1"/>  
+                        <img src="/images/productos/<%= product.image %> " alt="Foto alfajor 1"/>  
                     </li>
                 
                     <li id="slide2">
-                        <img src="/images/productos/AlfajorTripleTERRABUSITorta70Gr65,78.png" alt="">  
+                        <img src="/images/productos/<%= product.image %>" alt="">  
                     </li>
               
                     <li id="slide3">
-                        <img src="/images/productos/AlfajorMILKATripleMousse55Gr74,04.png" alt="Foto alfajor 3"/>  
+                        <img src="/images/productos/<%= product.image %>" alt="Foto alfajor 3"/>  
                     </li>
                 </ul>
             </section>
@@ -53,10 +53,10 @@
          <div class="conteinerDetalle">
            <section  class="price">
               <div >
-                <h1>Alfajor Milka Triple</h1>
+                <h1><%= product.title %> </h1>
              </div>  
 
-             <p>$ 74,04</p>
+             <p>$ <%= product.price %> </p>
 
             </section>
 
@@ -99,11 +99,13 @@
              <h2>PRODUCTOS RELACIONADOS</h2> 
            </div>
          <section class="productosRelacionados">
+            <% products = products.filter(product => product.categoria === 'Alfajores') %> 
+             <% products.forEach(product => {   %> 
               <article>
-                 <img src="/images/productos/AlfajorTripleTERRABUSITorta70Gr65,78.png" alt="imagen1"/>
-                <h6>Milka</h6>
-                <h3>Alfajor Milka Mouse <br> 55gr</h3>
-                <span class="precio">$ 74,04</span>
+                 <img src="/images/productos/<%= product.image %> " alt="imagen1"/>
+                <h6><%= product.marca %> </h6>
+                <h3><%= product.title %>  <br> 55gr</h3>
+                <span class="precio"><%= product.price %> </span>
                 <div>
                   <button>-</button>
                   <p>1</p>
@@ -111,9 +113,9 @@
                 </div>
                 <button class="agregar2">AGREGAR AL CARRITO</button>
                </article>
-         
+              <% }) %> 
 
-             <article>
+         <!--    <article>
                <img src="/images/productos/ChocolateMILKACastañas155Gr477,21.jpg" alt="">
                <h6>Milka</h6>
                 <h3>Alfajor Milka Mouse <br> 55gr</h3>
@@ -139,7 +141,7 @@
                 <button class="agregar2">AGREGAR AL CARRITO</button>
                </article>
 
-
+                 -->
      </main>
     </section>
     <%- include('./partials/footer') %> 
