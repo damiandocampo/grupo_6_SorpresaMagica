@@ -85,9 +85,8 @@
 
             <% productos.forEach(product=> { %>
                 <article>
-                    <a href="">
-                        <img src="/images/productos/<%= product.image %>"
-                            alt="<%= product.title %>">
+                    <a href="/productos/<%= product.id %>">
+                        <img src="/images/productos/<%= product.image %>" alt="<%= product.title %>">
                     </a>
                     <div class="descripcion">
                         <a href="/productos/<%= product.id %>">
@@ -95,7 +94,8 @@
                                 <%= product.marca %>
                             </h5>
                         </a>
-                        <h3><a href="/productos/<%= product.id %>">
+                        <h3>
+                            <a href="/productos/<%= product.id %>">
                                 <%= product.title %>
                             </a>
                         </h3>

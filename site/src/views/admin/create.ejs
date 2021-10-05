@@ -11,7 +11,7 @@
 
         <h1>Crear un producto</h1>
 
-        <form action="" method="post">
+        <form action="/admin/create" method="post" enctype="multipart/form-data">
 
           <div class="row g-2">
 
@@ -19,14 +19,14 @@
 
               <div class="col-md">
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="floatingInputGrid" value="Nombre del producto">
+                  <input type="text" class="form-control" id="floatingInputGrid" placeholder="Nombre del producto" name="title">
                   <label for="floatingInputGrid">Nombre del producto</label>
                 </div>
               </div>
 
               <div class="col-md">
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="floatingInputGrid" value="Marca">
+                  <input type="text" class="form-control" id="floatingInputGrid" placeholder="Marca" name="marca">
                   <label for="floatingInputGrid">Marca</label>
                 </div>
               </div>
@@ -37,14 +37,14 @@
 
               <div class="col-md">
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="floatingInputGrid" value="Precio">
+                  <input type="text" class="form-control" id="floatingInputGrid" placeholder="Precio" name="price">
                   <label for="floatingInputGrid">Precio</label>
                 </div>
               </div>
 
               <div class="col-md">
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="floatingInputGrid" value="Descuento">
+                  <input type="text" class="form-control" id="floatingInputGrid" placeholder="Descuento" name="descuento">
                   <label for="floatingInputGrid">Descuento</label>
                 </div>
               </div>
@@ -55,15 +55,15 @@
 
               <div class="col-md">
                 <div class="form-floating">
-                  <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
-                    <option selected hidden>Seleccioná una categoría</option>
-                    <option value="1">Alfajores</option>
-                    <option value="2">Caramelos</option>
-                    <option value="3">Chicles</option>
-                    <option value="4">Chocolates</option>
-                    <option value="5">Chupetines</option>
-                    <option value="6">Confites</option>
-                    <option value="7">Gomitas</option>
+                  <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example" name="categoria">
+                    <option value="" selected hidden>Seleccioná una categoría</option>
+                    <option value="Alfajores">Alfajores</option>
+                    <option value="Caramelos">Caramelos</option>
+                    <option value="Chicles">Chicles</option>
+                    <option value="Chocolates">Chocolates</option>
+                    <option value="Chupetines">Chupetines</option>
+                    <option value="Confites">Confites</option>
+                    <option value="Gomitas">Gomitas</option>
                   </select>
                   <label for="floatingSelectGrid">Categoría</label>
                 </div>
@@ -71,10 +71,10 @@
 
               <div class="col-md">
                 <div class="form-floating">
-                  <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                  <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example" name="destacado"> 
                     <option selected hidden>¿Es un producto destacado?</option>
-                    <option value="1">Si</option>
-                    <option value="2">No</option>
+                    <option value=true>Si</option>
+                    <option value=false>No</option>
                   </select>
                   <label for="floatingSelectGrid">Destacado</label>
                 </div>
@@ -87,13 +87,13 @@
               <div class="col-md">
                 <div class="mb-3">
                   <label for="formFile" class="form-label">Seleccione una imágen del producto</label>
-                  <input class="form-control" type="file" id="formFile">
+                  <input class="form-control" type="file" id="formFile" name="image">
                 </div>
               </div>
 
               <div class="col-md">
                 <div class="button-crear">
-                  <button type="button" class="btn btn-outline-info">Crear</button>
+                  <button type="submit" class="btn btn-outline-info">Crear</button>
                 </div>
               </div>
 

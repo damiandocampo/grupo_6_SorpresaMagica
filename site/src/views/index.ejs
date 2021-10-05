@@ -116,10 +116,10 @@
 
                         <div class="productos">
 
-                            <% const productos=products.filter(producto=> producto.destacado) %>
+                            <% const productos=products.filter(producto=> producto.destacado == true) %>
                                 <% productos.forEach(product=> { %>
                                     <article>
-                                        <a href="">
+                                        <a href="/productos/<%= product.id %>">
                                             <img src="/images/productos/<%= product.image %>"
                                                 alt="<%= product.title %>">
                                         </a>
@@ -129,9 +129,11 @@
                                                     <%= product.marca %>
                                                 </h5>
                                             </a>
-                                            <h3><a href="/productos/<%= product.id %>">
+                                            <h3>
+                                                <a href="/productos/<%= product.id %>">
                                                     <%= product.title %>
-                                                </a></h3>
+                                                </a>
+                                            </h3>
                                             <h2>
                                                 $ <%= product.price %>
                                             </h2>
