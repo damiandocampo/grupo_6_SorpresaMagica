@@ -6,7 +6,10 @@ let productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const controller = {
     detalle: (req,res) => {
-        res.render('detalleDeProductos');
+        const {id} = req.params
+        const product = products.find(element => element.id === +id)
+
+        res.render('detalleDeProductos', {product, products});
     },
     listado: (req, res) => {
         productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
