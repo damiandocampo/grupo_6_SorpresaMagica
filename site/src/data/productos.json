@@ -208,5 +208,15 @@
         "destacado": true,
         "descuento": "",
         "image": "ManiConChocolateCOFLERCja40Gr91,49.jpg"
+    },
+    {
+        "id": 22,
+        "marca":"Cofler",
+        "title": "Mani Con Chocolate COFLER 40Gr",
+        "price": 91.49,
+        "categoria":"Confites",
+        "destacado": true,
+        "descuento": "",
+        "image": "ManiConChocolateCOFLERCja40Gr91,49.jpg"
     }
 ]
