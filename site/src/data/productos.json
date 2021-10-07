@@ -5,7 +5,7 @@
     "title": "Alfajor MILKA Triple Mousse 55gr",
     "price": 74.04,
     "categoria": "Alfajores",
-    "destacado": true,
+    "destacado": "true",
     "descuento": "",
     "image": "AlfajorMILKATripleMousse55Gr74,04.png"
   },
@@ -35,7 +35,7 @@
     "title": "Bombones BON O BON Chocolate Con Leche 18u",
     "price": 422.26,
     "categoria": "Chocolate",
-    "destacado": true,
+    "destacado": "true",
     "descuento": "",
     "image": "BombonesBONOBONChocolateConLeche18U422,26.png"
   },
@@ -45,7 +45,7 @@
     "title": "BUTTER TOFFEES Bon O Bon 150gr",
     "price": 158.48,
     "categoria": "Caramelos",
-    "destacado": true,
+    "destacado": "true",
     "descuento": "",
     "image": "BUTTERTOFFEESBonOBon150Gr158,48.png"
   },
@@ -55,7 +55,7 @@
     "title": "Caramelos Duros ARCOR Rodajas Frutales Acidas 930gr",
     "price": 883.87,
     "categoria": "Caramelos",
-    "destacado": true,
+    "destacado": "true",
     "descuento": "",
     "image": "CaramelosDurosARCORRodajasFrutalesAcidas930Gr883,87.png"
   },
@@ -75,7 +75,7 @@
     "title": "Chicles 7 Ultra Green TOPLINE 24gr",
     "price": 109.99,
     "categoria": "Chicles",
-    "destacado": true,
+    "destacado": "true",
     "descuento": "",
     "image": "Chicles7UltraGreenTOPLINEEst24Gr109,99.jpg"
   },
@@ -105,7 +105,7 @@
     "title": "Chocolate CADBURY Yogur Frutilla 80gr",
     "price": 240.53,
     "categoria": "Chocolates",
-    "destacado": true,
+    "destacado": "true",
     "descuento": "",
     "image": "ChocolateCADBURYYogurFrutilla80Gr240,53.png"
   },
@@ -115,7 +115,7 @@
     "title": "Confites de Chocolate M&Ms 52Gr.jpg",
     "price": 221.99,
     "categoria": "Confites",
-    "destacado": true,
+    "destacado": "true",
     "descuento": "",
     "image": "ChocolateM&MBsa52Gr221,99.jpg"
   },
@@ -125,7 +125,7 @@
     "title": "Chocolate MILKA Castañas 155gr",
     "price": 477.21,
     "categoria": "Chocolate",
-    "destacado": true,
+    "destacado": "true",
     "descuento": "",
     "image": "ChocolateMILKACastañas155Gr477,21.jpg"
   },
@@ -155,7 +155,7 @@
     "title": "Chupetin Tutti Frutti FLYNN PAFF 432gr",
     "price": 488.99,
     "categoria": "Chupetines",
-    "destacado": true,
+    "destacado": "true",
     "descuento": "",
     "image": "ChupetinTuttiFruttiFlynnPaffPaq432Gr488,99.jpg"
   },
@@ -165,7 +165,7 @@
     "title": "Confites De Chocolate ROCKLETS 40gr",
     "price": 73.57,
     "categoria": "Confites",
-    "destacado": true,
+    "destacado": "true",
     "descuento": "",
     "image": "ConfitesDeChocolateROCKLETS40Gr73,57.jpg"
   },
@@ -175,7 +175,7 @@
     "title": "Gomitas MOGUL Frutillas Acidas 150gr",
     "price": 141.13,
     "categoria": "Gomitas",
-    "destacado": true,
+    "destacado": "true",
     "descuento": "",
     "image": "GomitasMOGULFrutillasAcidas150Gr141,13.png"
   },
@@ -205,7 +205,7 @@
     "title": "Mani Con Chocolate COFLER 40Gr",
     "price": 91.49,
     "categoria": "Confites",
-    "destacado": true,
+    "destacado": "true",
     "descuento": "",
     "image": "ManiConChocolateCOFLERCja40Gr91,49.jpg"
   }

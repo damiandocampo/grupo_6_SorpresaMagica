@@ -258,12 +258,34 @@
     height: 26px;
 }
 
+.home section.destacados .productos article .descripcion div {
+    margin-bottom: 5px;
+}
+
+/* precio */
+
+.home section.destacados .productos article .descripcion .precio {
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 22px;
+    margin: 0px;
+}
+
+.home section.destacados .productos article .descripcion .precio small {
+    font-size: 10px;
+    text-decoration: line-through;
+    color: gray;
+}
+
 .home section.destacados .productos article .descripcion h2 {
     font-size: 18px;
 }
 
-.home section.destacados .productos article .descripcion div {
-    margin-bottom: 5px;
+.home section.destacados .productos article .descripcion .precio h3 {
+    color: var(--celeste);
+    font-size: 14px;
 }
 
 /* cantidad */
@@ -565,6 +587,28 @@
         justify-content: space-between;
         align-items: center;
         box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.15);
+    }
+
+    /* precio */
+
+    .home section.destacados .productos article .descripcion .precio {
+        width: 85%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 22px;
+        margin: 0px;
+    }
+
+    .home section.destacados .productos article .descripcion .precio small {
+        font-size: 12px;
+        text-decoration: line-through;
+        color: gray;
+    }
+
+    .home section.destacados .productos article .descripcion .precio h3 {
+        color: var(--celeste);
+        font-size: 16px;
     }
 
     /* cantidad - agregar al carrito */

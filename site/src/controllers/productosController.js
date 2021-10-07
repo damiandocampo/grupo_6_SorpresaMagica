@@ -2,7 +2,9 @@ const fs = require('fs');
 const path = require('path');
 
 const productsFilePath = path.join(__dirname, '../data/productos.json');
-let productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+const finalPrice = (price, discount) => price - (price * discount / 100);
 
 const controller = {
     detalle: (req,res) => {
@@ -12,8 +14,8 @@ const controller = {
         res.render('detalleDeProductos', {product, products});
     },
     listado: (req, res) => {
-        productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        res.render('productos', {productos});
+        products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render('productos', {products, finalPrice});
     },
 }
 
