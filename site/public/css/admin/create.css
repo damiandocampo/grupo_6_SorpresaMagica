@@ -1,0 +1,133 @@
+.create {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 40px auto;
+    background-color: white;
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.15);
+}
+
+.create h1 {
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+
+.create form {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.create .g-2 {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column !important;
+    margin: 20px 0px;
+    padding: 20px 0px;
+}
+
+.create .col-md {
+    display: flex;
+    width: 95% !important;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0px;
+}
+
+.create .form-floating {
+    width: 100% !important;
+}
+
+.create .separador {
+    display: flex !important;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.create .button-crear {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.create .separador button {
+    width: 150px !important;
+    height: 50px;
+}
+
+.create .mb-3 {
+    display: flex !important;
+    align-items: center;
+    flex-direction: column;
+    width: 100% !important;
+}
+
+@media(min-width: 680px) {
+
+    .create .form-floating, .create .mb-3 {
+        width: 450px !important;
+    }
+
+}
+
+@media(min-width: 1024px) {
+
+    .create {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin: 40px auto;
+        background-color: white;
+        box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.15);
+    }
+
+    .create h1 {
+        margin-top: 40px;
+    }
+
+    .create .g-2 {
+        width: 90% !important;
+        display: flex;
+        flex-direction: column !important;
+        margin: 50px 0px;
+        padding: 20px 0px;
+    }
+
+    .create .col-md {
+        display: flex;
+        width: 50% !important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .create .form-floating, .create .mb-3 {
+        width: 90% !important;
+    }
+
+    .create .separador {
+        display: flex !important;
+        margin: 10px;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .create .button-crear {
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .create .separador button {
+        width: 150px !important;
+        height: 50px;
+    }
+}

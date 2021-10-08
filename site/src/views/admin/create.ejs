@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('./partials/head') %>
+
+  <body>
+
+    <%- include('./partials/header') %>
+
+      <main class="create">
+
+        <h1>Crear un producto</h1>
+
+        <form action="" method="post">
+
+          <div class="row g-2">
+
+            <div class="separador">
+
+              <div class="col-md">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingInputGrid" value="Nombre del producto">
+                  <label for="floatingInputGrid">Nombre del producto</label>
+                </div>
+              </div>
+
+              <div class="col-md">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingInputGrid" value="Marca">
+                  <label for="floatingInputGrid">Marca</label>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="separador">
+
+              <div class="col-md">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingInputGrid" value="Precio">
+                  <label for="floatingInputGrid">Precio</label>
+                </div>
+              </div>
+
+              <div class="col-md">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingInputGrid" value="Descuento">
+                  <label for="floatingInputGrid">Descuento</label>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="separador">
+
+              <div class="col-md">
+                <div class="form-floating">
+                  <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                    <option selected hidden>Seleccioná una categoría</option>
+                    <option value="1">Alfajores</option>
+                    <option value="2">Caramelos</option>
+                    <option value="3">Chicles</option>
+                    <option value="4">Chocolates</option>
+                    <option value="5">Chupetines</option>
+                    <option value="6">Confites</option>
+                    <option value="7">Gomitas</option>
+                  </select>
+                  <label for="floatingSelectGrid">Categoría</label>
+                </div>
+              </div>
+
+              <div class="col-md">
+                <div class="form-floating">
+                  <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                    <option selected hidden>¿Es un producto destacado?</option>
+                    <option value="1">Si</option>
+                    <option value="2">No</option>
+                  </select>
+                  <label for="floatingSelectGrid">Destacado</label>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="separador">
+
+              <div class="col-md">
+                <div class="mb-3">
+                  <label for="formFile" class="form-label">Seleccione una imágen del producto</label>
+                  <input class="form-control" type="file" id="formFile">
+                </div>
+              </div>
+
+              <div class="col-md">
+                <div class="button-crear">
+                  <button type="button" class="btn btn-outline-info">Crear</button>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </form>
+
+      </main>
+
+      <%- include('./partials/footer') %>
+
+  </body>
+
+</html>

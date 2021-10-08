@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "title": "Alfajores",
+        "image": "alfajores.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Caramelos",
+        "image": "caramelos.png"
+    },
+    {
+        "id": 3,
+        "title": "Chicles",
+        "image": "chicles.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Chocolates",
+        "image": "chocolates.jfif"
+    },
+    {
+        "id": 5,
+        "title": "Chupetines",
+        "image": "chupetines.jfif"
+    },
+    {
+        "id": 6,
+        "title": "Confites",
+        "image": "confites.jpg"
+    },
+    {
+        "id": 7,
+        "title": "Gomitas",
+        "image": "gomitas.jfif"
+    }
+]

@@ -1,6 +1,9 @@
+const products = require('../data/productos.json');
+const categorias = require('../data/categorias.json')
+
 const controller = {
     index: function(req, res, next) {
-        res.render('index');
+        res.render('index', {products, categorias});
     },
 }
 

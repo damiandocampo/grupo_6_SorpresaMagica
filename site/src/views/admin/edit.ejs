@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('./partials/head') %>
+
+  <body>
+
+    <%- include('./partials/header') %>
+
+      <main class="edit">
+
+        <h1>Editar un producto</h1>
+
+        <form action="/admin/edit/<%= product.id %>?_method=PUT" method="POST">
+
+          <div class="row g-2">
+
+            <div class="separador">
+
+              <div class="col-md">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingInputGrid" value="<%= product.title %> " name="title">
+                  <label for="floatingInputGrid">Nombre del producto</label>
+                </div>
+              </div>
+
+              <div class="col-md">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingInputGrid" value="<%= product.marca %> " name="marca">
+                  <label for="floatingInputGrid">Marca</label>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="separador">
+
+              <div class="col-md">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingInputGrid" value="<%= product.price %> " name="price">
+                  <label for="floatingInputGrid">Precio</label>
+                </div>
+              </div>
+
+              <div class="col-md">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingInputGrid" value="<%= product.descuento %> " name="descuento">
+                  <label for="floatingInputGrid">Descuento</label>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="separador">
+
+              <div class="col-md">
+                <div class="form-floating">
+                  <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example" name="categoria">
+                    <option value="" selected hidden>Seleccioná una categoría</option>
+                    <option value="Alfajores" <%= product.categoria === "Alfajores"? "selected" : null %>  >Alfajores</option>
+                    <option value="Caramelos" <%= product.categoria === "Caramelos"? "selected" : null %>  >Caramelos</option>
+                    <option value="Chicles" <%= product.categoria === "Chicles"? "selected" : null %>  >Chicles</option>
+                    <option value="Chocolate" <%= product.categoria === "Chocolate"? "selected" : null %>  >Chocolates</option>
+                    <option value="Chupetines" <%= product.categoria === "Chupetines"? "selected" : null %>  >Chupetines</option>
+                    <option value="Confites" <%= product.categoria === "Confites"? "selected" : null %>  >Confites</option>
+                    <option value="Gomitas" <%= product.categoria === "Gomitas"? "selected" : null %>  >Gomitas</option>
+                  </select>
+                  <label for="floatingSelectGrid">Categoría</label>
+                </div>
+              </div>
+
+              <div class="col-md">
+                <div class="form-floating">
+                  <select class="form-select" id="destacado" aria-label="Floating label select example">
+                  <!--  <option selected hidden>Es un producto destacado</option>-->
+                    <option value= "true" <%= product.destacado === true ? "selected" : null %> >Si</option>
+                    <option value="false" <%= product.destacado ===  false ? "selected" : null %> >No</option>
+                  </select>
+                  <label for="floatingSelectGrid">Destacado</label>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="separador">
+
+              <div class="col-md">
+                <div class="mb-3 imagen-del-producto">
+                  <img src="/images/productos/AlfajorMILKATripleMousse55Gr74,04.png" alt="Alfajor">
+                  <label for="formFile" class="form-label">Seleccione otra imágen del producto</label>
+                  <input class="form-control" type="file" id="formFile">
+                </div>
+              </div>
+
+              <div class="col-md">
+                <div class="button-crear">
+                  <button type="submit" class="btn btn-outline-info">Editar</button>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </form>
+
+      </main>
+
+      <%- include('./partials/footer') %>
+
+  </body>
+
+</html>

@@ -1,0 +1,38 @@
+.admin {
+    padding: 30px 20px;
+}
+
+.admin .titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin .titulo a {
+    margin-top: 15px;
+}
+
+.admin .table-responsive {
+    background-color: white;
+    margin-top: 50px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.admin .btn-outline-primary:hover > i , .btn-outline-danger:hover > i {
+    color: white;
+}
+
+/* tablet */
+
+@media(min-width: 640px) {
+    .admin .titulo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .admin .titulo a {
+        margin-top: 0px;
+    }
+}
