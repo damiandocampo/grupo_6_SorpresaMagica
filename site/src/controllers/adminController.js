@@ -26,9 +26,9 @@ const controller = {
             productUpdate.categoria = categoria
             productUpdate.descuento = +descuento
 
-            fs.writeFileSync(productsFilePath, JSON.stringify(products))
+            fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
 
-            res.redirect(`admin/admin/${req.params.id}`)
+            res.redirect(`/productos/detalle/${req.params.id}`)
         }else{
             res.redirect('/')
         }
