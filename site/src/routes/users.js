@@ -4,6 +4,30 @@ const { login, registro, registre} = require('../controllers/userController')
 
 /* GET users listing. */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 router.get('/login', login);
 
 router.get('/registro', registro);

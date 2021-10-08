@@ -11,14 +11,14 @@ const controller = {
 
 
     registro: (req,res) => {
-        return res.render('registro')
+         res.render('registro')
     },
 
     registre: (req,res) => {
         const {nombre, apellido, email, contraseña, repetir} = req.body
 
   let usuario = {
-    id: usuarios[usuarios.length - 1] ? usuarios[usuarios.length - 1].id + 1 : 1, //usuarios.lenght,
+    id: usuarios[usuarios.length - 1].id + 1, //usuarios.lenght,
     nombre: nombre.trimp(),
     apelido: apellido.trimp(),
     email: email.trimp(),
