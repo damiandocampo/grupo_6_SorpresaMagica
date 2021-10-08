@@ -32,6 +32,11 @@ const controller = {
         }else{
             res.redirect('/')
         }
+    },  
+    destroy: (req,res) => {
+    let productosBorrados = products.filter(producto => producto.id !== +req.params.id)
+        fs.writeFileSync(path.join(__dirname, '..', 'data', 'productos.json'),JSON.stringify(productosBorrados, null, 2), 'utf-8')
+        return res.redirect('/admin')
     }
 };
 
