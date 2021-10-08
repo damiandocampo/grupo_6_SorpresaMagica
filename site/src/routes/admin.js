@@ -2,8 +2,7 @@ const express = require('express');
 const router = express.Router();
 const multer  = require('multer');
 const path = require('path');
-
-const {list, create, edit, store} = require('../controllers/adminController');
+const {list, create, edit, update, destroy} = require('../controllers/adminController')
 
 const storage = multer.diskStorage({
     destination: function (req, file, callback) {
@@ -17,8 +16,13 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 router.get('/', list);
+
 router.get('/create', create);
 router.post('/create', upload.single('image'), store);
-router.get('/edit', edit);
+
+router.get('/edit/:id', edit);
+router.put('/edit/:id', update)
+
+router.delete('/delete/:id', destroy);
 
 module.exports = router;
