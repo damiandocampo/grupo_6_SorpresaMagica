@@ -8,6 +8,7 @@ const finalPrice = (price, discount) => price - (price * discount / 100);
 
 const controller = {
     detalle: (req,res) => {
+        products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         const {id} = req.params
         const product = products.find(element => element.id === +id)
 

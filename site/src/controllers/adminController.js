@@ -8,6 +8,7 @@ const finalPrice = (price, discount) => price - (price * discount / 100);
 
 const controller = {
     list: function(req, res, next) {
+        products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         res.render('./admin/admin', {products, finalPrice});
     },
 

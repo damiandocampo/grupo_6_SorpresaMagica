@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const multer  = require('multer');
 const path = require('path');
-const {list, create, edit, update, destroy} = require('../controllers/adminController')
+const {list, create, store, edit, update, destroy} = require('../controllers/adminController')
 
 const storage = multer.diskStorage({
     destination: function (req, file, callback) {
