@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include('./partials/head', {title: 'Home - Sorpresa Mágica' }) %>
+<%- include('./partials/head', {title: 'Home' }) %>
 
     <body>
 
@@ -116,10 +116,10 @@
 
                         <div class="productos">
 
-                            <% const productos=products.filter(producto=> producto.destacado) %>
+                            <% const productos = products.filter(producto=> producto.destacado === "true") %>
                                 <% productos.forEach(product=> { %>
                                     <article>
-                                        <a href="">
+                                        <a href="/productos/detalle/<%= product.id %>">
                                             <img src="/images/productos/<%= product.image %>"
                                                 alt="<%= product.title %>">
                                         </a>
@@ -129,12 +129,28 @@
                                                     <%= product.marca %>
                                                 </h5>
                                             </a>
-                                            <h3><a href="/productos/<%= product.id %>">
+                                            <h3>
+                                                <a href="/productos/detalle/<%= product.id %>">
                                                     <%= product.title %>
-                                                </a></h3>
-                                            <h2>
-                                                <%= product.price %>
-                                            </h2>
+                                                </a>
+                                            </h3>
+                                            <% if (product.descuento > 0) { %> 
+                                            <div class="precio">
+                                                <small>
+                                                    $<%= product.price %> 
+                                                </small>
+                                                <h2>
+                                                    $<%= finalPrice(product.price, product.descuento) %>
+                                                </h2>
+                                                <h3>
+                                                    <%= product.descuento %>% 
+                                                </h3>
+                                            </div>
+                                            <% } else { %>
+                                                <h2>
+                                                    $<%= product.price %>
+                                                </h2>
+                                            <% } %> 
                                             <div class="cantidad">
                                                 <button>-</button>
                                                 <p>1</p>

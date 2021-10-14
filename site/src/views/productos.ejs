@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('./partials/head', {title: 'Productos' }) %>
+
+<body>
+    
+    <%- include('./partials/header') %> 
+
+    <%- include('./partials/nav') %> 
+
+    <main class="listado-productos">
+        
+        <div class="filtros-orden">
+
+            <div class="filtros-container">
+
+                <label class="filtrar" for="filtros-hidden"> Filtrar <i class="fas fa-filter"></i> </label>
+                <input type="checkbox" name="filtros" id="filtros-hidden" class="filtros-hidden">
+
+                <div class="filtros">
+
+                    <h2>Filtrar <i class="fas fa-filter"></i></h2>
+                    
+                    <div class="categorias">
+                        <input type="checkbox" name="" id="f-categorias"><label for="f-categorias" class="titulo">Categorías</label>
+                        <ul>
+                            <li><input type="checkbox" name="cb-alfajores" id="alfajores"><label for="alfajores">Alfajores</label></li>
+                            <li><input type="checkbox" name="cb-caramelos" id="caramelos"><label for="caramelos">Caramelos</label></li>
+                            <li><input type="checkbox" name="cb-chicles" id="chicles"><label for="chicles">Chicles</label></li>
+                            <li><input type="checkbox" name="cb-chocolates" id="chocolates"><label for="chocolates">Chocolates</label></li>
+                            <li><input type="checkbox" name="cb-chupetines" id="chupetines"><label for="chupetines">Chupetines</label></li>
+                            <li><input type="checkbox" name="cb-confites" id="confites"><label for="confites">Confites</label></li>
+                            <li><input type="checkbox" name="cb-gomitas" id="gomitas"><label for="gomitas">Gomitas</label></li>
+                        </ul>
+                    </div>
+
+                    <div class="marcas">
+                        <input type="checkbox" name="" id="f-marcas"><label for="f-marcas" class="titulo">Marcas</label>
+                        <ul>
+                            <li><input type="checkbox" name="cb-arcor" id="arcor"><label for="arcor">Arcor</label></li>
+                            <li><input type="checkbox" name="cb-beldent" id="beldent"><label for="beldent">Beldent</label></li>
+                            <li><input type="checkbox" name="cb-billiken" id="billiken"><label for="billiken">Billiken</label></li>
+                            <li><input type="checkbox" name="cb-bon-o-bon" id="bon-o-bon"><label for="bon-o-bon">Bon o Bon</label></li>
+                            <li><input type="checkbox" name="cb-butter-toffees" id="butter-toffees"><label for="butter-toffees">Butter Toffees</label></li>
+                            <li><input type="checkbox" name="cb-cadbury" id="cadbury"><label for="cadbury">Cadbury</label></li>
+                            <li><input type="checkbox" name="cb-cofler" id="cofler"><label for="cofler">Cofler</label></li>
+                            <li><input type="checkbox" name="cb-flynn-paff" id="flynn-paff"><label for="flynn-paff">Flynn Paff</label></li>
+                            <li><input type="checkbox" name="cb-halls" id="halls"><label for="halls">Halls</label></li>
+                            <li><input type="checkbox" name="cb-m&ms" id="m&ms"><label for="m&ms">M&M's</label></li>
+                            <li><input type="checkbox" name="cb-milka" id="milka"><label for="milka">Milka</label></li>
+                            <li><input type="checkbox" name="cb-mogul" id="mogul"><label for="mogul">Mogul</label></li>
+                            <li><input type="checkbox" name="cb-mr-pops" id="mr-pops"><label for="mr-pops">Mr.Pop's</label></li>
+                            <li><input type="checkbox" name="cb-pepitos" id="pepitos"><label for="pepitos">Pepitos</label></li>
+                            <li><input type="checkbox" name="cb-rocklets" id="rocklets"><label for="rocklets">Rocklets</label></li>
+                            <li><input type="checkbox" name="cb-terrabusi" id="terrabusi"><label for="terrabusi">Terrabusi</label></li>
+                            <li><input type="checkbox" name="cb-topline" id="topline"><label for="topline">Topline</label></li>
+                        </ul>
+                    </div>
+
+                    <div class="descuentos">
+                        <input type="checkbox" name="" id="f-descuentos"><label for="f-descuentos" class="titulo">Descuentos</label>
+                        <ul>
+                            <li><input type="checkbox" name="cb-10" id="10"><label for="10">10%</label></li>
+                            <li><input type="checkbox" name="cb-15" id="15"><label for="15">15%</label></li>
+                            <li><input type="checkbox" name="cb-20" id="20"><label for="20">20%</label></li>
+                            <li><input type="checkbox" name="cb-50" id="50"><label for="50">50%</label></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+
+            </div>
+            
+            <div class="orden-container">
+
+                <input type="checkbox" name="orden" id="orden-hidden" class="orden-hidden">
+                <label class="ordenar" for="orden-hidden"> Ordenar por: 
+                <form action="" method="get">
+                    <select name="orden" id="">
+                        <option value="a-z" selected>A-Z</option>
+                        <option value="z-a">Z-A</option>
+                        <option value="menor-precio">$</option>
+                        <option value="mayor-precio">$$$</option>
+                    </select>
+                </form>
+                </label>
+
+            </div> 
+
+        </div>
+        
+        
+        <div class="productos">
+
+            <% products.forEach(product=> { %>
+                <article>
+                    <a href="/productos/detalle/<%= product.id %>">
+                        <img src="/images/productos/<%= product.image %>" alt="<%= product.title %>">
+                    </a>
+                    <div class="descripcion">
+                        <a href="/productos/detalle/<%= product.id %>">
+                            <h5>
+                                <%= product.marca %>
+                            </h5>
+                        </a>
+                        <h3>
+                            <a href="/productos/<%= product.id %>">
+                                <%= product.title %>
+                            </a>
+                        </h3>
+                        <% if (product.descuento > 0) { %> 
+                            <div class="precio">
+                                <small>
+                                    $<%= product.price %> 
+                                </small>
+                                <h2>
+                                    $<%= finalPrice(product.price, product.descuento) %>
+                                </h2>
+                                <h3>
+                                    <%= product.descuento %>% 
+                                </h3>
+                            </div>
+                        <% } else { %>
+                                <h2>
+                                    $<%= product.price %>
+                                </h2>
+                        <% } %>
+                        <div class="cantidad">
+                            <button>-</button>
+                            <p>1</p>
+                            <button>+</button>
+                        </div>
+                        <div class="comprar">
+                            <button type="submit">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </article>
+            <% }) %>
+
+        </div>
+
+
+    </main>
+
+    <%- include('./partials/footer') %> 
+
+</body>
+</html>

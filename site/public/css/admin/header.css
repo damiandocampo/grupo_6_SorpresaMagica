@@ -1,9 +1,22 @@
 header nav{
     background-color: var(--rosa);
+    box-shadow: 0px 2px 15px 0px rgba(32, 32, 32, .3);
 }
 
 .logo {
     width: 120px;
+}
+
+input.menu {
+    display: none;
+}
+
+.menu-hidden {
+    display: none;
+}
+
+input.menu:checked ~ .menu-hidden {
+    display: block !important;
 }
 
 .btn-outline-success {
@@ -15,4 +28,10 @@ header nav{
     color: white !important;
     border-color: #cb91b6 !important;
     background-color: #cb91b6 !important;
+}
+
+@media (min-width: 1024px) {
+    .menu-hidden {
+        display: block !important;
+    }
 }
