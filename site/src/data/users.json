@@ -5,7 +5,8 @@
         "Apellido": "Ondrousek",
         "Email": "condrousek0@hotmail.com",
         "Contraseña": "mBDHcvW9",
-        "Repetir": "mBDHcvW9"
+        "Repetir": "mBDHcvW9",
+        "Rol": "Usuario"
     },
     {
         "id": 2,
@@ -13,7 +14,8 @@
         "Apellido": "Semor",
         "Email": "csemor1@hotmail.com",
         "Contraseña": "Ip8jo5",
-        "Repetir": "Ip8jo5"
+        "Repetir": "Ip8jo5",
+        "Rol": "Usuario"
     },
     {
         "id": 3,
@@ -21,7 +23,8 @@
         "Apellido": "Gullan",
         "Email": "agullan2@hotmail.com",
         "Contraseña": "JaHM6uAS",
-        "Repetir": "JaHM6uAS"
+        "Repetir": "JaHM6uAS",
+        "Rol": "Usuario"
     },
     {
         "id": 4,
@@ -29,7 +32,8 @@
         "Apellido": "Gledstane",
         "Email": "hgledstane3@hotmail.com",
         "Contraseña": "B9D6CPq4",
-        "Repetir": "B9D6CPq4"
+        "Repetir": "B9D6CPq4",
+        "Rol": "Usuario"
     },
     {
         "id": 5,
@@ -37,7 +41,8 @@
         "Apellido": "Ruzicka",
         "Email": "sruzicka4@hotmail.com",
         "Contraseña": "kQV0njRa",
-        "Repetir": "kQV0njRa"
+        "Repetir": "kQV0njRa",
+        "Rol": "Usuario"
     },
     {
         "id": 6,
@@ -45,7 +50,8 @@
         "Apellido": "de Juares",
         "Email": "edejuares5@hotmail.com",
         "Contraseña": "UNic7mXL",
-        "Repetir": "UNic7mXL"
+        "Repetir": "UNic7mXL",
+        "Rol": "Usuario"
     },
     {
         "id": 7,
@@ -53,7 +59,8 @@
         "Apellido": "Kalinsky",
         "Email": "akalinsky6@hotmail.com",
         "Contraseña": "emC4LrFwuXr", 
-        "Repetir": "emC4LrFwuXr"
+        "Repetir": "emC4LrFwuXr",
+        "Rol": "Usuario"
     },
     {
         "id": 8,
@@ -61,7 +68,8 @@
         "Apellido": "Chicco",
         "Email": "echicco7@hotmail.com",
         "Contraseña": "yxMJZ1OiEA",
-        "Repetir": "yxMJZ1OiEA"
+        "Repetir": "yxMJZ1OiEA",
+        "Rol": "Usuario"
     },
     {
         "id": 9,
@@ -69,7 +77,8 @@
         "Apellido": "Lethley",
         "Email": "blethley8@hotmail.com",
         "Contraseña": "P82cpzb",
-        "Repetir": "P82cpzb"
+        "Repetir": "P82cpzb",
+        "Rol": "Usuario"
     },
     {
         "id": 10,
@@ -77,7 +86,8 @@
         "Apellido": "Gabe",
         "Email": "mgabe9@hotmail.com",
         "Contraseña": "R2zASbU",
-        "Repetir": "R2zASbU"
+        "Repetir": "R2zASbU",
+        "Rol": "Usuario"
     },
     {
         "id": 11,
@@ -85,7 +95,8 @@
         "Apellido": "Bridgewater",
         "Email": "tbridgewatera@hotmail.com",
         "Contraseña": "DMoR0O",
-        "Repetir": "DMoR0O"
+        "Repetir": "DMoR0O",
+        "Rol": "Usuario"
     },
     {
         "id": 12,
@@ -93,7 +104,8 @@
         "Apellido": "Arnolds",
         "Email": "karnoldsb@hotmail.com",
         "Contraseña": "16yeGLhrQJ",
-        "Repetir": "16yeGLhrQJ"
+        "Repetir": "16yeGLhrQJ",
+        "Rol": "Usuario"
     },
     {
         "id": 13,
@@ -101,7 +113,8 @@
         "Apellido": "Ruben",
         "Email": "grubenc@hotmail.com",
         "Contraseña": "WAGuPfG4gV",
-        "Repetir": "WAGuPfG4gV"
+        "Repetir": "WAGuPfG4gV",
+        "Rol": "Usuario"
     },
     {
         "id": 14,
@@ -109,7 +122,8 @@
         "Apellido": "Wernher",
         "Email": "rwernherd@hotmail.com",
         "Contraseña": "YRrG8b8lBc",
-        "Repetir": "YRrG8b8lBc"
+        "Repetir": "YRrG8b8lBc",
+        "Rol": "Usuario"
     },
     {
         "id": 15,
@@ -117,7 +131,8 @@
         "Apellido": "Fernie",
         "Email": "sferniee@hotmail.com",
         "Contraseña": "xZ06UMpHB3Z6",
-        "Repetir": "xZ06UMpHB3Z6"
+        "Repetir": "xZ06UMpHB3Z6",
+        "Rol": "Usuario"
     },
     {
         "id": 16,
@@ -125,7 +140,8 @@
         "Apellido": "Joll",
         "Email": "jjollf@hotmail.com",
         "Contraseña": "l5qwe4XiD",
-        "Repetir": "l5qwe4XiD"
+        "Repetir": "l5qwe4XiD",
+        "Rol": "Usuario"
     },
     {
         "id": 17,
@@ -133,7 +149,8 @@
         "Apellido": "Soares",
         "Email": "fsoaresg@hotmail.com",
         "Contraseña": "utRUtf7G8",
-        "Repetir": "utRUtf7G8"
+        "Repetir": "utRUtf7G8",
+        "Rol": "Usuario"
     },
     {
         "id": 18,
@@ -141,7 +158,8 @@
         "Apellido": "Bach",
         "Email": "dbachh@hotmail.com",
         "Contraseña": "rllYBq1wNp",
-        "Repetir": "rllYBq1wNp"
+        "Repetir": "rllYBq1wNp",
+        "Rol": "Usuario"
     },
     {
         "id": 19,
@@ -149,7 +167,8 @@
         "Apellido": "Bover",
         "Email": "lboveri@hotmail.com",
         "Contraseña": "4DsTKQLQ",
-        "Repetir": "4DsTKQLQ"
+        "Repetir": "4DsTKQLQ",
+        "Rol": "Usuario"
     },
     {
         "id": 20,
@@ -157,6 +176,7 @@
         "Apellido": "Vigars",
         "Email": "gvigarsj@hotmail.com",
         "Contraseña": "tpMgMqDPD",
-        "Repetir": "tpMgMqDPD"
+        "Repetir": "tpMgMqDPD",
+        "Rol": "Usuario"
     }
 ]
