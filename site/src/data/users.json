@@ -187,5 +187,14 @@
     "contraseña": "$2a$10$5hWkSF.H8Cqjl97yESRDtOqj.1ZM/ZTVDoe5fj.TrvTYTc5dvPD5m",
     "repetir": "$2a$10$v.sOeyMR.MkvDMd7PgLJU.mcYwCGLOtH3eiLHSfzwEfQPhChXx.Aq",
     "imagen": "default-image.png"
+  },
+  {
+    "id": 22,
+    "nombre": "Marta",
+    "apelido": "Sosa",
+    "email": "Sosaq@gmail.com",
+    "contraseña": "$2a$10$YHpU7x6pcQiB3ZrlZOPOte.Ihp/hGfst1akmltPEvfE/PH1bSBC4u",
+    "repetir": "$2a$10$ZAV3KsVlSsIsDIW8ZXbDCOkikVLXYAmhX8G/NV3MOVULX1U/JKJA2",
+    "imagen": "image-1635186054831.jpg"
   }
 ]
