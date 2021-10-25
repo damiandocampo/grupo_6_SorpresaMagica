@@ -1,162 +1,191 @@
 [
-    {
-        "id": 1,
-        "Nombre": "Constanza",
-        "Apellido": "Ondrousek",
-        "Email": "condrousek0@opensource.org",
-        "Contraseña": "mBDHcvW9",
-        "Repetir": "mBDHcvW9"
-    },
-    {
-        "id": 2,
-        "Nombre": "Carla",
-        "Apellido": "Semor",
-        "Email": "csemor1@google.es",
-        "Contraseña": "Ip8jo5",
-        "Repetir": "Ip8jo5"
-    },
-    {
-        "id": 3,
-        "Nombre": "Alfredo",
-        "Apellido": "Gullan",
-        "Email": "agullan2@ask.com",
-        "Contraseña": "JaHM6uAS",
-        "Repetir": "JaHM6uAS"
-    },
-    {
-        "id": 4,
-        "Nombre": "Helsa",
-        "Apellido": "Gledstane",
-        "Email": "hgledstane3@google.com.br",
-        "Contraseña": "B9D6CPq4",
-        "Repetir": "B9D6CPq4"
-    },
-    {
-        "id": 5,
-        "Nombre": "Sofia",
-        "Apellido": "Ruzicka",
-        "Email": "sruzicka4@homestead.com",
-        "Contraseña": "kQV0njRa",
-        "Repetir": "kQV0njRa"
-    },
-    {
-        "id": 6,
-        "Nombre": "Eduardo",
-        "Apellido": "de Juares",
-        "Email": "edejuares5@symantec.com",
-        "Contraseña": "UNic7mXL",
-        "Repetir": "UNic7mXL"
-    },
-    {
-        "id": 7,
-        "Nombre": "Alan",
-        "Apellido": "Kalinsky",
-        "Email": "akalinsky6@mozilla.com",
-        "Contraseña": "emC4LrFwuXr", 
-        "Repetir": "emC4LrFwuXr"
-    },
-    {
-        "id": 8,
-        "Nombre": "Ernesto",
-        "Apellido": "Chicco",
-        "Email": "echicco7@wikipedia.org",
-        "Contraseña": "yxMJZ1OiEA",
-        "Repetir": "yxMJZ1OiEA"
-    },
-    {
-        "id": 9,
-        "Nombre": "Betty",
-        "Apellido": "Lethley",
-        "Email": "blethley8@marketwatch.com",
-        "Contraseña": "P82cpzb",
-        "Repetir": "P82cpzb"
-    },
-    {
-        "id": 10,
-        "Nombre": "Milagros",
-        "Apellido": "Gabe",
-        "Email": "mgabe9@mozilla.com",
-        "Contraseña": "R2zASbU",
-        "Repetir": "R2zASbU"
-    },
-    {
-        "id": 11,
-        "Nombre": "Theo",
-        "Apellido": "Bridgewater",
-        "Email": "tbridgewatera@privacy.gov.au",
-        "Contraseña": "DMoR0O",
-        "Repetir": "DMoR0O"
-    },
-    {
-        "id": 12,
-        "Nombre": "Karina",
-        "Apellido": "Arnolds",
-        "Email": "karnoldsb@bbc.co.uk",
-        "Contraseña": "16yeGLhrQJ",
-        "Repetir": "16yeGLhrQJ"
-    },
-    {
-        "id": 13,
-        "Nombre": "Graciela",
-        "Apellido": "Ruben",
-        "Email": "grubenc@state.gov",
-        "Contraseña": "WAGuPfG4gV",
-        "Repetir": "WAGuPfG4gV"
-    },
-    {
-        "id": 14,
-        "Nombre": "Romina",
-        "Apellido": "Wernher",
-        "Email": "rwernherd@wikia.com",
-        "Contraseña": "YRrG8b8lBc",
-        "Repetir": "YRrG8b8lBc"
-    },
-    {
-        "id": 15,
-        "Nombre": "Selena",
-        "Apellido": "Fernie",
-        "Email": "sferniee@over-blog.com",
-        "Contraseña": "xZ06UMpHB3Z6",
-        "Repetir": "xZ06UMpHB3Z6"
-    },
-    {
-        "id": 16,
-        "Nombre": "Juan",
-        "Apellido": "Joll",
-        "Email": "jjollf@microsoft.com",
-        "Contraseña": "l5qwe4XiD",
-        "Repetir": "l5qwe4XiD"
-    },
-    {
-        "id": 17,
-        "Nombre": "Franco",
-        "Apellido": "Soares",
-        "Email": "fsoaresg@vinaora.com",
-        "Contraseña": "utRUtf7G8",
-        "Repetir": "utRUtf7G8"
-    },
-    {
-        "id": 18,
-        "Nombre": "Dolores",
-        "Apellido": "Bach",
-        "Email": "dbachh@devhub.com",
-        "Contraseña": "rllYBq1wNp",
-        "Repetir": "rllYBq1wNp"
-    },
-    {
-        "id": 19,
-        "Nombre": "Luciano",
-        "Apellido": "Bover",
-        "Email": "lboveri@mtv.com",
-        "Contraseña": "4DsTKQLQ",
-        "Repetir": "4DsTKQLQ"
-    },
-    {
-        "id": 20,
-        "Nombre": "German",
-        "Apellido": "Vigars",
-        "Email": "gvigarsj@wikispaces.com",
-        "Contraseña": "tpMgMqDPD",
-        "Repetir": "tpMgMqDPD"
-    }
+  {
+    "id": 1,
+    "Nombre": "Constanza",
+    "Apellido": "Ondrousek",
+    "Email": "condrousek0@opensource.org",
+    "Contraseña": "mBDHcvW9",
+    "Repetir": "mBDHcvW9",
+    "imagen": "default-image.png"
+  },
+  {
+    "id": 2,
+    "Nombre": "Carla",
+    "Apellido": "Semor",
+    "Email": "csemor1@google.es",
+    "Contraseña": "Ip8jo5",
+    "Repetir": "Ip8jo5",
+    "imagen": "default-image.png"
+  },
+  {
+    "id": 3,
+    "Nombre": "Alfredo",
+    "Apellido": "Gullan",
+    "Email": "agullan2@ask.com",
+    "Contraseña": "JaHM6uAS",
+    "Repetir": "JaHM6uAS",
+    "imagen": "default-image.png"
+  },
+  {
+    "id": 4,
+    "Nombre": "Helsa",
+    "Apellido": "Gledstane",
+    "Email": "hgledstane3@google.com.br",
+    "Contraseña": "B9D6CPq4",
+    "Repetir": "B9D6CPq4",
+    "imagen": "default-image.png"
+  },
+  {
+    "id": 5,
+    "Nombre": "Sofia",
+    "Apellido": "Ruzicka",
+    "Email": "sruzicka4@homestead.com",
+    "Contraseña": "kQV0njRa",
+    "Repetir": "kQV0njRa",
+    "imagen": "default-image.png"
+  },
+  {
+    "id": 6,
+    "Nombre": "Eduardo",
+    "Apellido": "de Juares",
+    "Email": "edejuares5@symantec.com",
+    "Contraseña": "UNic7mXL",
+    "Repetir": "UNic7mXL",
+    "imagen": "default-image.png"
+  },
+  {
+    "id": 7,
+    "Nombre": "Alan",
+    "Apellido": "Kalinsky",
+    "Email": "akalinsky6@mozilla.com",
+    "Contraseña": "emC4LrFwuXr",
+    "Repetir": "emC4LrFwuXr",
+    "imagen": "default-image.png"
+  },
+  {
+    "id": 8,
+    "Nombre": "Ernesto",
+    "Apellido": "Chicco",
+    "Email": "echicco7@wikipedia.org",
+    "Contraseña": "yxMJZ1OiEA",
+    "Repetir": "yxMJZ1OiEA",
+    "imagen": "default-image.png"
+  },
+  {
+    "id": 9,
+    "Nombre": "Betty",
+    "Apellido": "Lethley",
+    "Email": "blethley8@marketwatch.com",
+    "Contraseña": "P82cpzb",
+    "Repetir": "P82cpzb",
+    "imagen": "default-image.png"
+  },
+  {
+    "id": 10,
+    "Nombre": "Milagros",
+    "Apellido": "Gabe",
+    "Email": "mgabe9@mozilla.com",
+    "Contraseña": "R2zASbU",
+    "Repetir": "R2zASbU",
+    "imagen": "default-image.png"
+  },
+  {
+    "id": 11,
+    "Nombre": "Theo",
+    "Apellido": "Bridgewater",
+    "Email": "tbridgewatera@privacy.gov.au",
+    "Contraseña": "DMoR0O",
+    "Repetir": "DMoR0O",
+    "imagen": "default-image.png"
+  },
+  {
+    "id": 12,
+    "Nombre": "Karina",
+    "Apellido": "Arnolds",
+    "Email": "karnoldsb@bbc.co.uk",
+    "Contraseña": "16yeGLhrQJ",
+    "Repetir": "16yeGLhrQJ",
+    "imagen": "default-image.png"
+  },
+  {
+    "id": 13,
+    "Nombre": "Graciela",
+    "Apellido": "Ruben",
+    "Email": "grubenc@state.gov",
+    "Contraseña": "WAGuPfG4gV",
+    "Repetir": "WAGuPfG4gV",
+    "imagen": "default-image.png"
+  },
+  {
+    "id": 14,
+    "Nombre": "Romina",
+    "Apellido": "Wernher",
+    "Email": "rwernherd@wikia.com",
+    "Contraseña": "YRrG8b8lBc",
+    "Repetir": "YRrG8b8lBc",
+    "imagen": "default-image.png"
+  },
+  {
+    "id": 15,
+    "Nombre": "Selena",
+    "Apellido": "Fernie",
+    "Email": "sferniee@over-blog.com",
+    "Contraseña": "xZ06UMpHB3Z6",
+    "Repetir": "xZ06UMpHB3Z6",
+    "imagen": "default-image.png"
+  },
+  {
+    "id": 16,
+    "Nombre": "Juan",
+    "Apellido": "Joll",
+    "Email": "jjollf@microsoft.com",
+    "Contraseña": "l5qwe4XiD",
+    "Repetir": "l5qwe4XiD",
+    "imagen": "default-image.png"
+  },
+  {
+    "id": 17,
+    "Nombre": "Franco",
+    "Apellido": "Soares",
+    "Email": "fsoaresg@vinaora.com",
+    "Contraseña": "utRUtf7G8",
+    "Repetir": "utRUtf7G8",
+    "imagen": "default-image.png"
+  },
+  {
+    "id": 18,
+    "Nombre": "Dolores",
+    "Apellido": "Bach",
+    "Email": "dbachh@devhub.com",
+    "Contraseña": "rllYBq1wNp",
+    "Repetir": "rllYBq1wNp",
+    "imagen": "default-image.png"
+  },
+  {
+    "id": 19,
+    "Nombre": "Luciano",
+    "Apellido": "Bover",
+    "Email": "lboveri@mtv.com",
+    "Contraseña": "4DsTKQLQ",
+    "Repetir": "4DsTKQLQ",
+    "imagen": "default-image.png"
+  },
+  {
+    "id": 20,
+    "Nombre": "German",
+    "Apellido": "Vigars",
+    "Email": "gvigarsj@wikispaces.com",
+    "Contraseña": "tpMgMqDPD",
+    "Repetir": "tpMgMqDPD",
+    "imagen": "default-image.png"
+  },
+  {
+    "id": 21,
+    "nombre": "Claudia",
+    "apelido": "Casco",
+    "email": "clau@gmail.com",
+    "contraseña": "$2a$10$5hWkSF.H8Cqjl97yESRDtOqj.1ZM/ZTVDoe5fj.TrvTYTc5dvPD5m",
+    "repetir": "$2a$10$v.sOeyMR.MkvDMd7PgLJU.mcYwCGLOtH3eiLHSfzwEfQPhChXx.Aq",
+    "imagen": "default-image.png"
+  }
 ]
