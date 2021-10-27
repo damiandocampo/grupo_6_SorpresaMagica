@@ -24,6 +24,11 @@
                     <input class="checkbox" type="checkbox" name="Recuerdame" value="Recuerdame">
                     <label class="recuerdame" for="">Recuérdame</label>
                 </div>
+
+
+                <small class="error"><%= locals.errores && errores.email ? errores.email.msg ? null %> </small>
+            
+                
                 <div class="boton-contenedor">
                     <button class="boton" type="submit">Ingresar</button>
                 </div>

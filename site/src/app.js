@@ -31,6 +31,11 @@ app.use(methodOverride('_method'));
 
 
 app.use(express-session)
+
+app.use(session({
+  secret: "Secreto Mágico"
+}))
+
 app.use(userAccess)
 
 

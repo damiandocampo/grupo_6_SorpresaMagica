@@ -2,56 +2,39 @@ const path = require('path')
 const fs = require('fs')
 
 
-//const bcryptjs = require('bcryptjs')
-
-/*const {validationResult} = require('express-validator')*/
-
+const {validationResult} = require('express-validator')
 
 let usuarios = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','users.json'),'utf-8'));
+
 
 const controller = {
     login: (req,res) => {
         res.render('login');
     },
 
-    /*logear : (req,res) => {
-
+    logear: (req,res) => {
+        
         let errors = validationResult(req)
 
         if (errors.isEmpty()) {
+            const{email} = req.body
 
             let usuario = usuarios.find(usuario => usuario.email === email)
             req.session.usuarioLogin = {
-                id : usuario.id,
-                nombre : usuario.nombre,
+                id: usuario.id,
+                nombre: usuario.nombre,
+                //rol: usuario.rol
             }
 
-            /*if(req.body.recordar){
-                res.cookie("SorpresaMagicaLogin", req.session.usuarioLogin, {maxAge: 1000 * 60})
-            }
-            res.redirect('/')
+            return res.redirect('/')
+
         } else {
-            return res.render('login', {
-                errors : errors.mapped()
-            })
+            return res.render('login')
+
+            errores: errors.mapped()
         }
-    },
 
-    /*perfil : (req,res) => {
-        res.render('perfil', {
-            usuario : usuarios.find(usuario => usuario.id === +req.session.usuarioLogin.id)
-        })
     },
-
-    update : (req,res) => {
-        let errors = validationResult(req)
-        return res.send(errors)
-    },
-
-    logout : (req,res) => {
-        req.session.destroy()
-        return res.redirect('/')
-    },*/
 
     
     registro: (req,res) => {
