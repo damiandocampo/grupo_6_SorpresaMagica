@@ -28,11 +28,10 @@ router.delete('/delete/:id', destroy);
 module.exports = router;
 
 
-// const userCheck = require('../middlewares/userCheck')
 // const adminCheck = require('../middlewares/adminCheck')
 
-//router.get('/', userCheck, adminCheck, list);
+//router.get('/', adminCheck, list);
 
-//router.get('/create', userCheck, adminCheck, create);
+//router.get('/create', adminCheck, create);
 
-//router.get('/edit/:id', userCheck, adminCheck, edit);
+//router.get('/edit/:id', adminCheck, edit);

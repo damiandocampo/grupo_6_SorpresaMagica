@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const session = require('express-session');
 
 const productsFilePath = path.join(__dirname, '../data/productos.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));

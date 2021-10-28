@@ -51,3 +51,8 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+
+//const userCheck = require('./middlewares/userCheck');
+
+//app.use(userCheck);
