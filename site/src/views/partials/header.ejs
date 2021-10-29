@@ -7,7 +7,11 @@
         </label>
 
         <div class="user-checked">
-            <p><a href="/users/registro">Crear una cuenta</a> | <a href="/users/login">Iniciar sesión</a></p>
+            <% if (!(locals.usuarioL)) { %> 
+                <p><a href="/users/registro">Crear una cuenta</a> | <a href="/users/login">Iniciar sesión</a></p>
+            <% } else { %>
+                <p><form action="/users/logout" method="GET" class="logout"><button type="submit">Cerrar sesión</button></form></p>
+            <% } %> 
         </div>
 
         <div class="message">
@@ -35,7 +39,11 @@
         </div>
         <div class="user">
             <div class="user-icon"><i class="far fa-user-circle"></i></div>
-            <p><a href="/users/registro">Crear una cuenta</a> | <a href="/users/login">Iniciar sesión</a></p>
+            <% if (!(locals.usuarioL)) { %> 
+                <p><a href="/users/registro">Crear una cuenta</a> | <a href="/users/login">Iniciar sesión</a></p>
+            <% } else { %>
+                <p><form action="/users/logout" method="GET" class="logout"><button type="submit">Cerrar sesión</button></form></p>
+            <% } %> 
         </div>
     </div>
 

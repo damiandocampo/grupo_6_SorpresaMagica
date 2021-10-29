@@ -1,200 +1,260 @@
 [
   {
     "id": 1,
-    "Nombre": "Constanza",
-    "Apellido": "Ondrousek",
-    "Email": "condrousek0@hotmail.com",
-    "Contraseña": "mBDHcvW9",
-    "Repetir": "mBDHcvW9",
-    "imagen": "default-image.png"
+    "nombre": "Constanza",
+    "apellido": "Ondrousek",
+    "email": "condrousek0@hotmail.com",
+    "contraseña": "mBDHcvW9",
+    "repetir": "mBDHcvW9",
+    "imagen": "default-image.png",
+    "rol": "Usuario"
   },
   {
     "id": 2,
-    "Nombre": "Carla",
-    "Apellido": "Semor",
-    "Email": "csemor1@hotmail.com",
-    "Contraseña": "Ip8jo5",
-    "Repetir": "Ip8jo5",
-    "imagen": "default-image.png"
+    "nombre": "Carla",
+    "apellido": "Semor",
+    "email": "csemor1@hotmail.com",
+    "contraseña": "Ip8jo5",
+    "repetir": "Ip8jo5",
+    "imagen": "default-image.png",
+    "rol": "Usuario"
   },
   {
     "id": 3,
-    "Nombre": "Alfredo",
-    "Apellido": "Gullan",
-    "Email": "agullan2@hotmail.com",
-    "Contraseña": "JaHM6uAS",
-    "Repetir": "JaHM6uAS",
-    "imagen": "default-image.png"
+    "nombre": "Alfredo",
+    "apellido": "Gullan",
+    "email": "agullan2@hotmail.com",
+    "contraseña": "JaHM6uAS",
+    "repetir": "JaHM6uAS",
+    "imagen": "default-image.png",
+    "rol": "Usuario"
   },
   {
     "id": 4,
-    "Nombre": "Helsa",
-    "Apellido": "Gledstane",
-    "Email": "hgledstane3@hotmail.com",
-    "Contraseña": "B9D6CPq4",
-    "Repetir": "B9D6CPq4",
-    "imagen": "default-image.png"
+    "nombre": "Helsa",
+    "apellido": "Gledstane",
+    "email": "hgledstane3@hotmail.com",
+    "contraseña": "B9D6CPq4",
+    "repetir": "B9D6CPq4",
+    "imagen": "default-image.png",
+    "rol": "Usuario"
   },
   {
     "id": 5,
-    "Nombre": "Sofia",
-    "Apellido": "Ruzicka",
-    "Email": "sruzicka4@hotmail.com",
-    "Contraseña": "kQV0njRa",
-    "Repetir": "kQV0njRa",
-    "imagen": "default-image.png"
+    "nombre": "Sofia",
+    "apellido": "Ruzicka",
+    "email": "sruzicka4@hotmail.com",
+    "contraseña": "kQV0njRa",
+    "repetir": "kQV0njRa",
+    "imagen": "default-image.png",
+    "rol": "Usuario"
   },
   {
     "id": 6,
-    "Nombre": "Eduardo",
-    "Apellido": "de Juares",
-    "Email": "edejuares5@hotmail.com",
-    "Contraseña": "UNic7mXL",
-    "Repetir": "UNic7mXL",
-    "imagen": "default-image.png"
+    "nombre": "Eduardo",
+    "apellido": "de Juares",
+    "email": "edejuares5@hotmail.com",
+    "contraseña": "UNic7mXL",
+    "repetir": "UNic7mXL",
+    "imagen": "default-image.png",
+    "rol": "Usuario"
   },
   {
     "id": 7,
-    "Nombre": "Alan",
-    "Apellido": "Kalinsky",
-    "Email": "akalinsky6@hotmail.com",
-    "Contraseña": "emC4LrFwuXr",
-    "Repetir": "emC4LrFwuXr",
-    "imagen": "default-image.png"
+    "nombre": "Alan",
+    "apellido": "Kalinsky",
+    "email": "akalinsky6@hotmail.com",
+    "contraseña": "emC4LrFwuXr",
+    "repetir": "emC4LrFwuXr",
+    "imagen": "default-image.png",
+    "rol": "Usuario"
   },
   {
     "id": 8,
-    "Nombre": "Ernesto",
-    "Apellido": "Chicco",
-    "Email": "echicco7@hotmail.com",
-    "Contraseña": "yxMJZ1OiEA",
-    "Repetir": "yxMJZ1OiEA",
-    "imagen": "default-image.png"
+    "nombre": "Ernesto",
+    "apellido": "Chicco",
+    "email": "echicco7@hotmail.com",
+    "contraseña": "yxMJZ1OiEA",
+    "repetir": "yxMJZ1OiEA",
+    "imagen": "default-image.png",
+    "rol": "Usuario"
   },
   {
     "id": 9,
-    "Nombre": "Betty",
-    "Apellido": "Lethley",
-    "Email": "blethley8@hotmail.com",
-    "Contraseña": "P82cpzb",
-    "Repetir": "P82cpzb",
-    "imagen": "default-image.png"
+    "nombre": "Betty",
+    "apellido": "Lethley",
+    "email": "blethley8@hotmail.com",
+    "contraseña": "P82cpzb",
+    "repetir": "P82cpzb",
+    "imagen": "default-image.png",
+    "rol": "Usuario"
   },
   {
     "id": 10,
-    "Nombre": "Milagros",
-    "Apellido": "Gabe",
-    "Email": "mgabe9@hotmail.com",
-    "Contraseña": "R2zASbU",
-    "Repetir": "R2zASbU",
-    "imagen": "default-image.png"
+    "nombre": "Milagros",
+    "apellido": "Gabe",
+    "email": "mgabe9@hotmail.com",
+    "contraseña": "R2zASbU",
+    "repetir": "R2zASbU",
+    "imagen": "default-image.png",
+    "rol": "Usuario"
   },
   {
     "id": 11,
-    "Nombre": "Theo",
-    "Apellido": "Bridgewater",
-    "Email": "tbridgewatera@hotmail.com",
-    "Contraseña": "DMoR0O",
-    "Repetir": "DMoR0O",
-    "imagen": "default-image.png"
+    "nombre": "Theo",
+    "apellido": "Bridgewater",
+    "email": "tbridgewatera@hotmail.com",
+    "contraseña": "DMoR0O",
+    "repetir": "DMoR0O",
+    "imagen": "default-image.png",
+    "rol": "Usuario"
   },
   {
     "id": 12,
-    "Nombre": "Karina",
-    "Apellido": "Arnolds",
-    "Email": "karnoldsb@hotmail.com",
-    "Contraseña": "16yeGLhrQJ",
-    "Repetir": "16yeGLhrQJ",
-    "imagen": "default-image.png"
+    "nombre": "Karina",
+    "apellido": "Arnolds",
+    "email": "karnoldsb@hotmail.com",
+    "contraseña": "16yeGLhrQJ",
+    "repetir": "16yeGLhrQJ",
+    "imagen": "default-image.png",
+    "rol": "Usuario"
   },
   {
     "id": 13,
-    "Nombre": "Graciela",
-    "Apellido": "Ruben",
-    "Email": "grubenc@hotmail.com",
-    "Contraseña": "WAGuPfG4gV",
-    "Repetir": "WAGuPfG4gV",
-    "imagen": "default-image.png"
+    "nombre": "Graciela",
+    "apellido": "Ruben",
+    "email": "grubenc@hotmail.com",
+    "contraseña": "WAGuPfG4gV",
+    "repetir": "WAGuPfG4gV",
+    "imagen": "default-image.png",
+    "rol": "Usuario"
   },
   {
     "id": 14,
-    "Nombre": "Romina",
-    "Apellido": "Wernher",
-    "Email": "rwernherd@hotmail.com",
-    "Contraseña": "YRrG8b8lBc",
-    "Repetir": "YRrG8b8lBc",
-    "imagen": "default-image.png"
+    "nombre": "Romina",
+    "apellido": "Wernher",
+    "email": "rwernherd@hotmail.com",
+    "contraseña": "YRrG8b8lBc",
+    "repetir": "YRrG8b8lBc",
+    "imagen": "default-image.png",
+    "rol": "Usuario"
   },
   {
     "id": 15,
-    "Nombre": "Selena",
-    "Apellido": "Fernie",
-    "Email": "sferniee@hotmail.com",
-    "Contraseña": "xZ06UMpHB3Z6",
-    "Repetir": "xZ06UMpHB3Z6",
-    "imagen": "default-image.png"
+    "nombre": "Selena",
+    "apellido": "Fernie",
+    "email": "sferniee@hotmail.com",
+    "contraseña": "xZ06UMpHB3Z6",
+    "repetir": "xZ06UMpHB3Z6",
+    "imagen": "default-image.png",
+    "rol": "Usuario"
   },
   {
     "id": 16,
-    "Nombre": "Juan",
-    "Apellido": "Joll",
-    "Email": "jjollf@hotmail.com",
-    "Contraseña": "l5qwe4XiD",
-    "Repetir": "l5qwe4XiD",
-    "imagen": "default-image.png"
+    "nombre": "Juan",
+    "apellido": "Joll",
+    "email": "jjollf@hotmail.com",
+    "contraseña": "l5qwe4XiD",
+    "repetir": "l5qwe4XiD",
+    "imagen": "default-image.png",
+    "rol": "Usuario"
   },
   {
     "id": 17,
-    "Nombre": "Franco",
-    "Apellido": "Soares",
-    "Email": "fsoaresg@hotmail.com",
-    "Contraseña": "utRUtf7G8",
-    "Repetir": "utRUtf7G8",
-    "imagen": "default-image.png"
+    "nombre": "Franco",
+    "apellido": "Soares",
+    "email": "fsoaresg@hotmail.com",
+    "contraseña": "utRUtf7G8",
+    "repetir": "utRUtf7G8",
+    "imagen": "default-image.png",
+    "rol": "Usuario"
   },
   {
     "id": 18,
-    "Nombre": "Dolores",
-    "Apellido": "Bach",
-    "Email": "dbachh@hotmail.com",
-    "Contraseña": "rllYBq1wNp",
-    "Repetir": "rllYBq1wNp",
-    "imagen": "default-image.png"
+    "nombre": "Dolores",
+    "apellido": "Bach",
+    "email": "dbachh@hotmail.com",
+    "contraseña": "rllYBq1wNp",
+    "repetir": "rllYBq1wNp",
+    "imagen": "default-image.png",
+    "rol": "Usuario"
   },
   {
     "id": 19,
-    "Nombre": "Luciano",
-    "Apellido": "Bover",
-    "Email": "lboveri@hotmail.com",
-    "Contraseña": "4DsTKQLQ",
-    "Repetir": "4DsTKQLQ",
-    "imagen": "default-image.png"
+    "nombre": "Luciano",
+    "apellido": "Bover",
+    "email": "lboveri@hotmail.com",
+    "contraseña": "4DsTKQLQ",
+    "repetir": "4DsTKQLQ",
+    "imagen": "default-image.png",
+    "rol": "Usuario"
   },
   {
     "id": 20,
-    "Nombre": "German",
-    "Apellido": "Vigars",
-    "Email": "gvigarsj@hotmail.com",
-    "Contraseña": "tpMgMqDPD",
-    "Repetir": "tpMgMqDPD",
-    "imagen": "default-image.png"
+    "nombre": "German",
+    "apellido": "Vigars",
+    "email": "gvigarsj@hotmail.com",
+    "contraseña": "tpMgMqDPD",
+    "repetir": "tpMgMqDPD",
+    "imagen": "default-image.png",
+    "rol": "Usuario"
   },
   {
     "id": 21,
-    "nombre": "Claudia",
-    "apelido": "Casco",
-    "email": "clau@gmail.com",
-    "contraseña": "$2a$10$5hWkSF.H8Cqjl97yESRDtOqj.1ZM/ZTVDoe5fj.TrvTYTc5dvPD5m",
-    "repetir": "$2a$10$v.sOeyMR.MkvDMd7PgLJU.mcYwCGLOtH3eiLHSfzwEfQPhChXx.Aq",
-    "imagen": "default-image.png"
+    "nombre": "Soledad",
+    "apelido": "Verón",
+    "email": "soledad@gmail.com",
+    "contraseña": "$2a$10$7oQJIOtxYDSwYvjAQL6/0umVNgKpj77gvBjBUNiQ44tHefRn/bLD6",
+    "repetir": "$2a$10$icjdBc.VcYqKK3sblJgvWOpH3OxnQtykPIM8XoDugofNJuDM0rKJ6",
+    "imagen": "default-image.png",
+    "rol": "Admin"
   },
   {
     "id": 22,
+    "nombre": "Claudia",
+    "apelido": "Casco",
+    "email": "claudia@gmail.com",
+    "contraseña": "$2a$10$wxUH0a/ZAdzv3bT/bFBclOxf08aI8p6awTiR5hYYvCfNLOTXaS6xG",
+    "repetir": "$2a$10$4fXsCFYptj3tXfMTWEbq0ess4AWQoqXX9h49HSqONHhnl/77k/hl.",
+    "imagen": "default-image.png",
+    "rol": "Admin"
+  },
+  {
+    "id": 23,
+    "nombre": "Agustina",
+    "apelido": "Benitez",
+    "email": "agustina@gmail.com",
+    "contraseña": "$2a$10$a1B9uwlVnpmWDnmzSPHOHemsIhtZG4PtGRVEiz4U2jAkUo8RDYcTq",
+    "repetir": "$2a$10$XWGlwRRtoZzRscLda2gf1.hOuqn.guNztsQtBCFPpriK4RkQ/hr2.",
+    "imagen": "default-image.png",
+    "rol": "Admin"
+  },
+  {
+    "id": 24,
+    "nombre": "Damian",
+    "apelido": "DoCampo",
+    "email": "damian@gmail.com",
+    "contraseña": "$2a$10$nRcBDg6Az6Qt124A3SJl6OwJyDsZd4yh6D/Blbqn72RzZnwmswtYG",
+    "repetir": "$2a$10$8RfbuziDksT7ggs4gPtjv.0xKN4VR6AGZASDe.Z2ecGTThqrv5nx2",
+    "imagen": "default-image.png",
+    "rol": "Admin"
+  },
+  {
+    "id": 25,
     "nombre": "Marta",
     "apelido": "Sosa",
-    "email": "Sosaq@gmail.com",
-    "contraseña": "$2a$10$YHpU7x6pcQiB3ZrlZOPOte.Ihp/hGfst1akmltPEvfE/PH1bSBC4u",
-    "repetir": "$2a$10$ZAV3KsVlSsIsDIW8ZXbDCOkikVLXYAmhX8G/NV3MOVULX1U/JKJA2",
-    "imagen": "image-1635186054831.jpg"
+    "email": "marta@gmail.com",
+    "contraseña": "$2a$10$3662uQbvUT66m0i.5/prX.5l67SH/7G/wK7Wq3R1U24mLoX3iLdPe",
+    "repetir": "$2a$10$JOLEoEHYKYAIsZvTPr7yGeA4Wr/W6BVHCZSgNVsm1bIX7V0b1hJ4W",
+    "imagen": "default-image.png"
+  },
+  {
+    "id": 26,
+    "nombre": "Martin",
+    "apelido": "Fernandez",
+    "email": "martin@gmail.com",
+    "contraseña": "$2a$10$2jwNgWLo6dp/4KaClg3nueuaBIZyddcqM4xmGakRmJ/wMfgqdmkoO",
+    "repetir": "$2a$10$mF06UoTJ4C3qyLvk8meBm.A2CroAHA2dD593WQK8PMIAwBtyDmre2",
+    "imagen": "default-image.png"
   }
 ]

@@ -4,11 +4,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var methodOverride =  require('method-override');
+var session = require('express-session');
 
-
-var session = require('express-session')
-var userAccess = require('./middlewares/userAccess')
-
+const userCheck = require('./middlewares/userCheck');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -28,15 +26,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(methodOverride('_method'));
-
-
-app.use(express-session)
-
-app.use(session({
-  secret: "Secreto Mágico"
-}))
-
-app.use(userAccess)
+app.use(session({secret: "Secreto Mágico"}));
+app.use(userCheck);
 
 
 app.use('/', indexRouter);

@@ -1,11 +1,13 @@
-var express = require('express');
-var router = express.Router();
-const path = require('path')
-const multer  = require('multer');
-const { login, registro, registre, logear} = require('../controllers/userController')
+const express = require('express');
+const router = express.Router();
+const path = require('path');
 
-const loginValidator = require('../validations/loginValidator')
-const registroValidator = require('../validations/registroValidator')
+const { login, registro, registre, logear, logout} = require('../controllers/userController');
+const guestCheck = require('../middlewares/guestCheck');
+const loginValidator = require('../validations/loginValidator');
+const registerValidator = require('../validations/validateRegister')
+
+const multer  = require('multer');
 
 const storage = multer.diskStorage({
     destination: function (req, file, callback) {
@@ -18,14 +20,14 @@ const storage = multer.diskStorage({
   
 const upload = multer({ storage: storage });
 
-
-
 /* GET users listing. */
 
-router.get('/login', login);
-router.post('/login', loginValidator, logear)
+router.get('/login', guestCheck, login);
+router.post('/login', loginValidator, logear);
 
-router.get('/registro', registro);
-router.post('/registro', upload.single('image'), registroValidator, registre)
+router.get('/registro',guestCheck, registro);
+router.post('/registro', upload.single('image'), registerValidator, registre);
+
+router.get('/logout', logout);
 
 module.exports = router;

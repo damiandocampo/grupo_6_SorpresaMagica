@@ -1,13 +1,9 @@
-const path = require('path')
-const fs = require('fs')
-const { validationResult } = require('express-validator')
-const bcrypt = require('bcryptjs')
-
-
-const {validationResult} = require('express-validator')
+const path = require('path');
+const fs = require('fs');
+const { validationResult } = require('express-validator');
+const bcrypt = require('bcryptjs');
 
 let usuarios = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','users.json'),'utf-8'));
-
 
 const controller = {
     login: (req,res) => {
@@ -15,60 +11,60 @@ const controller = {
     },
 
     logear: (req,res) => {
-        
-        let errors = validationResult(req)
+        const usuario = usuarios.find(usuario => usuario.email === req.body.email);
 
-        if (errors.isEmpty()) {
-            const{email} = req.body
+        if (usuario && bcrypt.compareSync(req.body.contraseña, usuario.contraseña)) {
+            req.session.usuarioL = usuario;
 
-            let usuario = usuarios.find(usuario => usuario.email === email)
-            req.session.usuarioLogin = {
-                id: usuario.id,
-                nombre: usuario.nombre,
-                //rol: usuario.rol
-            }
+            if (req.body.Recuerdame != undefined) {
+                res.cookie('Recuerdame', usuario.email, {maxAge: 60*1000});
+            };
 
-            return res.redirect('/')
+            res.redirect('/');
 
         } else {
-            return res.render('login')
-
-            //errores: errors.mapped()
+            res.render('login', {errors: {msg: 'Email o constraseña inválidos.'}});
         }
-
     },
 
-    
     registro: (req,res) => {
          res.render('registro')
     },
 
     registre: (req,res) => {
-         let errors = validationResult(req)
+
+        const errors = validationResult(req);
+
         if(errors.isEmpty()){
-            const {Nombre, Apellido, email, image, contraseña, repetir} = req.body
+            const {nombre, apellido, email, contraseña, repetir} = req.body;
             let usuario = {
-                id: usuarios[usuarios.length - 1].id + 1, //usuarios.lenght,
-                nombre: Nombre.trim(),
-                apelido: Apellido.trim(),
+                id: usuarios[usuarios.length - 1].id + 1,
+                nombre: nombre.trim(),
+                apelido: apellido.trim(),
                 email: email.trim(),
-                contraseña : bcrypt.hashSync(contraseña, 10),
-                repetir : bcrypt.hashSync(repetir, 10),
+                contraseña: bcrypt.hashSync(contraseña, 10),
+                repetir: bcrypt.hashSync(repetir, 10),
                 imagen: req.file ? req.file.filename : 'default-image.png'
             }
             usuarios.push(usuario)
             fs.writeFileSync(path.join(__dirname, "..", "data", "users.json"),JSON.stringify(usuarios, null, 2), 'utf-8')
 
-  return res.redirect("/users/login")
+            res.redirect("/users/login")
         } else {
-            return res.render('registro',{
-                errors : errors.mapped()
-            })
+            res.render('registro',{errors: errors.mapped(), old: req.body});
         }
-       
-  
-  },
+    },
 
+    logout: (req, res) => {
+
+        req.session.destroy()
+
+        if (req.cookies.Recuerdame !== undefined) {
+            res.cookie('Recuerdame', '', {maxAge: -1})
+        }
+
+        res.redirect('/')
+    },
 
     carrito: (req,res) => {
         res.render('carritoDeCompras');
@@ -76,8 +72,3 @@ const controller = {
 }
 
 module.exports = controller;
-
-
-
-
-
