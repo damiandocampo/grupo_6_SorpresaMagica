@@ -1,6 +1,6 @@
 module.exports = (req, res, next) => {
-    if(req.session.usuarioLogin) {
-        res.locals.usuario = req.session.usuarioLogin
+    if(req.session.usuarioL) {
+        res.locals.usuarioL = req.session.usuarioL
     }
     next()
 }

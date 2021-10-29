@@ -11,26 +11,51 @@
 
     <main class="registro">
         <h1>Registro</h1>
-        <form action="" method="POST">
+        <form action="/users/registro" method="POST" enctype="multipart/form-data">
             <div class="seccion">
-                <label class="descripcion" for="Nombre">Nombre:</label>
-                <input class="completar" type="text" name="Nombre" id="Nombre" placeholder="Ingresar nombre">
+                <label class="descripcion" for="nombre">Nombre:</label>
+                <input class="completar" type="text" name="nombre" id="nombre" placeholder="Ingresar nombre">
             </div>
+            <% if (locals.errors && errors.nombre) { %> 
+                <small> <%= errors.nombre.msg %>  </small>
+                <% } %>
+
             <div class="seccion">
-                <label class="descripcion" for="Apellido">Apellido:</label>
-                <input class="completar" type="text" name="Apellido" id="Apellido" placeholder="Ingresar apellido">
+                <label class="descripcion" for="apellido">Apellido:</label>
+                <input class="completar" type="text" name="apellido" id="apellido" placeholder="Ingresar apellido">
             </div>
+            <% if (locals.errors && errors.apellido) { %> 
+                <small> <%= errors.apellido.msg %>  </small>
+                <% } %>
+
             <div class="seccion">
                 <label class="descripcion" for="email">E-mail:</label>
                 <input class="completar" type="email" name="email" id="email" placeholder="Ingresar e-mail">
             </div>
+            <% if (locals.errors && errors.email) { %> 
+                <small> <%= errors.email.msg %>  </small>
+                <% } %>
+
+            <div class="seccion">
+                <label class="descripcion" for="image">Imagen:</label>
+                <input class="completar" type="file" name="image" id="image" placeholder="Imagen">
+            </div>
+
             <div class="seccion">
                 <label class="descripcion" for="contraseña">Contraseña:</label>
-                <input class="completar" type="contraseña" name="contraseña" id="contraseña" placeholder="Ingresar contraseña">
+                <input class="completar" type="password" name="contraseña" id="contraseña" placeholder="Ingresar contraseña">
             </div>
+            <% if (locals.errors && errors.contraseña) { %> 
+                <small> <%= errors.contraseña.msg %>  </small>
+                <% } %>
+
             <div class="seccion">
                 <label class="descripcion" for="repetir">Repetir Contraseña:</label>
-                <input class="completar" type="repetir" name="repetir" id="repetir" placeholder="Repetir contraseña">
+            <% if (locals.errors && errors.repetir) { %> 
+                    <small> <%= errors.repetir.msg %>  </small>
+                    <% } %>
+
+                <input class="completar" type="password" name="repetir" id="repetir" placeholder="Repetir contraseña">
                 <p>Al registrarse, estás de acuerdo con Términos y Condiciones.</p>
                 <div class="boton-contenedor">
                     <button class="boton" type="submit">Registrar</button>

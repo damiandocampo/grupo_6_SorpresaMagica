@@ -119,18 +119,18 @@
                             <% const productos = products.filter(producto=> producto.destacado === "true") %>
                                 <% productos.forEach(product=> { %>
                                     <article>
-                                        <a href="/productos/detalle/<%= product.id %>">
+                                        <a href="/productos/detalle/<%= product.id %>#slide1">
                                             <img src="/images/productos/<%= product.image %>"
                                                 alt="<%= product.title %>">
                                         </a>
                                         <div class="descripcion">
-                                            <a href="/productos/<%= product.id %>">
+                                            <a href="/productos/<%= product.id %>#slide1">
                                                 <h5>
                                                     <%= product.marca %>
                                                 </h5>
                                             </a>
                                             <h3>
-                                                <a href="/productos/detalle/<%= product.id %>">
+                                                <a href="/productos/detalle/<%= product.id %>#slide1">
                                                     <%= product.title %>
                                                 </a>
                                             </h3>

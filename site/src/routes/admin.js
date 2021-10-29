@@ -2,7 +2,9 @@ const express = require('express');
 const router = express.Router();
 const multer  = require('multer');
 const path = require('path');
-const {list, create, store, edit, update, destroy} = require('../controllers/adminController')
+
+const {list, create, store, edit, update, destroy} = require('../controllers/adminController');
+const adminCheck = require('../middlewares/adminCheck');
 
 const storage = multer.diskStorage({
     destination: function (req, file, callback) {
@@ -15,23 +17,14 @@ const storage = multer.diskStorage({
   
 const upload = multer({ storage: storage });
 
-router.get('/', list);
+router.get('/', adminCheck, list);
 
-router.get('/create', create);
+router.get('/create', adminCheck, create);
 router.post('/create', upload.single('image'), store);
 
-router.get('/edit/:id', edit);
+router.get('/edit/:id', adminCheck, edit);
 router.put('/edit/:id', update)
 
 router.delete('/delete/:id', destroy);
 
 module.exports = router;
-
-
-// const adminCheck = require('../middlewares/adminCheck')
-
-//router.get('/', adminCheck, list);
-
-//router.get('/create', adminCheck, create);
-
-//router.get('/edit/:id', adminCheck, edit);

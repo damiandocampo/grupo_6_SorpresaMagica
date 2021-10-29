@@ -1,21 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<%- include('./partials/head', {title: 'Error'}) %> 
-
-<body>
-    
-    <%- include('./partials/header') %> 
-
-    <%- include('./partials/nav') %> 
-
-    <main class ="error">
-        
-        <h1> <%= errorMsg %> </h1>
-
-    </main>
-
-    <%- include('./partials/footer') %> 
-
-</body>
-</html>
+<h1><%= message %></h1>
+<h2><%= error.status %></h2>
+<pre><%= error.stack %></pre>
