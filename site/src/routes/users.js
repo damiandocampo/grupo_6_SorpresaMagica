@@ -27,4 +27,5 @@ router.post('/login', loginValidator, logear)
 
 router.get('/registro', registro);
 router.post('/registro', upload.single('image'), registroValidator, registre)
+
 module.exports = router;
