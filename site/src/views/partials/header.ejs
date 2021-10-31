@@ -1,16 +1,23 @@
 <header>
 
     <div>
-        <input type="checkbox" name="" id="user" class="checkbox-user">
-        <label for="user" class="user">
-            <div class="user-icon"><i class="far fa-user-circle"></i></div>
-        </label>
+        <% if (!(locals.usuarioL)) { %>
+            <input type="checkbox" name="checkbox-user" id="user" class="checkbox-user">
+            <label for="user" class="user">
+                <div class="user-icon"><i class="far fa-user-circle"></i></div>
+            </label>
+        <% } else { %>
+            <input type="checkbox" name="checkbox-user" id="user" class="checkbox-user">
+            <label for="user" class="user">
+                <div class="user-image"><img src="/images/usuarios/<%= locals.usuarioL.imagen %> " alt="Imágen de perfil del usuario"></div>
+            </label>
+        <% } %>
 
         <div class="user-checked">
             <% if (!(locals.usuarioL)) { %> 
                 <p><a href="/users/registro">Crear una cuenta</a> | <a href="/users/login">Iniciar sesión</a></p>
             <% } else { %>
-                <p><form action="/users/logout" method="GET" class="logout"><button type="submit">Cerrar sesión</button></form></p>
+                <a href="/users/perfil"><%= locals.usuarioL.nombre %> <%= locals.usuarioL.apelido %> <i class="fas fa-cog"></i></a>
             <% } %> 
         </div>
 
@@ -38,11 +45,17 @@
             <p><span>Envíos gratis</span> en compras mayores a $3.000.</p>
         </div>
         <div class="user">
-            <div class="user-icon"><i class="far fa-user-circle"></i></div>
             <% if (!(locals.usuarioL)) { %> 
+                <div class="user-icon"><i class="far fa-user-circle"></i></div>
                 <p><a href="/users/registro">Crear una cuenta</a> | <a href="/users/login">Iniciar sesión</a></p>
             <% } else { %>
-                <p><form action="/users/logout" method="GET" class="logout"><button type="submit">Cerrar sesión</button></form></p>
+                <div class="user-image"><img src="/images/usuarios/<%= locals.usuarioL.imagen %> " alt="Imágen de perfil del usuario"></div>
+                <label for="user-options"><%= locals.usuarioL.nombre %> <%= locals.usuarioL.apelido %> <i class="fas fa-caret-down"></i></label>
+                <input type="checkbox" name="user-options" id="user-options">
+                <ul>
+                    <li><a href="/users/perfil">Tu perfil <i class="fas fa-cog"></i></a></li>
+                    <li class="logout"><form action="/users/logout" method="GET" class="logout"><button type="submit">Cerrar sesión <i class="fas fa-power-off"></i></button></form></li>
+                </ul>
             <% } %> 
         </div>
     </div>

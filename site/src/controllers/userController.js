@@ -57,13 +57,17 @@ const controller = {
 
     logout: (req, res) => {
 
-        req.session.destroy()
+        req.session.destroy();
 
         if (req.cookies.Recuerdame !== undefined) {
-            res.cookie('Recuerdame', '', {maxAge: -1})
-        }
+            res.cookie('Recuerdame', '', {maxAge: -1});
+        };
 
-        res.redirect('/')
+        res.redirect('/');
+    },
+
+    perfil: (req, res) => {
+        res.render('usuarioPerfil');
     },
 
     carrito: (req,res) => {

@@ -56,6 +56,21 @@ header div .user-checked {
     display: none;
 }
 
+header .user-image {
+    width: 32px;
+    border: 2px var(--negro) solid;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+header .user-image img {
+    width: 30px;
+}
+
 /* envíos */
 
 header div .message {
@@ -421,6 +436,63 @@ nav.nav-bar .cart a {
     }
 
     header div.desktop .user p a:hover {
+        text-decoration: underline;
+    }
+
+    header div.desktop .user label {
+        width: 145px;
+        display: flex;
+        cursor: pointer;
+        padding-right: 3px;
+        padding-left: 5px;
+        justify-content: space-between;
+    }
+    
+    header div.desktop .user ul {
+        display: none;
+    }
+
+    header div.desktop .user input {
+        display: none;
+    }
+
+    header div.desktop .user input:checked ~ ul {
+        right: 10px;
+        display: flex;
+        background-color: var(--rosa);
+        position: absolute;
+        top: 40px;
+        display: flex;
+        flex-direction: column;
+        z-index: 15;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 10px;
+        width: 165px;
+        height: 75px;
+    }
+
+    header div.desktop .user ul:before {
+        content: "";
+        position: absolute;
+        bottom: 74px;
+        right: 8px;
+        width: 0;
+        height: 0;
+        border-right: 10px solid transparent;
+        border-left: 10px solid transparent;
+        border-bottom: 15px solid var(--rosa);
+    }
+    
+    header div.desktop .user ul li {
+        cursor: pointer;
+    }
+
+    header div.desktop .user ul li.logout button, header div.desktop .user ul li.logout i {
+        color: red;
+    }
+
+    header div.desktop .user ul li:hover {
         text-decoration: underline;
     }
 

@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 
-const { login, registro, registre, logear, logout} = require('../controllers/userController');
+const { login, registro, registre, logear, logout, perfil} = require('../controllers/userController');
 const guestCheck = require('../middlewares/guestCheck');
 const loginValidator = require('../validations/loginValidator');
 const registerValidator = require('../validations/validateRegister')
@@ -29,5 +29,7 @@ router.get('/registro',guestCheck, registro);
 router.post('/registro', upload.single('image'), registerValidator, registre);
 
 router.get('/logout', logout);
+
+router.get('/perfil', perfil);
 
 module.exports = router;
