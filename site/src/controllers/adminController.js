@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
+const { validationResult } = require('express-validator');
+
 const productsFilePath = path.join(__dirname, '../data/productos.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
@@ -17,17 +19,22 @@ const controller = {
     },
 
     store: (req, res) => {
-		const product = req.body;
-		product.id = products.length + 1;
-		product.image = req.file ? req.file.filename : 'defaultImage.png';
-        product.price = +req.body.price;
-        product.descuento = +req.body.descuento;
+        const errors = validationResult(req);
+        if (errors.isEmpty()) {
+            const product = req.body;
+            product.id = products.length + 1;
+            product.image = req.file ? req.file.filename : 'defaultImage.png';
+            product.price = +req.body.price;
+            product.descuento = +req.body.descuento;
 
-		products.push(product);
+            products.push(product);
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
+            fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
 
-		res.redirect(`/productos/detalle/${product.id}`)
+            res.redirect(`/productos/detalle/${product.id}`);
+        } else {
+            res.render('./admin/create', {errors: errors.mapped(), old: req.body});
+        };
 	},
 
     edit: function(req, res, next) {

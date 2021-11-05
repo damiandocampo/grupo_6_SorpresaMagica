@@ -1,42 +1,48 @@
 <header>
 
     <div>
-        <% if (!(locals.usuarioL)) { %>
-            <input type="checkbox" name="checkbox-user" id="user" class="checkbox-user">
-            <label for="user" class="user">
-                <div class="user-icon"><i class="far fa-user-circle"></i></div>
-            </label>
-        <% } else { %>
-            <input type="checkbox" name="checkbox-user" id="user" class="checkbox-user">
-            <label for="user" class="user">
-                <div class="user-image"><img src="/images/usuarios/<%= locals.usuarioL.imagen %> " alt="Imágen de perfil del usuario"></div>
-            </label>
+
+        <% if(locals.usuarioL && locals.usuarioL.rol === 'Admin') { %>
+            <div class="administrar">
+                <a href="/admin">Administrar</a>
+            </div>
         <% } %>
 
-        <div class="user-checked">
-            <% if (!(locals.usuarioL)) { %> 
-                <p><a href="/users/registro">Crear una cuenta</a> | <a href="/users/login">Iniciar sesión</a></p>
+        <div class="mobile-tablet">
+            <% if (!(locals.usuarioL)) { %>
+                <input type="checkbox" name="checkbox-user" id="user" class="checkbox-user">
+                <label for="user" class="user">
+                    <div class="user-icon"><i class="far fa-user-circle"></i></div>
+                </label>
             <% } else { %>
-                <a href="/users/perfil"><%= locals.usuarioL.nombre %> <%= locals.usuarioL.apelido %> <i class="fas fa-cog"></i></a>
-            <% } %> 
+                <input type="checkbox" name="checkbox-user" id="user" class="checkbox-user">
+                <label for="user" class="user">
+                    <div class="user-image"><img src="/images/usuarios/<%= locals.usuarioL.imagen %>" alt="Imágen de perfil del usuario"></div>
+                </label>
+            <% } %>
+            <div class="user-checked">
+                <% if (!(locals.usuarioL)) { %>
+                    <p><a href="/users/registro">Crear una cuenta</a> | <a href="/users/login">Iniciar sesión</a></p>
+                <% } else { %>
+                    <a href="/users/perfil"><%= locals.usuarioL.nombre %> <%= locals.usuarioL.apellido %> <i class="fas fa-cog"></i></a>
+                <% } %>
+            </div>
+            <div class="message">
+                <div class="truck-icon"><img src="/images/iconos/camion-negro.png" alt="Icono de camión"></div>
+                <p><span>Envíos gratis</span> en compras mayores a $3.000.</p>
+            </div>
+            <input type="checkbox" name="" id="search" class="checkbox-search">
+            <label for="search" class="search">
+                <div class="search-icon"><i class="fas fa-search"></i></div>
+            </label>
+            <div class="search-checked">
+                <form action="get">
+                    <input type="text" name="search" id="search" placeholder="Buscar">
+                    <button type="submit"><i class="fas fa-angle-double-right"></i></button>
+                </form>
+            </div>
         </div>
 
-        <div class="message">
-            <div class="truck-icon"><img src="/images/iconos/camion-negro.png" alt="Icono de camión"></div>
-            <p><span>Envíos gratis</span> en compras mayores a $3.000.</p>
-        </div>
-
-        <input type="checkbox" name="" id="search" class="checkbox-search">
-        <label for="search" class="search">
-            <div class="search-icon"><i class="fas fa-search"></i></div>
-        </label>
-
-        <div class="search-checked">
-            <form action="get">
-                <input type="text" name="search" id="search" placeholder="Buscar">
-                <button type="submit"><i class="fas fa-angle-double-right"></i></button>
-            </form>
-        </div>
     </div>
 
     <div class="desktop">
@@ -50,7 +56,7 @@
                 <p><a href="/users/registro">Crear una cuenta</a> | <a href="/users/login">Iniciar sesión</a></p>
             <% } else { %>
                 <div class="user-image"><img src="/images/usuarios/<%= locals.usuarioL.imagen %> " alt="Imágen de perfil del usuario"></div>
-                <label for="user-options"><%= locals.usuarioL.nombre %> <%= locals.usuarioL.apelido %> <i class="fas fa-caret-down"></i></label>
+                <label for="user-options"><%= locals.usuarioL.nombre %> <%= locals.usuarioL.apellido %> <i class="fas fa-caret-down"></i></label>
                 <input type="checkbox" name="user-options" id="user-options">
                 <ul>
                     <li><a href="/users/perfil">Tu perfil <i class="fas fa-cog"></i></a></li>

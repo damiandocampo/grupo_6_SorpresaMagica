@@ -17,7 +17,7 @@ const controller = {
             req.session.usuarioL = usuario;
 
             if (req.body.Recuerdame != undefined) {
-                res.cookie('Recuerdame', usuario.email, {maxAge: 60*1000});
+                res.cookie('Recuerdame', usuario.email, {maxAge: 60*1000*30});
             };
 
             res.redirect('/');
@@ -36,15 +36,15 @@ const controller = {
         const errors = validationResult(req);
 
         if(errors.isEmpty()){
-            const {nombre, apellido, email, contraseña, repetir} = req.body;
+            const {nombre, apellido, email, contraseña} = req.body;
             let usuario = {
                 id: usuarios[usuarios.length - 1].id + 1,
                 nombre: nombre.trim(),
-                apelido: apellido.trim(),
+                apellido: apellido.trim(),
                 email: email.trim(),
                 contraseña: bcrypt.hashSync(contraseña, 10),
-                repetir: bcrypt.hashSync(repetir, 10),
-                imagen: req.file ? req.file.filename : 'default-image.png'
+                imagen: req.file ? req.file.filename : 'default-image.png',
+                rol: 'Usuario'
             }
             usuarios.push(usuario)
             fs.writeFileSync(path.join(__dirname, "..", "data", "users.json"),JSON.stringify(usuarios, null, 2), 'utf-8')
@@ -68,6 +68,18 @@ const controller = {
 
     perfil: (req, res) => {
         res.render('usuarioPerfil');
+    },
+
+    editarDatos: (req, res) => {
+        const usuario = usuarios.find(usuario => usuario.email === local.usuarioL.email);
+        const { imagen } = req.body;
+        if(usuario) {
+            usuario.imagen = imagen;
+            fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios, null, 2));
+            res.redirect('/users/perfil');
+        }else{
+            res.redirect('/users/perfil', {errors: errors.mapped()});
+        }
     },
 
     carrito: (req,res) => {

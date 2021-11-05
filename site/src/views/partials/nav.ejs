@@ -61,6 +61,13 @@
                     <h3>Contacto</h3>
                 </a>
             </li>
+            <% if(locals.usuarioL && locals.usuarioL.rol === 'Admin') { %>
+            <li>
+                <a href="/admin">
+                    <h3>Administrar</h3>
+                </a>
+            </li>
+            <% } %>
         </ul>
     </div>
     <div class="search">

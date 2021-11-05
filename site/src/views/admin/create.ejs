@@ -19,16 +19,22 @@
 
               <div class="col-md">
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="floatingInputGrid" placeholder="Nombre del producto" name="title">
+                  <input type="text" class="form-control" id="floatingInputGrid" placeholder="Nombre del producto" name="title"  value=<%= locals.old && old.title ? old.title : null %>>
                   <label for="floatingInputGrid">Nombre del producto</label>
                 </div>
+                <% if (locals.errors && errors.title) { %> 
+                  <small> <%= errors.title.msg %>  </small>
+                  <% } %> 
               </div>
 
               <div class="col-md">
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="floatingInputGrid" placeholder="Marca" name="marca">
+                  <input type="text" class="form-control" id="floatingInputGrid" placeholder="Marca" name="marca"  value=<%= locals.old && old.marca ? old.marca : null %>>
                   <label for="floatingInputGrid">Marca</label>
                 </div>
+                <% if (locals.errors && errors.marca) { %> 
+                  <small> <%= errors.marca.msg %>  </small>
+                  <% } %> 
               </div>
 
             </div>
@@ -37,16 +43,22 @@
 
               <div class="col-md">
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="floatingInputGrid" placeholder="Precio" name="price">
+                  <input type="text" class="form-control" id="floatingInputGrid" placeholder="Precio" name="price"  value=<%= locals.old && old.price ? old.price : null %>>
                   <label for="floatingInputGrid">Precio</label>
                 </div>
+                <% if (locals.errors && errors.price) { %> 
+                  <small> <%= errors.price.msg %>  </small>
+                  <% } %> 
               </div>
 
               <div class="col-md">
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="floatingInputGrid" placeholder="Descuento" name="descuento">
+                  <input type="text" class="form-control" id="floatingInputGrid" placeholder="Descuento" name="descuento"  value=<%= locals.old && old.descuento ? old.descuento : null %>>
                   <label for="floatingInputGrid">Descuento</label>
                 </div>
+                <% if (locals.errors && errors.descuento) { %> 
+                  <small> <%= errors.descuento.msg %>  </small>
+                  <% } %> 
               </div>
 
             </div>
@@ -56,28 +68,34 @@
               <div class="col-md">
                 <div class="form-floating">
                   <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example" name="categoria">
-                    <option value="" selected hidden>Seleccioná una categoría</option>
-                    <option value="Alfajores">Alfajores</option>
-                    <option value="Caramelos">Caramelos</option>
-                    <option value="Chicles">Chicles</option>
-                    <option value="Chocolates">Chocolates</option>
-                    <option value="Chupetines">Chupetines</option>
-                    <option value="Confites">Confites</option>
-                    <option value="Gomitas">Gomitas</option>
+                    <option value="" <%= locals.old && old.categoria === '' ? 'selected' : null %> hidden>Seleccioná una categoría</option>
+                    <option value="Alfajores" <%= locals.old && old.categoria === 'Alfajores' ? 'selected' : null %>>Alfajores</option>
+                    <option value="Caramelos" <%= locals.old && old.categoria === 'Caramelos' ? 'selected' : null %>>Caramelos</option>
+                    <option value="Chicles" <%= locals.old && old.categoria === 'Chicles' ? 'selected' : null %>>Chicles</option>
+                    <option value="Chocolates" <%= locals.old && old.categoria === 'Chocolates' ? 'selected' : null %>>Chocolates</option>
+                    <option value="Chupetines" <%= locals.old && old.categoria === 'Chupetines' ? 'selected' : null %>>Chupetines</option>
+                    <option value="Confites" <%= locals.old && old.categoria === 'Confites' ? 'selected' : null %>>Confites</option>
+                    <option value="Gomitas" <%= locals.old && old.categoria === 'Gomitas' ? 'selected' : null %>>Gomitas</option>
                   </select>
                   <label for="floatingSelectGrid">Categoría</label>
                 </div>
+                <% if (locals.errors && errors.categoria) { %> 
+                  <small> <%= errors.categoria.msg %>  </small>
+                  <% } %> 
               </div>
 
               <div class="col-md">
                 <div class="form-floating">
                   <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example" name="destacado"> 
-                    <option selected hidden>¿Es un producto destacado?</option>
-                    <option value=true>Si</option>
-                    <option value=false>No</option>
+                    <option value="" <%= locals.old && old.destacado === '' ? 'selected' : null %> hidden>¿Es un producto destacado?</option>
+                    <option value=true <%= locals.old && old.destacado === 'true' ? 'selected' : null %>>Si</option>
+                    <option value=false <%= locals.old && old.destacado === 'false' ? 'selected' : null %>>No</option>
                   </select>
                   <label for="floatingSelectGrid">Destacado</label>
                 </div>
+                <% if (locals.errors && errors.destacado) { %> 
+                  <small> <%= errors.destacado.msg %>  </small>
+                  <% } %> 
               </div>
 
             </div>

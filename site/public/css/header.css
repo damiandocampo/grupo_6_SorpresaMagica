@@ -4,11 +4,30 @@ header div.desktop, nav.nav-bar-desktop {
 
 /* -- HEADER -- */
 
-
-header div{
+header div {
     display: flex;
+    flex-direction: column;
     align-items: center;
+}
+
+header div .administrar {
+    background-color: var(--rosa);
+    width: 100%;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    height: 24px;
+}
+
+header div .administrar a:active {
+    text-decoration: underline;
+}
+
+header div .mobile-tablet{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
     background-color: var(--rosa);
     padding: 0 10px;
     height: 44px;
@@ -17,11 +36,11 @@ header div{
 
 /* search - user */
 
-header div .checkbox-user, header div .checkbox-search{
+header div .mobile-tablet .checkbox-user, header div .mobile-tablet .checkbox-search{
     display: none;
 }
 
-header div .user, div .search {
+header div .mobile-tablet .user, div .search {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,11 +50,11 @@ header div .user, div .search {
 
 /* user */
 
-header div .user .user-icon i{
+header div .mobile-tablet .user .user-icon i{
     font-size: 34px;
 }
 
-header div .user-checked {
+header div .mobile-tablet .user-checked {
     display: none;
 }
 
@@ -46,6 +65,7 @@ header div .user-checked {
 .checkbox-user:checked ~ .user-checked{
     display: flex;
     width: 100vw;
+    justify-content: center;
 }
 
 .checkbox-user:checked ~ .message {
@@ -73,34 +93,35 @@ header .user-image img {
 
 /* envíos */
 
-header div .message {
+header div .mobile-tablet .message {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
 }
 
-header div .message .truck-icon{
+header div .mobile-tablet .message .truck-icon{
     width: 24px;
     padding: 0px;
 }
 
-header div .message img {
+header div .mobile-tablet .message img {
     width: 24px;
 }
 
-header div .message p {
+header div .mobile-tablet .message p {
     font-size: 12px;
     padding: 0px;
     padding-left: 5px;
 }
 
-header div .message span {
+header div .mobile-tablet .message span {
     font-weight: bold;
 }
 
 /* search */
 
-header div .search {
+header div .mobile-tablet .search {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,22 +129,22 @@ header div .search {
     padding-right: 5px;
 }
 
-header div .search i {
+header div .mobile-tablet .search i {
     font-size: 24px;
 }
 
-header div .search-checked {
+header div .mobile-tablet .search-checked {
     display: none;
     width: 100vw;
     position: absolute;
     justify-content: center;
 }
 
-header div .search-checked form {
+header div .mobile-tablet .search-checked form {
     display: flex;
 }
 
-header div .search-checked input {
+header div .mobile-tablet .search-checked input {
     width: 72vw;
     height: 30px;
     border: solid 2px var(--celeste);
@@ -132,7 +153,7 @@ header div .search-checked input {
     padding-left: 30px;
 }
 
-header div .search-checked button {
+header div .mobile-tablet .search-checked button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -145,7 +166,7 @@ header div .search-checked button {
     border-radius: 50%;
 }
 
-header div .search-checked i {
+header div .mobile-tablet .search-checked i {
     font-size: 24px;
 }
 
@@ -293,10 +314,10 @@ nav.nav-bar .cart a {
 
     /* -- HEADER -- */ 
 
-    header div {
+    header div .mobile-tablet {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
         background-color: var(--rosa);
         padding: 0 10px;
         height: 56px;
@@ -304,7 +325,7 @@ nav.nav-bar .cart a {
 
     /* user */
 
-    header div .user .user-icon i{
+    header div .mobile-tablet .user .user-icon i{
         font-size: 38px;
     }
     
@@ -315,13 +336,13 @@ nav.nav-bar .cart a {
 
     /* search */
     
-    header div .search .search-icon i{
+    header div .mobile-tablet .search .search-icon i{
         font-size: 30px;
     }
 
     /* envíos */
 
-    header div .message p {
+    header div .mobile-tablet .message p {
         text-align: center;
         font-size: 16px;
     }
@@ -378,6 +399,7 @@ nav.nav-bar .cart a {
         background-color: var(--rosa);
         padding: 0 10px;
         height: 38px;
+        flex-direction: row;
     }
 
     /* envíos */
@@ -387,6 +409,7 @@ nav.nav-bar .cart a {
         align-items: center;
         width: 50%;
         justify-content: flex-start;
+        flex-direction: row;
     }
 
     header div.desktop .message .truck-icon{
@@ -416,6 +439,7 @@ nav.nav-bar .cart a {
         justify-content: flex-end;
         align-items: center;
         width: 50%;
+        flex-direction: row;
     }
 
     header div.desktop .user .user-icon {
@@ -530,10 +554,10 @@ nav.nav-bar .cart a {
         height: 100%;
     }
 
-    /* inicio productos contacto */
+    /* inicio productos contacto administrar */
 
     nav.nav-bar-desktop .desktop-nav{
-        width: 30%;
+        width: 40%;
         display: flex;
     }
 
@@ -553,9 +577,9 @@ nav.nav-bar .cart a {
         text-shadow: 1px 1px 2px black;
     }
 
-    /* productos */
+    /* productos - administrar */
 
-    nav.nav-bar-desktop .desktop-nav ul li.productos {
+    nav.nav-bar-desktop .desktop-nav ul li.productos, .administrar {
         position: relative;
         display: flex;
         justify-content: center;

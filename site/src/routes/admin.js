@@ -5,6 +5,7 @@ const path = require('path');
 
 const {list, create, store, edit, update, destroy} = require('../controllers/adminController');
 const adminCheck = require('../middlewares/adminCheck');
+const productValidator = require('../validations/productValidator');
 
 const storage = multer.diskStorage({
     destination: function (req, file, callback) {
@@ -20,10 +21,10 @@ const upload = multer({ storage: storage });
 router.get('/', adminCheck, list);
 
 router.get('/create', adminCheck, create);
-router.post('/create', upload.single('image'), store);
+router.post('/create', upload.single('image'), productValidator, store);
 
 router.get('/edit/:id', adminCheck, edit);
-router.put('/edit/:id', update)
+router.put('/edit/:id', productValidator, update)
 
 router.delete('/delete/:id', destroy);
 

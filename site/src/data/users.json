@@ -202,7 +202,7 @@
   {
     "id": 21,
     "nombre": "Soledad",
-    "apelido": "Verón",
+    "apellido": "Verón",
     "email": "soledad@gmail.com",
     "contraseña": "$2a$10$7oQJIOtxYDSwYvjAQL6/0umVNgKpj77gvBjBUNiQ44tHefRn/bLD6",
     "repetir": "$2a$10$icjdBc.VcYqKK3sblJgvWOpH3OxnQtykPIM8XoDugofNJuDM0rKJ6",
@@ -212,7 +212,7 @@
   {
     "id": 22,
     "nombre": "Claudia",
-    "apelido": "Casco",
+    "apellido": "Casco",
     "email": "claudia@gmail.com",
     "contraseña": "$2a$10$wxUH0a/ZAdzv3bT/bFBclOxf08aI8p6awTiR5hYYvCfNLOTXaS6xG",
     "repetir": "$2a$10$4fXsCFYptj3tXfMTWEbq0ess4AWQoqXX9h49HSqONHhnl/77k/hl.",
@@ -222,7 +222,7 @@
   {
     "id": 23,
     "nombre": "Agustina",
-    "apelido": "Benitez",
+    "apellido": "Benitez",
     "email": "agustina@gmail.com",
     "contraseña": "$2a$10$a1B9uwlVnpmWDnmzSPHOHemsIhtZG4PtGRVEiz4U2jAkUo8RDYcTq",
     "repetir": "$2a$10$XWGlwRRtoZzRscLda2gf1.hOuqn.guNztsQtBCFPpriK4RkQ/hr2.",
@@ -232,7 +232,7 @@
   {
     "id": 24,
     "nombre": "Damian",
-    "apelido": "DoCampo",
+    "apellido": "DoCampo",
     "email": "damian@gmail.com",
     "contraseña": "$2a$10$nRcBDg6Az6Qt124A3SJl6OwJyDsZd4yh6D/Blbqn72RzZnwmswtYG",
     "repetir": "$2a$10$8RfbuziDksT7ggs4gPtjv.0xKN4VR6AGZASDe.Z2ecGTThqrv5nx2",
@@ -242,7 +242,7 @@
   {
     "id": 25,
     "nombre": "Marta",
-    "apelido": "Sosa",
+    "apellido": "Sosa",
     "email": "marta@gmail.com",
     "contraseña": "$2a$10$3662uQbvUT66m0i.5/prX.5l67SH/7G/wK7Wq3R1U24mLoX3iLdPe",
     "repetir": "$2a$10$JOLEoEHYKYAIsZvTPr7yGeA4Wr/W6BVHCZSgNVsm1bIX7V0b1hJ4W",
@@ -251,7 +251,7 @@
   {
     "id": 26,
     "nombre": "Martin",
-    "apelido": "Fernandez",
+    "apellido": "Fernandez",
     "email": "martin@gmail.com",
     "contraseña": "$2a$10$2jwNgWLo6dp/4KaClg3nueuaBIZyddcqM4xmGakRmJ/wMfgqdmkoO",
     "repetir": "$2a$10$mF06UoTJ4C3qyLvk8meBm.A2CroAHA2dD593WQK8PMIAwBtyDmre2",
