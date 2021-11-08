@@ -11,94 +11,88 @@
 
         <main class="user-profile">
 
-            <div class="avatar">
-                <img src="/images/usuarios/<%= locals.usuarioL.imagen %>" alt="Imágen de perfil del usuario">
+            <div class="avatar-name">
+
+              <div class="avatar">
+                  <img src="/images/usuarios/<%= locals.usuarioL.imagen %>" alt="Imágen de perfil del usuario">
+              </div>
+
+              <h1><%= locals.usuarioL.nombre %> <%= locals.usuarioL.apellido %></h1>
+              
             </div>
 
-            <h1><%= locals.usuarioL.nombre %> <%= locals.usuarioL.apellido %></h1>
+            <div class="forms">
 
-            <section>
-
-              <label for="datos">Datos personales <i class="fas fa-angle-down"></i></label>
-              <input type="checkbox" id="datos" class="hidden">
+              <section>
+                <label for="datos">Datos personales <i class="fas fa-angle-down"></i></label>
+                <input type="checkbox" id="datos" class="hidden" checked> 
               
-              <div class="accordion-body">
-
-                <form action="/users/edit" method="post">
-                  <div class="form-field">
-                    <label for="input">Nombre</label>
-                    <input type="text" id="input" name="nombre" value="<%= locals.usuarioL.nombre %>">
-                  </div>
-                  <div class="form-field">
-                    <label for="input">Apellido</label>
-                    <input type="text" id="input" name="apellido" value="<%= locals.usuarioL.apellido %>">
-                  </div>
-                  <div class="form-field">
-                    <label for="input">Email</label>
-                    <input type="email" id="input" name="email" value="<%= locals.usuarioL.email %>">
-                  </div>
-                  <div class="form-field">
-                    <label for="input">Contraseña actual</label>
-                    <input type="password" id="input" name="contraseña">
-                  </div>
-                  <div class="form-field">
-                    <label for="input">Nueva contraseña</label>
-                    <input type="password" id="input" name="nuevaContraseña">
-                  </div>
-                  <div class="form-field">
-                    <label for="input">Confirmar nueva contraseña</label>
-                    <input type="password" id="input" name="repetir">
-                  </div>
-                  <div class="submit-button">
-                    <button type="submit">Guardar cambios</button>
-                  </div>
-                </form>
-
-              </div>
-
-            </section>
-
-            <section>
-
-              <label for="notificaciones">Preferencias de notificaciones </i> <i class="fas fa-angle-down"></i></label>
-              <input type="checkbox" id="notificaciones" class="hidden">
+                <div class="accordion-body datos-absolute">
+                  <form action="/users/edit" method="post">
+                    <div class="form-field">
+                      <label for="input">Nombre</label>
+                      <input type="text" id="input" name="nombre" value="<%= locals.usuarioL.nombre %>">
+                    </div>
+                    <div class="form-field">
+                      <label for="input">Apellido</label>
+                      <input type="text" id="input" name="apellido" value="<%= locals.usuarioL.apellido %>">
+                    </div>
+                    <div class="form-field">
+                      <label for="input">Email</label>
+                      <input type="email" id="input" name="email" value="<%= locals.usuarioL.email %>">
+                    </div>
+                    <div class="form-field">
+                      <label for="input">Contraseña actual</label>
+                      <input type="password" id="input" name="contraseña">
+                    </div>
+                    <div class="form-field">
+                      <label for="input">Nueva contraseña</label>
+                      <input type="password" id="input" name="nuevaContraseña">
+                    </div>
+                    <div class="form-field">
+                      <label for="input">Confirmar nueva contraseña</label>
+                      <input type="password" id="input" name="repetir">
+                    </div>
+                    <div class="submit-button">
+                      <button type="submit">Guardar cambios</button>
+                    </div>
+                  </form>
+                </div>
+              </section>
+              <section>
+                <label for="notificaciones">Preferencias de notificaciones </i> <i class="fas fa-angle-down"></i></label>
+                <input type="checkbox" id="notificaciones" class="hidden">
               
-              <div class="accordion-body">
-
-                <form action="">
-                  <div class="form-field notificaciones">
-                    <label for="compras">Recibir actualizaciones sobre sus compras.</label>
-                    <input type="checkbox" name="compras" id="compras">
-                  </div>
-                  <div class="form-field notificaciones">
-                    <label for="cuenta">Recibir actualizaciones cuando su cuenta presente cambios.</label>
-                    <input type="checkbox" name="cuenta" id="cuenta">
-                  </div>
-                  <div class="form-field notificaciones">
-                    <label for="newsletter">Suscribirse al newsletter para recibir ofertas y/o promociones.</label>
-                    <input type="checkbox" name="newsletter" id="newsletter">
-                  </div>
-                  <div class="submit-button">
-                    <button type="submit">Guardar cambios</button>
-                  </div>
-                </form>
-
-              </div>
-
-            </section>
-
-            <section>
-
-              <label for="pedidos">Pedidos <i class="fas fa-angle-down"></i></label>
-              <input type="checkbox" id="pedidos" class="hidden">
+                <div class="accordion-body notificaciones-absolute">
+                  <form action="">
+                    <div class="form-field notificaciones">
+                      <label for="compras">Recibir actualizaciones sobre sus compras.</label>
+                      <input type="checkbox" name="compras" id="compras">
+                    </div>
+                    <div class="form-field notificaciones">
+                      <label for="cuenta">Recibir actualizaciones cuando su cuenta presente cambios.</label>
+                      <input type="checkbox" name="cuenta" id="cuenta">
+                    </div>
+                    <div class="form-field notificaciones">
+                      <label for="newsletter">Suscribirse al newsletter para recibir ofertas y/o promociones.</label>
+                      <input type="checkbox" name="newsletter" id="newsletter">
+                    </div>
+                    <div class="submit-button">
+                      <button type="submit">Guardar cambios</button>
+                    </div>
+                  </form>
+                </div>
+              </section>
+              <section>
+                <label for="pedidos">Pedidos <i class="fas fa-angle-down"></i></label>
+                <input type="checkbox" id="pedidos" class="hidden">
               
-              <div class="accordion-body pedidos">
+                <div class="accordion-body pedidos">
+                  <h3>Usted aún no tiene pedidos.</h3>
+                </div>
+              </section>
 
-                <h3>Usted aún no tiene pedidos.</h3>
-
-              </div>
-
-            </section>
+            </div>
 
             <section class="logout">
 
