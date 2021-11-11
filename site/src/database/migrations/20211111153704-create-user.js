@@ -29,7 +29,7 @@ module.exports = {
 
         references: {
           model: {
-            tableName: 'Carts'
+            tableName: 'Rols'
           },
           key: 'id'
         }
