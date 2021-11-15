@@ -1,17 +1,28 @@
-const fs = require('fs');
-const path = require('path');
+const db = require('../database/models');
+const sequelize = db.Sequelize;
 const session = require('express-session');
-
-const productsFilePath = path.join(__dirname, '../data/productos.json');
-let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-const categorias = require('../data/categorias.json')
 
 const finalPrice = (price, discount) => price - (price * discount / 100);
 
 const controller = {
-    index: function(req, res, next) {
-        products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        res.render('index', {products, categorias, finalPrice});
+    index: (req, res, next) => {
+        db.Product.findAll()
+
+        .then(products => {
+            db.Category.findAll()
+
+            .then(categorias => {
+                res.render('index', {products, categorias, finalPrice});
+            })
+
+            .catch(err => {
+                res.send(err)
+            })
+        })
+
+        .catch(err => {
+            res.send(err)
+        })
     },
 }
 
