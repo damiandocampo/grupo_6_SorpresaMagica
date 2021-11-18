@@ -13,7 +13,7 @@ module.exports = {
         image: 'default-image.png',
         rolId: 1,
         createdAt: new Date,
-        updateAt: new Date
+        updatedAt: new Date
     }
   ],  {});
   },
