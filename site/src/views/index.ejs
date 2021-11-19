@@ -116,7 +116,7 @@
 
                         <div class="productos">
 
-                            <% const productos = products.filter(producto=> producto.destacado === "true") %>
+                            <% const productos = products.filter(producto=> producto.destacado === 1) %>
                                 <% productos.forEach(product=> { %>
                                     <article>
                                         <a href="/productos/detalle/<%= product.id %>#slide1">
@@ -134,16 +134,16 @@
                                                     <%= product.title %>
                                                 </a>
                                             </h3>
-                                            <% if (product.descuento > 0) { %> 
+                                            <% if (product.discount > 0) { %> 
                                             <div class="precio">
                                                 <small>
                                                     $<%= product.price %> 
                                                 </small>
                                                 <h2>
-                                                    $<%= finalPrice(product.price, product.descuento) %>
+                                                    $<%= finalPrice(product.price, product.discount) %>
                                                 </h2>
                                                 <h3>
-                                                    <%= product.descuento %>% 
+                                                    <%= product.discount %>% 
                                                 </h3>
                                             </div>
                                             <% } else { %>

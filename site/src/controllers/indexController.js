@@ -6,10 +6,10 @@ const finalPrice = (price, discount) => price - (price * discount / 100);
 
 const controller = {
     index: (req, res, next) => {
-        db.Product.findAll()
+        db.Products.findAll()
 
         .then(products => {
-            db.Category.findAll()
+            db.Categories.findAll()
 
             .then(categorias => {
                 res.render('index', {products, categorias, finalPrice});

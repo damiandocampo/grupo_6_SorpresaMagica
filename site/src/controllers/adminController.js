@@ -9,7 +9,7 @@ const finalPrice = (price, discount) => price - (price * discount / 100);
 
 const controller = {
     list: function(req, res, next) {
-        db.Product.findAll()
+        db.Products.findAll()
 
         .then(products => {
             res.render('./admin/admin', {products, finalPrice});
@@ -29,7 +29,7 @@ const controller = {
 
         if (errors.isEmpty()) {
 
-            db.Product.create({
+            db.Products.create({
                 title: req.body.title,
                 marca: req.body.marca,
                 price: req.body.price,
@@ -53,7 +53,7 @@ const controller = {
 	},
 
     edit: function(req, res, next) {
-        db.Product.findByPk(+req.params.id)
+        db.Products.findByPk(+req.params.id)
 
         .then(product => {
             res.render('./admin/edit', {product});
@@ -69,7 +69,7 @@ const controller = {
 
         if (errors.isEmpty()) {
 
-            db.Product.update({
+            db.Products.update({
                 title: req.body.title,
                 marca: req.body.marca,
                 price: req.body.price,
@@ -77,6 +77,8 @@ const controller = {
                 categoria: req.body.categoria,
                 destacado: req.body.destadado,
                 image: req.file ? req.file.filename : 'defaultImage.png',
+            },{
+                where: {id: +req.params.id}
             })
     
             .then(product => {
@@ -93,7 +95,7 @@ const controller = {
     },
     
     destroy: (req,res) => {
-        db.Product.destroy({
+        db.Products.destroy({
             where: {id: +req.params.id}
         })
 
