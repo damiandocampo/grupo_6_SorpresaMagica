@@ -1,22 +1,37 @@
-const fs = require('fs');
-const path = require('path');
-
-const productsFilePath = path.join(__dirname, '../data/productos.json');
-let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const db = require('../database/models');
+const sequelize = db.Sequelize;
 
 const finalPrice = (price, discount) => price - (price * discount / 100);
 
 const controller = {
     detalle: (req,res) => {
-        products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        const {id} = req.params
-        const product = products.find(element => element.id === +id)
+        db.Product.findByPk(+req.params.id)
 
-        res.render('detalleDeProductos', {product, products});
+        .then(product => {
+            db.Product.findAll()
+            .then(products => {
+                res.render('detalleDeProductos', {product, products});
+            })
+            .catch(err => {
+                res.send(err)
+            })
+        })
+
+        .catch(err => {
+            res.send(err)
+        })
     },
+
     listado: (req, res) => {
-        products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        res.render('productos', {products, finalPrice});
+        db.Product.findAll()
+
+        .then(products => {
+            res.render('productos', {products})
+        })
+
+        .catch(err => {
+            res.send(err)
+        })
     },
 }
 

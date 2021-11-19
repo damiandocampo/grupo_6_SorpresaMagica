@@ -1,17 +1,23 @@
 const fs = require('fs');
 const path = require('path');
+const db = require('../database/models');
+const sequelize = db.Sequelize;
 
 const { validationResult } = require('express-validator');
-
-const productsFilePath = path.join(__dirname, '../data/productos.json');
-let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const finalPrice = (price, discount) => price - (price * discount / 100);
 
 const controller = {
     list: function(req, res, next) {
-        products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        res.render('./admin/admin', {products, finalPrice});
+        db.Products.findAll()
+
+        .then(products => {
+            res.render('./admin/admin', {products, finalPrice});
+        })
+
+        .catch(err => {
+            res.send(err)
+        })
     },
 
     create: function(req, res, next) {
@@ -20,50 +26,86 @@ const controller = {
 
     store: (req, res) => {
         const errors = validationResult(req);
+
         if (errors.isEmpty()) {
-            const product = req.body;
-            product.id = products.length + 1;
-            product.image = req.file ? req.file.filename : 'defaultImage.png';
-            product.price = +req.body.price;
-            product.descuento = +req.body.descuento;
 
-            products.push(product);
+            db.Products.create({
+                title: req.body.title,
+                marca: req.body.marca,
+                price: req.body.price,
+                descuento: req.body.descuento,
+                categoria: req.body.categoria,
+                destacado: req.body.destadado,
+                image: req.file ? req.file.filename : 'defaultImage.png',
+            })
+    
+            .then(product => {
+                res.redirect(`/productos/detalle/${product.id}`);
+            })
+    
+            .catch(err => {
+                res.send(err)
+            })
 
-            fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-
-            res.redirect(`/productos/detalle/${product.id}`);
         } else {
             res.render('./admin/create', {errors: errors.mapped(), old: req.body});
         };
 	},
 
     edit: function(req, res, next) {
-        const product = products.find(e => e.id === +req.params.id)
-        res.render('./admin/edit', {product});
+        db.Products.findByPk(+req.params.id)
+
+        .then(product => {
+            res.render('./admin/edit', {product});
+        })
+
+        .catch(err => {
+            res.send(err)
+        })
     },
 
     update: (req, res) =>{
-        const productUpdate = products.find(product => product.id === +req.params.id)
-        const { marca, title, price, categoria, descuento,} = req.body
-        if(productUpdate) {
-            productUpdate.marca = marca
-            productUpdate.title = title
-            productUpdate.price = +price
-            productUpdate.categoria = categoria
-            productUpdate.descuento = +descuento
+        const errors = validationResult(req);
 
-            fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
+        if (errors.isEmpty()) {
 
-            res.redirect(`/productos/detalle/${req.params.id}`)
+            db.Products.update({
+                title: req.body.title,
+                marca: req.body.marca,
+                price: req.body.price,
+                descuento: req.body.descuento,
+                categoria: req.body.categoria,
+                destacado: req.body.destadado,
+                image: req.file ? req.file.filename : 'defaultImage.png',
+            },{
+                where: {id: +req.params.id}
+            })
+    
+            .then(product => {
+                res.redirect(`/productos/detalle/${req.params.id}`)
+            })
+    
+            .catch(err => {
+                res.send(err)
+            })
+
         }else{
-            res.redirect('/')
+            res.render('./admin/edit', {errors: errors.mapped()})
         }
     },
     
     destroy: (req,res) => {
-    let productosBorrados = products.filter(producto => producto.id !== +req.params.id)
-        fs.writeFileSync(path.join(__dirname, '..', 'data', 'productos.json'),JSON.stringify(productosBorrados, null, 2), 'utf-8')
-        return res.redirect('/admin')
+        db.Products.destroy({
+            where: {id: +req.params.id}
+        })
+
+        .then(result => {
+            res.redirect('/admin')
+        })
+
+        .catch(err => {
+            res.send(err)
+        })
     }
 };
 
