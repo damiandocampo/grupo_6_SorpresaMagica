@@ -5,7 +5,7 @@ const products = require('../../data/productos.json');
 const images = products.map(product => {
   const image = {
     file: product.image,
-    product_id: 1,
+    product_id: product.id,
     createdAt: new Date,
     updatedAt: new Date
   };
