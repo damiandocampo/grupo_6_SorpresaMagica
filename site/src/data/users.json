@@ -7,7 +7,7 @@
     "contraseña": "mBDHcvW9",
     "repetir": "mBDHcvW9",
     "imagen": "default-image.png",
-    "rol": "Usuario"
+    "rol": 2
   },
   {
     "id": 2,
@@ -17,7 +17,7 @@
     "contraseña": "Ip8jo5",
     "repetir": "Ip8jo5",
     "imagen": "default-image.png",
-    "rol": "Usuario"
+    "rol": 2
   },
   {
     "id": 3,
@@ -27,7 +27,7 @@
     "contraseña": "JaHM6uAS",
     "repetir": "JaHM6uAS",
     "imagen": "default-image.png",
-    "rol": "Usuario"
+    "rol": 2
   },
   {
     "id": 4,
@@ -37,7 +37,7 @@
     "contraseña": "B9D6CPq4",
     "repetir": "B9D6CPq4",
     "imagen": "default-image.png",
-    "rol": "Usuario"
+    "rol": 2
   },
   {
     "id": 5,
@@ -47,7 +47,7 @@
     "contraseña": "kQV0njRa",
     "repetir": "kQV0njRa",
     "imagen": "default-image.png",
-    "rol": "Usuario"
+    "rol": 2
   },
   {
     "id": 6,
@@ -57,7 +57,7 @@
     "contraseña": "UNic7mXL",
     "repetir": "UNic7mXL",
     "imagen": "default-image.png",
-    "rol": "Usuario"
+    "rol": 2
   },
   {
     "id": 7,
@@ -67,7 +67,7 @@
     "contraseña": "emC4LrFwuXr",
     "repetir": "emC4LrFwuXr",
     "imagen": "default-image.png",
-    "rol": "Usuario"
+    "rol": 2
   },
   {
     "id": 8,
@@ -77,7 +77,7 @@
     "contraseña": "yxMJZ1OiEA",
     "repetir": "yxMJZ1OiEA",
     "imagen": "default-image.png",
-    "rol": "Usuario"
+    "rol": 2
   },
   {
     "id": 9,
@@ -87,7 +87,7 @@
     "contraseña": "P82cpzb",
     "repetir": "P82cpzb",
     "imagen": "default-image.png",
-    "rol": "Usuario"
+    "rol": 2
   },
   {
     "id": 10,
@@ -97,7 +97,7 @@
     "contraseña": "R2zASbU",
     "repetir": "R2zASbU",
     "imagen": "default-image.png",
-    "rol": "Usuario"
+    "rol": 2
   },
   {
     "id": 11,
@@ -107,7 +107,7 @@
     "contraseña": "DMoR0O",
     "repetir": "DMoR0O",
     "imagen": "default-image.png",
-    "rol": "Usuario"
+    "rol": 2
   },
   {
     "id": 12,
@@ -117,7 +117,7 @@
     "contraseña": "16yeGLhrQJ",
     "repetir": "16yeGLhrQJ",
     "imagen": "default-image.png",
-    "rol": "Usuario"
+    "rol": 2
   },
   {
     "id": 13,
@@ -127,7 +127,7 @@
     "contraseña": "WAGuPfG4gV",
     "repetir": "WAGuPfG4gV",
     "imagen": "default-image.png",
-    "rol": "Usuario"
+    "rol": 2
   },
   {
     "id": 14,
@@ -137,7 +137,7 @@
     "contraseña": "YRrG8b8lBc",
     "repetir": "YRrG8b8lBc",
     "imagen": "default-image.png",
-    "rol": "Usuario"
+    "rol": 2
   },
   {
     "id": 15,
@@ -147,7 +147,7 @@
     "contraseña": "xZ06UMpHB3Z6",
     "repetir": "xZ06UMpHB3Z6",
     "imagen": "default-image.png",
-    "rol": "Usuario"
+    "rol": 2
   },
   {
     "id": 16,
@@ -157,7 +157,7 @@
     "contraseña": "l5qwe4XiD",
     "repetir": "l5qwe4XiD",
     "imagen": "default-image.png",
-    "rol": "Usuario"
+    "rol": 2
   },
   {
     "id": 17,
@@ -167,7 +167,7 @@
     "contraseña": "utRUtf7G8",
     "repetir": "utRUtf7G8",
     "imagen": "default-image.png",
-    "rol": "Usuario"
+    "rol": 2
   },
   {
     "id": 18,
@@ -177,7 +177,7 @@
     "contraseña": "rllYBq1wNp",
     "repetir": "rllYBq1wNp",
     "imagen": "default-image.png",
-    "rol": "Usuario"
+    "rol": 2
   },
   {
     "id": 19,
@@ -187,7 +187,7 @@
     "contraseña": "4DsTKQLQ",
     "repetir": "4DsTKQLQ",
     "imagen": "default-image.png",
-    "rol": "Usuario"
+    "rol": 2
   },
   {
     "id": 20,
@@ -197,7 +197,7 @@
     "contraseña": "tpMgMqDPD",
     "repetir": "tpMgMqDPD",
     "imagen": "default-image.png",
-    "rol": "Usuario"
+    "rol": 2
   },
   {
     "id": 21,
@@ -207,7 +207,7 @@
     "contraseña": "$2a$10$7oQJIOtxYDSwYvjAQL6/0umVNgKpj77gvBjBUNiQ44tHefRn/bLD6",
     "repetir": "$2a$10$icjdBc.VcYqKK3sblJgvWOpH3OxnQtykPIM8XoDugofNJuDM0rKJ6",
     "imagen": "default-image.png",
-    "rol": "Admin"
+    "rol": 1
   },
   {
     "id": 22,
@@ -217,7 +217,7 @@
     "contraseña": "$2a$10$wxUH0a/ZAdzv3bT/bFBclOxf08aI8p6awTiR5hYYvCfNLOTXaS6xG",
     "repetir": "$2a$10$4fXsCFYptj3tXfMTWEbq0ess4AWQoqXX9h49HSqONHhnl/77k/hl.",
     "imagen": "default-image.png",
-    "rol": "Admin"
+    "rol": 1
   },
   {
     "id": 23,
@@ -227,7 +227,7 @@
     "contraseña": "$2a$10$a1B9uwlVnpmWDnmzSPHOHemsIhtZG4PtGRVEiz4U2jAkUo8RDYcTq",
     "repetir": "$2a$10$XWGlwRRtoZzRscLda2gf1.hOuqn.guNztsQtBCFPpriK4RkQ/hr2.",
     "imagen": "default-image.png",
-    "rol": "Admin"
+    "rol": 1
   },
   {
     "id": 24,
@@ -237,24 +237,6 @@
     "contraseña": "$2a$10$nRcBDg6Az6Qt124A3SJl6OwJyDsZd4yh6D/Blbqn72RzZnwmswtYG",
     "repetir": "$2a$10$8RfbuziDksT7ggs4gPtjv.0xKN4VR6AGZASDe.Z2ecGTThqrv5nx2",
     "imagen": "default-image.png",
-    "rol": "Admin"
-  },
-  {
-    "id": 25,
-    "nombre": "Marta",
-    "apellido": "Sosa",
-    "email": "marta@gmail.com",
-    "contraseña": "$2a$10$3662uQbvUT66m0i.5/prX.5l67SH/7G/wK7Wq3R1U24mLoX3iLdPe",
-    "repetir": "$2a$10$JOLEoEHYKYAIsZvTPr7yGeA4Wr/W6BVHCZSgNVsm1bIX7V0b1hJ4W",
-    "imagen": "default-image.png"
-  },
-  {
-    "id": 26,
-    "nombre": "Martin",
-    "apellido": "Fernandez",
-    "email": "martin@gmail.com",
-    "contraseña": "$2a$10$2jwNgWLo6dp/4KaClg3nueuaBIZyddcqM4xmGakRmJ/wMfgqdmkoO",
-    "repetir": "$2a$10$mF06UoTJ4C3qyLvk8meBm.A2CroAHA2dD593WQK8PMIAwBtyDmre2",
-    "imagen": "default-image.png"
+    "rol": 1
   }
 ]
