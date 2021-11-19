@@ -1,7 +1,8 @@
 [
   {
     "id": 1,
-    "marca": 1,
+    "marca": "Milka",
+    "marca_id": 1,
     "title": "Alfajor MILKA Triple Mousse 55gr",
     "price": 74.04,
     "categoria": 1,
@@ -11,7 +12,8 @@
   },
   {
     "id": 2,
-    "marca": 2,
+    "marca": "Pepitos",
+    "marca_id": 2,
     "title": "Alfajor PEPITOS Chocolate 57gr",
     "price": 88.99,
     "categoria": 1,
@@ -21,7 +23,8 @@
   },
   {
     "id": 3,
-    "marca": 3,
+    "marca": "Terrabusi",
+    "marca_id": 3,
     "title": "Alfajor Triple TERRABUSI Torta 70gr",
     "price": 65.78,
     "categoria": 1,
@@ -31,7 +34,8 @@
   },
   {
     "id": 4,
-    "marca": 4,
+    "marca": "Bon o Bon",
+    "marca_id": 4,
     "title": "Bombones BON O BON Chocolate Con Leche 18u",
     "price": 422.26,
     "categoria": 4,
@@ -41,7 +45,8 @@
   },
   {
     "id": 5,
-    "marca": 5,
+    "marca": "Butter Toffees",
+    "marca_id": 5,
     "title": "BUTTER TOFFEES Bon O Bon 150gr",
     "price": 158.48,
     "categoria": 2,
@@ -51,7 +56,8 @@
   },
   {
     "id": 6,
-    "marca": 6,
+    "marca": "Arcor",
+    "marca_id": 6,
     "title": "Caramelos Duros ARCOR Rodajas Frutales Acidas 930gr",
     "price": 883.87,
     "categoria": 2,
@@ -61,7 +67,8 @@
   },
   {
     "id": 7,
-    "marca": 7,
+    "marca": "Halls",
+    "marca_id": 7,
     "title": "Caramelos HALLS Creamy Mora 27gr",
     "price": 53.21,
     "categoria": 2,
@@ -71,7 +78,8 @@
   },
   {
     "id": 8,
-    "marca": 8,
+    "marca": "Topline",
+    "marca_id": 8,
     "title": "Chicles 7 Ultra Green TOPLINE 24gr",
     "price": 109.99,
     "categoria": 3,
@@ -81,7 +89,8 @@
   },
   {
     "id": 9,
-    "marca": 9,
+    "marca": "Beldent",
+    "marca_id": 9,
     "title": "Chicles Menta BELDENT 10gr",
     "price": 53.99,
     "categoria": 3,
@@ -91,7 +100,8 @@
   },
   {
     "id": 10,
-    "marca": 8,
+    "marca": "Topline",
+    "marca_id": 8,
     "title": "Chicles TOPLINE Fruta 6.7gr",
     "price": 27.99,
     "categoria": 3,
@@ -101,7 +111,8 @@
   },
   {
     "id": 11,
-    "marca": 10,
+    "marca": "Cadbury",
+    "marca_id": 10,
     "title": "Chocolate CADBURY Yogur Frutilla 80gr",
     "price": 240.53,
     "categoria": 4,
@@ -111,7 +122,8 @@
   },
   {
     "id": 12,
-    "marca": 11,
+    "marca": "M&Ms",
+    "marca_id": 11,
     "title": "Confites de Chocolate M&Ms 52Gr.jpg",
     "price": 221.99,
     "categoria": 6,
@@ -121,7 +133,8 @@
   },
   {
     "id": 13,
-    "marca": 1,
+    "marca": "Milka",
+    "marca_id": 1,
     "title": "Chocolate MILKA Castañas 155gr",
     "price": 477.21,
     "categoria": 4,
@@ -131,8 +144,9 @@
   },
   {
     "id": 14,
-    "marca": 12,
-    "title": "Chupetin Frutal MR,POP'S 10u",
+    "marca": "Mr.Pop's",
+    "marca_id": 12,
+    "title": "Chupetin Frutal MR.POP'S 10u",
     "price": 100.69,
     "categoria": 5,
     "destacado": 0,
@@ -141,7 +155,8 @@
   },
   {
     "id": 15,
-    "marca": 12,
+    "marca": "Mr.Pop's",
+    "marca_id": 12,
     "title": "Chupetin Tuti Fruti MR.POP'S 480gr",
     "price": 313.91,
     "categoria": 5,
@@ -151,7 +166,8 @@
   },
   {
     "id": 16,
-    "marca": 13,
+    "marca": "Flynn Paff",
+    "marca_id": 13,
     "title": "Chupetin Tutti Frutti FLYNN PAFF 432gr",
     "price": 488.99,
     "categoria": 5,
@@ -161,7 +177,8 @@
   },
   {
     "id": 17,
-    "marca": 14,
+    "marca": "Rocklets",
+    "marca_id": 14,
     "title": "Confites De Chocolate ROCKLETS 40gr",
     "price": 73.57,
     "categoria": 6,
@@ -171,7 +188,8 @@
   },
   {
     "id": 18,
-    "marca": 15,
+    "marca": "Mogul",
+    "marca_id": 15,
     "title": "Gomitas MOGUL Frutillas Acidas 150gr",
     "price": 141.13,
     "categoria": 7,
@@ -181,7 +199,8 @@
   },
   {
     "id": 19,
-    "marca": 15,
+    "marca": "Mogul",
+    "marca_id": 15,
     "title": "Gomitas MOGUL Jelly Buttons 220gr",
     "price": 238.67,
     "categoria": 7,
@@ -191,7 +210,8 @@
   },
   {
     "id": 20,
-    "marca": 16,
+    "marca": "Billiken",
+    "marca_id": 16,
     "title": "Gomitas Sabor Frutal BILLIKEN 200Gr",
     "price": 152.99,
     "categoria": 7,
@@ -201,7 +221,8 @@
   },
   {
     "id": 21,
-    "marca": 17,
+    "marca": "Cofler",
+    "marca_id": 17,
     "title": "Mani Con Chocolate COFLER 40Gr",
     "price": 91.49,
     "categoria": 6,

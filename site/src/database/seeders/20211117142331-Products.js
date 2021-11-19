@@ -9,7 +9,7 @@ const products = productsJSON.map(productMap => {
     featured_product: productMap.destacado,
     discount: productMap.descuento,
     category_id: productMap.categoria,
-    brand_id: productMap.marca,
+    brand_id: productMap.marca_id,
     createdAt: new Date,
     updatedAt: new Date
   };
