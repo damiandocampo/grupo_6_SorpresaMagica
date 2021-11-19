@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Images.belongsTo(models.Products, {
-        as: 'Producto',
+        as: 'product',
         foreignKey: 'product_id'
     })
     }

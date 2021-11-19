@@ -6,18 +6,17 @@ const finalPrice = (price, discount) => price - (price * discount / 100);
 
 const controller = {
     index: (req, res, next) => {
-        db.Products.findAll()
+        const products = db.Products.findAll({
+            where: {featured_product: 1},
+            include: [{association: 'brand'}]
+        })
 
-        .then(products => {
-            db.Categories.findAll()
+        const categories = db.Categories.findAll()
 
-            .then(categorias => {
-                res.render('index', {products, categorias, finalPrice});
-            })
+        Promise.all([products, categories])
 
-            .catch(err => {
-                res.send(err)
-            })
+        .then(({products, categories}) => {
+            res.render('index', {products, categories, finalPrice});
         })
 
         .catch(err => {

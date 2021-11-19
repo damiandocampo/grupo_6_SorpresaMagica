@@ -5,16 +5,20 @@ const finalPrice = (price, discount) => price - (price * discount / 100);
 
 const controller = {
     detalle: (req,res) => {
-        db.Product.findByPk(+req.params.id)
+        const product = db.Product.findOne({
+            where: {id: req.params.id},
+            include: [{association: 'brand'}]
+        })
 
-        .then(product => {
-            db.Product.findAll()
-            .then(products => {
-                res.render('detalleDeProductos', {product, products});
-            })
-            .catch(err => {
-                res.send(err)
-            })
+        const relatedProducts = db.Product.findAll({
+            where: {category_id: product.category_id},
+            limit: 3
+        })
+
+        Promise.all([product, relatedProducts])
+
+        .then(({product, relatedProducts}) => {
+            res.render('detalleDeProductos', {product, relatedProducts});
         })
 
         .catch(err => {
@@ -23,10 +27,12 @@ const controller = {
     },
 
     listado: (req, res) => {
-        db.Product.findAll()
+        db.Products.findAll({
+            include: [{association: 'brand'}]
+        })
 
         .then(products => {
-            res.render('productos', {products})
+            res.render('productos', {products, finalPrice});
         })
 
         .catch(err => {

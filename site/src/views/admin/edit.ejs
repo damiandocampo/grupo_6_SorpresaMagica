@@ -29,7 +29,7 @@
 
               <div class="col-md">
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="floatingInputGrid" value="<%= product.marca %> " name="marca">
+                  <input type="text" class="form-control" id="floatingInputGrid" value="<%= product.brand.name %> " name="marca">
                   <label for="floatingInputGrid">Marca</label>
                 </div>
                 <% if (locals.errors && errors.marca) { %> 
@@ -53,7 +53,7 @@
 
               <div class="col-md">
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="floatingInputGrid" value="<%= product.descuento %> " name="descuento">
+                  <input type="text" class="form-control" id="floatingInputGrid" value="<%= product.discount %> " name="descuento">
                   <label for="floatingInputGrid">Descuento</label>
                 </div>
                 <% if (locals.errors && errors.descuento) { %> 
@@ -69,13 +69,13 @@
                 <div class="form-floating">
                   <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example" name="categoria">
                     <option value="" selected hidden>Seleccioná una categoría</option>
-                    <option value="Alfajores" <%= product.categoria === "Alfajores"? "selected" : null %>  >Alfajores</option>
-                    <option value="Caramelos" <%= product.categoria === "Caramelos"? "selected" : null %>  >Caramelos</option>
-                    <option value="Chicles" <%= product.categoria === "Chicles"? "selected" : null %>  >Chicles</option>
-                    <option value="Chocolate" <%= product.categoria === "Chocolate"? "selected" : null %>  >Chocolates</option>
-                    <option value="Chupetines" <%= product.categoria === "Chupetines"? "selected" : null %>  >Chupetines</option>
-                    <option value="Confites" <%= product.categoria === "Confites"? "selected" : null %>  >Confites</option>
-                    <option value="Gomitas" <%= product.categoria === "Gomitas"? "selected" : null %>  >Gomitas</option>
+                    <option value=1 <%= product.category_id === 1? "selected" : null %>  >Alfajores</option>
+                    <option value=2 <%= product.category_id === 2? "selected" : null %>  >Caramelos</option>
+                    <option value=3 <%= product.category_id === 3? "selected" : null %>  >Chicles</option>
+                    <option value=4 <%= product.category_id === 4? "selected" : null %>  >Chocolates</option>
+                    <option value=5 <%= product.category_id === 5? "selected" : null %>  >Chupetines</option>
+                    <option value=6 <%= product.category_id === 6? "selected" : null %>  >Confites</option>
+                    <option value=7 <%= product.category_id === 7? "selected" : null %>  >Gomitas</option>
                   </select>
                   <label for="floatingSelectGrid">Categoría</label>
                 </div>
@@ -88,8 +88,8 @@
                 <div class="form-floating">
                   <select class="form-select" id="destacado" aria-label="Floating label select example">
                     <option selected hidden>Es un producto destacado</option>
-                    <option value= "true" <%= product.destacado === true ? "selected" : null %> >Si</option>
-                    <option value="false" <%= product.destacado ===  false ? "selected" : null %> >No</option>
+                    <option value= 1 <%= product.destacado === 1 ? "selected" : null %> >Si</option>
+                    <option value= 0 <%= product.destacado === 0 ? "selected" : null %> >No</option>
                   </select>
                   <label for="floatingSelectGrid">Destacado</label>
                 </div>
@@ -104,7 +104,7 @@
 
               <div class="col-md">
                 <div class="mb-3 imagen-del-producto">
-                  <img src="/images/productos/AlfajorMILKATripleMousse55Gr74,04.png" alt="Alfajor">
+                  <img src="/images/productos/<%= product.image.file %>" alt="Producto">
                   <label for="formFile" class="form-label">Seleccione otra imágen del producto</label>
                   <input class="form-control" type="file" id="formFile">
                 </div>

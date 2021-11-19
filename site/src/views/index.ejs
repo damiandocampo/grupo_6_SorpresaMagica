@@ -116,17 +116,16 @@
 
                         <div class="productos">
 
-                            <% const productos = products.filter(producto=> producto.destacado === 1) %>
-                                <% productos.forEach(product=> { %>
+                            <% products.forEach(product=> { %>
                                     <article>
                                         <a href="/productos/detalle/<%= product.id %>#slide1">
-                                            <img src="/images/productos/<%= product.image %>"
+                                            <img src="/images/productos/<%= product.image.file %>"
                                                 alt="<%= product.title %>">
                                         </a>
                                         <div class="descripcion">
                                             <a href="/productos/<%= product.id %>#slide1">
                                                 <h5>
-                                                    <%= product.marca %>
+                                                    <%= product.brand.name %>
                                                 </h5>
                                             </a>
                                             <h3>
@@ -179,26 +178,26 @@
 
                             <ul>
 
-                                <% categorias.forEach(categoria => { %>
+                                <% categories.forEach(category => { %>
                                     <li>
                                         <a href="">
-                                            <img src="/images/categorias/<%= categoria.image %>" alt="">
+                                            <img src="/images/categorias/<%= category.name %>" alt="">
                                             <div>
                                                 <h3>
-                                                    <%= categoria.title %>
+                                                    <%= category.title %>
                                                 </h3>
                                             </div>
                                         </a>
                                     </li>
                                 <% }) %>
 
-                                <% categorias.forEach(categoria => { %>
+                                <% categories.forEach(category => { %>
                                     <li>
                                         <a href="">
-                                            <img src="/images/categorias/<%= categoria.image %>" alt="">
+                                            <img src="/images/categorias/<%= category.image %>" alt="">
                                             <div>
                                                 <h3>
-                                                    <%= categoria.title %>
+                                                    <%= category.name %>
                                                 </h3>
                                             </div>
                                         </a>
