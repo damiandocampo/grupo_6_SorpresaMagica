@@ -84,17 +84,7 @@ const controller = {
         } else {
             res.render('registro',{errors: errors.mapped(), old: req.body});
         }
-    },
-
-    logout: (req, res) => {
-
-        req.session.destroy();
-
-        if (req.cookies.Recuerdame !== undefined) {
-            res.cookie('Recuerdame', '', {maxAge: -1});
-        };
-
-        res.redirect('/');
+    }
     },*/
 
         let errors = validationResult(req);
