@@ -9,7 +9,9 @@ const finalPrice = (price, discount) => price - (price * discount / 100);
 
 const controller = {
     list: function(req, res, next) {
-        db.Products.findAll()
+        db.Products.findAll({
+            include: [{association: 'brand'}]
+        })
 
         .then(products => {
             res.render('./admin/admin', {products, finalPrice});
@@ -31,11 +33,11 @@ const controller = {
 
             db.Products.create({
                 title: req.body.title,
-                marca: req.body.marca,
+                brand_id: req.body.marca,
                 price: req.body.price,
-                descuento: req.body.descuento,
-                categoria: req.body.categoria,
-                destacado: req.body.destadado,
+                discount: req.body.descuento,
+                category_id: req.body.categoria,
+                featured_product: req.body.destacado,
                 image: req.file ? req.file.filename : 'defaultImage.png',
             })
     
@@ -53,7 +55,10 @@ const controller = {
 	},
 
     edit: function(req, res, next) {
-        db.Products.findByPk(+req.params.id)
+        db.Products.findOne({
+            where: {id: req.params.id},
+            include: [{association: 'brand'}]
+        })
 
         .then(product => {
             res.render('./admin/edit', {product});
@@ -71,11 +76,11 @@ const controller = {
 
             db.Products.update({
                 title: req.body.title,
-                marca: req.body.marca,
+                brand_id: req.body.marca,
                 price: req.body.price,
-                descuento: req.body.descuento,
-                categoria: req.body.categoria,
-                destacado: req.body.destadado,
+                discount: req.body.descuento,
+                category_id: req.body.categoria,
+                featured_product: req.body.destacado,
                 image: req.file ? req.file.filename : 'defaultImage.png',
             },{
                 where: {id: +req.params.id}

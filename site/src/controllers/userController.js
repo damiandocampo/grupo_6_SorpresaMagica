@@ -143,7 +143,7 @@ const controller = {
                 email: req.body.email.trim(),
                 password: bcrypt.hashSync(req.body.nuevaContraseña, 10),
                 image: req.file ? req.file.filename : 'default-image.png',
-                rol: 'Usuario'
+                rol: 2
             },{
                 where: {email: locals.usuarioL.email}
             })

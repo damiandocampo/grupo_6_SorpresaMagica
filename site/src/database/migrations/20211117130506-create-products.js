@@ -17,7 +17,7 @@ module.exports = {
         allowNull: false
       },
       featured_product: {
-        type: Sequelize.BOOLEAN,
+        type: Sequelize.INTEGER,
         allowNull: false
       },
       discount: {
@@ -28,22 +28,20 @@ module.exports = {
         allowNull: false,
         references: {
           model: {
-            tablename: "Categories",
+            tableName: "Categories",
           },
           key: "id"
-        },
-        onDelete: "cascade"
+        }
       },
       brand_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
           model: {
-            tablename: "Brands",
+            tableName: "Brands",
           },
           key: "id"
-        },
-        onDelete: "cascade"
+        }
       },
       createdAt: {
         allowNull: false,

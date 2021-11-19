@@ -14,15 +14,15 @@
             <section class="conteiner">
                 <ul class="slider">
                     <li id="slide1">
-                        <img src="/images/productos/<%= product.image %> " alt="Foto alfajor 1"/>  
+                        <img src="/images/productos/<%= product.image.file %> " alt="Foto alfajor 1"/>  
                     </li>
                 
                     <li id="slide2">
-                        <img src="/images/productos/<%= product.image %>" alt="">  
+                        <img src="/images/productos/<%= product.image.file %>" alt="Foto alfajor 2">  
                     </li>
               
                     <li id="slide3">
-                        <img src="/images/productos/<%= product.image %>" alt="Foto alfajor 3"/>  
+                        <img src="/images/productos/<%= product.image.file %>" alt="Foto alfajor 3"/>  
                     </li>
                 </ul>
             </section>
@@ -37,19 +37,7 @@
                    <a href="#slide3">3</a>
                </li>
             </ul>
-           <!-- <section>
-              <article>
-                <img src="/images/productos/Alfajor MILKA Triple Mousse 55 Gr 74,04.png" alt="Foto alfajor 1"/>
-              </article>
 
-              <article>
-                <img src="/images/productos/Alfajor MILKA Triple Mousse 55 Gr 74,04.png" alt="Foto alfajor 2"/>
-              </article>
-
-              <article>
-                <img src="/images/productos/Alfajor MILKA Triple Mousse 55 Gr 74,04.png" alt="Foto alfajor 3"/>
-              </article>
-            </section>-->
          <div class="conteinerDetalle">
            <section  class="price">
               <div >
@@ -99,11 +87,10 @@
              <h2>PRODUCTOS RELACIONADOS</h2> 
            </div>
          <section class="productosRelacionados">
-            <% products = products.filter(product => product.categoria === 'Alfajores') %> 
-             <% products.forEach(product => {   %> 
+            <% relatedProducts.forEach(product => {   %> 
               <article>
                  <img src="/images/productos/<%= product.image %> " alt="imagen1"/>
-                <h6><%= product.marca %> </h6>
+                <h6><%= product.brand.name %> </h6>
                 <h3><%= product.title %>  <br> 55gr</h3>
                 <span class="precio"><%= product.price %> </span>
                 <div>

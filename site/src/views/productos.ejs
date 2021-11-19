@@ -96,12 +96,12 @@
             <% products.forEach(product=> { %>
                 <article>
                     <a href="/productos/detalle/<%= product.id %>">
-                        <img src="/images/productos/<%= product.image %>" alt="<%= product.title %>">
+                        <img src="/images/productos/<%= product.image.file %>" alt="<%= product.title %>">
                     </a>
                     <div class="descripcion">
                         <a href="/productos/detalle/<%= product.id %>">
                             <h5>
-                                <%= product.marca %>
+                                <%= product.brand.name %>
                             </h5>
                         </a>
                         <h3>
