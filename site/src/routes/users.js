@@ -2,11 +2,11 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 
-const { login, registro, registre, logear, logout, perfil, editarDatos } = require('../controllers/userController');
+const { login, registro, register, logear, logout, perfil, editarDatos } = require('../controllers/userController');
 const guestCheck = require('../middlewares/guestCheck');
 const loginValidator = require('../validations/loginValidator');
 const registerValidator = require('../validations/validateRegister');
-const userEditValidator = require('../validations/editUserValidator');
+//const userEditValidator = require('../validations/editUserValidator');
 
 const multer  = require('multer');
 
@@ -23,16 +23,19 @@ const upload = multer({ storage: storage });
 
 /* GET users listing. */
 
+// login
 router.get('/login', guestCheck, login);
 router.post('/login', loginValidator, logear);
 
+// registr0
 router.get('/registro',guestCheck, registro);
-router.post('/registro', upload.single('image'), registerValidator, registre);
+router.post('/registro', upload.single('image'), registerValidator, register);
 
-router.get('/logout', logout);
-
+// perfil
 router.get('/perfil', perfil);
+router.put('/edit', editarDatos)
 
-router.post('/edit', userEditValidator, editarDatos)
+// logout
+router.get('/logout', logout);
 
 module.exports = router;

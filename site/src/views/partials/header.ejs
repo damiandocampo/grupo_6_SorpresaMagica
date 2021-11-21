@@ -2,7 +2,7 @@
 
     <div>
 
-        <% if(locals.usuarioL && locals.usuarioL.rol === 'Admin') { %>
+        <% if(locals.usuarioL && locals.usuarioL.rolId === 1) { %>
             <div class="administrar">
                 <a href="/admin">Administrar</a>
             </div>
@@ -17,14 +17,14 @@
             <% } else { %>
                 <input type="checkbox" name="checkbox-user" id="user" class="checkbox-user">
                 <label for="user" class="user">
-                    <div class="user-image"><img src="/images/usuarios/<%= locals.usuarioL.imagen %>" alt="Imágen de perfil del usuario"></div>
+                    <div class="user-image"><img src="/images/usuarios/<%= locals.usuarioL.image %>" alt="Imágen de perfil del usuario"></div>
                 </label>
             <% } %>
             <div class="user-checked">
                 <% if (!(locals.usuarioL)) { %>
                     <p><a href="/users/registro">Crear una cuenta</a> | <a href="/users/login">Iniciar sesión</a></p>
                 <% } else { %>
-                    <a href="/users/perfil"><%= locals.usuarioL.nombre %> <%= locals.usuarioL.apellido %> <i class="fas fa-cog"></i></a>
+                    <a href="/users/perfil"><%= locals.usuarioL.first_name %> <%= locals.usuarioL.last_name %> <i class="fas fa-cog"></i></a>
                 <% } %>
             </div>
             <div class="message">
@@ -55,8 +55,8 @@
                 <div class="user-icon"><i class="far fa-user-circle"></i></div>
                 <p><a href="/users/registro">Crear una cuenta</a> | <a href="/users/login">Iniciar sesión</a></p>
             <% } else { %>
-                <div class="user-image"><img src="/images/usuarios/<%= locals.usuarioL.imagen %> " alt="Imágen de perfil del usuario"></div>
-                <label for="user-options"><%= locals.usuarioL.nombre %> <%= locals.usuarioL.apellido %> <i class="fas fa-caret-down"></i></label>
+                <div class="user-image"><img src="/images/usuarios/<%= locals.usuarioL.image %> " alt="Imágen de perfil del usuario"></div>
+                <label for="user-options"><%= locals.usuarioL.first_name %> <%= locals.usuarioL.last_name %> <i class="fas fa-caret-down"></i></label>
                 <input type="checkbox" name="user-options" id="user-options">
                 <ul>
                     <li><a href="/users/perfil">Tu perfil <i class="fas fa-cog"></i></a></li>

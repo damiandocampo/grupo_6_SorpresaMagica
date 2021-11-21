@@ -16,5 +16,5 @@ module.exports = [
     check('categoria')
         .notEmpty().withMessage('Debes seleccionar una categoría.'),
     check('destacado')
-        .notEmpty().withMessage('Debes aclarar si es un producto destacado.'),
+        .isInt().withMessage('Debes aclarar si es un producto destacado.')
 ]

@@ -53,7 +53,7 @@
 
               <div class="col-md">
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="floatingInputGrid" placeholder="Descuento" name="descuento"  value=<%= locals.old && old.descuento ? old.descuento : null %>>
+                  <input type="text" class="form-control" id="floatingInputGrid" placeholder="Descuento" name="descuento" value=<%= locals.old && old.descuento ? old.descuento : null %>>
                   <label for="floatingInputGrid">Descuento</label>
                 </div>
                 <% if (locals.errors && errors.descuento) { %> 
@@ -69,13 +69,9 @@
                 <div class="form-floating">
                   <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example" name="categoria">
                     <option value="" <%= locals.old && old.categoria === '' ? 'selected' : null %> hidden>Seleccioná una categoría</option>
-                    <option value="Alfajores" <%= locals.old && old.categoria === 'Alfajores' ? 'selected' : null %>>Alfajores</option>
-                    <option value="Caramelos" <%= locals.old && old.categoria === 'Caramelos' ? 'selected' : null %>>Caramelos</option>
-                    <option value="Chicles" <%= locals.old && old.categoria === 'Chicles' ? 'selected' : null %>>Chicles</option>
-                    <option value="Chocolates" <%= locals.old && old.categoria === 'Chocolates' ? 'selected' : null %>>Chocolates</option>
-                    <option value="Chupetines" <%= locals.old && old.categoria === 'Chupetines' ? 'selected' : null %>>Chupetines</option>
-                    <option value="Confites" <%= locals.old && old.categoria === 'Confites' ? 'selected' : null %>>Confites</option>
-                    <option value="Gomitas" <%= locals.old && old.categoria === 'Gomitas' ? 'selected' : null %>>Gomitas</option>
+                    <% categories.forEach(category => { %> 
+                      <option value=<%= category.id %>  <%= locals.old && old.categoria === category.id ? 'selected' : null %>> <%= category.name %> </option>
+                    <% }) %> 
                   </select>
                   <label for="floatingSelectGrid">Categoría</label>
                 </div>
@@ -88,8 +84,8 @@
                 <div class="form-floating">
                   <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example" name="destacado"> 
                     <option value="" <%= locals.old && old.destacado === '' ? 'selected' : null %> hidden>¿Es un producto destacado?</option>
-                    <option value=true <%= locals.old && old.destacado === 'true' ? 'selected' : null %>>Si</option>
-                    <option value=false <%= locals.old && old.destacado === 'false' ? 'selected' : null %>>No</option>
+                    <option value=1 <%= locals.old && old.destacado === 1 ? 'selected' : null %>>Si</option>
+                    <option value=0 <%= locals.old && old.destacado === 0 ? 'selected' : null %>>No</option>
                   </select>
                   <label for="floatingSelectGrid">Destacado</label>
                 </div>

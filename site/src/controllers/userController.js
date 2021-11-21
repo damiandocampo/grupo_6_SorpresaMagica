@@ -3,15 +3,21 @@ const fs = require('fs');
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 const db = require('../database/models');
-const { where } = require('sequelize/types');
 
-let usuarios = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','users.json'),'utf-8'));
-
-const db = require('../database/models')
+// let usuarios = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','users.json'),'utf-8'));
 
 const controller = {
     login: (req,res) => {
-        res.render('login');
+
+        db.Categories.findAll()
+
+        .then(categories => {
+            res.render('login',{categories});
+        })
+        
+        .catch(err => {
+            res.send(err)
+        })
     },
 
     logear: (req,res) => {
@@ -33,36 +39,64 @@ const controller = {
         let errors = validationResult(req);
     
         if (errors.isEmpty()) {
-            const {email} =req.body
 
-            db.User.findOne({
-                where: {
-                    email
+            const comparePassword = async (password, hash) => {
+                try {
+                    return await bcrypt.compare(password, hash);
+                } catch (error) {
+                    console.log(error);
                 }
 
+                return false;
+            };
+
+            const {email} =req.body
+
+            db.users.findOne({
+                where: {
+                    email: email
+                }
             })
-            .then( usuario => {
-                if (usuario && bcrypt.compareSync(req.body.contraseña, usuario.contraseña)) {
+
+            .then(usuario => {
+
+                if (usuario && bcrypt.compare(req.body.contraseña.trim(), usuario.password)) {
+                    
                     req.session.usuarioL = usuario
 
                     if (req.body.Recuerdame != undefined) {
-                        res.cookie('Recuerdame', usuario.email, {maxAge: 60*1000*30})
+                        res.cookie('Recuerdame', usuario.email, {maxAge: 8*60*60*1000})
                     }
+
                     return res.redirect('/')
                 } 
             })
             .catch(error => console.log(error))
 
         } else {
-            res.render('login', {errors: {msg: 'Email o constraseña inválidos.'}});
+            db.Categories.findAll()
+
+            .then(categories => {
+                res.render('login', {categories, errors: {msg: 'Email o constraseña inválidos.'}});
+            })
+
+            .catch(error => console.log(error))
         }          
     },
 
     registro: (req,res) => {
-         res.render('registro')
+        db.Categories.findAll()
+
+        .then(categories => {
+            res.render('registro',{categories});
+        })
+        
+        .catch(err => {
+            res.send(err)
+        })
     },
 
-    registre: (req,res) => {
+    register: (req,res) => {
 
         /*const errors = validationResult(req);
 
@@ -87,34 +121,38 @@ const controller = {
     }
     },*/
 
-        let errors = validationResult(req);
+    let errors = validationResult(req);
+    
+    if (errors.isEmpty()) {
+        const {email} =req.body
 
-        if(errors.isEmpty()){
-            const {nombre, apellido, email, contraseña} = req.body;
+        db.users.findOne({
+            where: {
+                email: email
+            }
 
-            db.User.create({
-                nombre: nombre.trim(),
-                apellido: apellido.trim(),
-                email: email.trim(),
-                contraseña: bcrypt.hashSync(contraseña, 10),
-                imagen: 'default-image.png',
-                rolId: 'Usuario'
-            })
+        })
+        .then( usuario => {
+            if (usuario && bcrypt.compareSync(req.body.contraseña.trim(), usuario.password)) {
+                req.session.usuarioL = usuario
 
-            .then(user => {
-                req.session.usuarioL = {
-                    id: user.id,
-                    name : user.nombre,
-                    image : user.image,
-                    rolId : user.rolId
+                if (req.body.Recuerdame != undefined) {
+                    res.cookie('Recuerdame', usuario.email, {maxAge: 60*1000*30})
                 }
-                return res.redirect('/users/login')
-            })
-            .catch(error => console.log(error))
+                return res.redirect('/')
+            } 
+        })
+        .catch(error => console.log(error))
 
-        } else {
-            res.render('registro',{errors: errors.mapped(), old: req.body});
-        }
+    } else {
+        db.Categories.findAll()
+
+            .then(categories => {
+                res.render('registro',{categories, errors: errors.mapped(), old: req.body});
+            })
+
+            .catch(error => console.log(error))
+    }
     },
 
     logout: (req, res) => {
@@ -129,7 +167,16 @@ const controller = {
     },
 
     perfil: (req, res) => {
-        res.render('usuarioPerfil');
+        db.Categories.findAll()
+
+        .then(categories => {
+            res.render('usuarioPerfil', {categories});
+        })
+        
+        .catch(err => {
+            res.send(err)
+        })
+
     },
 
     editarDatos: (req, res) => {
@@ -137,15 +184,14 @@ const controller = {
 
         if(errors.isEmpty()){
 
-            db.Users.update({
-                name: req.body.nombre.trim(),
+            db.users.update({
+                first_name: req.body.nombre.trim(),
                 last_name: req.body.apellido.trim(),
                 email: req.body.email.trim(),
-                password: bcrypt.hashSync(req.body.nuevaContraseña, 10),
-                image: req.file ? req.file.filename : 'default-image.png',
-                rol: 2
+                password: req.body.nuevaContraseña? bcrypt.hashSync(req.body.nuevaContraseña, 10) : bcrypt.hashSync(req.body.contraseña, 10),
+                image: req.file ? req.file.filename : 'default-image.png'
             },{
-                where: {email: locals.usuarioL.email}
+                where: {email: req.body.email}
             })
 
             .then(user => {
@@ -157,12 +203,28 @@ const controller = {
             })
 
         } else {
-            res.render('usuarioPerfil',{errors: errors.mapped()});
+            db.Categories.findAll()
+
+            .then(categories => {
+                res.render('usuarioPerfil',{categories, errors: errors.mapped()});
+            })
+            
+            .catch(err => {
+                res.send(err)
+            })
         }
     },
 
     carrito: (req,res) => {
-        res.render('carritoDeCompras');
+        db.Categories.findAll()
+
+        .then(categories => {
+            res.render('carritoDeCompras',{categories, errors: errors.mapped()});
+        })
+        
+        .catch(err => {
+            res.send(err)
+        })
     },
 }
 

@@ -5,20 +5,30 @@ const finalPrice = (price, discount) => price - (price * discount / 100);
 
 const controller = {
     detalle: (req,res) => {
-        const product = db.Product.findOne({
-            where: {id: req.params.id},
+        const product = db.Products.findOne({
+            where: {id: +req.params.id},
             include: [{association: 'brand'}]
         })
 
-        const relatedProducts = db.Product.findAll({
-            where: {category_id: product.category_id},
-            limit: 3
-        })
+        const categories = db.Categories.findAll()
 
-        Promise.all([product, relatedProducts])
+        Promise.all([product, categories])
 
-        .then(({product, relatedProducts}) => {
-            res.render('detalleDeProductos', {product, relatedProducts});
+        .then(([product, categories]) => {
+
+            db.Products.findAll( {
+                include: [{association: 'brand'}],
+                where: {category_id: product.category_id},
+                limit: 3
+            })
+
+            .then(relatedProducts => {
+                res.render('detalleDeProductos', {product, relatedProducts, categories});
+            })
+
+            .catch(err => {
+                res.send(err)
+            })
         })
 
         .catch(err => {
@@ -27,12 +37,18 @@ const controller = {
     },
 
     listado: (req, res) => {
-        db.Products.findAll({
+        const products = db.Products.findAll({
             include: [{association: 'brand'}]
         })
 
-        .then(products => {
-            res.render('productos', {products, finalPrice});
+        const categories = db.Categories.findAll()
+
+        const brands = db.Brands.findAll()
+
+        Promise.all([products, categories, brands])
+
+        .then(([products, categories, brands]) => {
+            res.render('productos', {products, categories, brands, finalPrice});
         })
 
         .catch(err => {

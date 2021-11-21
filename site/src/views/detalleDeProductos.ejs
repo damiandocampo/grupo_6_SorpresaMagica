@@ -14,18 +14,18 @@
             <section class="conteiner">
                 <ul class="slider">
                     <li id="slide1">
-                        <img src="/images/productos/<%= product.image.file %> " alt="Foto alfajor 1"/>  
-                    </li>
+                        <img src="/images/productos/<%= product.image %> " alt="Foto producto"/>  
+                    </li><!-- 
                 
                     <li id="slide2">
-                        <img src="/images/productos/<%= product.image.file %>" alt="Foto alfajor 2">  
+                        <img src="/images/productos/<%= product.image %>" alt="Foto producto">  
                     </li>
               
                     <li id="slide3">
-                        <img src="/images/productos/<%= product.image.file %>" alt="Foto alfajor 3"/>  
-                    </li>
+                        <img src="/images/productos/<%= product.image %>" alt="Foto producto"/>  
+                    </li> -->
                 </ul>
-            </section>
+            </section><!-- 
             <ul class="menu">
                <li>
                    <a href="#slide1">1</a>
@@ -36,7 +36,7 @@
                <li>
                    <a href="#slide3">3</a>
                </li>
-            </ul>
+            </ul> -->
 
          <div class="conteinerDetalle">
            <section  class="price">
@@ -81,7 +81,7 @@
         <section class="fondo">
           <section class="descripcion">
             <h2>Descripcion</h2>
-            <p>Alfajor de chocolate Triple relleno de mouse <br> 55 gr </p>
+            <p><%= product.title %> </p>
           </section>
            <div>
              <h2>PRODUCTOS RELACIONADOS</h2> 

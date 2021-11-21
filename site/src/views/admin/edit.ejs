@@ -11,7 +11,7 @@
 
         <h1>Editar un producto</h1>
 
-        <form action="/admin/edit/<%= product.id %>?_method=PUT" method="POST">
+        <form action="/admin/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
 
           <div class="row g-2">
 
@@ -19,7 +19,7 @@
 
               <div class="col-md">
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="floatingInputGrid" value="<%= product.title %> " name="title">
+                  <input type="text" class="form-control" id="floatingInputGrid" value="<%= product.title %>" name="title">
                   <label for="floatingInputGrid">Nombre del producto</label>
                 </div>
                 <% if (locals.errors && errors.title) { %> 
@@ -29,7 +29,7 @@
 
               <div class="col-md">
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="floatingInputGrid" value="<%= product.brand.name %> " name="marca">
+                  <input type="text" class="form-control" id="floatingInputGrid" value="<%= product.brand.name %>" name="marca">
                   <label for="floatingInputGrid">Marca</label>
                 </div>
                 <% if (locals.errors && errors.marca) { %> 
@@ -43,7 +43,7 @@
 
               <div class="col-md">
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="floatingInputGrid" value="<%= product.price %> " name="price">
+                  <input type="text" class="form-control" id="floatingInputGrid" value="<%= product.price %>" name="price">
                   <label for="floatingInputGrid">Precio</label>
                 </div>
                 <% if (locals.errors && errors.price) { %> 
@@ -53,7 +53,7 @@
 
               <div class="col-md">
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="floatingInputGrid" value="<%= product.discount %> " name="descuento">
+                  <input type="text" class="form-control" id="floatingInputGrid" value="<%= product.discount? product.discount : 0 %>" name="descuento">
                   <label for="floatingInputGrid">Descuento</label>
                 </div>
                 <% if (locals.errors && errors.descuento) { %> 
@@ -69,13 +69,9 @@
                 <div class="form-floating">
                   <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example" name="categoria">
                     <option value="" selected hidden>Seleccioná una categoría</option>
-                    <option value=1 <%= product.category_id === 1? "selected" : null %>  >Alfajores</option>
-                    <option value=2 <%= product.category_id === 2? "selected" : null %>  >Caramelos</option>
-                    <option value=3 <%= product.category_id === 3? "selected" : null %>  >Chicles</option>
-                    <option value=4 <%= product.category_id === 4? "selected" : null %>  >Chocolates</option>
-                    <option value=5 <%= product.category_id === 5? "selected" : null %>  >Chupetines</option>
-                    <option value=6 <%= product.category_id === 6? "selected" : null %>  >Confites</option>
-                    <option value=7 <%= product.category_id === 7? "selected" : null %>  >Gomitas</option>
+                    <% categories.forEach(category => { %> 
+                      <option value=<%= category.id %> <%= product.category_id === category.id? "selected" : null %>><%= category.name %> </option>
+                    <% }) %> 
                   </select>
                   <label for="floatingSelectGrid">Categoría</label>
                 </div>
@@ -86,10 +82,10 @@
 
               <div class="col-md">
                 <div class="form-floating">
-                  <select class="form-select" id="destacado" aria-label="Floating label select example">
+                  <select class="form-select" id="destacado" name="destacado" aria-label="Floating label select example">
                     <option selected hidden>Es un producto destacado</option>
-                    <option value= 1 <%= product.destacado === 1 ? "selected" : null %> >Si</option>
-                    <option value= 0 <%= product.destacado === 0 ? "selected" : null %> >No</option>
+                    <option value=1 <%= product.featured_product === 1? "selected" : null %>>Si</option>
+                    <option value=0 <%= product.featured_product === 0? "selected" : null %>>No</option>
                   </select>
                   <label for="floatingSelectGrid">Destacado</label>
                 </div>
@@ -104,9 +100,9 @@
 
               <div class="col-md">
                 <div class="mb-3 imagen-del-producto">
-                  <img src="/images/productos/<%= product.image.file %>" alt="Producto">
+                  <img src="/images/productos/<%= product.image %>" alt="Producto">
                   <label for="formFile" class="form-label">Seleccione otra imágen del producto</label>
-                  <input class="form-control" type="file" id="formFile">
+                  <input class="form-control" type="file" id="formFile" name="image">
                 </div>
               </div>
 

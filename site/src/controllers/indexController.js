@@ -6,6 +6,7 @@ const finalPrice = (price, discount) => price - (price * discount / 100);
 
 const controller = {
     index: (req, res, next) => {
+        
         const products = db.Products.findAll({
             where: {featured_product: 1},
             include: [{association: 'brand'}]
@@ -15,7 +16,7 @@ const controller = {
 
         Promise.all([products, categories])
 
-        .then(({products, categories}) => {
+        .then(([products, categories]) => {
             res.render('index', {products, categories, finalPrice});
         })
 

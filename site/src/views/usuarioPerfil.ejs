@@ -14,10 +14,10 @@
             <div class="avatar-name">
 
               <div class="avatar">
-                  <img src="/images/usuarios/<%= locals.usuarioL.imagen %>" alt="Imágen de perfil del usuario">
+                  <img src="/images/usuarios/<%= locals.usuarioL.image %>" alt="Imágen de perfil del usuario">
               </div>
 
-              <h1><%= locals.usuarioL.nombre %> <%= locals.usuarioL.apellido %></h1>
+              <h1><%= locals.usuarioL.first_name %> <%= locals.usuarioL.last_name %></h1>
               
             </div>
 
@@ -28,11 +28,11 @@
                 <input type="checkbox" id="datos" class="hidden" checked> 
               
                 <div class="accordion-body datos-absolute">
-                  <form action="/users/edit" method="post">
+                  <form action="/users/edit?_method=PUT" method="POST">
 
                     <div class="form-field">
                       <label for="input">Nombre</label>
-                      <input type="text" id="input" name="nombre" value="<%= locals.usuarioL.nombre %>">
+                      <input type="text" id="input" name="nombre" value="<%= locals.usuarioL.first_name %>">
                       <% if (locals.errors && errors.nombre) { %> 
                         <small> <%= errors.nombre.msg %>  </small>
                       <% } %>
@@ -40,7 +40,7 @@
 
                     <div class="form-field">
                       <label for="input">Apellido</label>
-                      <input type="text" id="input" name="apellido" value="<%= locals.usuarioL.apellido %>">
+                      <input type="text" id="input" name="apellido" value="<%= locals.usuarioL.last_name %>">
                       <% if (locals.errors && errors.apellido) { %> 
                         <small> <%= errors.apellido.msg %>  </small>
                       <% } %>

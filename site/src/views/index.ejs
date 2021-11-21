@@ -119,7 +119,7 @@
                             <% products.forEach(product=> { %>
                                     <article>
                                         <a href="/productos/detalle/<%= product.id %>#slide1">
-                                            <img src="/images/productos/<%= product.image.file %>"
+                                            <img src="/images/productos/<%= product.image %>"
                                                 alt="<%= product.title %>">
                                         </a>
                                         <div class="descripcion">
@@ -181,10 +181,10 @@
                                 <% categories.forEach(category => { %>
                                     <li>
                                         <a href="">
-                                            <img src="/images/categorias/<%= category.name %>" alt="">
+                                            <img src="/images/categorias/<%= category.image %>" alt="">
                                             <div>
                                                 <h3>
-                                                    <%= category.title %>
+                                                    <%= category.name %>
                                                 </h3>
                                             </div>
                                         </a>

@@ -24,7 +24,7 @@ router.get('/create', adminCheck, create);
 router.post('/create', upload.single('image'), productValidator, store);
 
 router.get('/edit/:id', adminCheck, edit);
-router.put('/edit/:id', productValidator, update)
+router.put('/edit/:id', upload.single('image'), productValidator, update);
 
 router.delete('/delete/:id', destroy);
 

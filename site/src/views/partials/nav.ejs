@@ -7,13 +7,9 @@
         </label>
         <ul>
             <li><a href="/productos"><span>●</span> Todo <span>●</span></a></li>
-            <li><a href="/productos/alfajores"><span>●</span> Alfajores <span>●</span></a></li>
-            <li><a href="/productos/caramelos"><span>●</span> Caramelos <span>●</span></a></li>
-            <li><a href="/productos/chicles"><span>●</span> Chicles <span>●</span></a></li>
-            <li><a href="/productos/chocolates"><span>●</span> Chocolates <span>●</span></a></li>
-            <li><a href="/productos/chupetines"><span>●</span> Chupetines <span>●</span></a></li>
-            <li><a href="/productos/confites"><span>●</span> Confites <span>●</span></a></li>
-            <li><a href="/productos/gomitas"><span>●</span> Gomitas <span>●</span></a></li>
+            <% categories.forEach(category => { %>
+                <li><a href="/productos/<%= category.name %>"><span>●</span> <%= category.name %> <span>●</span></a></li>
+            <% }) %>
             <li><a href="/productos/marcas"><span>●</span> Marcas <span>●</span></a></li>
         </ul>
     </nav>
@@ -45,13 +41,9 @@
                 <nav>
                     <ul>
                         <li><a href="/productos"><span>●</span> Todo <span>●</span></a></li>
-                        <li><a href="/productos/alfajores"><span>●</span> Alfajores <span>●</span></a></li>
-                        <li><a href="/productos/caramelos"><span>●</span> Caramelos <span>●</span></a></li>
-                        <li><a href="/productos/chicles"><span>●</span> Chicles <span>●</span></a></li>
-                        <li><a href="/productos/chocolates"><span>●</span> Chocolates <span>●</span></a></li>
-                        <li><a href="/productos/chupetines"><span>●</span> Chupetines <span>●</span></a></li>
-                        <li><a href="/productos/confites"><span>●</span> Confites <span>●</span></a></li>
-                        <li><a href="/productos/gomitas"><span>●</span> Gomitas <span>●</span></a></li>
+                        <% categories.forEach(category => { %>
+                            <li><a href="/productos/<%= category.name %> "><span>●</span> <%= category.name %> <span>●</span></a></li>
+                        <% }) %> 
                         <li><a href="/productos/marcas"><span>●</span> Marcas <span>●</span></a></li>
                     </ul>
                 </nav>
@@ -61,7 +53,7 @@
                     <h3>Contacto</h3>
                 </a>
             </li>
-            <% if(locals.usuarioL && locals.usuarioL.rol === 'Admin') { %>
+            <% if(locals.usuarioL && locals.usuarioL.rolId === 1) { %>
             <li>
                 <a href="/admin">
                     <h3>Administrar</h3>

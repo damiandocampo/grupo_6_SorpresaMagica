@@ -16,10 +16,10 @@ module.exports = [
         .equals(locals.usuarioL.password).withMessage('La contraseña no coincide.').bail()
         .isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres'),
     check('nuevaContraseña')
-        .notEmpty().withMessage('El campo contraseña es requerido').bail()
-        .isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres'),
+        .isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres')
+        .optional({ checkFalsy: true }),
     check('repetir')
-        .notEmpty().withMessage('El campo contraseña es requerido').bail()
         .equals(req.body.nuevaContraseña).withMessage('La contraseña no coincide.').bail()
-        .isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres'),
+        .isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres')
+        .optional({ checkFalsy: true }),
 ]

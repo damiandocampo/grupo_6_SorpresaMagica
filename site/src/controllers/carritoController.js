@@ -1,6 +1,18 @@
+const db = require('../database/models')
+
 const controller = {
     carrito: (req,res) => {
-        res.render('carritoDeCompras');
+        
+        db.Categories.findAll()
+
+        .then(categories => {
+            res.render('carritoDeCompras', {categories});
+        })
+
+        .catch(err => {
+            res.send(err)
+        })
+        
     },
 }
 
