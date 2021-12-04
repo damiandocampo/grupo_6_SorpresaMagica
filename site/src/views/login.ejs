@@ -1,36 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include('./partials/head', {title: 'Login'}) %> 
+<%- include('./partials/head', {title: 'Login' }) %>
 
-<body>
-    
-    <%- include('./partials/header') %> 
+    <body>
 
-    <%- include('./partials/nav') %> 
+    <%- include('./partials/header') %>
 
-    <main class ="login">
-        <h1>Iniciar Sesión</h1>
-        <form action="/users/login" method="POST">
-            <div class="seccion">
-                <label class="descripcion" for="email">E-mail</label>
-                <input class="completar" type="email" name="email" id="email" placeholder="Ingrese su e-mail">
-            </div>
-            <div class="seccion">
-                <label class="descripcion" for="contraseña">Contraseña</label>
-                <input class="completar" type="password" name="contraseña" id="contraseña" placeholder="ingrese su contraseña">
-            </div>
+    <%- include('./partials/nav') %>
+
+        <main class="login">
+            <h1>Iniciar Sesión</h1>
+            <form action="/users/login" method="POST">
+                <div class="seccion">
+                    <label class="descripcion" for="email">E-mail</label>
+                    <input class="completar" type="email" name="email" id="email" placeholder="Ingrese su e-mail">
+                </div>
+                <div class="seccion">
+                    <label class="descripcion" for="contraseña">Contraseña</label>
+                    <input class="completar" type="password" name="password" id="contraseña" placeholder="ingrese su contraseña">
+                </div>
                 <div>
-                    <input class="checkbox" type="checkbox" name="Recuerdame" value="Recuerdame">
+                    <input class="checkbox" type="checkbox" name="recuerdame" value="recuerdame">
                     <label class="recuerdame" for="">Recuérdame</label>
                 </div>
 
+                <% if (locals.errors && errors.email) { %>
+                    <small>
+                        <%= errors.email.msg %>
+                    </small>
+                <% } %>
 
-                <% if (locals.errors && errors.msg) { %> 
-                    <small> <%= errors.msg %>  </small>
-                    <% } %> 
-            
-                
+                <% if (locals.errors && errors.password) { %>
+                    <small>
+                        <%= errors.password.msg %>
+                    </small>
+                <% } %>
+
                 <div class="boton-contenedor">
                     <button class="boton" type="submit">Ingresar</button>
                 </div>
@@ -39,9 +45,10 @@
             </form>
         </main>
         </form>
-    </main>
+        </main>
 
-    <%- include('./partials/footer') %> 
+        <%- include('./partials/footer') %>
 
-</body>
+    </body>
+
 </html>

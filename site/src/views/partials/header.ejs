@@ -12,7 +12,7 @@
             <% if (!(locals.usuarioL)) { %>
                 <input type="checkbox" name="checkbox-user" id="user" class="checkbox-user">
                 <label for="user" class="user">
-                    <div class="user-icon"><i class="far fa-user-circle"></i></div>
+                    <div class="user-icon"><img src="/images/iconos/user-negro.png" alt="Icono de usuario"></div>
                 </label>
             <% } else { %>
                 <input type="checkbox" name="checkbox-user" id="user" class="checkbox-user">
@@ -32,13 +32,18 @@
                 <p><span>Envíos gratis</span> en compras mayores a $3.000.</p>
             </div>
             <input type="checkbox" name="" id="search" class="checkbox-search">
-            <label for="search" class="search">
-                <div class="search-icon"><i class="fas fa-search"></i></div>
+            <label for="search" class="search" id="search">
+                <div class="search-icon"><img src="/images/iconos/lupa1-negro.png" alt="Icono de lupa"></div>
+            </label>
+            <label for="search" class="search" id="arrow">
+                <div class="arrow-icon"><img src="/images/iconos/cancel-negro.png" alt="Cerrar buscador"></div>
             </label>
             <div class="search-checked">
-                <form action="get">
-                    <input type="text" name="search" id="search" placeholder="Buscar">
-                    <button type="submit"><i class="fas fa-angle-double-right"></i></button>
+                <form action="/buscar" method="GET">
+                    <input type="text" name="keywords" id="search" placeholder="Ingrese su búsqueda">
+                    <button type="submit">
+                        <div class="search-icon"><img src="/images/iconos/lupa1-negro.png" alt="Buscar"></div>
+                    </button>
                 </form>
             </div>
         </div>

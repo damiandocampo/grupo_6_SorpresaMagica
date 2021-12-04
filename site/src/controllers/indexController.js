@@ -1,6 +1,7 @@
 const db = require('../database/models');
 const sequelize = db.Sequelize;
 const session = require('express-session');
+const { Op } = require("sequelize");
 
 const finalPrice = (price, discount) => price - (price * discount / 100);
 
@@ -18,6 +19,42 @@ const controller = {
 
         .then(([products, categories]) => {
             res.render('index', {products, categories, finalPrice});
+        })
+
+        .catch(err => {
+            res.send(err)
+        })
+    },
+
+    buscar: (req, res) => {
+
+        const keywords = req.query.keywords.toLowerCase().trim();
+
+        const products = db.Products.findAll({
+            where: {
+                [Op.or]: [
+                    {title:
+                        {[Op.substring]: keywords}
+                    },
+                    {description:
+                        {[Op.substring]: keywords}
+                    },
+                    {brand_id:
+                        {[Op.substring]: keywords}
+                    }
+                ]
+            },
+            include: [{association: 'brand'}]
+        })
+
+        const brands = db.Brands.findAll()
+
+        const categories = db.Categories.findAll()
+
+        Promise.all([products, categories, brands])
+
+        .then(([products, categories, brands]) => {
+            res.render('productos', {products, categories, brands, finalPrice});
         })
 
         .catch(err => {

@@ -12,29 +12,30 @@
     <main class="registro">
         <h1>Registro</h1>
         <form action="/users/registro" method="POST" enctype="multipart/form-data">
+
             <div class="seccion">
                 <label class="descripcion" for="nombre">Nombre:</label>
-                <input class="completar" type="text" name="nombre" id="nombre" placeholder="Ingresar nombre">
+                <input class="completar" type="text" name="nombre" id="nombre" placeholder="Ingresar nombre" value=<%= locals.old && old.nombre ? old.nombre : null %>>
             </div>
             <% if (locals.errors && errors.nombre) { %> 
                 <small> <%= errors.nombre.msg %>  </small>
-                <% } %>
+            <% } %>
 
             <div class="seccion">
                 <label class="descripcion" for="apellido">Apellido:</label>
-                <input class="completar" type="text" name="apellido" id="apellido" placeholder="Ingresar apellido">
+                <input class="completar" type="text" name="apellido" id="apellido" placeholder="Ingresar apellido" value=<%= locals.old && old.apellido ? old.apellido : null %>>
             </div>
             <% if (locals.errors && errors.apellido) { %> 
                 <small> <%= errors.apellido.msg %>  </small>
-                <% } %>
+            <% } %>
 
             <div class="seccion">
                 <label class="descripcion" for="email">E-mail:</label>
-                <input class="completar" type="email" name="email" id="email" placeholder="Ingresar e-mail">
+                <input class="completar" type="email" name="email" id="email" placeholder="Ingresar e-mail" value=<%= locals.old && old.email ? old.email : null %>>
             </div>
             <% if (locals.errors && errors.email) { %> 
                 <small> <%= errors.email.msg %>  </small>
-                <% } %>
+            <% } %>
 
             <div class="seccion">
                 <label class="descripcion" for="image">Imagen:</label>
@@ -47,20 +48,23 @@
             </div>
             <% if (locals.errors && errors.contraseña) { %> 
                 <small> <%= errors.contraseña.msg %>  </small>
-                <% } %>
+            <% } %>
 
             <div class="seccion">
                 <label class="descripcion" for="repetir">Repetir Contraseña:</label>
+                <input class="completar" type="password" name="repetir" id="repetir" placeholder="Repetir contraseña">
+            </div>
             <% if (locals.errors && errors.repetir) { %> 
                     <small> <%= errors.repetir.msg %>  </small>
-                    <% } %>
+            <% } %>    
 
-                <input class="completar" type="password" name="repetir" id="repetir" placeholder="Repetir contraseña">
+            <div class="seccion">
                 <p>Al registrarse, estás de acuerdo con Términos y Condiciones.</p>
                 <div class="boton-contenedor">
                     <button class="boton" type="submit">Registrar</button>
                 </div>
             </div>
+
         </form>
     </main>
     

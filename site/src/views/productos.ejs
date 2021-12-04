@@ -75,50 +75,56 @@
         
         <div class="productos">
 
-            <% products.forEach(product=> { %>
-                <article>
-                    <a href="/productos/detalle/<%= product.id %>#slide1">
-                        <img src="/images/productos/<%= product.image %>" alt="<%= product.title %>">
-                    </a>
-                    <div class="descripcion">
-                        <a href="/productos/detalle/<%= product.id %>">
-                            <h5>
-                                <%= product.brand.name %>
-                            </h5>
+            <% if(products != '') { %>
+
+                <% products.forEach(product=> { %>
+                    <article>
+                        <a href="/productos/detalle/<%= product.id %>#slide1">
+                            <img src="/images/productos/<%= product.image %>" alt="<%= product.title %>">
                         </a>
-                        <h3>
-                            <a href="/productos/<%= product.id %>">
-                                <%= product.title %>
+                        <div class="descripcion">
+                            <a href="/productos/detalle/<%= product.id %>">
+                                <h5>
+                                    <%= product.brand.name %>
+                                </h5>
                             </a>
-                        </h3>
-                        <% if (product.descuento > 0) { %> 
-                            <div class="precio">
-                                <small>
-                                    $<%= product.price %> 
-                                </small>
-                                <h2>
-                                    $<%= finalPrice(product.price, product.descuento) %>
-                                </h2>
-                                <h3>
-                                    <%= product.descuento %>% 
-                                </h3>
+                            <h3>
+                                <a href="/productos/<%= product.id %>">
+                                    <%= product.title %>
+                                </a>
+                            </h3>
+                            <% if (product.discount > 0) { %> 
+                                <div class="precio">
+                                    <small>
+                                        $<%= product.price %> 
+                                    </small>
+                                    <h2>
+                                        $<%= finalPrice(product.price, product.discount) %>
+                                    </h2>
+                                    <h3>
+                                        <%= product.discount %>% 
+                                    </h3>
+                                </div>
+                            <% } else { %>
+                                    <h2>
+                                        $<%= product.price %>
+                                    </h2>
+                            <% } %>
+                            <div class="cantidad">
+                                <button>-</button>
+                                <p>1</p>
+                                <button>+</button>
                             </div>
-                        <% } else { %>
-                                <h2>
-                                    $<%= product.price %>
-                                </h2>
-                        <% } %>
-                        <div class="cantidad">
-                            <button>-</button>
-                            <p>1</p>
-                            <button>+</button>
+                            <div class="comprar">
+                                <button type="submit">Agregar al carrito</button>
+                            </div>
                         </div>
-                        <div class="comprar">
-                            <button type="submit">Agregar al carrito</button>
-                        </div>
-                    </div>
-                </article>
-            <% }) %>
+                    </article>
+                <% }) %>
+
+            <% } else { %> 
+                <h2 class="noResults">No se encontraron resultados para tu búsqueda</h2>
+            <% } %> 
 
         </div>
 

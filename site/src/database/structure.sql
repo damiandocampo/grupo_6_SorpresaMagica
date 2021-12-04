@@ -34,6 +34,7 @@ CREATE TABLE Products (
    price DECIMAL(10,2) NOT NULL,
    featured_product TINYINT NOT NULL,
    discount INT,
+   description VARCHAR(255) NOT NULL,
    image VARCHAR(255) NOT NULL,
    category_id INT NOT NULL,
    brand_id INT NOT NULL,

@@ -23,6 +23,10 @@ module.exports = {
       discount: {
         type: Sequelize.INTEGER
       },
+      description: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
       image: {
         type: Sequelize.STRING,
         allowNull: false

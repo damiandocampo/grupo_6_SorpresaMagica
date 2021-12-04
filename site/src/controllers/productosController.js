@@ -23,7 +23,7 @@ const controller = {
             })
 
             .then(relatedProducts => {
-                res.render('detalleDeProductos', {product, relatedProducts, categories});
+                res.render('detalleDeProductos', {product, relatedProducts, categories, finalPrice});
             })
 
             .catch(err => {
