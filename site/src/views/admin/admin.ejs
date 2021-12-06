@@ -36,8 +36,8 @@
                 <% products.forEach(product => { %>
                   <tr>
                     <th scope="row"><%= product.id %></th>
-                    <td><img src="/images/productos/<%= product.image %>" alt="..." width="90px"></td>
-                    <td><%= product.title %></td>
+                    <td><a href="/productos/detalle/<%= product.id %>#slide1"><img src="/images/productos/<%= product.image %>" alt="..." width="90px"></a></td>
+                    <td><a href="/productos/detalle/<%= product.id %>#slide1"><%= product.title %></a></td>
                     <td><%= product.brand.name %></td>
                     <td>$<%= product.price %></td>
                     <% if (product.discount > 0) { %>

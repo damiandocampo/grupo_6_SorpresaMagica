@@ -16,5 +16,8 @@ module.exports = [
     check('categoria')
         .notEmpty().withMessage('Debes seleccionar una categoría.'),
     check('destacado')
-        .isInt().withMessage('Debes aclarar si es un producto destacado.')
+        .isInt().withMessage('Debes aclarar si es un producto destacado.'),
+    check('descripcion')
+        .notEmpty().withMessage('La descripción del producto es requerida.').bail()
+        .isLength({min: 20}).withMessage('La descripción del producto debe tener al menos 20 caracteres.'),
 ]

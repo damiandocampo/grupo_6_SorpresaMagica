@@ -4,6 +4,7 @@ const path = require('path');
 
 const { login, registro, register, logear, logout, perfil, editarDatos, newPass } = require('../controllers/userController');
 const guestCheck = require('../middlewares/guestCheck');
+const userCheck = require('../middlewares/userCheck');
 const loginValidator = require('../validations/loginValidator');
 const registerValidator = require('../validations/validateRegister');
 const userEditValidator = require('../validations/editUserValidator');
@@ -32,7 +33,7 @@ router.get('/registro',guestCheck, registro);
 router.post('/registro', upload.single('image'), registerValidator, register);
 
 // perfil
-router.get('/perfil', perfil);
+router.get('/perfil', userCheck, perfil);
 router.put('/edit', userEditValidator, editarDatos);
 router.put('/newPassword', newPassValidator, newPass);
 

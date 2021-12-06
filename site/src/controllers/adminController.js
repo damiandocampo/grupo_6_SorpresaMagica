@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const db = require('../database/models');
 const sequelize = db.Sequelize;
+const { Op } = require('sequelize');
 
 const { validationResult } = require('express-validator');
 const { title } = require('process');
@@ -65,6 +66,7 @@ const controller = {
                             discount: req.body.descuento? req.body.descuento : 0,
                             category_id: req.body.categoria? req.body.categoria : 0,
                             featured_product: req.body.destacado,
+                            description: req.body.descripcion,
                             image: req.file ? req.file.filename : 'defaultImage.png',
                         })
 
@@ -97,6 +99,7 @@ const controller = {
                             discount: req.body.descuento? req.body.descuento : 0,
                             category_id: req.body.categoria? req.body.categoria : 0,
                             featured_product: req.body.destacado,
+                            description: req.body.descripcion,
                             image: req.file ? req.file.filename : 'defaultImage.png',
                         })
 
@@ -171,7 +174,9 @@ const controller = {
                     })
 
                     .then(brand => {
+
                         //crear producto con la nueva marca
+
                         db.Products.update({
                             title: req.body.title,
                             brand_id: brand.id,
@@ -179,6 +184,7 @@ const controller = {
                             discount: req.body.descuento? req.body.descuento : 0,
                             category_id: req.body.categoria,
                             featured_product: req.body.destacado,
+                            description: req.body.descripcion,
                             image: req.file ? req.file.filename : 'defaultImage.png',
                         },{
                             where: {id: req.params.id}
@@ -213,6 +219,7 @@ const controller = {
                             discount: req.body.descuento? req.body.descuento : 0,
                             category_id: req.body.categoria,
                             featured_product: req.body.destacado,
+                            description: req.body.descripcion,
                             image: req.file ? req.file.filename : 'defaultImage.png',
                         },{
                             where: {id: req.params.id}
@@ -259,19 +266,77 @@ const controller = {
             })
         }
     },
-    
-    destroy: (req,res) => {
-        db.Products.destroy({
-            where: {id: +req.params.id}
+
+    buscar: (req, res) => {
+
+        const keywords = req.query.keywords.toLowerCase().trim();
+
+        const products = db.Products.findAll({
+            where: {
+                [Op.or]: [
+                    {title:
+                        {[Op.substring]: keywords}
+                    },
+                    {description:
+                        {[Op.substring]: keywords}
+                    },
+                    {brand_id:
+                        {[Op.substring]: keywords}
+                    }
+                ]
+            },
+            include: [{association: 'brand'}]
         })
 
-        .then(result => {
-            res.redirect('/admin')
+        const brands = db.Brands.findAll()
+
+        const categories = db.Categories.findAll()
+
+        Promise.all([products, categories, brands])
+
+        .then(([products, categories, brands]) => {
+            res.render('./admin/admin', {products, categories, brands, finalPrice});
         })
 
         .catch(err => {
             res.send(err)
         })
+    },
+    
+    destroy: (req,res) => {
+
+        db.Products.findOne({
+            where: {id: req.params.id}
+        })
+
+        .then(product => {
+
+            fs.unlink(`public/images/productos/${product.image}`, (err) => {
+                if(err) {
+                    console.log(err);
+                } else {
+                    console.log('La imágen fue eliminada');
+                }
+            })
+            
+            db.Products.destroy({
+                where: {id: +req.params.id}
+            })
+
+            .then(result => {
+                res.redirect('/admin')
+            })
+
+            .catch(err => {
+                res.send(err)
+            })
+
+        })
+
+        .catch(err => {
+            res.send(err)
+        })
+        
     }
 };
 

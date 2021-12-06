@@ -99,19 +99,33 @@
             <div class="separador">
 
               <div class="col-md">
-                <div class="mb-3">
-                  <label for="formFile" class="form-label">Seleccione una imágen del producto</label>
-                  <input class="form-control" type="file" id="formFile" name="image">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingInputGrid" placeholder="Descripción del producto" name="descripcion" value=<%= locals.old && old.descripcion ? old.descripcion : null %>>
+                  <label for="floatingInputGrid">Descripción del producto</label>
                 </div>
+                <% if (locals.errors && errors.descripcion) { %> 
+                  <small> <%= errors.descripcion.msg %>  </small>
+                  <% } %> 
               </div>
 
               <div class="col-md">
-                <div class="button-crear">
-                  <button type="submit" class="btn btn-outline-info">Crear</button>
+                <div class="mb-3">
+                  <label for="formFile" class="form-label">Seleccione una imágen del producto</label>
+                  <input class="form-control" type="file" id="formFile" name="image" accept="image/*">
                 </div>
               </div>
 
             </div>
+
+              <div class="separador">
+
+                <div class="col-md">
+                  <div class="button-crear">
+                    <button type="submit" class="btn btn-outline-info">Crear</button>
+                  </div>
+                </div>
+                
+              </div>
 
           </div>
 
