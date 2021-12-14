@@ -5,7 +5,6 @@ const sequelize = db.Sequelize;
 const { Op } = require('sequelize');
 
 const { validationResult } = require('express-validator');
-const { title } = require('process');
 
 const finalPrice = (price, discount) => price - (price * discount / 100);
 
@@ -311,14 +310,16 @@ const controller = {
 
         .then(product => {
 
-            fs.unlink(`public/images/productos/${product.image}`, (err) => {
-                if(err) {
-                    console.log(err);
-                } else {
-                    console.log('La imágen fue eliminada');
-                }
-            })
-            
+            if(product.image !== 'defaultImage.png') {
+                fs.unlink(`public/images/productos/${product.image}`, (err) => {
+                    if(err) {
+                        console.log(err);
+                    } else {
+                        console.log('La imágen fue eliminada');
+                    }
+                })
+            }
+
             db.Products.destroy({
                 where: {id: +req.params.id}
             })
