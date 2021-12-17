@@ -70,7 +70,7 @@ const controller = {
                         })
 
                         .then(product => {
-                            res.redirect(`/productos/detalle/${product.id}#slide1`);
+                            res.redirect(`/admin#${product.id}`);
                         })
 
                         .catch(err => {
@@ -103,7 +103,7 @@ const controller = {
                         })
 
                         .then(product => {
-                            res.redirect(`/productos/detalle/${product.id}#slide1`);
+                            res.redirect(`/admin#${product.id}`);
                         })
 
                         .catch(err => {
@@ -190,7 +190,7 @@ const controller = {
                         })
 
                         .then(product => {
-                            res.redirect(`/admin`);
+                            res.redirect(`/admin#${req.params.id}`);
                         })
 
                         .catch(err => {
@@ -225,7 +225,7 @@ const controller = {
                         })
 
                         .then(product => {
-                            res.redirect(`/admin`);
+                            res.redirect(`/admin#${req.params.id}`);
                         })
 
                         .catch(err => {

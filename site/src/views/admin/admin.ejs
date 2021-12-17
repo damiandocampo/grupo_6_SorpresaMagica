@@ -35,7 +35,7 @@
               
                 <% products.forEach(product => { %>
                   <tr>
-                    <th scope="row"><%= product.id %></th>
+                    <th id=<%= product.id %> scope="row"><%= product.id %></th>
                     <td><a href="/productos/detalle/<%= product.id %>#slide1"><img src="/images/productos/<%= product.image %>" alt="..." width="90px"></a></td>
                     <td><a href="/productos/detalle/<%= product.id %>#slide1"><%= product.title %></a></td>
                     <td><%= product.brand.name %></td>

@@ -8,54 +8,105 @@
 
 /* SLIDER */
 
-.home div.slider {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
+.home .slider-container {
     width: 95%;
+    margin: auto;
     overflow: hidden;
     position: relative;
     z-index: 1;
-    
-}
-
-.home div.slider ul {
-    display: flex;
-    width: 400%;
-    animation: cambio 20s infinite;
-}
-
-.home div.slider ul li {
-    width: 100%;
-}
-
-.home div.slider ul li img {
-    width: 100%;
     box-shadow: 0px 0px 5px 2px rgb(0 0 0 / 15%);
 }
 
-.home div.slider ul.tablet, .home div.slider ul.desktop {
-    display: none;
+.home .slider-container .slider {
+    display: flex;
+    width: 400%;
+    margin-left: -100%;
 }
 
-@keyframes cambio {
-    0% {margin-left: 0}
-    20% {margin-left: 0}
-
-    25% {margin-left: -100%}
-    45% {margin-left: -100%}
-
-    50% {margin-left: -200%}
-    70% {margin-left: -200%}
-
-    75% {margin-left: -300%}
-    95% {margin-left: -300%}
+.home .slider-container .slider article {
+    width: 100%;
 }
 
-/* botones izq-der */
+.home .slider-container .slider article picture,
+.home .slider-container .slider article picture img {
+    width: 100%;
+    display: block;
+}
 
-.home div.slider .buttons {
+.home .slider-container .slider article picture source {
+    display: block;
+}
+
+/* flehcas izq-der */
+
+.home .slider-container .arrows {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+.home .slider-container .arrows .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, .6);
+}
+
+.home .slider-container .arrows .arrow:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.home .slider-container .arrows .arrow i {
+    font-size: 20px;
+}
+
+/* botones de navegación */
+
+.home .slider-container .navigation {
+    display: flex;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.home .slider-container .bttn {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background-color: white;
+    border: solid 1.5px var(--rosa);
+    margin: 2px;
+    box-shadow: 0px 0px 5px 2px rgb(0 0 0 / 15%);
+}
+
+.home .slider-container .active {
+    animation: appear normal 5s;
+}
+
+@keyframes appear {
+    from {
+        background-color: rgba(255, 255, 255, 1)
+    }
+
+    5% {
+        background-color: var(--rosa);
+    }
+
+    to {
+        background-color: var(--rosa);
+    }
+}
+
+/* .home div.slider .buttons {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -79,7 +130,7 @@
     font-size: 20px;
 }
 
-/* botones abajo */
+botones abajo 
 
 .home div.slider .dots {
     display: flex;
@@ -116,7 +167,7 @@
 
 .home div.slider input.slide4:checked ~ label.slide4{
     background-color: var(--rosa);
-}
+} */
 
 /* ESPECIALES */
 

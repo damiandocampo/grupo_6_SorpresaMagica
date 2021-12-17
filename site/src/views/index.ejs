@@ -2,6 +2,7 @@
 <html lang="es">
 
 <%- include('./partials/head', {title: 'Home' }) %>
+<script src='/js/slider.js'></script>
 
     <body>
 
@@ -11,100 +12,100 @@
 
         <main class="home">
 
-                    <div class="slider">
+            <div class="slider-container">
 
-                        <ul class="mobile">
-                            <li> <img src="/images/banners/banner-mix-felfort.png" alt="Mix feltfort" class="slide1">
-                            </li>
-                            <li> <img src="/images/banners/banner-edulzatusmm.png" alt="Endulzá tus mejores momentos"
-                                    class="slide2"> </li>
-                            <li> <img src="/images/banners/banner-bonobon.png" alt="Bon o bon mes de la dulzura"
-                                    class="slide3">
-                            </li>
-                            <li> <img src="/images/banners/banner-golosinas.png" alt="Golosinas marcas" class="slide4">
-                            </li>
-                        </ul>
+                <section class="slider" id='slider'>
 
-                        <ul class="tablet">
-                            <li> <img src="/images/banners/banner-mix-felfort-tablet.png" alt="Mix feltfort"
-                                    class="slide1"> </li>
-                            <li> <img src="/images/banners/banner-edulzatusmm-tablet.png"
-                                    alt="Endulzá tus mejores momentos" class="slide2"> </li>
-                            <li> <img src="/images/banners/banner-bonobon-tablet.png" alt="Bon o bon mes de la dulzura"
-                                    class="slide3"> </li>
-                            <li> <img src="/images/banners/banner-golosinas-tablet.png" alt="Golosinas marcas"
-                                    class="slide4"> </li>
-                        </ul>
+                    <article class="slider-article" id="art1">
+                        <picture>
+                            <source media="(min-width: 1024px)" srcset="/images/banners/banner-mix-felfort-desktop.png">
+                            <source media="(min-width: 680px)" srcset="/images/banners/banner-mix-felfort-tablet.png">
+                            <source srcset="/images/banners/banner-mix-felfort.png">
+                            <img src="/images/banners/banner-mix-felfort-desktop.png" alt="">
+                        </picture>
+                    </article>
+        
+                    <article class="slider-article" id="art2">
+                        <picture>
+                            <source media="(min-width: 1024px)" srcset="/images/banners/banner-edulzatusmm-desktop.png">
+                            <source media="(min-width: 680px)" srcset="/images/banners/banner-edulzatusmm-tablet.png">
+                            <source srcset="/images/banners/banner-edulzatusmm.png">
+                            <img src="/images/banners/banner-edulzatusmm-desktop.png" alt="">
+                        </picture>
+                    </article>
+        
+                    <article class="slider-article" id="art3">
+                        <picture>
+                            <source media="(min-width: 1024px)" srcset="/images/banners/banner-bonobon-desktop.png">
+                            <source media="(min-width: 680px)" srcset="/images/banners/banner-bonobon-tablet.png">
+                            <source srcset="/images/banners/banner-bonobon.png">
+                            <img src="/images/banners/banner-bonobon-desktop.png" alt="">
+                        </picture>
+                    </article>
+        
+                    <article class="slider-article" id="art4">
+                        <picture>
+                            <source media="(min-width: 1024px)" srcset="/images/banners/banner-golosinas-desktop.png">
+                            <source media="(min-width: 680px)" srcset="/images/banners/banner-golosinas-tablet.png">
+                            <source srcset="/images/banners/banner-golosinas.png">
+                            <img src="/images/banners/banner-golosinas-desktop.png" alt="">
+                        </picture>
+                    </article>
+        
+                </section>
 
-                        <ul class="desktop">
-                            <li> <img src="/images/banners/banner-mix-felfort-desktop.png" alt="Mix feltfort"
-                                    class="slide1"> </li>
-                            <li> <img src="/images/banners/banner-edulzatusmm-desktop.png"
-                                    alt="Endulzá tus mejores momentos" class="slide2"> </li>
-                            <li> <img src="/images/banners/banner-bonobon-desktop.png" alt="Bon o bon mes de la dulzura"
-                                    class="slide3"> </li>
-                            <li> <img src="/images/banners/banner-golosinas-desktop.png" alt="Golosinas marcas"
-                                    class="slide4">
-                            </li>
-                        </ul>
-
-                        <div class="buttons">
-                            <button class="left">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="right">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                        </div>
-
-                        <div class="dots">
-
-                            <input type="radio" name="slider" id="slide1" class="slide1" checked>
-                            <input type="radio" name="slider" id="slide2" class="slide2">
-                            <input type="radio" name="slider" id="slide3" class="slide3">
-                            <input type="radio" name="slider" id="slide4" class="slide4">
-
-                            <label for="slide1" class="slide1"></label>
-                            <label for="slide2" class="slide2"></label>
-                            <label for="slide3" class="slide3"></label>
-                            <label for="slide4" class="slide4"></label>
-
-                        </div>
-
+                <div class="arrows">
+                    <div class="arrow left" id="left-arrow">
+                        <i class="fas fa-chevron-left"></i>
                     </div>
+                    <div class="arrow right" id="right-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
 
-                    <section class="especiales">
+                <div class="navigation">
 
-                        <article class="ofertas">
-                            <a href="">
-                                <div class="hasta">
-                                    <p>Hasta</p>
-                                    <h3>2x1</h3>
-                                </div>
-                                <img src="/images/dest1-ofertas-golosinas.png" alt="Ofertas">
-                                <div>
-                                    <h3>Ofertas imperdibles</h3>
-                                </div>
-                            </a>
-                        </article>
-                        <article class="nuevos">
-                            <a href="">
-                                <img src="/images/dest2-nuevos-arcor.png" alt="Nuevos productos Arcor">
-                                <div>
-                                    <h3>Nuevos productos</h3>
-                                </div>
-                            </a>
-                        </article>
-                        <article class="cajas">
-                            <a href="">
-                                <img src="/images/dest3-cajas-candy-box.png" alt="Cajas de golosinas para regalar">
-                                <div>
-                                    <h3>Cajas para regalar</h3>
-                                </div>
-                            </a>
-                        </article>
+                    <div class="bttn active" id="bttn1"></div>
+                    <div class="bttn" id="bttn2"></div>
+                    <div class="bttn" id="bttn3"></div>
+                    <div class="bttn" id="bttn4"></div>
 
-                    </section>
+                </div>
+
+            </div>
+
+                <section class="especiales">
+
+                    <article class="ofertas">
+                        <a href="">
+                            <div class="hasta">
+                                <p>Hasta</p>
+                                <h3>2x1</h3>
+                            </div>
+                            <img src="/images/dest1-ofertas-golosinas.png" alt="Ofertas">
+                            <div>
+                                <h3>Ofertas imperdibles</h3>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="nuevos">
+                        <a href="">
+                            <img src="/images/dest2-nuevos-arcor.png" alt="Nuevos productos Arcor">
+                            <div>
+                                <h3>Nuevos productos</h3>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="cajas">
+                        <a href="">
+                            <img src="/images/dest3-cajas-candy-box.png" alt="Cajas de golosinas para regalar">
+                            <div>
+                                <h3>Cajas para regalar</h3>
+                            </div>
+                        </a>
+                    </article>
+
+                </section>
 
                     <section class="destacados">
 
