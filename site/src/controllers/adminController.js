@@ -6,7 +6,16 @@ const { Op } = require('sequelize');
 
 const { validationResult } = require('express-validator');
 
-const finalPrice = (price, discount) => price - (price * discount / 100);
+const finalPrice = (price, discount) => {
+    let precio = price - (price * discount / 100)
+    let precioString = precio.toString()
+    if(precioString.indexOf('.')>=0) {
+        let fin = precioString.indexOf('.')
+        return +precioString.slice(0, fin)
+    } else {
+        return precio
+    }
+}
 
 const controller = {
     list: function(req, res, next) {
@@ -168,13 +177,19 @@ const controller = {
                 //crear marca si no existe
                 if(!(brands.find(brand => brand.name === req.body.marca))) {
 
-                    db.Brands.create({
+                    const product = db.Products.findOne({
+                        where: {id: req.params.id},
+                    })
+        
+                    const brand = db.Brands.create({
                         name: req.body.marca
                     })
+        
+                    Promise.all([product, brand])
 
-                    .then(brand => {
+                    .then(([product, brand]) => {
 
-                        //crear producto con la nueva marca
+                        //editar producto con la nueva marca
 
                         db.Products.update({
                             title: req.body.title,
@@ -184,7 +199,7 @@ const controller = {
                             category_id: req.body.categoria,
                             featured_product: req.body.destacado,
                             description: req.body.descripcion,
-                            image: req.file ? req.file.filename : 'defaultImage.png',
+                            image: req.file ? req.file.filename : product.image,
                         },{
                             where: {id: req.params.id}
                         })
@@ -205,12 +220,21 @@ const controller = {
 
                 } else {
                     //encontrar la marca que coincida
-                    db.Brands.findOne({
+
+                    const product = db.Products.findOne({
+                        where: {id: req.params.id},
+                    })
+        
+                    const brand = db.Brands.findOne({
                         where: {name: req.body.marca}
                     })
+        
+                    Promise.all([product, brand])
 
-                    .then(brand => {
-                        //crear producto con la marca existente
+                    .then(([product, brand]) => {
+
+                        //editar producto con la marca existente
+                        
                         db.Products.update({
                             title: req.body.title,
                             brand_id: brand.id,
@@ -219,7 +243,7 @@ const controller = {
                             category_id: req.body.categoria,
                             featured_product: req.body.destacado,
                             description: req.body.descripcion,
-                            image: req.file ? req.file.filename : 'defaultImage.png',
+                            image: req.file ? req.file.filename : product.image,
                         },{
                             where: {id: req.params.id}
                         })

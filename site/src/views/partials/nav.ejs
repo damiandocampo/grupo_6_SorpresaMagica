@@ -8,7 +8,7 @@
         <ul>
             <li><a href="/productos"><span>●</span> Todo <span>●</span></a></li>
             <% categories.forEach(category => { %>
-                <li><a href="/productos/<%= category.name %>"><span>●</span> <%= category.name %> <span>●</span></a></li>
+                <li><a href=<%= `/productos?c=${category.id}` %>><span>●</span> <%= category.name %> <span>●</span></a></li>
             <% }) %>
             <li><a href="/productos/marcas"><span>●</span> Marcas <span>●</span></a></li>
         </ul>
@@ -42,7 +42,7 @@
                     <ul>
                         <li><a href="/productos"><span>●</span> Todo <span>●</span></a></li>
                         <% categories.forEach(category => { %>
-                            <li><a href="/productos/<%= category.name %> "><span>●</span> <%= category.name %> <span>●</span></a></li>
+                            <li><a href=<%=`/productos?c=${category.id}`%>><span>●</span> <%= category.name %> <span>●</span></a></li>
                         <% }) %> 
                         <li><a href="/productos/marcas"><span>●</span> Marcas <span>●</span></a></li>
                     </ul>

@@ -1,6 +1,7 @@
 <header>
+    <script src="/js/header.js"></script>
 
-    <div>
+    <div class="header-mobile">
 
         <% if(locals.usuarioL && locals.usuarioL.rolId === 1) { %>
             <div class="administrar">
@@ -70,5 +71,82 @@
             <% } %> 
         </div>
     </div>
+
+    <nav class="nav-bar">
+        <nav class="menu">
+            <input type="checkbox" name="" id="products">
+            <label for="products">
+                <img src="/images/iconos/menu-negro.png" alt="Icono de menú">
+                <h3>Productos</h3>
+            </label>
+            <ul>
+                <li><a href="/productos"><span>●</span> Todo <span>●</span></a></li>
+                <% categories.forEach(category => { %>
+                    <li><a href=<%= `/productos?c=${category.id}` %>><span>●</span> <%= category.name %> <span>●</span></a></li>
+                <% }) %>
+                <li><a href="/productos/marcas"><span>●</span> Marcas <span>●</span></a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <a href="/"><img src="/images/logo-sorpresa-magica.png" alt="logo"></a>
+        </div>
+        <div class="cart">
+            <a href="/carrito">
+                <img src="/images/iconos/carrito-negro.png" alt="Icono de carrito">
+                <h3>Carrito</h3>
+            </a>
+        </div>
+    </nav>
+    <nav class="nav-bar-desktop">
+        <div class="logo">
+            <a href="/"><img src="/images/logo-sorpresa-magica.png" alt="logo"></a>
+        </div>
+        <div class="desktop-nav">
+            <ul>
+                <li>
+                    <a href="/">
+                        <h3>Inicio</h3>
+                    </a>
+                </li>
+                <li class="productos">
+                    <a href="/productos">
+                        <h3>Productos</h3>
+                    </a>
+                    <nav>
+                        <ul>
+                            <li><a href="/productos"><span>●</span> Todo <span>●</span></a></li>
+                            <% categories.forEach(category => { %>
+                                <li><a href=<%=`/productos?c=${category.id}`%>><span>●</span> <%= category.name %> <span>●</span></a></li>
+                            <% }) %> 
+                            <li><a href="/productos/marcas"><span>●</span> Marcas <span>●</span></a></li>
+                        </ul>
+                    </nav>
+                </li>
+                <li>
+                    <a href="/contacto">
+                        <h3>Contacto</h3>
+                    </a>
+                </li>
+                <% if(locals.usuarioL && locals.usuarioL.rolId === 1) { %>
+                <li>
+                    <a href="/admin">
+                        <h3>Administrar</h3>
+                    </a>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+        <div class="search">
+            <form action="/buscar" method="GET">
+                <input type="text" name="keywords" id="search" placeholder="Ingrese su búsqueda">
+                <button type="submit">
+                    <div class="search-icon"><img src="/images/iconos/lupa1-negro.png" alt="Buscar"></div>
+                </button>
+            </form>
+        </div>
+        <div class="cart">
+            <a href="/carrito"><img src="/images/iconos/carrito-negro.png" alt="Icono de carrito"></a>
+        </div>
+    </nav>
 
 </header>

@@ -3,7 +3,16 @@ const sequelize = db.Sequelize;
 const session = require('express-session');
 const { Op } = require("sequelize");
 
-const finalPrice = (price, discount) => price - (price * discount / 100);
+const finalPrice = (price, discount) => {
+    let precio = price - (price * discount / 100)
+    let precioString = precio.toString()
+    if(precioString.indexOf('.')>=0) {
+        let fin = precioString.indexOf('.')
+        return +precioString.slice(0, fin)
+    } else {
+        return precio
+    }
+}
 
 const controller = {
     index: (req, res, next) => {

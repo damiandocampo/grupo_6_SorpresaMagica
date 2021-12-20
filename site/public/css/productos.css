@@ -45,6 +45,13 @@
     width: 94vw;
 }
 
+.listado-productos .filtros-orden .filtros-container .filtros form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .listado-productos .filtros-orden .filtros-container .filtros h2{
     display: none;
 }
@@ -125,6 +132,10 @@
     background-color: var(--rosa);
     border: none;
     width: 45px;
+    cursor: pointer;
+}
+
+.listado-productos .filtros-orden .orden-container form select option {
     cursor: pointer;
 }
 
@@ -414,6 +425,7 @@
     
     .listado-productos .productos article {
         display: flex;
+        height: fit-content;
         border: 1px solid #c4c4c4;
         margin-bottom: 10px;
         background-color: white;

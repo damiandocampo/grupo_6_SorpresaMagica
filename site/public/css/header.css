@@ -225,7 +225,7 @@ header .logout button:hover {
 
 /* -- NAV BAR -- */
 
- nav.nav-bar {
+nav.nav-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -235,8 +235,12 @@ header .logout button:hover {
     width: 100%;
     box-shadow: 0px 2px 15px 0px rgba(32, 32, 32, .3);
     z-index: 10;
-    position: sticky;
+}
+
+nav.fixed {
+    position: fixed;
     top: 0;
+    width: 100%
 }
 
 /* menu - cart */
@@ -259,12 +263,20 @@ nav.nav-bar .menu img, nav.nav-bar .cart a img {
 
 /* menu */
 
+nav.nav-bar .menu {
+    position: relative;
+}
+
 nav.nav-bar .menu label {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
+}
+
+nav.nav-bar .menu ul {
+    z-index: 5;
 }
 
 nav.nav-bar .menu ul, nav.nav-bar .menu input {
@@ -296,8 +308,8 @@ nav.nav-bar .menu input:checked ~ ul {
     position: absolute;
     background-color: white;
     width: 100vw;
-    top: 99px;
-    right: 0px;
+    top: 78px;
+    left: -10px;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -388,8 +400,12 @@ nav.nav-bar .cart a {
         height: 111px;
         box-shadow: 0px 2px 15px 0px rgba(32, 32, 32, .3);
         z-index: 10;
-        position: sticky;
+    }
+
+    nav.fixed {
+        position: fixed;
         top: 0;
+        width: 100%
     }
 
     /* logo */
@@ -561,8 +577,12 @@ nav.nav-bar .cart a {
         background-color: white;
         box-shadow: 0px 2px 15px 0px rgba(32, 32, 32, .3);
         z-index: 10;
-        position: sticky;
+    }
+
+    nav.fixed {
+        position: fixed;
         top: 0;
+        width: 100%
     }
 
     /* logo */
@@ -618,6 +638,7 @@ nav.nav-bar .cart a {
         display: none;
         position: absolute;
         top: 23px;
+        z-index: 5;
     }
     
     nav.nav-bar-desktop .desktop-nav ul li.productos nav ul {
