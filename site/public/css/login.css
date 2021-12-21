@@ -84,7 +84,28 @@ main.login .boton:hover {
     background-color: #9ce8eb;
 }
 
+main.login button.disabled {
+    background-color: gray;
+    font-weight: lighter;
+    color: white;
+    border: gray 2px solid;
+}
 
+main.login button.disabled:hover {
+    background-color: gray;
+    font-weight: lighter;
+    color: white;
+    border: gray 2px solid;
+    cursor: default;
+}
+
+main.login .error {
+    border: #ff6060 2px solid !important;
+}
+
+main.login small, main.login .text-error {
+    color: #ff6060 !important;
+}
 
 
 
@@ -113,6 +134,29 @@ main.login .boton:hover {
     main.login .boton {
         font-size: 20px;
     }
+
+    main.login button.disabled {
+        background-color: gray;
+        font-weight: lighter;
+        color: white;
+        border: gray 2px solid;
+    }
+    
+    main.login button.disabled:hover {
+        background-color: gray;
+        font-weight: lighter;
+        color: white;
+        border: gray 2px solid;
+        cursor: default;
+    }
+    
+    main.login .error {
+        border: #ff6060 2px solid !important;
+    }
+    
+    main.login small, main.login .text-error {
+        color: #ff6060 !important;
+    }
 }
 
 
@@ -123,6 +167,10 @@ main.login .boton:hover {
 
     main.login h1 {
         font-size: 50px;
+    }
+
+    main.login form {
+        width: 600px;
     }
 
     main.login .descripcion {
@@ -143,5 +191,28 @@ main.login .boton:hover {
 
     main.login .boton {
         font-size: 20px;
+    }
+
+    main.login button.disabled {
+        background-color: gray;
+        font-weight: lighter;
+        color: white;
+        border: gray 2px solid;
+    }
+    
+    main.login button.disabled:hover {
+        background-color: gray;
+        font-weight: lighter;
+        color: white;
+        border: gray 2px solid;
+        cursor: default;
+    }
+    
+    main.login .error {
+        border: #ff6060 2px solid !important;
+    }
+    
+    main.login small, main.login .text-error {
+        color: #ff6060 !important;
     }
 }

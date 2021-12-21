@@ -1,7 +1,5 @@
 window.addEventListener('load', () => {
 
-    // console.log('vinculado');
-
     // functions
 
     var qs = (tag) => document.querySelector(tag);
@@ -19,60 +17,6 @@ window.addEventListener('load', () => {
             btn.classList.add('disabled');
         }
     };
-    
-    /* function notEmpty(input, small) { //revisa si el value del input está vacío, escribe el error en la etiqueta small indicada
-        input.addEventListener('blur', (e) => {
-
-            if(e.target.value === '') {
-                input.classList.add('error');
-                label.classList.add('text-error');
-                small.innerHTML = 'El campo no puede estar vacío';
-                console.log('validate normal ', validate[input]);
-                console.log('validate con vastics ', validate[`${input}`]);
-                validate[input] = false;
-            };
-    
-            functionValidate(validate);
-        })
-    };
-
-    function validateRange(input, min, max, small, errorMsg) { //revisa si el value está entre el min y max, escribe el error en el small
-        input.addEventListener('blur', (e) => {
-
-            if(e.target.value < min || e.target.value > max) {
-                input.classList.add('error');
-                label.classList.add('text-error');
-                small.innerHTML = errorMsg;
-                validate[input]= false;
-            } else {
-                input.classList.remove('error');
-                label.classList.remove('text-error');
-                small.innerHTML = '';
-                validate[input]= true;
-            };
-    
-            functionValidate(validate);
-        })
-    };
-
-    function validateLength(input, minLength, small, errorMsg) { //revisa si el value cumple con el largo indicado, escribe el error en el small
-        input.addEventListener('blur', (e) => {
-
-            if(e.target.value.length < minLength) {
-                input.classList.add('error');
-                label.classList.add('text-error');
-                small.innerHTML = errorMsg;
-                validate[input]= false;
-            } else {
-                input.classList.remove('error');
-                label.classList.remove('text-error');
-                small.innerHTML = '';
-                validate[input]= true;
-            };
-    
-            functionValidate(validate);
-        })
-    }; */
 
     // tags
     const title = qs('.title');
@@ -297,20 +241,5 @@ window.addEventListener('load', () => {
             validate.image = true;
         }
     });
-
-    /*
-    notEmpty(title, sTitle);
-    notEmpty(brand, sBrand);
-    notEmpty(price, sPrice);
-    notEmpty(category, sCategory);
-    notEmpty(featured, sFeatured);
-    
-    validateRange(category, 1, 7, sCategory, 'Es necesario seleccionar una categoría válida');
-    validateRange(featured, 0, 1, sFeatured, 'Es necesario indicar si es un producto destacado');
-
-    validateLength(title, 5, sTitle, 'El nombre debe tener al menos 5 caracteres.');
-    validateLength(brand, 3, sBrand, 'La marca debe tener al menos 3 caracteres');
-    validateLength(description, 20, sDescription, 'La descripción debe ser de al menos 20 caracteres');
-    */
 
 })

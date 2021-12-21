@@ -1,7 +1,7 @@
 const db = require('../database/models');
 
 const { check, body } = require('express-validator');
-
+const regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$/;
 
 module.exports = [
     check('nombre')
@@ -18,7 +18,13 @@ module.exports = [
 
     check('contraseña')
         .notEmpty().withMessage('El campo contraseña no puede estar vacío.').bail()
-        .isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres'),
+        .custom(value => {
+            if(!regExPass.test(value)) {
+                return false
+            } else {
+                return true
+            }
+        }).withMessage('La contraseña de tener al menos 8 caracteres, 1 mayúscula, 1 minúscula, 1 número y 1 carácter especial'),
 
     body('email')
         .custom(value => {
@@ -37,6 +43,19 @@ module.exports = [
         
         }),
 
+    check('imagen')
+        .custom((value, {req}) => {
+
+                if(!req.file) {
+                    return true
+                } else if (req.file.mimetype === 'image/png' || req.file.mimetype === 'image/jpeg') {
+                    return true
+                } else {
+                    return false
+                }
+
+        }).withMessage('Por favor ingrese un archivo de imágen válido.'),
+
     body('repetir')
         .custom((value, {req}) => {
 
@@ -46,5 +65,5 @@ module.exports = [
                 return true
             }
 
-        }).withMessage('Las contraseñas no conciden'),
+        }).withMessage('La contraseña no concide'),
 ]

@@ -1,7 +1,5 @@
 window.addEventListener('load', () => {
 
-    console.log('vinculado');
-
     // functions
 
     var qs = (tag) => document.querySelector(tag);
