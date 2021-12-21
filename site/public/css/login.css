@@ -105,6 +105,7 @@ main.login .error {
 
 main.login small, main.login .text-error {
     color: #ff6060 !important;
+    text-shadow: none;
 }
 
 

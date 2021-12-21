@@ -12,3 +12,6 @@
 
 - **Retrospectiva 5**<br>
 <a href="https://ibb.co/kSDSZTF"><img src="https://i.ibb.co/MC1CdHL/Captura-de-pantalla-91.png" alt="Retrospectiva 5" border="0"></a>
+
+- **Retrospectiva 6**<br>
+<a href="https://ibb.co/VpDfMF2"><img src="https://i.ibb.co/TqR9PQm/Retrospectiva6.png" alt="Retrospectiva6" border="0"></a>

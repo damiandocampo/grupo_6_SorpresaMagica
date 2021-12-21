@@ -94,6 +94,7 @@ main.registro .error {
 
 main.registro small, main.registro .text-error {
     color: #ff6060 !important;
+    text-shadow: none;
 }
 
 
