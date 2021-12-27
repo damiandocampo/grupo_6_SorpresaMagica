@@ -6,7 +6,6 @@ main.registro {
     margin: 0px auto;
     width: 100%;
     align-items: center;
-    background-image: url('/images/imagenDeFondo.jpeg');
 }
 
 main.registro h1 {

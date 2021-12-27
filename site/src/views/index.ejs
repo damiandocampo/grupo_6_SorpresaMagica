@@ -117,18 +117,18 @@
 
                             <% products.forEach(product=> { %>
                                     <article>
-                                        <a href="/productos/detalle/<%= product.id %>#slide1">
+                                        <a href="/productos/detalle/<%= product.id %>">
                                             <img src="/images/productos/<%= product.image %>"
                                                 alt="<%= product.title %>">
                                         </a>
                                         <div class="descripcion">
-                                            <a href="/productos/<%= product.id %>#slide1">
+                                            <a href="/productos/<%= product.id %>">
                                                 <h5>
                                                     <%= product.brand.name %>
                                                 </h5>
                                             </a>
                                             <h3>
-                                                <a href="/productos/detalle/<%= product.id %>#slide1">
+                                                <a href="/productos/detalle/<%= product.id %>">
                                                     <%= product.title %>
                                                 </a>
                                             </h3>
@@ -179,8 +179,8 @@
 
                                 <% categories.forEach(category => { %>
                                     <li>
-                                        <a href="">
-                                            <img src="/images/categorias/<%= category.image %>" alt="">
+                                        <a href="<%=`/productos?c=${category.id}`%>">
+                                            <img src="/images/categorias/<%= category.image %>" alt="<%= category.name %>">
                                             <div>
                                                 <h3>
                                                     <%= category.name %>
@@ -192,8 +192,8 @@
 
                                 <% categories.forEach(category => { %>
                                     <li>
-                                        <a href="">
-                                            <img src="/images/categorias/<%= category.image %>" alt="">
+                                        <a href="<%=`/productos?c=${category.id}`%>">
+                                            <img src="/images/categorias/<%= category.image %>" alt="<%= category.name %>">
                                             <div>
                                                 <h3>
                                                     <%= category.name %>

@@ -8,140 +8,130 @@
 
     <main class="productos">
 
-          <section class="conteiner">
-            <ul class="slider">
-              <li id="slide1">
-                <img src="/images/productos/<%= product.image %> " alt="Foto producto" />
-              </li>
-              <!-- 
-                
-                    <li id="slide2">
-                        <img src="/images/productos/<%= product.image %>" alt="Foto producto">  
-                    </li>
-              
-                    <li id="slide3">
-                        <img src="/images/productos/<%= product.image %>" alt="Foto producto"/>  
-                    </li> -->
-            </ul>
-          </section>
-          <!-- 
-            <ul class="menu">
-               <li>
-                   <a href="#slide1">1</a>
-               </li>
-               <li>
-                   <a href="#slide2">2</a>
-               </li>
-               <li>
-                   <a href="#slide3">3</a>
-               </li>
-            </ul> -->
+      <div class="product-container">
 
-          <div class="conteinerDetalle">
-            <section class="price">
-              <div>
-                <h1>
-                  <%= product.title %>
-                </h1>
+        <section class="image-detail">
+
+          <article class="image">
+            <img src="/images/productos/<%= product.image %> " alt="Foto producto" />
+          </article>
+
+          <article class="detail">
+            <div class="name-price">
+              <h1>
+                <%= product.title %>
+              </h1>
+              <% if (product.discount > 0) { %>
+              <div class="precio">
+                <small>
+                  $<%= product.price %>
+                </small>
+                <h2>
+                  $<%= finalPrice(product.price, product.discount) %>
+                </h2>
+                <h3>
+                  <%= product.discount %>%
+                </h3>
               </div>
-
-              <% if (product.discount> 0) { %>
-                <div class="precio">
-                  <small>
-                    $<%= product.price %>
-                  </small>
-                  <h2>
-                    $<%= finalPrice(product.price, product.discount) %>
-                  </h2>
-                  <h3>
-                    <%= product.discount %>%
-                  </h3>
-                </div>
-                <% } else { %>
-                  <p>$ <%= product.price %>
-                  </p>
-                  <% } %>
-
-            </section>
-
-            <div class="rayas"> </div>
-
-            <section class="cantidad">
-              <div class="cant">
-                <span>Cantidad</span>
-              </div>
-
-              <div class="numeber">
-                <p>1</p>
-              </div>
-
-              <div class="angle">
-                <i class="fas fa-angle-right"></i>
-              </div>
-            </section>
-
-            <section>
-              <button class="agregar">AGREGAR AL CARRITO</button>
-            </section>
-
-            <section class="CP">
-              <div class="postal">
-
-                <SPan>Tu código postal</SPan>
-
-                <button class="calcular">Calcular</button>
-              </div>
-            </section>
-          </div>
-          <div class="rayas"> </div>
-          <section class="fondo">
-            <section class="descripcion">
-              <h2>Descripcion</h2>
-              <p>
-                <%= product.description %>
-              </p>
-            </section>
-            <div>
-              <h2>PRODUCTOS RELACIONADOS</h2>
+              <% } else { %>
+              <h2>
+                $ <%= product.price %>
+              </h2>
+              <% } %>
             </div>
-            <section class="productosRelacionados">
-              <% relatedProducts.forEach(product=> { %>
-                <article>
-                  <img src="/images/productos/<%= product.image %> " alt="imagen1" />
-                  <h6>
-                    <%= product.brand.name %>
-                  </h6>
-                  <h3>
-                    <%= product.title %> <br> 55gr
-                  </h3>
-                  <% if (product.discount> 0) { %>
-                    <div class="precio">
-                      <small>
-                        $<%= product.price %>
-                      </small>
-                      <h2>
-                        $<%= finalPrice(product.price, product.discount) %>
-                      </h2>
-                      <h3>
-                        <%= product.discount %>%
-                      </h3>
-                    </div>
-                    <% } else { %>
-                      <span class="precio">
-                        $ <%= product.price %>
-                      </span>
-                      <% } %>
-                        <div>
-                          <button>-</button>
-                          <p>1</p>
-                          <button>+</button>
+
+            <div class="c-c-cp">
+              <div class="cantidad">
+                <button>-</button>
+                  <p>1</p>
+                <button>+</button>
+              </div>
+        
+              <div class="comprar">
+                  <button type="submit">Agregar al carrito</button>
+              </div>
+        
+              <div class="CP">
+                <div class="postal">
+                  <input type="text" placeholder="Tu código postal">
+                  <button class="calcular">Calcular</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </section>
+        
+        <div class="rayas"> </div>
+        
+        <section class="descripcion">
+          <h2>Descripción</h2>
+          <p>
+            <%= product.description %>
+          </p>
+        </section>
+
+      </div>
+
+            <div class="related">
+
+              <h2>PRODUCTOS RELACIONADOS</h2>
+
+              <section class="related-container">
+
+              <div class="relatedProducts">
+                <% relatedProducts.forEach(product=> { %>
+                    <article>
+                        <a href="/productos/detalle/<%= product.id %>">
+                            <img src="/images/productos/<%= product.image %>"
+                                alt="<%= product.title %>">
+                        </a>
+                        <div class="descripcion">
+                            <a href="/productos/<%= product.id %>">
+                                <h5>
+                                    <%= product.brand.name %>
+                                </h5>
+                            </a>
+                            <h3>
+                                <a href="/productos/detalle/<%= product.id %>">
+                                    <%= product.title %>
+                                </a>
+                            </h3>
+                            <% if (product.discount > 0) { %> 
+                            <div class="precio">
+                                <small>
+                                    $<%= product.price %> 
+                                </small>
+                                <h2>
+                                    $<%= finalPrice(product.price, product.discount) %>
+                                </h2>
+                                <h3>
+                                    <%= product.discount %>% 
+                                </h3>
+                            </div>
+                            <% } else { %>
+                                <h2>
+                                    $<%= product.price %>
+                                </h2>
+                            <% } %> 
+                            <div class="cantidad">
+                                <button>-</button>
+                                <p>1</p>
+                                <button>+</button>
+                            </div>
+                            <div class="comprar">
+                                <button type="submit">Agregar al carrito</button>
+                            </div>
                         </div>
-                        <button class="agregar2">AGREGAR AL CARRITO</button>
-                </article>
+                    </article>
                 <% }) %>
+              </div>
+
+              </section>
+            
+            </div>
 
         </main>
-        </section>
         <%- include('./partials/footer') %>
 
 

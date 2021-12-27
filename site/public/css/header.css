@@ -4,6 +4,10 @@ header div.desktop, nav.nav-bar-desktop {
 
 /* -- HEADER -- */
 
+header {
+    margin-bottom: 10px;
+}
+
 header div {
     display: flex;
     flex-direction: column;

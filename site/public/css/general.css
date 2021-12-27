@@ -21,6 +21,10 @@
     color: var(--negro);
 }
 
+body {
+    background-image: url(/images/imagenDeFondo.jpeg);
+}
+
 a {
     text-decoration: none;
 }

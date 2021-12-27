@@ -19,7 +19,7 @@
 **Descripcion de página:**
 
 Somos un grupo de desarrolladores web al cual se les asignó la tarea de crear un e-commerce multi plataforma.
-Nuestro sitio se basa principalmente en la venta de golosinas de manera particular o mayorista.
+Nuestro sitio se basa principalmente en la venta de golosinas de manera particular.
 La facilidad de registro, práctico carrito de compras y posibilidad de envios hacen de nuestro sitio una excelente experiencia a la hora de comprar . 
 Si sos un usuario particular o tenes un negocio, no dejes pasar la oportunidad de visitarnos y de disfrutar un momento dulce y divertido junto a familiares y amigos.
 
