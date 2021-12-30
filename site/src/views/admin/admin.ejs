@@ -2,6 +2,8 @@
 <html lang="es">
 
 <%- include('./partials/head', {title: 'Administrador'}) %>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/js/deleteProduct.js"></script>
 
   <body>
 
@@ -36,8 +38,8 @@
                 <% products.forEach(product => { %>
                   <tr>
                     <th id=<%= product.id %> scope="row"><%= product.id %></th>
-                    <td><a href="/productos/detalle/<%= product.id %>#slide1"><img src="/images/productos/<%= product.image %>" alt="..." width="90px"></a></td>
-                    <td><a href="/productos/detalle/<%= product.id %>#slide1"><%= product.title %></a></td>
+                    <td><a href="/productos/detalle/<%= product.id %>"><img src="/images/productos/<%= product.image %>" alt="..." width="90px"></a></td>
+                    <td><a href="/productos/detalle/<%= product.id %>"><%= product.title %></a></td>
                     <td><%= product.brand.name %></td>
                     <td>$<%= product.price %></td>
                     <% if (product.discount > 0) { %>
@@ -52,8 +54,8 @@
                     </td>
 
                     <td>
-                      <form action="/admin/delete/<%= product.id %>?_method=DELETE" method="POST">
-                        <button type="submit" class="btn btn-outline-danger"><i class="fas fa-trash btn-outline-danger"></i> Eliminar</button>
+                      <form action="/admin/delete/<%= product.id %>?_method=DELETE" method="POST" class="delete-form">
+                        <button type="submit" class="btn btn-outline-danger delete-button"><i class="fas fa-trash btn-outline-danger"></i> Eliminar</button>
                       </form>
                     </td>
 
