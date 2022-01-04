@@ -24,10 +24,31 @@ main.login form {
     padding: 0px 60px;
 }
 
+main.login form div #recuerdame, main.login form div .recuerdame {
+    cursor: pointer;
+}
+
 main.login .seccion {
     display:flex;
     flex-direction: column;
     margin-bottom: 10px;
+}
+
+main.login .seccion .pass {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+main.login .seccion .pass input{
+    width: 100%;
+}
+
+main.login .seccion .pass img {
+    width: 24px;
+    position: absolute;
+    right: 6px;
+    cursor: pointer;
 }
 
 main.login .descripcion {
@@ -76,7 +97,8 @@ main.login .boton {
     color: rgb(32, 32, 102);
     font-weight: bold;
     font-size: 14px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
 }
 
 main.login .boton:hover {

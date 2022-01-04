@@ -10,6 +10,7 @@
         <% } %>
 
         <div class="mobile-tablet">
+
             <% if (!(locals.usuarioL)) { %>
                 <input type="checkbox" name="checkbox-user" id="user" class="checkbox-user">
                 <label for="user" class="user">
@@ -28,11 +29,13 @@
                     <a href="/users/perfil"><%= locals.usuarioL.first_name %> <%= locals.usuarioL.last_name %> <i class="fas fa-cog"></i></a>
                 <% } %>
             </div>
+
             <div class="message">
                 <div class="truck-icon"><img src="/images/iconos/camion-negro.png" alt="Icono de camión"></div>
                 <p><span>Envíos gratis</span> en compras mayores a $3.000.</p>
             </div>
-            <input type="checkbox" name="" id="search" class="checkbox-search">
+
+            <input type="checkbox" id="search" class="checkbox-search">
             <label for="search" class="search" id="search">
                 <div class="search-icon"><img src="/images/iconos/lupa1-negro.png" alt="Icono de lupa"></div>
             </label>
@@ -40,13 +43,14 @@
                 <div class="arrow-icon"><img src="/images/iconos/cancel-negro.png" alt="Cerrar buscador"></div>
             </label>
             <div class="search-checked">
-                <form action="/buscar" method="GET">
-                    <input type="text" name="keywords" id="search" placeholder="Ingrese su búsqueda">
+                <form action="/buscar" method="GET" class="search-form">
+                    <input type="text" name="keywords" id="search0" placeholder="Ingrese su búsqueda">
                     <button type="submit">
                         <div class="search-icon"><img src="/images/iconos/lupa1-negro.png" alt="Buscar"></div>
                     </button>
                 </form>
             </div>
+
         </div>
 
     </div>
@@ -137,8 +141,8 @@
             </ul>
         </div>
         <div class="search">
-            <form action="/buscar" method="GET">
-                <input type="text" name="keywords" id="search" placeholder="Ingrese su búsqueda">
+            <form action="/buscar" method="GET" class="search-form1">
+                <input type="text" name="keywords" id="search1" placeholder="Ingrese su búsqueda">
                 <button type="submit">
                     <div class="search-icon"><img src="/images/iconos/lupa1-negro.png" alt="Buscar"></div>
                 </button>

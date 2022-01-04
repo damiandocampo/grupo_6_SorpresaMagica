@@ -193,6 +193,7 @@
     display: flex;
     align-items: center;
     height: 26px;
+    color: var(--celeste);
 }
 
 .listado-productos .productos article .descripcion div {
@@ -283,6 +284,11 @@
 
     /* filtros */
 
+    .listado-productos .filtros-orden {
+        width: 640px;
+        margin: 0px auto;
+    }
+
     .listado-productos .filtros div ul li {
         display: flex;
         width: 25%;
@@ -290,14 +296,32 @@
         margin: 2px 0px;
     }
 
+    .listado-productos .filtros-orden .filtros-container .filtros-hidden:checked ~ .filtros {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 10px;
+        width: 620px;
+        border-radius: 7px;
+        background-color: white;
+    }
+
     /* productos */
+
+    .listado-productos .productos {
+        display: flex;
+        margin: 10px auto;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 620px;
+    }
     
     .listado-productos .productos article {
         display: flex;
         border: 1px solid #c4c4c4;
-        margin-bottom: 10px;
+        margin: 5px;
         background-color: white;
-        width: 32%;
+        width: 196px;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
@@ -342,14 +366,16 @@
 
     .listado-productos {
         display: flex;
+        justify-content: center;
+        margin: 0px auto;
     }
 
     /* filtros - orden */
 
     .listado-productos .filtros-orden {
         flex-direction: column;
-        width: 15%;
-        padding-left: 10px;
+        width: 164px;
+        margin: 0px 0px 0px 10px;
     }
 
     /* filtros */
@@ -416,16 +442,19 @@
     /* productos */
 
     .listado-productos .productos {
-        width: 85%;
+        width: 80%;
+        min-width: 840px;
+        margin: 15px 5px;
     }
     
     .listado-productos .productos article {
         display: flex;
         height: fit-content;
         border: 1px solid #c4c4c4;
-        margin-bottom: 10px;
+        margin: 5px;
         background-color: white;
-        width: 24%;
+        width: 23%;
+        min-width: 200px;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;

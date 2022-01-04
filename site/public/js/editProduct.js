@@ -57,6 +57,7 @@ window.addEventListener('load', () => {
         discount: true,
         category: true,
         featured: true,
+        description: true,
         image: true,
     };
 

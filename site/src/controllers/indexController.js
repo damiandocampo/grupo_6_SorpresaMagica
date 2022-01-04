@@ -63,7 +63,7 @@ const controller = {
         Promise.all([products, categories, brands])
 
         .then(([products, categories, brands]) => {
-            res.render('productos', {products, categories, brands, finalPrice});
+            res.render('resultadosDeBusqueda', {products, categories, brands, finalPrice});
         })
 
         .catch(err => {

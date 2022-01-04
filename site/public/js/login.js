@@ -88,4 +88,32 @@ window.addEventListener('load', () => {
         functionValidate(validate);
     });
 
+
+    // Ver contraseña
+
+    function showHide() {
+        if(password.type === 'password') {
+            password.setAttribute('type', 'text');
+            show.style.display = 'none';
+            hide.style.display = 'block';
+        } else {
+            password.setAttribute('type', 'password');
+            hide.style.display = 'none';
+            show.style.display = 'block';
+        }
+    }
+    
+    const show = qs('.show');
+    const hide = qs('.hide');
+
+    hide.style.display = "none";
+
+    show.addEventListener('click', function() {
+        showHide()
+    })
+
+    hide.addEventListener('click', function() {
+        showHide()
+    })
+
 })

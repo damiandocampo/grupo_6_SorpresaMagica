@@ -369,20 +369,9 @@ nav.nav-bar .cart a {
     }
 
     /* user */
-
-    header div .mobile-tablet .user .user-icon i{
-        font-size: 38px;
-    }
     
     .checkbox-user:checked ~ .user-checked{
         display: flex;
-        width: 80vw;
-    }
-
-    /* search */
-    
-    header div .mobile-tablet .search .search-icon i{
-        font-size: 30px;
     }
 
     /* envíos */
@@ -699,7 +688,7 @@ nav.nav-bar .cart a {
     nav.nav-bar-desktop .search{
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-end;
         width: 265px;
         border: solid 2px var(--celeste);
         border-radius: 15px;
@@ -708,6 +697,8 @@ nav.nav-bar .cart a {
     nav.nav-bar-desktop .search form {
         display: flex;
         align-items: center;
+        width: 250px;
+        justify-content: space-evenly;
     }
 
     nav.nav-bar-desktop .search input {
@@ -724,6 +715,9 @@ nav.nav-bar .cart a {
         background-color: white;
         border-radius: 15px;
         cursor: pointer;
+    }
+    nav.nav-bar-desktop .search .search-icon {
+        display: flex;
     }
 
     nav.nav-bar-desktop button img {

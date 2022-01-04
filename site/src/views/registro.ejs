@@ -52,7 +52,11 @@
 
             <div class="seccion">
                 <label class="descripcion lPassword1" for="contraseña">Contraseña:</label>
-                <input class="completar password1" type="password" name="contraseña" id="contraseña" placeholder="Ingresar contraseña">
+                <div class="pass">
+                    <input class="completar password1" type="password" name="contraseña" id="contraseña" placeholder="Ingresar contraseña">
+                    <img src="/images/iconos/ojo1-negro.png" alt="Ver contraseña" class="show" title="Mostrar contraseña">
+                    <img src="/images/iconos/ojo2-negro.png" alt="Ocultar contraseña" class="hide" title="Ocultar contraseña">
+                </div>
             </div>
             <small class="sPassword1"></small>
             <% if (locals.errors && errors.contraseña) { %> 

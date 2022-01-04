@@ -29,6 +29,7 @@ window.addEventListener('load', () => {
     const image = qs('.image');
 
     const btn = qs('.button');
+
     //labels
     const lTitle = qs('.lTitle');
     const lBrand = qs('.lBrand');
@@ -57,6 +58,7 @@ window.addEventListener('load', () => {
         discount: true, // es opcional
         category: false,
         featured: false,
+        description: false,
         image: true, // es opcional
     };
 

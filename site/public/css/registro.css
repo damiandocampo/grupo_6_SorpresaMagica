@@ -30,6 +30,23 @@ main.registro .seccion {
     margin-bottom: 10px;
 }
 
+main.registro .seccion .pass {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+main.registro .seccion .pass input{
+    width: 100%;
+}
+
+main.registro .seccion .pass img {
+    width: 24px;
+    position: absolute;
+    right: 6px;
+    cursor: pointer;
+}
+
 main.registro .descripcion {
     padding: 10px;
     color:rgb(34, 23, 23);
