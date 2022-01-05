@@ -24,10 +24,12 @@ const controller = {
 
         const categories = db.Categories.findAll()
 
-        Promise.all([products, categories])
+        const brands = db.Brands.findAll()
 
-        .then(([products, categories]) => {
-            res.render('index', {products, categories, finalPrice});
+        Promise.all([products, categories, brands])
+
+        .then(([products, categories, brands]) => {
+            res.render('index', {products, categories, brands, finalPrice});
         })
 
         .catch(err => {

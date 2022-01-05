@@ -20,10 +20,12 @@ const controller = {
         })
 
         const categories = db.Categories.findAll()
+        
+        const brands = db.Brands.findAll()
 
-        Promise.all([product, categories])
+        Promise.all([product, categories, brands])
 
-        .then(([product, categories]) => {
+        .then(([product, categories, brands]) => {
 
             db.Products.findAll( {
                 include: [{association: 'brand'}],
@@ -32,7 +34,7 @@ const controller = {
             })
 
             .then(relatedProducts => {
-                res.render('detalleDeProductos', {product, relatedProducts, categories, finalPrice});
+                res.render('detalleDeProductos', {product, relatedProducts, categories, brands, finalPrice});
             })
 
             .catch(err => {

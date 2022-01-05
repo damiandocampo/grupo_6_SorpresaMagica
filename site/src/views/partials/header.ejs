@@ -77,20 +77,36 @@
     </div>
 
     <nav class="nav-bar">
+
         <nav class="menu">
-            <input type="checkbox" name="" id="products">
-            <label for="products">
+
+            <label class="label-menu">
                 <img src="/images/iconos/menu-negro.png" alt="Icono de menú">
                 <h3>Productos</h3>
             </label>
-            <ul>
-                <li><a href="/productos"><span>●</span> Todo <span>●</span></a></li>
+
+            <ul class="ul-menu">
+                <li class="close-menu categoriesLi"><img src="/images/iconos/cancel-negro.png" alt="Cerrar menú"></li>
+
+                <li class="categoriesLi"><a href="/productos"><span>●</span> Todo <span>●</span></a></li>
+
                 <% categories.forEach(category => { %>
-                    <li><a href=<%= `/productos?c=${category.id}` %>><span>●</span> <%= category.name %> <span>●</span></a></li>
+                    <li class="categoriesLi"><a href=<%= `/productos?c=${category.id}` %>><span>●</span> <%= category.name %> <span>●</span></a></li>
                 <% }) %>
-                <li><a href="/productos/marcas"><span>●</span> Marcas <span>●</span></a></li>
+
+                <li class="brands"> Marcas <img src="/images/iconos/flecha-der-violeta.png">
+                    <div class="ul-brands">
+                        <ul>
+                            <% brands.forEach(brand => { %>
+                                <li><a href=<%= `/productos?m=${brand.id}` %>><span>●</span> <%= brand.name %> <span>●</span></a></li>
+                            <% }) %>
+                        </ul>
+                    </div>
+                </li>
             </ul>
+
         </nav>
+
         <div class="logo">
             <a href="/"><img src="/images/logo-sorpresa-magica.png" alt="logo"></a>
         </div>
@@ -122,7 +138,15 @@
                             <% categories.forEach(category => { %>
                                 <li><a href=<%=`/productos?c=${category.id}`%>><span>●</span> <%= category.name %> <span>●</span></a></li>
                             <% }) %> 
-                            <li><a href="/productos/marcas"><span>●</span> Marcas <span>●</span></a></li>
+                            <li class="brands"> Marcas <img src="/images/iconos/flecha-der-violeta.png">
+                                <div class="ul-brands">
+                                    <ul>
+                                        <% brands.forEach(brand => { %>
+                                            <li><a href=<%= `/productos?m=${brand.id}` %>> <%= brand.name %> </a></li>
+                                        <% }) %>
+                                    </ul>
+                                </div>
+                            </li>
                         </ul>
                     </nav>
                 </li>
