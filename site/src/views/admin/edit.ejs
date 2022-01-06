@@ -3,11 +3,11 @@
 
 <%- include('./partials/head', {title: 'Editar un producto'}) %>
 <script src="/js/editProduct.js"></script>
+<script src="/js/previewImage.js"></script>
 
   <body>
 
     <%- include('./partials/header') %>
-<% console.log('DESCRIPCIÓN', product.description); %> 
       <main class="edit">
 
         <h1>Editar un producto</h1>
@@ -118,7 +118,7 @@
 
               <div class="col-md">
                 <div class="mb-3">
-                  <label for="formFile" class="form-label label image lImage">Seleccione una imágen del producto</label>
+                  <label for="formFile" class="form-label label lImage">Seleccione una imágen del producto</label>
                   <input class="form-control image" type="file" id="formFile" name="image" accept="image/png, image/jpeg">
                 </div>
                 <small class="sImage"></small>
@@ -129,15 +129,25 @@
 
             </div>
 
-              <div class="separador">
+            <div class="separador">
 
-                <div class="col-md">
-                  <div class="button-crear">
-                    <button type="submit" class="button">Editar</button>
-                  </div>
-                </div>
-                
+              <div class="col-md">
+
+                  <img src="/images/productos/<%= product.image %>" class="image-preview">
+                  
               </div>
+              
+            </div>
+
+            <div class="separador">
+
+              <div class="col-md">
+                <div class="button-crear">
+                  <button type="submit" class="button">Editar</button>
+                </div>
+              </div>
+              
+            </div>
 
           </div>
 

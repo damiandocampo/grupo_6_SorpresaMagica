@@ -53,6 +53,11 @@
     width: 250px;
 }
 
+.edit .separador .image-preview {
+    width: 250px;
+    border: 1px solid #ced4da;
+}
+
 .edit .button-crear {
     width: 50%;
     display: flex;

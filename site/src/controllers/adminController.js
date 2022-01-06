@@ -134,6 +134,14 @@ const controller = {
 
         } else {
 
+            if(req.file){
+                let image = req.file.filename;
+
+                if(fs.existsSync(path.join(__dirname,'../../public/images/productos/' + image))){
+                    fs.unlinkSync(path.join(__dirname,'../../public/images/productos/' + image))
+                }
+            }
+
             db.Categories.findAll()
 
             .then(categories => {
@@ -188,6 +196,8 @@ const controller = {
                     Promise.all([product, brand])
 
                     .then(([product, brand]) => {
+
+                        // ver si se modificó la imágen, de ser así eliminarla
 
                         //editar producto con la nueva marca
 
@@ -335,7 +345,7 @@ const controller = {
         .then(product => {
 
             if(product.image !== 'defaultImage.png') {
-                fs.unlink(`public/images/productos/${product.image}`, (err) => {
+                fs.unlinkSync(path.join(__dirname,'../../public/images/productos/' + product.image), (err) => {
                     if(err) {
                         console.log(err);
                     } else {
