@@ -3,6 +3,7 @@
 
 <%- include('./partials/head', {title: 'Registro'}) %> 
 <script src="/js/register.js"></script>
+<script src="/js/previewImage.js"></script>
 
 <body>
     
@@ -42,8 +43,12 @@
             <% } %>
 
             <div class="seccion">
-                <label class="descripcion lImage" for="image">Imagen:</label>
+                <label class="descripcion lImage">Imágen:</label>
+                <label for="image" class="labelImage">Subir una imágen</label>
                 <input class="completar image" type="file" name="image" id="image" accept="image/png, image/jpeg" placeholder="Imagen">
+                <div class="image-preview-container">
+                    <img src="/images/usuarios/default-image.png" class="image-preview">
+                </div>
             </div>
             <small class="sImage"></small>
             <% if (locals.errors && errors.imagen) { %> 

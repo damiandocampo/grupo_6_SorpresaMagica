@@ -199,6 +199,17 @@ const controller = {
 
                         // ver si se modificó la imágen, de ser así eliminarla
 
+                        if(req.file.filename !== product.image && product.image !== 'defaultImage.png') {
+                            fs.unlinkSync(path.join(__dirname,'../../public/images/productos/' + product.image),
+                            (err) => {
+                                if(err) {
+                                    console.log(err);
+                                } else {
+                                    console.log('La imágen fue eliminada');
+                                }
+                            })
+                        }
+
                         //editar producto con la nueva marca
 
                         db.Products.update({
@@ -242,6 +253,19 @@ const controller = {
                     Promise.all([product, brand])
 
                     .then(([product, brand]) => {
+                        
+                        // ver si se modificó la imágen, de ser así eliminarla
+
+                        if(req.file.filename !== product.image && product.image !== 'defaultImage.png') {
+                            fs.unlinkSync(path.join(__dirname,'../../public/images/productos/' + product.image),
+                            (err) => {
+                                if(err) {
+                                    console.log(err);
+                                } else {
+                                    console.log('La imágen fue eliminada');
+                                }
+                            })
+                        }
 
                         //editar producto con la marca existente
                         

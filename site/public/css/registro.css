@@ -21,7 +21,7 @@ main.registro form {
     display: flex;
     flex-direction: column;
     align-content: center;
-    padding: 0px 60px;
+    width: 250px;
 }
 
 main.registro .seccion {
@@ -47,8 +47,39 @@ main.registro .seccion .pass img {
     cursor: pointer;
 }
 
+main.registro .seccion input.image {
+    display: none;
+}
+
+main.registro .seccion .labelImage {
+    border-radius: 10px;
+    border: 2px solid #202020;
+    background-color: lavender;
+    padding: 8px 9px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+main.registro .seccion .image-preview-container {
+    width: 200px;
+    height: 200px;
+    margin: 5px auto 0px;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    border-radius: 100%;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2)
+}
+
+main.registro .seccion .image-preview-container .image-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 main.registro .descripcion {
-    padding: 10px;
+    padding: 10px 0px;
     color:rgb(34, 23, 23);
     text-shadow: 2px 2px 2px #11e7ee;
 }
@@ -118,6 +149,10 @@ main.registro small, main.registro .text-error {
 
 @media (min-width: 640px) {
 
+    main.registro form {
+        width: 300px;
+    }
+
     main.registro h1 {
         font-size: 50px;
     }
@@ -173,7 +208,7 @@ main.registro small, main.registro .text-error {
     }
 
     main.registro form {
-        width: 600px;
+        width: 500px;
     }
 
     main.registro .descripcion {
