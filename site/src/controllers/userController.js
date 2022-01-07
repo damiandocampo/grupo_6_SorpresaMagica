@@ -3,11 +3,11 @@ const fs = require('fs');
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 const db = require('../database/models');
-const { where } = require('sequelize/types');
+//const { where } = require('sequelize/types');
 
-let usuarios = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','users.json'),'utf-8'));
+const usuarios = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','users.json'),'utf-8'));
 
-const db = require('../database/models')
+
 
 const controller = {
     login: (req,res) => {

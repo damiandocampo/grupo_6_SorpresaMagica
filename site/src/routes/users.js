@@ -6,7 +6,8 @@ const { login, registro, registre, logear, logout, perfil, editarDatos } = requi
 const guestCheck = require('../middlewares/guestCheck');
 const loginValidator = require('../validations/loginValidator');
 const registerValidator = require('../validations/validateRegister');
-const userEditValidator = require('../validations/editUserValidator');
+
+//const userEditValidator = require('../validations/editUserValidator');
 
 const multer  = require('multer');
 
@@ -33,6 +34,6 @@ router.get('/logout', logout);
 
 router.get('/perfil', perfil);
 
-router.post('/edit', userEditValidator, editarDatos)
+router.post('/edit', editarDatos)
 
 module.exports = router;
