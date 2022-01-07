@@ -1,22 +1,22 @@
 require('dotenv').config()
 
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var methodOverride =  require('method-override');
-var session = require('express-session');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const methodOverride =  require('method-override');
+const session = require('express-session');
 
-const userCheck = require('./middlewares/userCheck');
+const sessionCheck = require('./middlewares/sessionCheck');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var productosRouter = require('./routes/productos');
-var carritoRouter = require('./routes/carrito');
-var adminRouter = require('./routes/admin');
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
+const productosRouter = require('./routes/productos');
+const carritoRouter = require('./routes/carrito');
+const adminRouter = require('./routes/admin');
 
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -29,7 +29,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(methodOverride('_method'));
 app.use(session({secret: "Secreto Mágico"}));
-app.use(userCheck);
+app.use(sessionCheck);
 
 
 app.use('/', indexRouter);

@@ -1,139 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head', {title: 'Detalle del producto' }) %> 
-    <body>
+<%- include('./partials/head', {title: `${product.title}` }) %>
 
-        <%- include('./partials/header') %>
-    
-       
-    
-        <%- include('./partials/nav') %>
+  <body>
 
-        <main class="productos">
-           
-            <section class="conteiner">
-                <ul class="slider">
-                    <li id="slide1">
-                        <img src="/images/productos/<%= product.image.file %> " alt="Foto alfajor 1"/>  
-                    </li>
-                
-                    <li id="slide2">
-                        <img src="/images/productos/<%= product.image.file %>" alt="Foto alfajor 2">  
-                    </li>
-              
-                    <li id="slide3">
-                        <img src="/images/productos/<%= product.image.file %>" alt="Foto alfajor 3"/>  
-                    </li>
-                </ul>
-            </section>
-            <ul class="menu">
-               <li>
-                   <a href="#slide1">1</a>
-               </li>
-               <li>
-                   <a href="#slide2">2</a>
-               </li>
-               <li>
-                   <a href="#slide3">3</a>
-               </li>
-            </ul>
+    <%- include('./partials/header') %>
 
-         <div class="conteinerDetalle">
-           <section  class="price">
-              <div >
-                <h1><%= product.title %> </h1>
-             </div>  
+    <main class="productos">
 
-             <p>$ <%= product.price %> </p>
+      <div class="product-container">
 
-            </section>
+        <section class="image-detail">
 
-             <div class="rayas"> </div>
-     
-            <section class="cantidad" >
-              <div class="cant">
-                <span>Cantidad</span>
+          <article class="image">
+            <img src="/images/productos/<%= product.image %> " alt="Foto producto" />
+          </article>
+
+          <article class="detail">
+            <div class="name-price">
+              <h1>
+                <%= product.title %>
+              </h1>
+              <% if (product.discount > 0) { %>
+              <div class="precio">
+                <small>
+                  $<%= product.price %>
+                </small>
+                <h2>
+                  $<%= finalPrice(product.price, product.discount) %>
+                </h2>
+                <h3>
+                  <%= product.discount %>%
+                </h3>
               </div>
-
-              <div class="numeber">
-               <p>1</p>
-              </div>
-
-              <div class="angle">
-               <i class="fas fa-angle-right"></i>
-              </div>
-            </section>
-          
-            <section>
-             <button class="agregar">AGREGAR AL CARRITO</button>
-           </section>
-
-          <section class="CP">
-             <div class="postal">
-
-              <SPan>Tu código postal</SPan>
-         
-              <button class="calcular">Calcular</button>
+              <% } else { %>
+              <h2>
+                $ <%= product.price %>
+              </h2>
+              <% } %>
             </div>
-          </section>
-        </div>
-          <div class="rayas"> </div>
-        <section class="fondo">
-          <section class="descripcion">
-            <h2>Descripcion</h2>
-            <p>Alfajor de chocolate Triple relleno de mouse <br> 55 gr </p>
-          </section>
-           <div>
-             <h2>PRODUCTOS RELACIONADOS</h2> 
-           </div>
-         <section class="productosRelacionados">
-            <% relatedProducts.forEach(product => {   %> 
-              <article>
-                 <img src="/images/productos/<%= product.image %> " alt="imagen1"/>
-                <h6><%= product.brand.name %> </h6>
-                <h3><%= product.title %>  <br> 55gr</h3>
-                <span class="precio"><%= product.price %> </span>
-                <div>
-                  <button>-</button>
+
+            <div class="c-c-cp">
+              <div class="cantidad">
+                <button>-</button>
                   <p>1</p>
-                  <button>+</button>
+                <button>+</button>
+              </div>
+        
+              <div class="comprar">
+                  <button type="submit">Agregar al carrito</button>
+              </div>
+        
+              <div class="CP">
+                <div class="postal">
+                  <input type="text" placeholder="Tu código postal">
+                  <button class="calcular">Calcular</button>
                 </div>
-                <button class="agregar2">AGREGAR AL CARRITO</button>
-               </article>
-              <% }) %> 
+              </div>
+            </div>
+          </article>
 
-         <!--    <article>
-               <img src="/images/productos/ChocolateMILKACastañas155Gr477,21.jpg" alt="">
-               <h6>Milka</h6>
-                <h3>Alfajor Milka Mouse <br> 55gr</h3>
-                <span class="precio">$ 74,04</span>
-                <div>
-                  <button>-</button>
-                  <p>1</p>
-                  <button>+</button>
-                </div>
-                <button class="agregar2">AGREGAR AL CARRITO</button>
-               </article>
-               
-             <article>
-               <img src="/images/productos/ConfitesDeChocolateROCKLETS40Gr73,57.jpg" alt="">
-               <h6>Milka</h6>
-                <h3>Alfajor Milka Mouse <br> 55gr</h3>
-                <span class="precio">$ 74,04</span>
-                <div>
-                  <button>-</button>
-                  <p>1</p>
-                  <button>+</button>
-                </div>
-                <button class="agregar2">AGREGAR AL CARRITO</button>
-               </article>
+        </section>
+        
+        <div class="rayas"> </div>
+        
+        <section class="descripcion">
+          <h2>Descripción</h2>
+          <p>
+            <%= product.description %>
+          </p>
+        </section>
 
-                 -->
-     </main>
-    </section>
-    <%- include('./partials/footer') %> 
+      </div>
+
+            <div class="related">
+
+              <h2>PRODUCTOS RELACIONADOS</h2>
+
+              <section class="related-container">
+
+              <div class="relatedProducts">
+                <% relatedProducts.forEach(product=> { %>
+                    <article>
+                        <a href="/productos/detalle/<%= product.id %>">
+                            <img src="/images/productos/<%= product.image %>"
+                                alt="<%= product.title %>">
+                        </a>
+                        <div class="descripcion">
+                            <a href="/productos/<%= product.id %>">
+                                <h5>
+                                    <%= product.brand.name %>
+                                </h5>
+                            </a>
+                            <h3>
+                                <a href="/productos/detalle/<%= product.id %>">
+                                    <%= product.title %>
+                                </a>
+                            </h3>
+                            <% if (product.discount > 0) { %> 
+                            <div class="precio">
+                                <small>
+                                    $<%= product.price %> 
+                                </small>
+                                <h2>
+                                    $<%= finalPrice(product.price, product.discount) %>
+                                </h2>
+                                <h3>
+                                    <%= product.discount %>% 
+                                </h3>
+                            </div>
+                            <% } else { %>
+                                <h2>
+                                    $<%= product.price %>
+                                </h2>
+                            <% } %> 
+                            <div class="cantidad">
+                                <button>-</button>
+                                <p>1</p>
+                                <button>+</button>
+                            </div>
+                            <div class="comprar">
+                                <button type="submit">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </article>
+                <% }) %>
+              </div>
+
+              </section>
+            
+            </div>
+
+        </main>
+        <%- include('./partials/footer') %>
 
 
-</body>
+  </body>
+
 </html>
-    

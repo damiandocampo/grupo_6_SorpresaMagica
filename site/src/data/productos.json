@@ -7,6 +7,7 @@
     "price": 74.04,
     "categoria": 1,
     "destacado": 1,
+    "descripcion": "Alfajor Milka con relleno tipo mousse de chocolate con cobertura de chocolate con leche 55gr",
     "descuento": 0,
     "image": "AlfajorMILKATripleMousse55Gr74,04.png"
   },
@@ -18,6 +19,7 @@
     "price": 88.99,
     "categoria": 1,
     "destacado": 0,
+    "descripcion": "Alfajor Pepitos triple relleno con mousse de chocolate con baño de repostería 57gr",
     "descuento": 0,
     "image": "AlfajorPepitosChocolate57GrX1U88,99.jpg"
   },
@@ -29,6 +31,7 @@
     "price": 65.78,
     "categoria": 1,
     "destacado": 0,
+    "descripcion": "Alfajor Terrabusi triple relleno de dulce de leche con baño de reposteria 70gr",
     "descuento": 0,
     "image": "AlfajorTripleTERRABUSITorta70Gr65,78.png"
   },
@@ -40,6 +43,7 @@
     "price": 422.26,
     "categoria": 4,
     "destacado": 1,
+    "descripcion": "Bombones Bon o Bon sabor chocolate con leche x18 unidades",
     "descuento": 0,
     "image": "BombonesBONOBONChocolateConLeche18U422,26.png"
   },
@@ -51,6 +55,7 @@
     "price": 158.48,
     "categoria": 2,
     "destacado": 1,
+    "descripcion": "Caramelos Butter Toffees rellenos con pasta de maní Bon o Bon 150gr",
     "descuento": 0,
     "image": "BUTTERTOFFEESBonOBon150Gr158,48.png"
   },
@@ -62,6 +67,7 @@
     "price": 883.87,
     "categoria": 2,
     "destacado": 1,
+    "descripcion": "Caramelos duros Arcor rodajas frutales ácidas sabores surtidos 930gr",
     "descuento": 0,
     "image": "CaramelosDurosARCORRodajasFrutalesAcidas930Gr883,87.png"
   },
@@ -73,6 +79,7 @@
     "price": 53.21,
     "categoria": 2,
     "destacado": 0,
+    "descripcion": "Caramelos duros Halls sabor a mora y crema 27gr",
     "descuento": 0,
     "image": "CaramelosHALLSCreamyMora27Gr53,21.jpg"
   },
@@ -84,6 +91,7 @@
     "price": 109.99,
     "categoria": 3,
     "destacado": 1,
+    "descripcion": "Chicles Topline dietéticos reducidos en calorías sabor menta 24gr",
     "descuento": 0,
     "image": "Chicles7UltraGreenTOPLINEEst24Gr109,99.jpg"
   },
@@ -95,6 +103,7 @@
     "price": 53.99,
     "categoria": 3,
     "destacado": 0,
+    "descripcion": "Chicles Beldent sin azúcar sabor menta 10gr",
     "descuento": 0,
     "image": "ChiclesMentaBeldentX10Gr53,99.jpg"
   },
@@ -106,6 +115,7 @@
     "price": 27.99,
     "categoria": 3,
     "destacado": 0,
+    "descripcion": "Chicles Topline dietéticos reducidos en calorías sabor frutal 24gr",
     "descuento": 0,
     "image": "ChiclesTOPLINEFrutaPaq6.7Gr27,99.jpg"
   },
@@ -117,6 +127,7 @@
     "price": 240.53,
     "categoria": 4,
     "destacado": 1,
+    "descripcion": "Chocolate con leche Cadbury relleno con yoghurt, frutilla y arroz inflado, aromatizado con vainilla 80gr",
     "descuento": 0,
     "image": "ChocolateCADBURYYogurFrutilla80Gr240,53.png"
   },
@@ -124,10 +135,11 @@
     "id": 12,
     "marca": "M&Ms",
     "marca_id": 11,
-    "title": "Confites de Chocolate M&Ms 52Gr.jpg",
+    "title": "Confites de Chocolate M&M's 52Gr",
     "price": 221.99,
     "categoria": 6,
     "destacado": 1,
+    "descripcion": "Confites M&M's de chocolate con leche 52gr",
     "descuento": 0,
     "image": "ChocolateM&MBsa52Gr221,99.jpg"
   },
@@ -139,6 +151,7 @@
     "price": 477.21,
     "categoria": 4,
     "destacado": 1,
+    "descripcion": "Chocolate con leche Milka con castañas de cajú y caramelo, aromatizado con vainilla 155gr",
     "descuento": 0,
     "image": "ChocolateMILKACastañas155Gr477,21.jpg"
   },
@@ -150,6 +163,7 @@
     "price": 100.69,
     "categoria": 5,
     "destacado": 0,
+    "descripcion": "Chupetines Mr.Pop's de caramelo duro ácido, sabores sutidos de frutilla, naranja, cereza y manzana x10 unidades",
     "descuento": 0,
     "image": "ChupetinFrutalMr.Pop'SBsa10U100,69.jpg"
   },
@@ -157,10 +171,11 @@
     "id": 15,
     "marca": "Mr.Pop's",
     "marca_id": 12,
-    "title": "Chupetin Tuti Fruti MR.POP'S 480gr",
+    "title": "Chupetin MR.POP'S Evolution Blueberry 480gr",
     "price": 313.91,
     "categoria": 5,
     "destacado": 0,
+    "descripcion": "Chupetines Mr.Pop's de caramelo duro sabor a arándano rellenos de chicle con sabor a tutti frutti 480gr",
     "descuento": 0,
     "image": "ChupetinTutiFrutiMr.Pop'SBsa480Gr313,91.jpg"
   },
@@ -172,6 +187,7 @@
     "price": 488.99,
     "categoria": 5,
     "destacado": 1,
+    "descripcion": "Chupetines Flynn Paff de caramelo duro con relleno masticable sabor titti frutti 432gr",
     "descuento": 0,
     "image": "ChupetinTuttiFruttiFlynnPaffPaq432Gr488,99.jpg"
   },
@@ -183,6 +199,7 @@
     "price": 73.57,
     "categoria": 6,
     "destacado": 1,
+    "descripcion": "Confites Rocklets de chocolate con leche 40gr",
     "descuento": 0,
     "image": "ConfitesDeChocolateROCKLETS40Gr73,57.jpg"
   },
@@ -194,6 +211,7 @@
     "price": 141.13,
     "categoria": 7,
     "destacado": 1,
+    "descripcion": "Gomitas Mogul ácidas sabor a frutilla 150gr",
     "descuento": 0,
     "image": "GomitasMOGULFrutillasAcidas150Gr141,13.png"
   },
@@ -205,6 +223,7 @@
     "price": 238.67,
     "categoria": 7,
     "destacado": 0,
+    "descripcion": "Gomitas Mogul sabores frutilla, manzana, naranja y banana 220gr",
     "descuento": 0,
     "image": "GomitasMOGULJellyButtons220Gr238,67.jpg"
   },
@@ -216,6 +235,7 @@
     "price": 152.99,
     "categoria": 7,
     "destacado": 0,
+    "descripcion": "Gomitas Billiken sabores ananá, limón, frambuesa y naranja surtidas 200gr",
     "descuento": 0,
     "image": "GomitasSaborFrutalBillikenBsa200Gr152,99.jpg"
   },
@@ -227,6 +247,7 @@
     "price": 91.49,
     "categoria": 6,
     "destacado": 1,
+    "descripcion": "Maní con chocolate con leche Cofler 40gr",
     "descuento": 0,
     "image": "ManiConChocolateCOFLERCja40Gr91,49.jpg"
   }

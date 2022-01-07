@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url('/images/imagenDeFondo.jpeg');
     padding: 20px 10px;
 }
 
@@ -214,7 +213,7 @@
 
     .user-profile {
         display: flex;
-        height: 800px;
+        height: 650px;
         flex-direction: column;
         align-items: flex-start;
         background-image: url('/images/imagenDeFondo.jpeg');
@@ -279,28 +278,10 @@
     .user-profile section .accordion-body {
         width: 71%;
         margin: auto;
-        height: 562px;
+        height: 400px;
         background-color: white;
         border-radius: 10px;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    }
-
-    .user-profile section .datos-absolute {
-        position: absolute;
-        right: 0px;
-        top: 0px;
-    }
-
-    .user-profile section .notificaciones-absolute {
-        position: absolute;
-        right: 0px;
-        top: -57px;
-    }
-
-    .user-profile section .pedidos {
-        position: absolute;
-        right: 0px;
-        top: -114px;
     }
 
     .user-profile section .accordion-body form {
@@ -309,6 +290,30 @@
 
     .user-profile section .accordion-body form .notificaciones label {
         width: 450px;
+    }
+
+    .user-profile section .datos-absolute {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+    .user-profile section .newPass {
+        position: absolute;
+        right: 0;
+        top: -57px;
+    }
+
+    .user-profile section .notificaciones-absolute {
+        position: absolute;
+        right: 0px;
+        top: -116px;
+    }
+
+    .user-profile section .pedidos {
+        position: absolute;
+        right: 0px;
+        top: -173px;
     }
 
     .user-profile .logout {

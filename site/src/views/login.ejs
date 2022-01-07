@@ -1,47 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include('./partials/head', {title: 'Login'}) %> 
+<%- include('./partials/head', {title: 'Login' }) %>
+<script src="/js/login.js"></script>
 
-<body>
-    
-    <%- include('./partials/header') %> 
+    <body>
 
-    <%- include('./partials/nav') %> 
+    <%- include('./partials/header') %>
 
-    <main class ="login">
-        <h1>Iniciar Sesión</h1>
-        <form action="" method="POST">
-            <div class="seccion">
-                <label class="descripcion" for="email">E-mail</label>
-                <input class="completar" type="email" name="email" id="email" placeholder="Ingrese su e-mail">
-            </div>
-            <div class="seccion">
-                <label class="descripcion" for="contraseña">Contraseña</label>
-                <input class="completar" type="password" name="contraseña" id="contraseña" placeholder="ingrese su contraseña">
-            </div>
-                <div>
-                    <input class="checkbox" type="checkbox" name="Recuerdame" value="Recuerdame">
-                    <label class="recuerdame" for="">Recuérdame</label>
+        <main class="login">
+
+            <h1>Iniciar Sesión</h1>
+
+            <form action="/users/login" method="POST">
+
+                <div class="seccion">
+                    <label class="descripcion lEmail" for="email">E-mail</label>
+                    <input class="completar email" type="email" name="email" id="email" placeholder="Ingrese su e-mail">
                 </div>
+                <small class="sEmail"></small>
 
-
-                <% if (locals.errors && errors.msg) { %> 
-                    <small> <%= errors.msg %>  </small>
-                    <% } %> 
-            
+                <div class="seccion">
+                    <label class="descripcion lPassword" for="contraseña">Contraseña</label>
+                    <div class="pass">
+                        <input class="completar password" type="password" name="password" id="contraseña" placeholder="ingrese su contraseña">
+                        <img src="/images/iconos/ojo1-negro.png" alt="Mostrar contraseña" class="show" title="Mostrar contraseña">
+                        <img src="/images/iconos/ojo2-negro.png" alt="Ocultar contraseña" class="hide" title="Ocultar contraseña">
+                    </div>
+                </div>
+                <small class="sPassword"></small>
                 
-                <div class="boton-contenedor">
-                    <button class="boton" type="submit">Ingresar</button>
+                <div>
+                    <input class="checkbox" type="checkbox" name="recuerdame" value="recuerdame" id="recuerdame">
+                    <label class="recuerdame" for="recuerdame">Recuérdame</label>
                 </div>
+
+                <% if (locals.errors && errors.email) { %>
+                    <small>
+                        <%= errors.email.msg %>
+                    </small>
+                <% } %>
+
+                <% if (locals.errors && errors.password) { %>
+                    <small>
+                        <%= errors.password.msg %>
+                    </small>
+                <% } %>
+
+                <div class="boton-contenedor">
+                    <button class="boton bttn" type="submit">Ingresar</button>
+                </div>
+
                 <p class="olvidar"><a href="#">¿Olvidaste tu contraseña?</a></p>
-                <p class="cuenta">¿No tienes cuenta? <a href="#">Regístrate</a></p>
+                <p class="cuenta">¿No tienes cuenta? <a href="/users/registro">Regístrate</a></p>
+
             </form>
+
         </main>
-        </form>
-    </main>
 
-    <%- include('./partials/footer') %> 
+        <%- include('./partials/footer') %>
 
-</body>
+    </body>
+
 </html>

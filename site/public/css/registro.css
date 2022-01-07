@@ -6,7 +6,6 @@ main.registro {
     margin: 0px auto;
     width: 100%;
     align-items: center;
-    background-image: url('/images/imagenDeFondo.jpeg');
 }
 
 main.registro h1 {
@@ -29,6 +28,23 @@ main.registro .seccion {
     display:flex;
     flex-direction: column;
     margin-bottom: 10px;
+}
+
+main.registro .seccion .pass {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+main.registro .seccion .pass input{
+    width: 100%;
+}
+
+main.registro .seccion .pass img {
+    width: 24px;
+    position: absolute;
+    right: 6px;
+    cursor: pointer;
 }
 
 main.registro .descripcion {
@@ -73,7 +89,29 @@ main.registro .boton:hover {
     background-color: #9ce8eb;
 }
 
+main.registro button.disabled {
+    background-color: gray;
+    font-weight: lighter;
+    color: white;
+    border: gray 2px solid;
+}
 
+main.registro button.disabled:hover {
+    background-color: gray;
+    font-weight: lighter;
+    color: white;
+    border: gray 2px solid;
+    cursor: default;
+}
+
+main.registro .error {
+    border: #ff6060 2px solid !important;
+}
+
+main.registro small, main.registro .text-error {
+    color: #ff6060 !important;
+    text-shadow: none;
+}
 
 
 
@@ -99,6 +137,29 @@ main.registro .boton:hover {
     main.registro .boton {
         font-size: 20px;
     }
+
+    main.registro button.disabled {
+        background-color: gray;
+        font-weight: lighter;
+        color: white;
+        border: gray 2px solid;
+    }
+    
+    main.registro button.disabled:hover {
+        background-color: gray;
+        font-weight: lighter;
+        color: white;
+        border: gray 2px solid;
+        cursor: default;
+    }
+    
+    main.registro .error {
+        border: #ff6060 2px solid !important;
+    }
+    
+    main.registro small, main.registro .text-error {
+        color: #ff6060 !important;
+    }
 }
 
 
@@ -109,6 +170,10 @@ main.registro .boton:hover {
 
     main.registro h1 {
         font-size: 50px;
+    }
+
+    main.registro form {
+        width: 600px;
     }
 
     main.registro .descripcion {
@@ -125,6 +190,29 @@ main.registro .boton:hover {
 
     main.registro .boton {
         font-size: 20px;
+    }
+
+    main.registro button.disabled {
+        background-color: gray;
+        font-weight: lighter;
+        color: white;
+        border: gray 2px solid;
+    }
+    
+    main.registro button.disabled:hover {
+        background-color: gray;
+        font-weight: lighter;
+        color: white;
+        border: gray 2px solid;
+        cursor: default;
+    }
+    
+    main.registro .error {
+        border: #ff6060 2px solid !important;
+    }
+    
+    main.registro small, main.registro .text-error {
+        color: #ff6060 !important;
     }
 }
 

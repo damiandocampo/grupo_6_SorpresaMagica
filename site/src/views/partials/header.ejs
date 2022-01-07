@@ -1,46 +1,56 @@
 <header>
+    <script src="/js/header.js"></script>
 
-    <div>
+    <div class="header-mobile">
 
-        <% if(locals.usuarioL && locals.usuarioL.rol === 'Admin') { %>
+        <% if(locals.usuarioL && locals.usuarioL.rolId === 1) { %>
             <div class="administrar">
                 <a href="/admin">Administrar</a>
             </div>
         <% } %>
 
         <div class="mobile-tablet">
+
             <% if (!(locals.usuarioL)) { %>
                 <input type="checkbox" name="checkbox-user" id="user" class="checkbox-user">
                 <label for="user" class="user">
-                    <div class="user-icon"><i class="far fa-user-circle"></i></div>
+                    <div class="user-icon"><img src="/images/iconos/user-negro.png" alt="Icono de usuario"></div>
                 </label>
             <% } else { %>
                 <input type="checkbox" name="checkbox-user" id="user" class="checkbox-user">
                 <label for="user" class="user">
-                    <div class="user-image"><img src="/images/usuarios/<%= locals.usuarioL.imagen %>" alt="Imágen de perfil del usuario"></div>
+                    <div class="user-image"><img src="/images/usuarios/<%= locals.usuarioL.image %>" alt="Imágen de perfil del usuario"></div>
                 </label>
             <% } %>
             <div class="user-checked">
                 <% if (!(locals.usuarioL)) { %>
                     <p><a href="/users/registro">Crear una cuenta</a> | <a href="/users/login">Iniciar sesión</a></p>
                 <% } else { %>
-                    <a href="/users/perfil"><%= locals.usuarioL.nombre %> <%= locals.usuarioL.apellido %> <i class="fas fa-cog"></i></a>
+                    <a href="/users/perfil"><%= locals.usuarioL.first_name %> <%= locals.usuarioL.last_name %> <i class="fas fa-cog"></i></a>
                 <% } %>
             </div>
+
             <div class="message">
                 <div class="truck-icon"><img src="/images/iconos/camion-negro.png" alt="Icono de camión"></div>
                 <p><span>Envíos gratis</span> en compras mayores a $3.000.</p>
             </div>
-            <input type="checkbox" name="" id="search" class="checkbox-search">
-            <label for="search" class="search">
-                <div class="search-icon"><i class="fas fa-search"></i></div>
+
+            <input type="checkbox" id="search" class="checkbox-search">
+            <label for="search" class="search" id="search">
+                <div class="search-icon"><img src="/images/iconos/lupa1-negro.png" alt="Icono de lupa"></div>
+            </label>
+            <label for="search" class="search" id="arrow">
+                <div class="arrow-icon"><img src="/images/iconos/cancel-negro.png" alt="Cerrar buscador"></div>
             </label>
             <div class="search-checked">
-                <form action="get">
-                    <input type="text" name="search" id="search" placeholder="Buscar">
-                    <button type="submit"><i class="fas fa-angle-double-right"></i></button>
+                <form action="/buscar" method="GET" class="search-form">
+                    <input type="text" name="keywords" id="search0" placeholder="Ingrese su búsqueda">
+                    <button type="submit">
+                        <div class="search-icon"><img src="/images/iconos/lupa1-negro.png" alt="Buscar"></div>
+                    </button>
                 </form>
             </div>
+
         </div>
 
     </div>
@@ -55,8 +65,8 @@
                 <div class="user-icon"><i class="far fa-user-circle"></i></div>
                 <p><a href="/users/registro">Crear una cuenta</a> | <a href="/users/login">Iniciar sesión</a></p>
             <% } else { %>
-                <div class="user-image"><img src="/images/usuarios/<%= locals.usuarioL.imagen %> " alt="Imágen de perfil del usuario"></div>
-                <label for="user-options"><%= locals.usuarioL.nombre %> <%= locals.usuarioL.apellido %> <i class="fas fa-caret-down"></i></label>
+                <div class="user-image"><img src="/images/usuarios/<%= locals.usuarioL.image %> " alt="Imágen de perfil del usuario"></div>
+                <label for="user-options"><%= locals.usuarioL.first_name %> <%= locals.usuarioL.last_name %> <i class="fas fa-caret-down"></i></label>
                 <input type="checkbox" name="user-options" id="user-options">
                 <ul>
                     <li><a href="/users/perfil">Tu perfil <i class="fas fa-cog"></i></a></li>
@@ -65,5 +75,82 @@
             <% } %> 
         </div>
     </div>
+
+    <nav class="nav-bar">
+        <nav class="menu">
+            <input type="checkbox" name="" id="products">
+            <label for="products">
+                <img src="/images/iconos/menu-negro.png" alt="Icono de menú">
+                <h3>Productos</h3>
+            </label>
+            <ul>
+                <li><a href="/productos"><span>●</span> Todo <span>●</span></a></li>
+                <% categories.forEach(category => { %>
+                    <li><a href=<%= `/productos?c=${category.id}` %>><span>●</span> <%= category.name %> <span>●</span></a></li>
+                <% }) %>
+                <li><a href="/productos/marcas"><span>●</span> Marcas <span>●</span></a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <a href="/"><img src="/images/logo-sorpresa-magica.png" alt="logo"></a>
+        </div>
+        <div class="cart">
+            <a href="/carrito">
+                <img src="/images/iconos/carrito-negro.png" alt="Icono de carrito">
+                <h3>Carrito</h3>
+            </a>
+        </div>
+    </nav>
+    <nav class="nav-bar-desktop">
+        <div class="logo">
+            <a href="/"><img src="/images/logo-sorpresa-magica.png" alt="logo"></a>
+        </div>
+        <div class="desktop-nav">
+            <ul>
+                <li>
+                    <a href="/">
+                        <h3>Inicio</h3>
+                    </a>
+                </li>
+                <li class="productos">
+                    <a href="/productos">
+                        <h3>Productos</h3>
+                    </a>
+                    <nav>
+                        <ul>
+                            <li><a href="/productos"><span>●</span> Todo <span>●</span></a></li>
+                            <% categories.forEach(category => { %>
+                                <li><a href=<%=`/productos?c=${category.id}`%>><span>●</span> <%= category.name %> <span>●</span></a></li>
+                            <% }) %> 
+                            <li><a href="/productos/marcas"><span>●</span> Marcas <span>●</span></a></li>
+                        </ul>
+                    </nav>
+                </li>
+                <li>
+                    <a href="/contacto">
+                        <h3>Contacto</h3>
+                    </a>
+                </li>
+                <% if(locals.usuarioL && locals.usuarioL.rolId === 1) { %>
+                <li>
+                    <a href="/admin">
+                        <h3>Administrar</h3>
+                    </a>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+        <div class="search">
+            <form action="/buscar" method="GET" class="search-form1">
+                <input type="text" name="keywords" id="search1" placeholder="Ingrese su búsqueda">
+                <button type="submit">
+                    <div class="search-icon"><img src="/images/iconos/lupa1-negro.png" alt="Buscar"></div>
+                </button>
+            </form>
+        </div>
+        <div class="cart">
+            <a href="/carrito"><img src="/images/iconos/carrito-negro.png" alt="Icono de carrito"></a>
+        </div>
+    </nav>
 
 </header>

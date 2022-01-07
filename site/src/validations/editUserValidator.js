@@ -1,25 +1,47 @@
-const { check } = require('express-validator');
+const db = require('../database/models');
 
-// Validator
+const { check, body } = require('express-validator');
+
 module.exports = [
     check('nombre')
         .notEmpty().withMessage('El campo nombre es requerido').bail()
         .isLength({min: 3}).withMessage('El nombre tiene que tener al menos 3 caracteres'),
+
     check('apellido')
         .notEmpty().withMessage('El campo apellido es requerido').bail()
         .isLength({min: 3}).withMessage('El apellido tiene que tener al menos 3 caracteres'),
+
     check('email')
         .notEmpty().withMessage('El campo email es requerido').bail()
         .isEmail().withMessage('Email inválido'),
-    check('contraseña')
-        .notEmpty().withMessage('El campo contraseña es requerido').bail()
-        .equals(locals.usuarioL.password).withMessage('La contraseña no coincide.').bail()
-        .isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres'),
-    check('nuevaContraseña')
-        .notEmpty().withMessage('El campo contraseña es requerido').bail()
-        .isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres'),
-    check('repetir')
-        .notEmpty().withMessage('El campo contraseña es requerido').bail()
-        .equals(req.body.nuevaContraseña).withMessage('La contraseña no coincide.').bail()
-        .isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres'),
+
+    body('email')
+        .custom((value, {req}) => {
+
+            return db.users.findAll()
+
+            .then(users => {
+                
+                var validacion = [];
+
+                users.forEach(user => {
+
+                    if(value === user.email && value !== req.session.usuarioL.email) {
+                        //si el email ingresado está en la bbdd y es NO es el actual, no hacer el update
+                        validacion.push('repetido')
+
+                    } else if(value !== user.email || value === req.session.usuarioL.email) {
+                        //si el email ingresado NO está en la bbdd o no se modificó, hacer el update
+                        validacion.push('unico')
+                    }
+
+                })
+
+                if(validacion.includes('repetido')) {
+                    return Promise.reject('Este email ya está registrado.')
+                }
+
+            })
+        
+        }),
 ]

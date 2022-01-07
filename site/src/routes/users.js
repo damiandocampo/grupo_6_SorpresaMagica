@@ -2,12 +2,13 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 
-const { login, registro, registre, logear, logout, perfil, editarDatos } = require('../controllers/userController');
+const { login, registro, register, logear, logout, perfil, editarDatos, newPass } = require('../controllers/userController');
 const guestCheck = require('../middlewares/guestCheck');
+const userCheck = require('../middlewares/userCheck');
 const loginValidator = require('../validations/loginValidator');
 const registerValidator = require('../validations/validateRegister');
-
-//const userEditValidator = require('../validations/editUserValidator');
+const userEditValidator = require('../validations/editUserValidator');
+const newPassValidator = require('../validations/newPassValidator');
 
 const multer  = require('multer');
 
@@ -22,18 +23,21 @@ const storage = multer.diskStorage({
   
 const upload = multer({ storage: storage });
 
-/* GET users listing. */
 
+// login
 router.get('/login', guestCheck, login);
 router.post('/login', loginValidator, logear);
 
+// registro
 router.get('/registro',guestCheck, registro);
-router.post('/registro', upload.single('image'), registerValidator, registre);
+router.post('/registro', upload.single('image'), registerValidator, register);
 
+// perfil
+router.get('/perfil', userCheck, perfil);
+router.put('/edit', userEditValidator, editarDatos);
+router.put('/newPassword', newPassValidator, newPass);
+
+// logout
 router.get('/logout', logout);
-
-router.get('/perfil', perfil);
-
-router.post('/edit', editarDatos)
 
 module.exports = router;

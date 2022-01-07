@@ -1,10 +1,10 @@
 'use strict';
 
-const products = require('../../data/productos.json');
+const brandsArray = ["Milka", "Pepitos", "Terrabusi", "Bon o Bon", "Butter Toffees", "Arcor", "Halls", "Topline", "Beldent", "Cadbury", "M&Ms", "Mr.Pop's", "Flynn Paff", "Rocklets", "Mogul", "Billiken", "Cofler"];
 
-const brands = products.map(product => {
+const brands = brandsArray.map(brandMap => {
   const brand = {
-    name: product.marca,
+    name: brandMap,
     createdAt: new Date,
     updatedAt: new Date
   };

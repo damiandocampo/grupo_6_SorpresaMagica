@@ -4,6 +4,10 @@ header div.desktop, nav.nav-bar-desktop {
 
 /* -- HEADER -- */
 
+header {
+    margin-bottom: 10px;
+}
+
 header div {
     display: flex;
     flex-direction: column;
@@ -27,9 +31,8 @@ header div .mobile-tablet{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: var(--rosa);
-    padding: 0 10px;
     height: 44px;
     width: 100%;
 }
@@ -40,7 +43,7 @@ header div .mobile-tablet .checkbox-user, header div .mobile-tablet .checkbox-se
     display: none;
 }
 
-header div .mobile-tablet .user, div .search {
+header div .mobile-tablet .user, header div .mobile-tablet .search {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,10 +51,15 @@ header div .mobile-tablet .user, div .search {
     height: 44px;
 }
 
+header div .mobile-tablet .user-icon img, header div .mobile-tablet .search-icon img {
+    width: 32px;
+}
+
 /* user */
 
-header div .mobile-tablet .user .user-icon i{
-    font-size: 34px;
+header div .mobile-tablet .user {
+    padding-left: 10px;
+    padding-right: 2px;
 }
 
 header div .mobile-tablet .user-checked {
@@ -64,16 +72,18 @@ header div .mobile-tablet .user-checked {
 
 .checkbox-user:checked ~ .user-checked{
     display: flex;
-    width: 100vw;
+    width: 100%;
+    height: 44px;
+    z-index: 3;
+    position: absolute;
+    left: 0;
     justify-content: center;
+    align-items: center;
+    background-color: var(--rosa);
 }
 
-.checkbox-user:checked ~ .message {
-    display: none;
-}
-
-.checkbox-user:checked ~ .search {
-    display: none;
+.checkbox-user:checked ~ .user {
+    z-index: 5;
 }
 
 header .user-image {
@@ -98,6 +108,7 @@ header div .mobile-tablet .message {
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    padding: 0px 3px;
 }
 
 header div .mobile-tablet .message .truck-icon{
@@ -125,32 +136,46 @@ header div .mobile-tablet .search {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 10px;
-    padding-right: 5px;
+    padding-right: 10px;
+    padding-left: 2px;
 }
 
-header div .mobile-tablet .search i {
-    font-size: 24px;
+header div .mobile-tablet #arrow {
+    display: none;
+}
+
+header div .mobile-tablet #arrow img {
+    width: 18px;
 }
 
 header div .mobile-tablet .search-checked {
     display: none;
-    width: 100vw;
+    width: 100%;
+    height: 44px;
+    z-index: 3;
     position: absolute;
+    left: 0;
     justify-content: center;
+    align-items: center;
+    background-color: var(--rosa);
 }
 
 header div .mobile-tablet .search-checked form {
     display: flex;
+    align-items: center;
 }
 
 header div .mobile-tablet .search-checked input {
     width: 72vw;
     height: 30px;
-    border: solid 2px var(--celeste);
+    border: none;
     border-radius: 15px;
     outline: none;
     padding-left: 30px;
+}
+
+header div .mobile-tablet .search-checked input:focus {
+    border: solid 2px var(--celeste);
 }
 
 header div .mobile-tablet .search-checked button {
@@ -159,15 +184,15 @@ header div .mobile-tablet .search-checked button {
     justify-content: center;
     position: absolute;
     padding-left: 2px;
-    width: 30px;
-    height: 30px;
-    background-color: white;
-    border: solid 2px var(--celeste);
+    width: 28px;
+    height: 28px;
+    background-color: transparent;
+    border: none;
     border-radius: 50%;
 }
 
-header div .mobile-tablet .search-checked i {
-    font-size: 24px;
+header div .mobile-tablet .search-checked img {
+    width: 20px;
 }
 
 .checkbox-search:checked ~ .search-checked {
@@ -176,6 +201,14 @@ header div .mobile-tablet .search-checked i {
 
 .checkbox-search:checked ~ .search {
     z-index: 5;
+}
+
+.checkbox-search:checked ~ #search {
+    display: none;
+}
+
+.checkbox-search:checked ~ #arrow {
+    display: flex;
 }
 
 header .logout button {
@@ -196,7 +229,7 @@ header .logout button:hover {
 
 /* -- NAV BAR -- */
 
- nav.nav-bar {
+nav.nav-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -206,8 +239,12 @@ header .logout button:hover {
     width: 100%;
     box-shadow: 0px 2px 15px 0px rgba(32, 32, 32, .3);
     z-index: 10;
-    position: sticky;
+}
+
+nav.fixed {
+    position: fixed;
     top: 0;
+    width: 100%
 }
 
 /* menu - cart */
@@ -230,12 +267,20 @@ nav.nav-bar .menu img, nav.nav-bar .cart a img {
 
 /* menu */
 
+nav.nav-bar .menu {
+    position: relative;
+}
+
 nav.nav-bar .menu label {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
+}
+
+nav.nav-bar .menu ul {
+    z-index: 5;
 }
 
 nav.nav-bar .menu ul, nav.nav-bar .menu input {
@@ -267,8 +312,8 @@ nav.nav-bar .menu input:checked ~ ul {
     position: absolute;
     background-color: white;
     width: 100vw;
-    top: 99px;
-    right: 0px;
+    top: 78px;
+    left: -10px;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -324,20 +369,9 @@ nav.nav-bar .cart a {
     }
 
     /* user */
-
-    header div .mobile-tablet .user .user-icon i{
-        font-size: 38px;
-    }
     
     .checkbox-user:checked ~ .user-checked{
         display: flex;
-        width: 80vw;
-    }
-
-    /* search */
-    
-    header div .mobile-tablet .search .search-icon i{
-        font-size: 30px;
     }
 
     /* envíos */
@@ -359,8 +393,12 @@ nav.nav-bar .cart a {
         height: 111px;
         box-shadow: 0px 2px 15px 0px rgba(32, 32, 32, .3);
         z-index: 10;
-        position: sticky;
+    }
+
+    nav.fixed {
+        position: fixed;
         top: 0;
+        width: 100%
     }
 
     /* logo */
@@ -532,8 +570,12 @@ nav.nav-bar .cart a {
         background-color: white;
         box-shadow: 0px 2px 15px 0px rgba(32, 32, 32, .3);
         z-index: 10;
-        position: sticky;
+    }
+
+    nav.fixed {
+        position: fixed;
         top: 0;
+        width: 100%
     }
 
     /* logo */
@@ -589,6 +631,7 @@ nav.nav-bar .cart a {
         display: none;
         position: absolute;
         top: 23px;
+        z-index: 5;
     }
     
     nav.nav-bar-desktop .desktop-nav ul li.productos nav ul {
@@ -645,10 +688,17 @@ nav.nav-bar .cart a {
     nav.nav-bar-desktop .search{
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-end;
         width: 265px;
         border: solid 2px var(--celeste);
         border-radius: 15px;
+    }
+
+    nav.nav-bar-desktop .search form {
+        display: flex;
+        align-items: center;
+        width: 250px;
+        justify-content: space-evenly;
     }
 
     nav.nav-bar-desktop .search input {
@@ -666,9 +716,12 @@ nav.nav-bar .cart a {
         border-radius: 15px;
         cursor: pointer;
     }
+    nav.nav-bar-desktop .search .search-icon {
+        display: flex;
+    }
 
-    nav.nav-bar-desktop button i {
-        font-size: 18px;
+    nav.nav-bar-desktop button img {
+        width: 20px;
     }
 
 

@@ -1,23 +1,50 @@
-const {body} = require ('express-validator')
+const db = require('../database/models');
 
-const path = require('path')
-const fs = require('fs')
-
-const usuarios = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','users.json'),'utf-8'))
-
-const bcryptjs = require('bcryptjs')
-
+const { check, body } = require('express-validator');
+const bcrypt = require('bcryptjs');
 
 module.exports = [
+    check('email')
+        .notEmpty().withMessage('El campo email no puede estar vacío.').bail()
+        .isEmail().withMessage('Es necesario ingresar un email válido.'),
+
     body('email')
-    .custom((value,{req}) => {
+        .custom((value) => {
+            
+            return db.users.findOne({
+                where: {
+                    email: value
+                }
+            })
 
-        let usuarios = usuario.find(usuario => usuario.email === value && bcryptjs.compareSync(req.body.contraseña, usuario.contraseña))
+            .then(user =>{
+                if(!user) {
+                    return Promise.reject()
+                }
+            })
 
-        if(usuario){
-            return true
-        } else {
-            return false
-        }
-    }).withMessage('Usuario inválido!')
+            .catch(() => {
+                return Promise.reject('El usuario no está registrado')
+            })
+        }),
+
+    body('password')
+        .custom((value, {req}) => {
+
+            return db.users.findOne({
+                where: {
+                    email: req.body.email
+                }
+            })
+
+            .then(user => {
+                if(!user || !bcrypt.compareSync(value, user.password)) {
+                   return Promise.reject()
+                }
+            })
+
+            .catch(() => {
+                return Promise.reject("Contraseña incorrecta")
+            })
+        })
 ]
