@@ -3,6 +3,7 @@
 
 <%- include('./partials/head', {title: 'Crear un producto'}) %>
 <script src="/js/createProduct.js"></script>
+<script src="/js/previewImage.js"></script>
 
   <body>
 
@@ -129,15 +130,25 @@
 
             </div>
 
-              <div class="separador">
+            <div class="separador">
 
-                <div class="col-md">
-                  <div class="button-crear">
-                    <button type="submit" class="button">Crear</button>
-                  </div>
-                </div>
-                
+              <div class="col-md">
+
+                  <img src="/images/productos/defaultImage.png" class="image-preview">
+                  
               </div>
+              
+            </div>
+
+            <div class="separador">
+
+              <div class="col-md">
+                <div class="button-crear">
+                  <button type="submit" class="button">Crear</button>
+                </div>
+              </div>
+              
+            </div>
 
           </div>
 

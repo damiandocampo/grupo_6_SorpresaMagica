@@ -134,6 +134,14 @@ const controller = {
 
         } else {
 
+            if(req.file){
+                let image = req.file.filename;
+
+                if(fs.existsSync(path.join(__dirname,'../../public/images/productos/' + image))){
+                    fs.unlinkSync(path.join(__dirname,'../../public/images/productos/' + image))
+                }
+            }
+
             db.Categories.findAll()
 
             .then(categories => {
@@ -189,6 +197,19 @@ const controller = {
 
                     .then(([product, brand]) => {
 
+                        // ver si se modificó la imágen, de ser así eliminarla
+
+                        if(req.file.filename !== product.image && product.image !== 'defaultImage.png') {
+                            fs.unlinkSync(path.join(__dirname,'../../public/images/productos/' + product.image),
+                            (err) => {
+                                if(err) {
+                                    console.log(err);
+                                } else {
+                                    console.log('La imágen fue eliminada');
+                                }
+                            })
+                        }
+
                         //editar producto con la nueva marca
 
                         db.Products.update({
@@ -232,6 +253,19 @@ const controller = {
                     Promise.all([product, brand])
 
                     .then(([product, brand]) => {
+                        
+                        // ver si se modificó la imágen, de ser así eliminarla
+
+                        if(req.file.filename !== product.image && product.image !== 'defaultImage.png') {
+                            fs.unlinkSync(path.join(__dirname,'../../public/images/productos/' + product.image),
+                            (err) => {
+                                if(err) {
+                                    console.log(err);
+                                } else {
+                                    console.log('La imágen fue eliminada');
+                                }
+                            })
+                        }
 
                         //editar producto con la marca existente
                         
@@ -335,7 +369,7 @@ const controller = {
         .then(product => {
 
             if(product.image !== 'defaultImage.png') {
-                fs.unlink(`public/images/productos/${product.image}`, (err) => {
+                fs.unlinkSync(path.join(__dirname,'../../public/images/productos/' + product.image), (err) => {
                     if(err) {
                         console.log(err);
                     } else {

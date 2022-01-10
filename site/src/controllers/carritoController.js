@@ -3,10 +3,14 @@ const db = require('../database/models')
 const controller = {
     carrito: (req,res) => {
         
-        db.Categories.findAll()
+        const categories = db.Categories.findAll()
 
-        .then(categories => {
-            res.render('carritoDeCompras', {categories});
+        const brands = db.Brands.findAll()
+
+        Promise.all([categories, brands])
+
+        .then(([categories, brands]) => {
+            res.render('carritoDeCompras', {categories, brands});
         })
 
         .catch(err => {

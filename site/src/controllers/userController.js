@@ -5,10 +5,14 @@ const db = require('../database/models');
 const controller = {
     login: (req,res) => {
 
-        db.Categories.findAll()
+        const categories = db.Categories.findAll()
 
-        .then(categories => {
-            res.render('login',{categories});
+        const brands = db.Brands.findAll()
+
+        Promise.all([categories, brands])
+
+        .then(([categories, brands]) => {
+            res.render('login',{categories, brands});
         })
         
         .catch(err => {
@@ -47,10 +51,14 @@ const controller = {
             })
 
         } else {
-            db.Categories.findAll()
+            const categories = db.Categories.findAll()
 
-            .then(categories => {
-                res.render('login', {categories,  errors: errors.mapped()});
+            const brands = db.Brands.findAll()
+
+            Promise.all([categories, brands])
+
+            .then(([categories, brands]) => {
+                res.render('login', {categories, brands, errors: errors.mapped()});
             })
 
             .catch(error => {
@@ -60,10 +68,14 @@ const controller = {
     },
 
     registro: (req, res) => {
-        db.Categories.findAll()
+        const categories = db.Categories.findAll()
 
-        .then(categories => {
-            res.render('registro',{categories});
+        const brands = db.Brands.findAll()
+
+        Promise.all([categories, brands])
+
+        .then(([categories, brands]) => {
+            res.render('registro',{categories, brands});
         })
         
         .catch(err => {
@@ -93,10 +105,14 @@ const controller = {
             .catch(error => console.log(error))
 
         } else {
-            db.Categories.findAll()
+            const categories = db.Categories.findAll()
 
-            .then(categories => {
-                res.render('registro',{categories, errors: errors.mapped(), old: req.body});
+            const brands = db.Brands.findAll()
+
+            Promise.all([categories, brands])
+
+            .then(([categories, brands]) => {
+                res.render('registro',{categories, brands, errors: errors.mapped(), old: req.body});
             })
 
             .catch(error => console.log(error))
@@ -116,10 +132,14 @@ const controller = {
 
     perfil: (req, res) => {
 
-        db.Categories.findAll()
+        const categories = db.Categories.findAll()
 
-        .then(categories => {
-            res.render('usuarioPerfil', {categories});
+        const brands = db.Brands.findAll()
+
+        Promise.all([categories, brands])
+
+        .then(([categories, brands]) => {
+            res.render('usuarioPerfil', {categories, brands});
         })
         
         .catch(err => {
@@ -167,10 +187,14 @@ const controller = {
             })
 
         } else {
-            db.Categories.findAll()
+            const categories = db.Categories.findAll()
 
-            .then(categories => {
-                res.render('usuarioPerfil',{categories, errors: errors.mapped(), old: req.body});
+            const brands = db.Brands.findAll()
+
+            Promise.all([categories, brands])
+
+            .then(([categories, brands]) => {
+                res.render('usuarioPerfil',{categories, brands, errors: errors.mapped(), old: req.body});
             })
             
             .catch(err => {
@@ -204,29 +228,20 @@ const controller = {
             })
 
         } else {
-            db.Categories.findAll()
+            const categories = db.Categories.findAll()
 
-            .then(categories => {
-                res.render('usuarioPerfil',{categories, errors: errors.mapped()});
+            const brands = db.Brands.findAll()
+
+            Promise.all([categories, brands])
+
+            .then(([categories, brands]) => {
+                res.render('usuarioPerfil',{categories, brands, errors: errors.mapped()});
             })
             
             .catch(err => {
                 res.send(err)
             })
         }
-    },
-
-    carrito: (req,res) => {
-
-        db.Categories.findAll()
-
-        .then(categories => {
-            res.render('carritoDeCompras',{categories, errors: errors.mapped()});
-        })
-        
-        .catch(err => {
-            res.send(err)
-        })
     },
 }
 

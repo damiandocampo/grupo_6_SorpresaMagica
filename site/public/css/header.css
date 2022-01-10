@@ -280,16 +280,31 @@ nav.nav-bar .menu label {
 }
 
 nav.nav-bar .menu ul {
-    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(2px);
+    top: 0px;
+    left: -679px;
+    z-index: 10;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all 0.5s;
 }
 
-nav.nav-bar .menu ul, nav.nav-bar .menu input {
-    display: none;
+nav.nav-bar .menu ul.mostrar {
+    left: 0px;
 }
 
 nav.nav-bar .menu ul li {
     display: flex;
-    border-bottom: solid 1px var(--rosa);
+    background-color: #ffc2e8;
+    border-bottom: solid 1px var(
+    --rosa);
+    box-shadow: 0px 0px 5px 0px #ffc2e8;
     width: 80%;
     height: 45px;
     justify-content: center;
@@ -302,20 +317,34 @@ nav.nav-bar .menu ul li a {
     text-align: center;
 }
 
-nav.nav-bar .menu ul li span {
-    color: var(--violeta);
+nav.nav-bar .menu ul li.close-menu {
+    background-color: transparent;
+    box-shadow: none;
+    border-bottom: none;
+    height: 34px;
+    width: 100%;
+    display: flex;
 }
 
-nav.nav-bar .menu input:checked ~ ul {
+nav.nav-bar .menu ul li.close-menu img {
+    width: 22px;
+}
+
+nav.nav-bar .menu ul li.close-menu:active {
+    box-shadow: none;
+    border-bottom: none;
+    height: 34px;
+    width: 34px;
+    border-radius: 100%;
+    margin: 0px auto;
     display: flex;
-    flex-direction: column;
-    position: absolute;
-    background-color: white;
-    width: 100vw;
-    top: 78px;
-    left: -10px;
+    background-color: rgba(0, 0, 0, 0.2);
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+}
+
+nav.nav-bar .menu ul li span {
+    color: var(--violeta);
 }
 
 nav.nav-bar .menu ul li:active {
@@ -326,9 +355,64 @@ nav.nav-bar .menu ul li a:active {
     font-weight: bold;
 }
 
+nav.nav-bar .menu ul li.openBrands {
+    display: none;
+}
+
+nav.nav-bar .menu ul li.brands {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+nav.nav-bar .menu ul li.open {
+    position: absolute;
+    top: 10px;
+}
+
+nav.nav-bar .menu ul li.brands img {
+    position: absolute;
+    width: 24px;
+    right: 10px;
+}
+
+nav.nav-bar .menu ul li.brands img.openBrands {
+    transform: rotateY(180deg);
+    left: 24px;
+}
+
+nav.nav-bar .menu ul li .ul-brands {
+    display: none;
+}
+
+nav.nav-bar .menu ul li div.openBrands {
+    display: flex;
+    height: 87vh;
+    position: absolute;
+    overflow: scroll;
+    top: 50px;
+    width: 100%;
+}
+
+nav.nav-bar .menu ul li .ul-brands ul {
+    left: 0px;
+    position: static;
+    top: 60px;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    backdrop-filter: none;
+}
+
+nav.nav-bar .menu ul li .ul-brands ul li {
+    width: 100%;
+    margin-bottom: 4px;
+}
+
 /* logo */
 
- nav.nav-bar .logo {
+nav.nav-bar .logo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -415,6 +499,10 @@ nav.nav-bar .cart a {
     
     nav.nav-bar .menu h3, nav.nav-bar .cart h3 {
         font-size: 16px;
+    }
+
+    nav.nav-bar .menu ul {
+        left: -1023px;
     }
 
 }
@@ -661,6 +749,62 @@ nav.nav-bar .cart a {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    nav.nav-bar-desktop .desktop-nav ul li.productos nav ul li.brands {
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        width: 100%;
+        cursor: pointer;
+    }
+    
+    nav.nav-bar-desktop .desktop-nav ul li.productos nav ul li.brands img {
+        position: absolute;
+        width: 24px;
+        right: 10px;
+        height: 24px;
+    }
+
+    nav.nav-bar-desktop .desktop-nav ul li.productos nav ul li.brands .ul-brands {
+        display: none;
+        height: 338px;
+        position: absolute;
+        overflow: scroll;
+        top: -299px;
+        left: 200px;
+        background-color: rgba(255, 255, 255, 0.6);
+        width: 460px;
+    }
+
+    nav.nav-bar-desktop .desktop-nav ul li.productos nav ul li.brands:hover > .ul-brands {
+        display: flex;
+    }
+
+    nav.nav-bar-desktop .desktop-nav ul li.productos nav ul li.brands .ul-brands:hover > .ul-brands {
+        display: flex;
+    }
+
+    nav.nav-bar-desktop .desktop-nav ul li.productos nav ul li.brands .ul-brands ul {
+        display: flex;
+        padding: 10px;
+        width: 100%;
+        flex-wrap: wrap;
+        height: 100%;
+        background-color: transparent;
+        flex-direction: row;
+    }
+
+    nav.nav-bar-desktop .desktop-nav ul li.productos nav ul li.brands .ul-brands ul li {
+        width: 120px;
+        background-color: var(--rosa);
+        border: none;
+        margin: 0px 5px;
+    }
+
+    nav.nav-bar-desktop .desktop-nav ul li.productos nav ul li.brands .ul-brands ul li a {
+        font-size: 16px;
     }
     
     nav.nav-bar-desktop .desktop-nav ul li.productos nav ul li span {

@@ -56,6 +56,11 @@
     align-items: center;
 }
 
+.create .separador .image-preview {
+    width: 250px;
+    border: 1px solid #ced4da;
+}
+
 .create .separador button {
     width: 150px;
     height: 50px;
