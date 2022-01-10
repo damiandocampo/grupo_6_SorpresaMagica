@@ -78,7 +78,7 @@ main.productos .product-container .image-detail .c-c-cp {
     justify-content: space-around;
 }
 
-main.productos .product-container .image-detail .cantidad {
+main.productos .product-container .image-detail .cantidad, main.productos .relatedProducts .cantidad {
     display: flex;
     width: 90%;
     height: 30px;
@@ -87,7 +87,7 @@ main.productos .product-container .image-detail .cantidad {
     border: solid 1px gray;
 }
 
-main.productos .product-container .image-detail .cantidad button {
+main.productos .product-container .image-detail .cantidad button, main.productos .relatedProducts .cantidad button {
     display: flex;
     width: 35%;
     height: 100%;
@@ -97,12 +97,14 @@ main.productos .product-container .image-detail .cantidad button {
     cursor: pointer;
 }
 
-main.productos .product-container .image-detail .cantidad p {
+main.productos .product-container .image-detail .cantidad input, main.productos .relatedProducts .cantidad input {
     display: flex;
-    width: 40%;
+    width: 30%;
+    text-align: center;
     height: 100%;
     justify-content: center;
     align-items: center;
+    border: none;
     border-left: solid 1px gray;
     border-right: solid 1px gray;
 }

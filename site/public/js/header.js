@@ -31,13 +31,13 @@ window.addEventListener('load', () => {
 
     const menu = qs('.ul-menu');
     const label = qs('.label-menu');
-    const close = qs('.close-menu');
+    const closeMenu = qs('.close-menu');
 
     label.addEventListener('click', function() {
         menu.classList.add('mostrar')
     })
 
-    close.addEventListener('click', function() {
+    closeMenu.addEventListener('click', function() {
         menu.classList.remove('mostrar')
     })
 
@@ -57,4 +57,18 @@ window.addEventListener('load', () => {
         brandsUL.classList.toggle('openBrands');
     })
 
-})
+    // carrito
+
+    const cartIcon = qs('.cart img');
+    const cart = qs('.dropDown-cart');
+    const closeCart = qs('.close-cart');
+
+    cartIcon.addEventListener('click', function() {
+        cart.classList.add('mostrar')
+    });
+
+    closeCart.addEventListener('click', function() {
+        cart.classList.remove('mostrar')
+    });
+
+});

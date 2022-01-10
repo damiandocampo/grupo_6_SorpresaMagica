@@ -1,132 +1,115 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <%- include('./partials/head', {title: 'Carrito'}) %> 
+<%- include('./partials/head', {title: 'Carrito' }) %>
+<script src="/js/amount.js"></script>
 
-<body>
-    
-    <%- include('./partials/header') %> 
+    <body>
 
-    <main class="bodyCarrito">
-        <div class="micompra">
-     <h1><i class="fas fa-shopping-cart"></i> Mi Compra</h1>
-     </div>
+        <%- include('./partials/header') %>
 
- <div class="productContainer">
-    <div class="tabla">
-     <div class="titulos">
-      <div class="tituloscolor">
-         <div class="producto">
-         <h3>Producto</h3>
-        </div>
-        <div class="descripcionCarrito">
-         <h3>Descripcion</h3>
-        </div>
-        <div class="cantidad">
-         <h3>Cantidad</h3>
-        </div>
-        <div class="precio">
-         <h3>Precio</h3>
-        </div>
-        <div class="tachitotitulo">
-            <i class="fas fa-trash"></i>
-            
-        </div>
-    </div>
-    
-     </div>
+            <main class="bodyCarrito">
+                <h1>Mi Compra</h1>
 
-     <div class="titulos">
-         <div class="producto" >
-            <img class="img" src="/images/productos/AlfajorMILKATripleMousse55Gr74,04.png" alt="imagen alfajor">
-        </div>
-        <div class="descripcionCarrito">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, dolores culpa dolorem</p>
-        </div>
-        <div class="cantidad">
-            <button><</button>
-            <p>1</p>
-            <button>></button>
-        </div>
-        <div class="precio">
-            <p>$</p>
-            <p>123</p>
-           </div>
-        <div class="tachito">
-            <i class="fas fa-trash"></i>
-        </div>
-        </div>
+                <section>
+                    <article>
+                        <img src="/images/productos/AlfajorMILKATripleMousse55Gr74,04.png" alt="Alfajor">
+                        <div class="descripcion">
+                            <h4>Alfajor MILKA Triple Mousse 55gr</h4>
+                            <div class="cant-prec-elim">
+                                <div class="cant-prec">
+                                    <div class="cantidad">
+                                        <button class="less">-</button>
+                                        <input type="text" value="1">
+                                        <button class="more">+</button>
+                                    </div>
+                                    <p>x $74,04</p>
+                                </div>
+                                <img src="/images/iconos/tacho-negro.png" alt="Eliminar productor" class="tachito">
+                            </div>
+                            <p class="descr">Alfajor Milka con relleno tipo mousse de chocolate con cobertura de chocolate con leche 55gr</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="/images/productos/CaramelosDurosARCORRodajasFrutalesAcidas930Gr883,87.png" alt="Caramelos Duros ARCOR Rodajas Frutales Acidas 930gr">
+                        <div class="descripcion">
+                            <h4>Caramelos Duros ARCOR Rodajas Frutales Acidas 930gr</h4>
+                            <div class="cant-prec-elim">
+                                <div class="cant-prec">
+                                    <div class="cantidad">
+                                        <button class="less">-</button>
+                                        <input type="text" value="1">
+                                        <button class="more">+</button>
+                                    </div>
+                                    <p>x $883.87</p>
+                                </div>
+                                <img src="/images/iconos/tacho-negro.png" alt="Eliminar productor" class="tachito">
+                            </div>
+                            <p class="descr">Caramelos duros Arcor rodajas frutales ácidas sabores surtidos 930gr</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="/images/productos/CaramelosHALLSCreamyMora27Gr53,21.jpg" alt="Caramelos HALLS Creamy Mora 27gr">
+                        <div class="descripcion">
+                            <h4>Caramelos HALLS Creamy Mora 27gr</h4>
+                            <div class="cant-prec-elim">
+                                <div class="cant-prec">
+                                    <div class="cantidad">
+                                        <button class="less">-</button>
+                                        <input type="text" value="1">
+                                        <button class="more">+</button>
+                                    </div>
+                                    <p>x $53.21</p>
+                                </div>
+                                <img src="/images/iconos/tacho-negro.png" alt="Eliminar productor" class="tachito">
+                            </div>
+                            <p class="descr">Caramelos duros Halls sabor a mora y crema 27gr</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="/images/productos/Chicles7UltraGreenTOPLINEEst24Gr109,99.jpg" alt="Chicles 7 Ultra Green TOPLINE 24gr">
+                        <div class="descripcion">
+                            <h4>Chicles 7 Ultra Green TOPLINE 24gr</h4>
+                            <div class="cant-prec-elim">
+                                <div class="cant-prec">
+                                    <div class="cantidad">
+                                        <button class="less">-</button>
+                                        <input type="text" value="1">
+                                        <button class="more">+</button>
+                                    </div>
+                                    <p>x $109.99</p>
+                                </div>
+                                <img src="/images/iconos/tacho-negro.png" alt="Eliminar productor" class="tachito">
+                            </div>
+                            <p class="descr">Chicles Topline dietéticos reducidos en calorías sabor menta 24gr</p>
+                        </div>
+                    </article>
+                </section>
 
+                <div class="total">
+                    <h3>Cantidad:</h3>
+                    <div class="resultado">4</div>
 
-        <div class="titulos">
-            <div class="producto" >
-                <img class="img" src="/images/productos/BombonesBONOBONChocolateConLeche18U422,26.png" alt="imagen alfajor">
-           </div>
-           <div class="descripcionCarrito">
-               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, dolores culpa dolorem</p>
-           </div>
-           <div class="cantidad">
-               <button><</button>
-            <p>1</p>
-                <button>></button>
-           </div>
-           <div class="precio">
-            <p>$</p>
-            <p>123</p>
-           </div>
-           <div class="tachito">
-            <i class="fas fa-trash"></i>
-           </div>
-           </div>
+                    <h3>Total:</h3>
+                    <div class="resultado">
+                        <p>$</p>
+                        <p>123</p>
+                    </div>
+                </div>
 
-           <div class="titulos">
-            <div class="producto" >
-                <img class="img" src="/images/productos/ConfitesDeChocolateROCKLETS40Gr73,57.jpg" alt="imagen alfajor">
-           </div>
-           <div class="descripcionCarrito">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, dolores culpa dolorem</p>
-        </div>
-           <div class="cantidad">
-            <button><</button>
-            <p>1</p>
-            <button>></button>
-           </div>
-           <div class="precio">
-            <p>$</p>
-            <p>123</p>
-           </div>
-           <div class="tachito">
-            <i class="fas fa-trash"></i>
-           </div>
-           </div>
-</div>
-           <div class="dosBotones">
-            
-    <button class="subButon">Vaciar carrito</button>
-    <button class="subButon">Seguir comprando</button>
-            </div>
-    <div class="total">
-        <h3>Total Productos:</h3>
-        <div class="resultado">1</div>
-    
-        <h3>Valor:</h3>
-        <div class="resultado">
-            <p>$</p>
-            <p>123</p>
-    </div>
-</div>
-            
-    
-            <div class="continuar">
-    
-                <button class="buton">CONTINUAR</button>
-    
-            </div>
-</div>
-    </main>
-   
-    <%- include('./partials/footer') %>
+                <div class="buttons">
+                    <div class="subButtons">
+                        <button class="subButon">Vaciar carrito</button>
+                        <button class="subButon">Seguir comprando</button>
+                    </div>
+                    <button class="buton">Finalizar compra</button>
+                </div>
+
+            </main>
+
+            <%- include('./partials/footer') %>
 
 
-</body>
+    </body>
+
 </html>
