@@ -1,0 +1,10 @@
+
+main.contacto h1 {
+    text-align: center;
+    margin: 0 auto;
+    font: italic bold 40px Georgia, Serif;
+    text-shadow: -4px 3px 0 #dcc2ffff, -14px 7px 0 #11e7ee;
+    padding-bottom: 40px;
+    padding-top: 50px
+}
+

@@ -70,6 +70,20 @@ const controller = {
             res.send(err)
         })
     },
+
+    contacto: (req,res) => {
+        
+        db.Categories.findAll()
+
+        .then(categories => {
+            res.render('contacto', {categories});
+        })
+
+        .catch(err => {
+            res.send(err)
+        })
+        
+    },
 }
 
 module.exports = controller;
