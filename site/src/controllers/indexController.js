@@ -74,17 +74,20 @@ const controller = {
     },
 
     contacto: (req,res) => {
-        
-        db.Categories.findAll()
 
-        .then(categories => {
-            res.render('contacto', {categories});
+        const brands = db.Brands.findAll()
+
+        const categories = db.Categories.findAll()
+
+        Promise.all([categories, brands])
+
+        .then(([categories, brands]) => {
+            res.render('contacto', {categories, brands});
         })
 
         .catch(err => {
             res.send(err)
-        })
-        
+        })      
     },
 }
 
