@@ -13,6 +13,10 @@
     --tipografia: 'Roboto', sans-serif;
 }
 
+html {
+    scroll-behavior: "smooth";
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
