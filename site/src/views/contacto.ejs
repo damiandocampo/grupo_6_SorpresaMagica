@@ -1,28 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('./partials/head', {title: 'Contacto'}) %> 
-<body>
+<body class="contacto">
     <%- include('./partials/header') %> 
 
     <main class="contacto">
 
         <h1>¡Contactanos!</h1> 
         
-    <div class="container">
-        <div class="target">
-            <a href="https://www.instagram.com/sorpresa_magica_golosinas" target="_blank">
-                <img src="/images/iconos/zinstagram.png" alt="Icono de Instagram">
-            </a>
-            <a href="https://www.facebook.com/sorpresa_magica_golosinas" target="_blank">
-                <img src="/images/iconos/zfacebook.png" alt="Icono de Facebook">
-            </a>
-            <a href="https://www.twitter.com/sorpresa_magica_golosinas" target="_blank">
-                <img src="/images/iconos/ztwitter.png" alt="Icono de Twitter">
-            </a>
-        </div>
-    </div>
+        <div class="container">
 
-    </main>  
+            <div class="target">
+                <a href="https://www.instagram.com/sorpresa_magica_golosinas" target="_blank">
+                    <img src="/images/iconos/zinstagram.png" alt="Icono de Instagram">
+                </a>
+                <a href="https://www.facebook.com/sorpresa_magica_golosinas" target="_blank">
+                    <img src="/images/iconos/zfacebook.png" alt="Icono de Facebook">
+                </a>
+                <a href="https://www.twitter.com/sorpresa_magica_golosinas" target="_blank">
+                    <img src="/images/iconos/ztwitter.png" alt="Icono de Twitter">
+                </a>
+            </div>
+
+            <div class="contact">
+                <p><img src="/images/iconos/telefono-negro.png" alt="Icono de teléfono"> 1234-5678</p>
+                <p><img src="/images/iconos/correo-negro.png" alt="Icono de correo"> sorpresa-magica@outlook.com</p>
+                <p><img src="/images/iconos/ubicacion-negro.png" alt="Icono de ubicación"> San Benito de Palermo 565, CABA</p>
+            </div>
+
+            <div class="mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.4514133879015!2d-58.434576985177785!3d-34.56744276308578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5bc77430ee7%3A0xea9b07e9d0781f38!2sSan%20Benito%20de%20Palermo%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1629818682912!5m2!1ses-419!2sar"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+    </main>
+
+    <%- include('./partials/footer') %>
 
 </body>
 </html>
