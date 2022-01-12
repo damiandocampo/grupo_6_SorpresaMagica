@@ -72,6 +72,23 @@ const controller = {
             res.send(err)
         })
     },
+
+    contacto: (req,res) => {
+
+        const brands = db.Brands.findAll()
+
+        const categories = db.Categories.findAll()
+
+        Promise.all([categories, brands])
+
+        .then(([categories, brands]) => {
+            res.render('contacto', {categories, brands});
+        })
+
+        .catch(err => {
+            res.send(err)
+        })      
+    },
 }
 
 module.exports = controller;
